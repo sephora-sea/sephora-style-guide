@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sephora-style-guide (0.1.0)
+    sephora_style_guide (0.0.1)
       rails
       slim
 
@@ -132,7 +132,7 @@ PLATFORMS
 
 DEPENDENCIES
   rspec
-  sephora-style-guide!
+  sephora_style_guide!
   sqlite3
 
 BUNDLED WITH
