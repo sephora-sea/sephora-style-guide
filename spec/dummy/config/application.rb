@@ -3,7 +3,7 @@ require_relative 'boot'
 require 'rails/all'
 
 Bundler.require(*Rails.groups)
-require "sephora_style_guide"
+require 'sephora_style_guide'
 
 module Dummy
   class Application < Rails::Application
