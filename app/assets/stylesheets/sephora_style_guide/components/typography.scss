@@ -1,50 +1,75 @@
-// Font definitions
+// Font faces
 @font-face {
-  font-family: 'Avalon-Bold';
-  src:  asset-url('avalon-bold-webfont.eot') format('eot'),
-        asset-url('avalon-bold-webfont.woff') format('woff'),
-        asset-url('avalon-bold-webfont.woff2') format('woff2'),
-        asset-url('avalon-bold-webfont.ttf') format('truetype'),
-        asset-url('avalon-bold-webfont.svg#avalon_mediumbold') format('svg');
-  font-style: normal;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: 'Avalon-Demi';
-  src:  asset-url('avalon-demi-webfont.eot') format('eot'),
-        asset-url('avalon-demi-webfont.woff') format('woff'),
-        asset-url('avalon-demi-webfont.woff2') format('woff2'),
-        asset-url('avalon-demi-webfont.ttf') format('truetype'),
-        asset-url('avalon-demi-webfont.svg#avalon_mediumbold') format('svg');
-  font-style: normal;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: 'Avalon-Book';
-  src:  asset-url('avalon-book-webfont.eot') format('eot'),
-        asset-url('avalon-book-webfont.woff') format('woff'),
-        asset-url('avalon-book-webfont.woff2') format('woff2'),
-        asset-url('avalon-book-webfont.ttf') format('truetype'),
-        asset-url('avalon-book-webfont.svg#avalonregular') format('svg');
-  font-style: normal;
+  font-family: 'Sephora Serif';
+  src: asset-url('SephoraSerifWeb-Book.eot');
+  src: asset-url('SephoraSerifWeb-Book.eot?#iefix') format('embedded-opentype'),
+    asset-url('SephoraSerifWeb-Book.woff2') format('woff2'),
+    asset-url('SephoraSerifWeb-Book.woff') format('woff'),
+    asset-url('SephoraSerifWeb-Book.ttf') format('truetype'),
+    asset-url('SephoraSerifWeb-Book.svg#SephoraSerifWeb-Book') format('svg');
   font-weight: 400;
+  font-style: normal;
 }
 
-// Base
-html {
-  font-family: $font-family-avalon-book;
-  font-size: $font-size-root;
+@font-face {
+  font-family: 'Sephora Serif';
+  src: asset-url('SephoraSerifWeb-BookItalic.eot');
+  src: asset-url('SephoraSerifWeb-BookItalic.eot?#iefix') format('embedded-opentype'),
+    asset-url('SephoraSerifWeb-BookItalic.woff2') format('woff2'),
+    asset-url('SephoraSerifWeb-BookItalic.woff') format('woff'),
+    asset-url('SephoraSerifWeb-BookItalic.ttf') format('truetype'),
+    asset-url('SephoraSerifWeb-BookItalic.svg#SephoraSerifWeb-BookItalic') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Avalon';
+  src: asset-url('Avalon-Bold.eot');
+  src: asset-url('Avalon-Bold.eot?#iefix') format('embedded-opentype'),
+    asset-url('Avalon-Bold.woff2') format('woff2'),
+    asset-url('Avalon-Bold.woff') format('woff'),
+    asset-url('Avalon-Bold.ttf') format('truetype'),
+    asset-url('Avalon-Bold.svg#Avalon-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avalon';
+  src: asset-url('Avalon-Demi.eot');
+  src: asset-url('Avalon-Demi.eot?#iefix') format('embedded-opentype'),
+    asset-url('Avalon-Demi.woff2') format('woff2'),
+    asset-url('Avalon-Demi.woff') format('woff'),
+    asset-url('Avalon-Demi.ttf') format('truetype'),
+    asset-url('Avalon-Demi.svg#Avalon-Demi') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avalon';
+  src: asset-url('Avalon-Book.eot');
+  src: asset-url('Avalon-Book.eot?#iefix') format('embedded-opentype'),
+    asset-url('Avalon-Book.woff2') format('woff2'),
+    asset-url('Avalon-Book.woff') format('woff'),
+    asset-url('Avalon-Book.ttf') format('truetype'),
+    asset-url('Avalon-Book.svg#Avalon-Book') format('svg');
+  font-weight: 400;
+  font-style: normal;
 }
 
 // Headings
 .page-title {
-
+  @include font-sephora-serif;
+  font-size: 34px;
+  line-height: 36px;
 }
 
 .page-title-italic {
-
+  @include font-sephora-serif-italic;
+  font-size: 34px;
+  line-height: 36px;
 }
 
 .h1 {
@@ -71,24 +96,23 @@ html {
 
 }
 
-
 // Helpers
 .text-sephora-book {
-  font-family: $font-family-sephora-book;
+  @include font-sephora-serif;
 }
 
 .text-sephora-italic {
-  font-family: $font-family-sephora-italic;
+  @include font-sephora-serif-italic;
 }
 
 .text-avalon-bold {
-  font-family: $font-family-avalon-bold;
+  @include font-avalon-bold;
 }
 
 .text-avalon-demi {
-  font-family: $font-family-avalon-demi;
+  @include font-avalon-demi;
 }
 
 .text-avalon-book {
-  font-family: $font-family-avalon-book;
+  @include font-avalon-book;
 }
