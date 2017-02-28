@@ -1,23 +1,104 @@
-article
+article#typography
   h2.h2 Typography
+
+  label Preview Text
+  br
+  input type='text' v-model='text'
 
   section
     h3.h3 Fonts
 
-    p.text-sephora-book Sephora Serif Book
-    p.text-sephora-italic Sephora Serif Book Italic
-    p.text-avalon-bold Avalon Bold
-    p.text-avalon-demi Avalon Demi
-    p.text-avalon-book Avalon Book
+    table
+      tbody
+        tr
+          td
+            p.text-sephora-book Sephora Serif Book
+          td
+            p.text-sephora-book
+              ' {{ text }}
+        tr
+          td
+            p.text-sephora-italic Sephora Serif Book Italic
+          td
+            p.text-sephora-italic
+              ' {{ text }}
+        tr
+          td
+            p.text-avalon-bold Avalon Bold
+          td
+            p.text-avalon-bold
+              ' {{ text }}
+        tr
+          td
+            p.text-avalon-demi Avalon Demi
+          td
+            p.text-avalon-demi
+              ' {{ text }}
+        tr
+          td
+            p.text-avalon-book Avalon Book
+          td
+            p.text-avalon-book
+              ' {{ text }}
 
   section
     h3.h3 Headings
 
-    .page-title Lorem
-    .page-title-italic Loremm
-    h1.h1 Lorem
-    h2.h2 Lorem
-    h3.h3 Lorem
-    h4.h4 Lorem
-    h5.h5 Lorem
-    h6.h6 Lorem
+    table
+      tbody
+        tr
+          td
+            p.page-title Title
+          td
+            p.page-title
+              ' {{ text }}
+        tr
+          td
+            p.page-title-italic Title Italic
+          td
+            p.page-title-italic
+              ' {{ text }}
+        tr
+          td
+            h1.h1 H1
+          td
+            h1.h1
+              ' {{ text }}
+        tr
+          td
+            h2.h2 H2
+          td
+            h2.h2
+              ' {{ text }}
+        tr
+          td
+            h3.h3 H3
+          td
+            h3.h3
+              ' {{ text }}
+        tr
+          td
+            h4.h4 H4
+          td
+            h4.h4
+              ' {{ text }}
+        tr
+          td
+            h5.h5 H5
+          td
+            h5.h5
+              ' {{ text }}
+        tr
+          td
+            h6.h6 H6
+          td
+            h6.h6
+              ' {{ text }}
+
+javascript:
+  var typography = new Vue({
+    el: '#typography',
+    data: {
+      text: 'The quick brown fox jumps over the lazy dog.'
+    }
+  });
