@@ -5,6 +5,12 @@ article#typography
   br
   input type='text' v-model='text'
 
+  br
+
+  label Font Size
+  br
+  input type='number' v-model='fontSize'
+
   section
     h3.h3 Fonts
 
@@ -12,33 +18,33 @@ article#typography
       tbody
         tr
           td
-            p.text-sephora-book Sephora Serif Book
+            p.text-sephora-book style='font-size: 18px;' Sephora Serif Book
           td
-            p.text-sephora-book
+            p.text-sephora-book v-bind:style="{fontSize: fontSize + 'px'}"
               ' {{ text }}
         tr
           td
-            p.text-sephora-italic Sephora Serif Book Italic
+            p.text-sephora-italic style='font-size: 18px;' Sephora Serif Book Italic
           td
-            p.text-sephora-italic
+            p.text-sephora-italic v-bind:style="{fontSize: fontSize + 'px'}"
               ' {{ text }}
         tr
           td
-            p.text-avalon-bold Avalon Bold
+            p.text-avalon-bold style='font-size: 18px;' Avalon Bold
           td
-            p.text-avalon-bold
+            p.text-avalon-bold v-bind:style="{fontSize: fontSize + 'px'}"
               ' {{ text }}
         tr
           td
-            p.text-avalon-demi Avalon Demi
+            p.text-avalon-demi style='font-size: 18px;' Avalon Demi
           td
-            p.text-avalon-demi
+            p.text-avalon-demi v-bind:style="{fontSize: fontSize + 'px'}"
               ' {{ text }}
         tr
           td
-            p.text-avalon-book Avalon Book
+            p.text-avalon-book style='font-size: 18px;' Avalon Book
           td
-            p.text-avalon-book
+            p.text-avalon-book v-bind:style="{fontSize: fontSize + 'px'}"
               ' {{ text }}
 
   section
@@ -99,6 +105,7 @@ javascript:
   var typography = new Vue({
     el: '#typography',
     data: {
-      text: 'The quick brown fox jumps over the lazy dog.'
+      text: 'The quick brown fox jumps over the lazy dog.',
+      fontSize: '18'
     }
   });
