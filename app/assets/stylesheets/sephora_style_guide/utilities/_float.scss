@@ -1,0 +1,7 @@
+.float-left {
+  @include float-left();
+}
+
+.float-right {
+  @include float-right();
+}

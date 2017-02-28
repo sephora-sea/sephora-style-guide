@@ -1,0 +1,36 @@
+$input-padding-x:                10px;
+$input-padding-top:              20px;
+$input-padding-bottom:           5px;
+$input-line-height:              1;
+$input-font-size:                13px;
+$input-label-color:              $gray;
+
+$input-bg:                       $white;
+$input-bg-disabled:              $gray-lighter !default;
+
+$input-color:                    $black;
+$input-border-color:             $gray-light;
+$input-btn-border-width:         $border-width;
+
+$input-bg-focus:                 $white;
+$input-border-focus:             $black;
+$input-color-focus:              $black;
+
+$input-color-placeholder:        $gray;
+
+// $input-padding-x-sm:             .5rem !default;
+// $input-padding-y-sm:             .25rem !default;
+
+// $input-padding-x-lg:             1.5rem !default;
+// $input-padding-y-lg:             .75rem !default;
+
+$input-height:                   40px !default;
+$input-height-lg:                40px !default;
+$input-height-sm:                40px !default;
+
+$form-group-margin-bottom:       20px;
+
+// $input-group-addon-bg:           $gray-lighter !default;
+// $input-group-addon-border-color: $input-border-color !default;
+
+$cursor-disabled: not-allowed;

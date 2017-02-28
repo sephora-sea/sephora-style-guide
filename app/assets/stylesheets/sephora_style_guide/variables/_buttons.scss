@@ -1,0 +1,35 @@
+$btn-padding-x:           10px;
+$btn-padding-y:           12px;
+$btn-line-height:         1;
+$btn-font-weight:         normal;
+$btn-border-width:        1px;
+$btn-font-family:         $font-family-avalon-bold;
+
+$btn-default-color:       $white;
+$btn-default-bg:          $black;
+$btn-default-border:      $black;
+
+$btn-primary-color:       $white;
+$btn-primary-bg:          $brand-primary;
+$btn-primary-border:      $btn-primary-bg;
+
+$btn-gray-color:          $white;
+$btn-gray-bg:             $gray;
+$btn-gray-border:         $gray;
+
+$btn-white-color:         $black;
+$btn-white-bg:            $white;
+$btn-white-border:        $black;
+
+$btn-disabled-color:      $gray-light;
+$btn-disabled-bg:         $gray-lighter;
+$btn-disabled-border:     $gray-lighter;
+
+$btn-padding-x-sm:        10px !default;
+$btn-padding-y-sm:        12px !default;
+
+$btn-padding-x-lg:        19px !default;
+$btn-padding-y-lg:        11px !default;
+
+$btn-block-spacing-y:     10px;
+// $btn-toolbar-margin:      .5rem;

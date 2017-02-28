@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Avalon-Book';
+  src:  asset-url('avalon-book-webfont.eot') format('eot'),
+        asset-url('avalon-book-webfont.woff') format('woff'),
+        asset-url('avalon-book-webfont.woff2') format('woff2'),
+        asset-url('avalon-book-webfont.ttf') format('truetype'),
+        asset-url('avalon-book-webfont.svg#avalonregular') format('svg');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Avalon-Demi';
+  src:  asset-url('avalon-demi-webfont.eot') format('eot'),
+        asset-url('avalon-demi-webfont.woff') format('woff'),
+        asset-url('avalon-demi-webfont.woff2') format('woff2'),
+        asset-url('avalon-demi-webfont.ttf') format('truetype'),
+        asset-url('avalon-demi-webfont.svg#avalon_mediumbold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avalon-Bold';
+  src:  asset-url('avalon-bold-webfont.eot') format('eot'),
+        asset-url('avalon-bold-webfont.woff') format('woff'),
+        asset-url('avalon-bold-webfont.woff2') format('woff2'),
+        asset-url('avalon-bold-webfont.ttf') format('truetype'),
+        asset-url('avalon-bold-webfont.svg#avalon_mediumbold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+html {
+  font-family: $font-family-avalon-book;
+  font-size: $font-size-base;
+}
