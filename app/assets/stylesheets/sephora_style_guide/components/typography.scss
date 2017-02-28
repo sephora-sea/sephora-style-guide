@@ -1,3 +1,26 @@
+// Font definitions
+@font-face {
+  font-family: 'Avalon-Bold';
+  src:  asset-url('avalon-bold-webfont.eot') format('eot'),
+        asset-url('avalon-bold-webfont.woff') format('woff'),
+        asset-url('avalon-bold-webfont.woff2') format('woff2'),
+        asset-url('avalon-bold-webfont.ttf') format('truetype'),
+        asset-url('avalon-bold-webfont.svg#avalon_mediumbold') format('svg');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Avalon-Demi';
+  src:  asset-url('avalon-demi-webfont.eot') format('eot'),
+        asset-url('avalon-demi-webfont.woff') format('woff'),
+        asset-url('avalon-demi-webfont.woff2') format('woff2'),
+        asset-url('avalon-demi-webfont.ttf') format('truetype'),
+        asset-url('avalon-demi-webfont.svg#avalon_mediumbold') format('svg');
+  font-style: normal;
+  font-weight: bold;
+}
+
 @font-face {
   font-family: 'Avalon-Book';
   src:  asset-url('avalon-book-webfont.eot') format('eot'),
@@ -9,29 +32,63 @@
   font-weight: 400;
 }
 
-@font-face {
-  font-family: 'Avalon-Demi';
-  src:  asset-url('avalon-demi-webfont.eot') format('eot'),
-        asset-url('avalon-demi-webfont.woff') format('woff'),
-        asset-url('avalon-demi-webfont.woff2') format('woff2'),
-        asset-url('avalon-demi-webfont.ttf') format('truetype'),
-        asset-url('avalon-demi-webfont.svg#avalon_mediumbold') format('svg');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Avalon-Bold';
-  src:  asset-url('avalon-bold-webfont.eot') format('eot'),
-        asset-url('avalon-bold-webfont.woff') format('woff'),
-        asset-url('avalon-bold-webfont.woff2') format('woff2'),
-        asset-url('avalon-bold-webfont.ttf') format('truetype'),
-        asset-url('avalon-bold-webfont.svg#avalon_mediumbold') format('svg');
-  font-weight: bold;
-  font-style: normal;
-}
-
+// Base
 html {
   font-family: $font-family-avalon-book;
-  font-size: $font-size-base;
+  font-size: $font-size-root;
+}
+
+// Headings
+.page-title {
+
+}
+
+.page-title-italic {
+
+}
+
+.h1 {
+
+}
+
+.h2 {
+
+}
+
+.h3 {
+
+}
+
+.h4 {
+
+}
+
+.h5 {
+
+}
+
+.h6 {
+
+}
+
+
+// Helpers
+.text-sephora-book {
+  font-family: $font-family-sephora-book;
+}
+
+.text-sephora-italic {
+  font-family: $font-family-sephora-italic;
+}
+
+.text-avalon-bold {
+  font-family: $font-family-avalon-bold;
+}
+
+.text-avalon-demi {
+  font-family: $font-family-avalon-demi;
+}
+
+.text-avalon-book {
+  font-family: $font-family-avalon-book;
 }
