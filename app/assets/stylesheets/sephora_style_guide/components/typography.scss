@@ -92,8 +92,13 @@
 
 .h4 {
   @include font-avalon-demi;
-  font-size: 13px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 20px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 13px;
+    line-height: 16px;
+  }
 }
 
 // Helpers
