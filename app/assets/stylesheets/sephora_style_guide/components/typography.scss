@@ -73,27 +73,27 @@
 }
 
 .h1 {
-
+  @include font-avalon-bold;
+  font-size: 24px;
+  line-height: 26px;
 }
 
 .h2 {
-
+  @include font-avalon-bold;
+  font-size: 20px;
+  line-height: 22px;
 }
 
 .h3 {
-
+  @include font-avalon-bold;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .h4 {
-
-}
-
-.h5 {
-
-}
-
-.h6 {
-
+  @include font-avalon-demi;
+  font-size: 13px;
+  line-height: 16px;
 }
 
 // Helpers

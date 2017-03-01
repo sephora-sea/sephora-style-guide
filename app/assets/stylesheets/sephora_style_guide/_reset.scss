@@ -10,6 +10,7 @@ html {
   @include font-avalon-book;
   color: $black;
   font-size: $font-size-root;
+  line-height: $line-height-base;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
