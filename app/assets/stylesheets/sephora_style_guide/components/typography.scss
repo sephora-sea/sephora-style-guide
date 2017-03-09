@@ -64,36 +64,49 @@
   @include font-sephora-serif;
   font-size: 34px;
   line-height: 36px;
+  letter-spacing: normal;
 }
 
 .page-title-italic {
   @include font-sephora-serif-italic;
   font-size: 34px;
   line-height: 36px;
+  letter-spacing: normal;
 }
 
 .h1 {
   @include font-avalon-bold;
   font-size: 24px;
   line-height: 26px;
+  letter-spacing: 0.5px;
 }
 
 .h2 {
   @include font-avalon-bold;
   font-size: 20px;
   line-height: 22px;
+  letter-spacing: 0.5px;
 }
 
 .h3 {
   @include font-avalon-bold;
   font-size: 16px;
   line-height: 18px;
+  letter-spacing: 0.5px;
 }
 
 .h4 {
+  @include font-avalon-bold;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+}
+
+.h5 {
   @include font-avalon-demi;
   font-size: 14px;
   line-height: 20px;
+  letter-spacing: 0.3px;
 
   @include media-breakpoint-up(md) {
     font-size: 13px;
