@@ -1,8 +1,7 @@
 // Base styles
 .btn {
   display: inline-block;
-  font-weight: $btn-font-weight;
-  font-family: $btn-font-family;
+  @include font-avalon-bold;
   letter-spacing: 1px;
   line-height: $btn-line-height;
   text-align: center;
@@ -60,8 +59,8 @@
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border)
 }
 
-.btn-gray {
-  @include button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border)
+.btn-grey {
+  @include button-variant($btn-grey-color, $btn-grey-bg, $btn-grey-border)
 }
 
 .btn-white {
