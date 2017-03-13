@@ -1,0 +1,98 @@
+// Base styles
+.btn {
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  font-family: $btn-font-family;
+  letter-spacing: 1px;
+  line-height: $btn-line-height;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: $btn-border-width solid transparent;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base);
+  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus();
+    }
+  }
+
+  @include hover-focus {
+    @include media-breakpoint-up(md) {
+      opacity: 0.8;
+    }
+  }
+
+  &.focus {
+    @include media-breakpoint-up(md) {
+      opacity: 0.8;
+    }
+  }
+
+  &:active,
+  &.active {
+    @include media-breakpoint-up(md) {
+      opacity: 0.8;
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    @include button-variant($btn-disabled-color, $btn-disabled-bg, $btn-disabled-border);
+    cursor: $cursor-disabled;
+    opacity: 1;
+  }
+}
+
+// Alternate buttons
+.btn-primary {
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border)
+}
+
+.btn-gray {
+  @include button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border)
+}
+
+.btn-white {
+  @include button-variant($btn-white-color, $btn-white-bg, $btn-white-border)
+}
+
+// Button Sizes
+.btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg);
+}
+
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm);
+}
+
+// Block button
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: $btn-block-spacing-y;
+}
+
+// Specificity overrides
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+  &.btn-block {
+    width: 100%;
+  }
+}
