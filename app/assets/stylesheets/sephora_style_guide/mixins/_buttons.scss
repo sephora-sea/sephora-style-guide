@@ -16,12 +16,14 @@
     @include hover {
       background-color: $background;
       border-color: $border;
+      opacity: 1; // check
     }
 
     &:focus,
     &.focus {
       background-color: $background;
       border-color: $border;
+      opacity: 1; // check
     }
   }
 }

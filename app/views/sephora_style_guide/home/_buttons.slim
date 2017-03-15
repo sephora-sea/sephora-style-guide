@@ -21,16 +21,16 @@ article#buttons
       .button-variant
         h4.h4 = button[:name]
 
-        button.btn.btn-sm v-on:click='clickButton' v-bind:disabled='isDisabled' class=button[:class]
+        button.btn.btn-sm v-on:click='clickButton' v-bind:disabled="isDisabled || #{button[:name] == 'Disabled'}" class=button[:class]
           ' {{ text || 'Small' }}
         br
-        button.btn v-on:click='clickButton' v-bind:disabled='isDisabled' class=button[:class]
+        button.btn v-on:click='clickButton' v-bind:disabled="isDisabled || #{button[:name] == 'Disabled'}" class=button[:class]
           ' {{ text || 'Default' }}
         br
-        button.btn.btn-lg v-on:click='clickButton' v-bind:disabled='isDisabled' class=button[:class]
+        button.btn.btn-lg v-on:click='clickButton' v-bind:disabled="isDisabled || #{button[:name] == 'Disabled'}" class=button[:class]
           ' {{ text || 'Large' }}
         br
-        button.btn.btn-block v-on:click='clickButton' v-bind:disabled='isDisabled' class=button[:class]
+        button.btn.btn-block v-on:click='clickButton' v-bind:disabled="isDisabled || #{button[:name] == 'Disabled'}" class=button[:class]
           ' {{ text || 'Block' }}
 
 javascript:

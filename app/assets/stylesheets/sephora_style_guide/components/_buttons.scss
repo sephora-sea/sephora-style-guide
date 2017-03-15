@@ -20,31 +20,25 @@
   }
 
   @include hover {
-    @include media-breakpoint-up(md) {
-      opacity: 0.8;
-    }
+    opacity: 0.8;
   }
 
   &:focus,
   &.focus {
-    @include media-breakpoint-up(md) {
-      outline: 0;
-      opacity: 0.8;
-    }
+    outline: 0;
+    opacity: 0.8;
+  }
+
+  &:disabled,
+  &.disabled {
+    @include button-variant($btn-disabled-color, $btn-disabled-bg, $btn-disabled-border);
+    cursor: $cursor-disabled;
+    opacity: 1;
   }
 
   &:active,
   &.active {
-    @include media-breakpoint-up(md) {
-      opacity: 0.8;
-    }
-  }
-
-  &.disabled,
-  &:disabled {
-    @include button-variant($btn-disabled-color, $btn-disabled-bg, $btn-disabled-border);
-    cursor: $cursor-disabled;
-    opacity: 1;
+    opacity: 0.8;
   }
 }
 
