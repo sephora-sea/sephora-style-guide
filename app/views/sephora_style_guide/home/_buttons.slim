@@ -1,0 +1,60 @@
+article#buttons
+  h2.h2 Buttons
+
+  section
+    h3.h3 Preview Settings
+
+    label Initial Text
+    br
+    input type='text' v-model='textInitial' v-on:keyup='changeInitialText'
+
+    br
+
+    label Pending Text
+    br
+    input type='text' v-model='textPending'
+
+  section
+    h3.h3 Variants
+
+    - @buttons.each do |button|
+      .button-variant
+        h4.h4 = button[:name]
+
+        button.btn.btn-sm v-on:click='clickButton' v-bind:disabled='isDisabled' class=button[:class]
+          ' {{ text || 'Small' }}
+        br
+        button.btn v-on:click='clickButton' v-bind:disabled='isDisabled' class=button[:class]
+          ' {{ text || 'Default' }}
+        br
+        button.btn.btn-lg v-on:click='clickButton' v-bind:disabled='isDisabled' class=button[:class]
+          ' {{ text || 'Large' }}
+        br
+        button.btn.btn-block v-on:click='clickButton' v-bind:disabled='isDisabled' class=button[:class]
+          ' {{ text || 'Block' }}
+
+javascript:
+  var buttons = new Vue({
+    el: '#buttons',
+    data: {
+      isDisabled: false,
+      text: this.textInitial,
+      textInitial: '',
+      textPending: 'Adding...'
+    },
+    methods: {
+      changeInitialText: function() {
+        this.text = this.textInitial;
+      },
+
+      clickButton: function() {
+        var self = this;
+        this.text = this.textPending;
+        this.isDisabled = 'disabled';
+        setTimeout(function(){
+          self.text = self.textInitial;
+          self.isDisabled = false;
+        }, 2000);
+      }
+    }
+  });
