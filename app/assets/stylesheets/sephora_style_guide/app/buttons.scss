@@ -1,0 +1,23 @@
+#buttons {
+  .button-variant {
+    display: inline-block;
+    margin-right: 5%;
+    text-align: center;
+    min-width: 45%;
+    max-width: 80%;
+
+    @include media-breakpoint-up(md) {
+      min-width: 16%;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  h4 { margin-bottom: 5px; }
+
+  .btn {
+    margin-bottom: 10px;
+  }
+}

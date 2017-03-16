@@ -2,6 +2,7 @@
 @mixin button-size($padding-y, $padding-x, $font-size) {
   padding: ($padding-y + 1px) $padding-x ($padding-y - 1px);
   font-size: $font-size;
+  line-height: $font-size;
 }
 
 // Button variants
@@ -15,12 +16,14 @@
     @include hover {
       background-color: $background;
       border-color: $border;
+      opacity: 1;
     }
 
     &:focus,
     &.focus {
       background-color: $background;
       border-color: $border;
+      opacity: 1;
     }
   }
 }

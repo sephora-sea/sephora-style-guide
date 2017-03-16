@@ -3,7 +3,6 @@
   display: inline-block;
   @include font-avalon-bold;
   letter-spacing: 1px;
-  line-height: 16px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -12,49 +11,32 @@
   cursor: pointer;
   user-select: none;
   border: $btn-border-width solid transparent;
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
+  transition: opacity 0.12s ease-in-out;
 
-  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size);
   @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
 
-  @include media-breakpoint-up(md) {
-    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm);
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size);
+
+  @include hover {
+    opacity: 0.8;
   }
 
-  &,
-  &:active,
-  &.active {
-    &:focus,
-    &.focus {
-      @include tab-focus();
-    }
-  }
-
-  @include hover-focus {
-    @include media-breakpoint-up(md) {
-      opacity: 0.8;
-    }
-  }
-
+  &:focus,
   &.focus {
-    @include media-breakpoint-up(md) {
-      opacity: 0.8;
-    }
+    outline: 0;
+    opacity: 0.8;
   }
 
-  &:active,
-  &.active {
-    @include media-breakpoint-up(md) {
-      opacity: 0.8;
-    }
-  }
-
-  &.disabled,
-  &:disabled {
+  &:disabled,
+  &.disabled {
     @include button-variant($btn-disabled-color, $btn-disabled-bg, $btn-disabled-border);
     cursor: $cursor-disabled;
     opacity: 1;
+  }
+
+  &:active,
+  &.active {
+    opacity: 0.8;
   }
 }
 
