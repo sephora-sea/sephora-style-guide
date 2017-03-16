@@ -1,13 +1,13 @@
 #buttons {
   .button-variant {
     display: inline-block;
-    margin-right: 5%;
     text-align: center;
-    min-width: 45%;
-    max-width: 80%;
+    width: 100%;
 
     @include media-breakpoint-up(md) {
       min-width: 16%;
+      margin-right: 5%;
+      width: auto;
     }
 
     &:last-child {

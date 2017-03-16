@@ -1,5 +1,7 @@
 $btn-border-width:        1px;
 
+$btn-hover-opacity:       0.8;
+
 $btn-default-color:       $white;
 $btn-default-bg:          $black;
 $btn-default-border:      $black;
@@ -11,6 +13,7 @@ $btn-primary-border:      $brand-primary;
 $btn-white-color:         $black;
 $btn-white-bg:            $white;
 $btn-white-border:        $black;
+$btn-white-hover-opacity: 0.7;
 
 $btn-grey-color:          $white;
 $btn-grey-bg:             $grey-mid;
@@ -20,15 +23,15 @@ $btn-disabled-color:      $grey;
 $btn-disabled-bg:         $grey-light;
 $btn-disabled-border:     $grey-light;
 
-$btn-padding-x-sm:        15px;
+$btn-padding-x-sm:        10px;
 $btn-padding-y-sm:        7px;
 $btn-font-size-sm:        14px;
 
-$btn-padding-x:           20px;
+$btn-padding-x:           15px;
 $btn-padding-y:           11px;
 $btn-font-size:           16px;
 
-$btn-padding-x-lg:        20px;
+$btn-padding-x-lg:        15px;
 $btn-padding-y-lg:        13.5px;
 $btn-font-size-lg:        16px;
 

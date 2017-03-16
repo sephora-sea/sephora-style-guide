@@ -6,10 +6,20 @@
 }
 
 // Button variants
-@mixin button-variant($color, $background, $border) {
+@mixin button-variant($color, $background, $border, $hover-opacity: $btn-hover-opacity) {
   color: $color;
   background-color: $background;
   border-color: $border;
+
+  @include hover {
+    opacity: $hover-opacity;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    opacity: $hover-opacity;
+  }
 
   &.disabled,
   &:disabled {
@@ -25,5 +35,10 @@
       border-color: $border;
       opacity: 1;
     }
+  }
+
+  &:active,
+  &.active {
+    opacity: $hover-opacity;
   }
 }

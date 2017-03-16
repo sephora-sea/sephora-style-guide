@@ -17,40 +17,25 @@
 
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size);
 
-  @include hover {
-    opacity: 0.8;
-  }
-
-  &:focus,
-  &.focus {
-    outline: 0;
-    opacity: 0.8;
-  }
-
   &:disabled,
   &.disabled {
     @include button-variant($btn-disabled-color, $btn-disabled-bg, $btn-disabled-border);
     cursor: $cursor-disabled;
     opacity: 1;
   }
-
-  &:active,
-  &.active {
-    opacity: 0.8;
-  }
 }
 
 // Alternate buttons
 .btn-primary {
-  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border)
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
 
 .btn-grey {
-  @include button-variant($btn-grey-color, $btn-grey-bg, $btn-grey-border)
+  @include button-variant($btn-grey-color, $btn-grey-bg, $btn-grey-border);
 }
 
 .btn-white {
-  @include button-variant($btn-white-color, $btn-white-bg, $btn-white-border)
+  @include button-variant($btn-white-color, $btn-white-bg, $btn-white-border, $btn-white-hover-opacity);
 }
 
 // Button Sizes
