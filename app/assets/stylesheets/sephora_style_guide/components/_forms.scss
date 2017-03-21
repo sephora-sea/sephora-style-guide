@@ -71,7 +71,8 @@ select.form-control {
 }
 
 textarea.form-control {
-  line-height: 16px;
+  font-size: $input-font-size;
+  line-height: $textarea-line-height;
   resize: none;
 }
 
@@ -80,10 +81,19 @@ textarea.form-control {
   position: absolute;
   top: 5px;
   left: 10px;
+  color: $input-label-color;
 }
 
 .control-label-text {
   color: $input-label-color;
+}
+
+.control-title {
+  font-size: $label-font-size-focus;
+  line-height: $label-line-height-focus;
+  margin-bottom: 6px;
+  display: block;
+  @include clearfix;
 }
 
 // Form groups
@@ -94,6 +104,71 @@ textarea.form-control {
 .form-group {
   position: relative;
   margin-bottom: $form-group-margin-bottom;
+
+  &.floating-labels {
+    .control-label {
+      font-size: $input-font-size;
+      line-height: $input-line-height;
+      transform: translateY(7px);
+      transform-origin: left top;
+      transition: 240ms;
+    }
+
+    .form-control {
+      height: $input-height;
+    }
+
+    .form-control[readonly],
+    .form-control[disabled] {
+      background-color: $input-bg-disabled;
+      color: $input-color-disabled;
+    }
+
+    &.filled,
+    &.focused,
+    &:focus {
+      .control-label {
+        font-size: $label-font-size-focus;
+        line-height: $label-line-height-focus;
+        transform: translateY(0px);
+      }
+
+      .form-control[readonly],
+      .form-control[disabled] {
+        border-color: $input-border-color;
+      }
+    }
+
+    &.textarea {
+      border: 1px solid $input-border-color;
+
+      .control-label {
+        z-index: 1;
+        top: 0;
+        transform: translateY(12px);
+      }
+
+      textarea {
+        border: none;
+        position: absolute;
+        bottom: 0;
+        padding-top: $input-padding-bottom;
+      }
+
+      &.focus,
+      &:focus {
+        border-color: $input-border-focus;
+      }
+
+      &.filled,
+      &.focused,
+      &:focus {
+        .control-label {
+          transform: translateY(6px);
+        }
+      }
+    }
+  }
 }
 
 .form-text {
@@ -126,4 +201,7 @@ textarea.form-control {
 .form-control-feedback {
   display: block;
   margin-top: 5px;
+  font-size: $error-font-size;
+  line-height: $error-line-height;
+  position: absolute;
 }

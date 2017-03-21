@@ -1,0 +1,14 @@
+#date-group, #month-group {
+  width: 50px;
+  float: left;
+  margin-right: 9px;
+}
+
+#year-group {
+  width: 100px;
+  float: left;
+}
+
+.form-group.floating-labels.textarea {
+  @include textarea(90px);
+}

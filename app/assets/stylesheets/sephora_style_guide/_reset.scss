@@ -67,6 +67,30 @@ table {
   border-collapse: collapse; // Prevent double borders
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+input:invalid {
+  box-shadow: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
 // Elements
 ol,
 ul,

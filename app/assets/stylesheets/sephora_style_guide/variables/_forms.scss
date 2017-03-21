@@ -1,12 +1,13 @@
 $input-padding-x:                10px;
-$input-padding-top:              20px;
+$input-padding-top:              19px;
 $input-padding-bottom:           5px;
-$input-line-height:              1;
-$input-font-size:                13px;
-$input-label-color:              $grey-mid;
+$input-line-height:              19px;
+$input-font-size:                16px;
+$input-label-color:              $grey-dark;
 
 $input-bg:                       $white;
-$input-bg-disabled:              $grey-light !default;
+$input-bg-disabled:              $grey-light;
+$input-color-disabled:           $grey-mid;
 
 $input-color:                    $black;
 $input-border-color:             $grey;
@@ -17,6 +18,13 @@ $input-border-focus:             $black;
 $input-color-focus:              $black;
 
 $input-color-placeholder:        $grey-mid;
+
+$textarea-line-height:           20px;
+$label-font-size-focus:          11px;
+$label-line-height-focus:        13px;
+
+$error-font-size:                12px;
+$error-line-height:              14px;
 
 // $input-padding-x-sm:             .5rem !default;
 // $input-padding-y-sm:             .25rem !default;

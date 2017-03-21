@@ -17,6 +17,16 @@
   .form-control {
     border-color: $color;
   }
+
+  &.floating-labels {
+    .control-label {
+      color: $color;
+    }
+  }
+
+  .form-control-feedback {
+    color: $color;
+  }
 }
 
 // Form control focus state
@@ -63,5 +73,13 @@
   textarea#{$parent},
   select[multiple]#{$parent} {
     height: auto;
+  }
+}
+
+@mixin textarea($input-height) {
+  height: $input-height;
+
+  textarea {
+    height: $input-height - $input-padding-top;
   }
 }
