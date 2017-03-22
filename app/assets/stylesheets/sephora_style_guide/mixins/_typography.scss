@@ -13,22 +13,20 @@
 }
 
 @mixin font-avalon-bold {
-  font-family: $font-family-avalon;
-  font-style: normal;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
 
 @mixin font-avalon-demi {
-  font-family: $font-family-avalon;
-  font-style: normal;
   font-weight: 600;
-  letter-spacing: 0.3px;
 }
 
 @mixin font-avalon-book {
+  font-weight: 400;
+}
+
+@mixin font-family-avalon {
   font-family: $font-family-avalon;
   font-style: normal;
-  font-weight: 400;
   letter-spacing: 0.3px;
 }

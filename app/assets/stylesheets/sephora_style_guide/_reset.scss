@@ -7,6 +7,7 @@
 
 // Base
 html {
+  @include font-family-avalon;
   @include font-avalon-book;
   color: $black;
   font-size: $font-size-root-mobile;
