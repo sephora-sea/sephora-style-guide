@@ -1,24 +1,24 @@
 // Font faces
 @font-face {
   font-family: 'Sephora Serif';
-  src: asset-url('SephoraSerifWeb-Book.eot');
-  src: asset-url('SephoraSerifWeb-Book.eot?#iefix') format('embedded-opentype'),
-    asset-url('SephoraSerifWeb-Book.woff2') format('woff2'),
-    asset-url('SephoraSerifWeb-Book.woff') format('woff'),
-    asset-url('SephoraSerifWeb-Book.ttf') format('truetype'),
-    asset-url('SephoraSerifWeb-Book.svg#SephoraSerifWeb-Book') format('svg');
+  src: asset-url('SephoraSerif-Book.eot');
+  src: asset-url('SephoraSerif-Book.eot?#iefix') format('embedded-opentype'),
+    asset-url('SephoraSerif-Book.woff2') format('woff2'),
+    asset-url('SephoraSerif-Book.woff') format('woff'),
+    asset-url('SephoraSerif-Book.ttf') format('truetype'),
+    asset-url('SephoraSerif-Book.svg#SephoraSerif-Book') format('svg');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Sephora Serif';
-  src: asset-url('SephoraSerifWeb-BookItalic.eot');
-  src: asset-url('SephoraSerifWeb-BookItalic.eot?#iefix') format('embedded-opentype'),
-    asset-url('SephoraSerifWeb-BookItalic.woff2') format('woff2'),
-    asset-url('SephoraSerifWeb-BookItalic.woff') format('woff'),
-    asset-url('SephoraSerifWeb-BookItalic.ttf') format('truetype'),
-    asset-url('SephoraSerifWeb-BookItalic.svg#SephoraSerifWeb-BookItalic') format('svg');
+  src: asset-url('SephoraSerif-BookItalic.eot');
+  src: asset-url('SephoraSerif-BookItalic.eot?#iefix') format('embedded-opentype'),
+    asset-url('SephoraSerif-BookItalic.woff2') format('woff2'),
+    asset-url('SephoraSerif-BookItalic.woff') format('woff'),
+    asset-url('SephoraSerif-BookItalic.ttf') format('truetype'),
+    asset-url('SephoraSerif-BookItalic.svg#SephoraSerif-BookItalic') format('svg');
   font-weight: 400;
   font-style: italic;
 }
