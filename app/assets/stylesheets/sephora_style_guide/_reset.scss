@@ -62,6 +62,11 @@ button::-moz-focus-inner,
   border-style: none;
 }
 
+// Tables
+table {
+  border-collapse: collapse; // Prevent double borders
+}
+
 // Elements
 ol,
 ul,

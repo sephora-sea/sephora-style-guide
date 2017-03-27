@@ -1,43 +1,20 @@
-// Basic Bootstrap table
 .table {
   width: 100%;
   max-width: 100%;
   margin-bottom: $spacer;
+  background-color: $table-bg;
+  border: $table-border-width solid $table-border-color;
 
   th,
   td {
     padding: $table-cell-padding;
     vertical-align: top;
-    border-top: $table-border-width solid $table-border-color;
-  }
-
-  thead th {
-    vertical-align: bottom;
-    border-bottom: (2 * $table-border-width) solid $table-border-color;
-  }
-
-  tbody + tbody {
-    border-top: (2 * $table-border-width) solid $table-border-color;
-  }
-
-  .table {
-    background-color: $body-bg;
-  }
-}
-
-// Bordered version
-.table-bordered {
-  border: $table-border-width solid $table-border-color;
-
-  th,
-  td {
     border: $table-border-width solid $table-border-color;
   }
 
-  thead {
-    th,
-    td {
-      border-bottom-width: (2 * $table-border-width);
-    }
+  thead th {
+    background-color: $table-heading-bg;
+    @include font-avalon-demi;
+    text-transform: uppercase;
   }
 }
