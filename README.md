@@ -5,6 +5,8 @@ Short description and motivation.
 How to use my plugin.
 
 ## Installation
+
+### For use with Ruby on Rails applications
 Add this line to your application's Gemfile:
 
 ```ruby
@@ -19,6 +21,11 @@ $ bundle
 Or install it yourself as:
 ```bash
 $ gem install sephora_style_guide
+```
+
+### For use with NodeJS applications
+```
+$ yarn add sephora-style-guide
 ```
 
 ## Contributing

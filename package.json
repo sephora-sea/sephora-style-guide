@@ -1,0 +1,19 @@
+{
+  "name": "sephora-style-guide",
+  "version": "0.0.1",
+  "description": "Style Guide for Sephora Digital SEA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luxola/sephora-style-guide.git"
+  },
+  "author": "Justin Ho <justin@sephoradigital.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luxola/sephora-style-guide/issues"
+  },
+  "homepage": "https://github.com/luxola/sephora-style-guide#readme"
+}

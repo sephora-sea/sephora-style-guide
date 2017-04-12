@@ -1,0 +1,11 @@
+/app/controllers
+/app/helpers
+/app/views
+/bin
+/config
+/lib
+/spec
+Gemfile
+Gemfile.lock
+Rakefile
+sephora_style_guide.gemspec
