@@ -5,21 +5,17 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px
-) !default;
+);
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
-) !default;
+  xl: 1155px
+);
 
-$grid-columns:               12 !default;
-$grid-gutter-width-base:     30px !default;
+$grid-columns: 12;
 $grid-gutter-widths: (
-  xs: $grid-gutter-width-base,
-  sm: $grid-gutter-width-base,
-  md: $grid-gutter-width-base,
-  lg: $grid-gutter-width-base,
-  xl: $grid-gutter-width-base
-) !default;
+  tn: 20px,
+  sm: 30px,
+);
