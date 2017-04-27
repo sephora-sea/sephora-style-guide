@@ -55,16 +55,17 @@ article#input
       label.control-label for='credit-card' Credit Card
       input#credit-card.form-control type='text' value='4111111111111111' maxlength=19
 
-    label.control-title = 'Date of Birth'
-    .form-group.floating-labels#date-group
-      label.control-label for='date' DD
-      input#date.form-control type='number' max=31 min=1 maxlength=2
-    .form-group.floating-labels#month-group
-      label.control-label for='month' MM
-      input#month.form-control type='number' max=12 min=1 maxlength=2
-    .form-group.floating-labels#year-group
-      label.control-label for='year' YYYY
-      input#year.form-control type='number' max=2999 min=1899
+    .clearfix
+      label.control-title = 'Date of Birth'
+      .form-group.floating-labels#date-group
+        label.control-label for='date' DD
+        input#date.form-control type='number' max=31 min=1 maxlength=2
+      .form-group.floating-labels#month-group
+        label.control-label for='month' MM
+        input#month.form-control type='number' max=12 min=1 maxlength=2
+      .form-group.floating-labels#year-group
+        label.control-label for='year' YYYY
+        input#year.form-control type='number' max=2999 min=1899
 
 javascript:
   $('#credit-card').on('keypress change', function(){
