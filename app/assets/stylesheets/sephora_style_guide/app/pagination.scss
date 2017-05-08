@@ -1,0 +1,65 @@
+#pagination {
+  section {
+    float: left;
+    width: 50%;
+  }
+  
+  .pagination {
+    display: inline-block;
+    text-align: center;
+    
+    .page {
+      background: #fff;
+      border: 1px solid #aaa;
+      border-right: 0;
+      display: inline-block;
+      font-size: 13px;
+      text-align: center;
+      text-decoration: none;
+      padding: 5px;
+      height: 23px;
+      min-width: 23px;
+      width: auto;
+      
+      &:last-child {
+        border-right: 1px solid #aaa;
+      }
+      
+      a, em {
+        display: inline-block;
+        padding: 4px 3px 0;
+        vertical-align: middle;
+        width: auto;
+        font-style: normal;
+      }
+      
+      &:hover {
+        background: #CCCCCC;
+      }
+      
+      &.current {
+        background: #F1F1F1;
+      }
+      
+      &.hover {
+        background: #CCCCCC;
+      }
+      
+      &.next a,
+      &.prev a {
+        width: 16px;
+        height: 16px;
+        
+        .arrow {
+          width: 15px;
+          height: 15px;
+          font-size: 20px;
+        }
+      }
+      
+      &.next a .arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
