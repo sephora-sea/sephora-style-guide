@@ -1,0 +1,128 @@
+article#pagination
+  h2.h2 Pagination Buttons
+
+  section
+    h3.h3 Top
+    br
+    label Less then 3 pages
+    br
+    nav.pagination
+      span.page.current
+        em 1
+      span.page
+        a 2
+      span.page.next
+        a
+          = inline_svg 'sephora_style_guide/arrow-right.svg'
+    br
+    br
+    label Between pages
+    br
+    nav.pagination
+      span.page.prev
+        a
+          = inline_svg 'sephora_style_guide/arrow-left.svg'
+      span.page
+        a 7
+      span.page.current
+        a 8
+      span.page
+        a 9
+      span.page.next
+        a
+          = inline_svg 'sephora_style_guide/arrow-right.svg'
+    br
+    br
+    label On last page
+    br
+    nav.pagination
+      span.page.prev
+        a
+          = inline_svg 'sephora_style_guide/arrow-left.svg'
+      span.page
+        a 206
+      span.page
+        a 207
+      span.page.current
+        a 208
+  section
+    h3.h3 Bottom
+    br
+    label Less then 3 pages - #F1F1F1
+    br
+    nav.pagination
+      span.page.current
+        em 1
+      span.page
+        a 2
+      span.page.next
+        a
+          = inline_svg 'sephora_style_guide/arrow-right.svg'
+    br
+    br
+    
+    label On the first page
+    br
+    nav.pagination
+      span.page.prev
+        a
+          = inline_svg 'sephora_style_guide/arrow-left.svg'
+      span.page.current
+        a 1
+      span.page
+        a 2
+      span.page.continue
+        a ...
+      span.page
+        a 11
+      span.page
+        a 12
+      span.page.next
+        a
+          = inline_svg 'sephora_style_guide/arrow-right.svg'
+    br
+    br
+    label Between pages
+    br
+    nav.pagination
+      span.page.prev
+        a
+          = inline_svg 'sephora_style_guide/arrow-left.svg'
+      span.page
+        a 1
+      span.page.continue
+        a ...
+      span.page.current
+        a 7
+      span.page
+        a 8
+      span.page
+        a 9
+      span.page.continue
+        a ...
+      span.page
+        a 12
+      span.page.next
+        a
+          = inline_svg 'sephora_style_guide/arrow-right.svg'
+    br
+    br
+    label On last page
+    br
+    nav.pagination
+      span.page.prev
+        a
+          = inline_svg 'sephora_style_guide/arrow-left.svg'
+      span.page
+        a 1
+      span.page
+        a 2
+      span.page.continue
+        a ...
+      span.page
+        a 11
+      span.page.current
+        a 12
+      span.page.next
+        a
+          = inline_svg 'sephora_style_guide/arrow-right.svg'
