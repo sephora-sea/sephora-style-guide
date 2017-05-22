@@ -3,14 +3,13 @@
 @import 'variables';
 
 @import 'reset';
-@import 'reset_non_amp';
 
 // Components
 @import 'components/typography';
 @import 'components/buttons';
-@import 'components/forms'; // Needs clean up
+@import 'components/forms';
 @import 'components/tables';
-@import 'components/grid'; // Needs clean up
+@import 'components/grid';
 @import 'components/modal'; // Needs clean up
 
 // Utilities

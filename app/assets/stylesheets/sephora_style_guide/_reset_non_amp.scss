@@ -1,8 +1,0 @@
-// Resets that are non-compliant with AMP
-[tabindex='-1']:focus {
-  outline: none !important;
-}
-
-[hidden] {
-  display: none !important;
-}
