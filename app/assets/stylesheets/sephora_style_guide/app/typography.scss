@@ -1,3 +1,29 @@
-td {
-  padding: 15px;
+#typography {
+  td {
+    padding: 15px;
+  }
+
+  .rule-header {
+    @include font-avalon-bold;
+    border-top: 1px solid $grey;
+    font-size: 16px;
+    line-height: 18px;
+    padding-top: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      border-top: 0;
+      border-bottom: 1px solid $black;
+      font-size: 20px;
+      line-height: 24px;
+      padding-top: 0;
+      padding-bottom: 5px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+  }
 }
