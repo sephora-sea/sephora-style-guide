@@ -3,17 +3,35 @@ article#tables
 
   section
     h3.h3 Sizes
+    = link_to 'Open Small Modal', '#sample-modal-sm', data: { toggle: 'modal' }, class: 'btn'
+    '
     = link_to 'Open Modal', '#sample-modal', data: { toggle: 'modal' }, class: 'btn'
+    '
+    = link_to 'Open Large Modal', '#sample-modal-lg', data: { toggle: 'modal' }, class: 'btn'
+
+    .modal.fade#sample-modal-sm aria-hidden='true' role='dialog' tabindex='-1'
+      .modal-dialog.modal-sm role='document'
+        .modal-content
+          .modal-header
+            .modal-title This is a small modal
+            button.close type='button' data-dismiss='modal' aria-label='Close'
+          .modal-body
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
     .modal.fade#sample-modal aria-hidden='true' role='dialog' tabindex='-1'
       .modal-dialog role='document'
         .modal-content
           .modal-header
-            .modal-title The title
+            .modal-title This is a normal modal
             button.close type='button' data-dismiss='modal' aria-label='Close'
           .modal-body
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-  section
-    h3.h3 HTML sample
-
+    .modal.fade#sample-modal-lg aria-hidden='true' role='dialog' tabindex='-1'
+      .modal-dialog.modal-lg role='document'
+        .modal-content
+          .modal-header
+            .modal-title This is a large modal
+            button.close type='button' data-dismiss='modal' aria-label='Close'
+          .modal-body
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
