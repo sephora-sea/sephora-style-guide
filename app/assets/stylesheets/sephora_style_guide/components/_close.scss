@@ -1,0 +1,18 @@
+.close {
+  cursor: pointer;
+  font-family: 'Zapf Dingbats';
+  font-size: 24px;
+  float: right;
+  line-height: 18px;
+
+  &:after {
+    content: '\2715';
+  }
+}
+
+button.close {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
