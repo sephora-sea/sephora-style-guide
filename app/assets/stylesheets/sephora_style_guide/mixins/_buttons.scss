@@ -12,6 +12,7 @@
   border-color: $border;
 
   @include hover {
+    color: $color;
     opacity: $hover-opacity;
   }
 
