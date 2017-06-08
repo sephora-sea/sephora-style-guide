@@ -28,11 +28,9 @@
 
   &.fade .modal-dialog {
     @include transition($modal-transition);
-    // transform: translate(0, -25%);
   }
 
   &.show .modal-dialog {
-    // transform: translate(0, 0);
     transform: scale(1);
     opacity: 1;
   }
