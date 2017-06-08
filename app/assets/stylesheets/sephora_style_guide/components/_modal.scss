@@ -26,12 +26,16 @@
   // gnarly iOS Safari bug: https://bugs.webkit.org/show_bug.cgi?id=158342
   // See also https://github.com/twbs/bootstrap/issues/17695
 
-  // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
     @include transition($modal-transition);
-    transform: translate(0, -25%);
+    // transform: translate(0, -25%);
   }
-  &.show .modal-dialog { transform: translate(0, 0); }
+
+  &.show .modal-dialog {
+    // transform: translate(0, 0);
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 .modal-open .modal {
   overflow-x: hidden;
@@ -40,16 +44,21 @@
 
 // Shell div to position the modal with bottom padding
 .modal-dialog {
+  min-height: calc(100vh - 10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: auto;
   position: relative;
   width: auto;
-  margin: $modal-dialog-margin;
+  margin: 10px;
+  opacity: 0;
+  transform: scale(0.7);
 }
 
 // Actual modal
 .modal-content {
   position: relative;
-  display: flex;
-  flex-direction: column;
   background-color: $modal-content-bg;
   background-clip: padding-box;
   // Remove focus outline from opened modal
@@ -121,7 +130,8 @@
   // Automatically set modal's width for larger viewports
   .modal-dialog {
     max-width: $modal-md;
-    margin: $modal-dialog-sm-up-margin-y auto;
+    margin: 30px auto;
+    min-height: calc(100vh - 60px);
   }
 
   .modal-sm { max-width: $modal-sm; }
