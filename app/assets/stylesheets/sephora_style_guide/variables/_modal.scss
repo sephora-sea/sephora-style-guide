@@ -1,8 +1,10 @@
-$modal-transition:            transform 0.5s, opacity 0.5s;
+$modal-transition-time:       0.5s;
+$modal-transition:            transform $modal-transition-time, opacity $modal-transition-time;
 
 $modal-content-bg:            $white;
 $modal-backdrop-bg:           $black;
 $modal-backdrop-opacity:      0.5 !default;
+$modal-backfrop-transition:   opacity $modal-transition-time;
 
 // Padding applied to the modal body
 $modal-inner-padding:         15px !default;
