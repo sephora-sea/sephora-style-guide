@@ -1,0 +1,44 @@
+.product-card {
+  .product-card-image {
+    vertical-align: bottom;
+    width: 100%;
+  }
+
+  .product-card-actions {
+    position: relative;
+  }
+
+  .product-card-add-to-bag {
+    margin-top: -60px;
+  }
+
+  .product-card-variants {
+    height: 30px;
+  }
+
+  .product-card-description {
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  .product-card-label {
+
+  }
+
+  .product-card-brand {
+    @include font-avalon-demi;
+  }
+
+  .product-card-product {
+
+  }
+
+  .product-card-price {
+    @include font-avalon-demi;
+  }
+
+  .product-card-rating {
+
+  }
+}

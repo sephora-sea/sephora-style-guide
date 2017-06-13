@@ -10,6 +10,10 @@ main.container-fluid#app role='main'
   = render 'sephora_style_guide/home/tables'
   = render 'sephora_style_guide/home/grid'
 
+  br
+  h2.h2 Partials
+  = render 'sephora_style_guide/home/product_card'
+
 javascript:
   var app = new Vue({
     el: '#app',
@@ -19,7 +23,8 @@ javascript:
       buttonIsDisabled: false,
       buttonText: this.textInitial,
       buttonTextInitial: '',
-      buttonTextPending: 'Adding...'
+      buttonTextPending: 'Adding...',
+      showProductCardActions: false
     },
     methods: {
       changeInitialText: function() {
@@ -34,6 +39,14 @@ javascript:
           self.buttonText = self.buttonTextInitial;
           self.buttonIsDisabled = false;
         }, 2000);
+      },
+
+      mouseoverProductCard: function() {
+        this.showProductCardActions = true;
+      },
+
+      mouseleaveProductCard: function() {
+        this.showProductCardActions = false;
       }
     }
   });

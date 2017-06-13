@@ -1,0 +1,24 @@
+article#product-card
+  h2.h2 Product Card
+
+  section
+    .container
+      .row
+        .col-3.offset-3
+          .product-card @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
+            = link_to '#product-link' do
+              = image_tag 'sephora_style_guide/product1-225x225.jpg', class: 'product-card-image'
+            .product-card-actions v-if='showProductCardActions'
+              button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to Bag
+              .product-card-variants
+              .product-card-wishlist
+            = link_to '#product-link', class: 'product-card-description' do
+              .product-card-label
+              p.product-card-brand Urban Decay
+              p.product-card-product Vice Lipstick
+              p.product-card-price $29.00
+              .product-card-rating
+        .col-3
+          ' Hello
+        .col-3
+          ' Hello
