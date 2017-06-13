@@ -66,10 +66,3 @@ article#input
       .form-group.floating-labels#year-group
         label.control-label for='year' YYYY
         input#year.form-control type='number' max=2999 min=1899
-
-javascript:
-  $('#credit-card').on('keypress change', function(){
-    $(this).val(function (index, value) {
-      return value.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ');
-    });
-  }).trigger('change');

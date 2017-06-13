@@ -1,7 +1,7 @@
-main role='main'
-  h1.h1 Sephora Style Guide
+script src='https://unpkg.com/vue'
 
-  script src='https://unpkg.com/vue'
+main.container-fluid#app role='main'
+  h1.h1 Sephora Style Guide
 
   = render 'sephora_style_guide/home/typography'
   = render 'sephora_style_guide/home/colors'
@@ -9,3 +9,31 @@ main role='main'
   = render 'sephora_style_guide/home/forms'
   = render 'sephora_style_guide/home/tables'
   = render 'sephora_style_guide/home/grid'
+
+javascript:
+  var app = new Vue({
+    el: '#app',
+    data: {
+      text: 'The quick brown fox jumps over the lazy dog.',
+      fontSize: '18',
+      buttonIsDisabled: false,
+      buttonText: this.textInitial,
+      buttonTextInitial: '',
+      buttonTextPending: 'Adding...'
+    },
+    methods: {
+      changeInitialText: function() {
+        this.buttonText = this.buttonTextInitial;
+      },
+
+      clickButton: function() {
+        var self = this;
+        this.buttonText = this.buttonTextPending;
+        this.isDisabled = 'disabled';
+        setTimeout(function(){
+          self.buttonText = self.buttonTextInitial;
+          self.buttonIsDisabled = false;
+        }, 2000);
+      }
+    }
+  });

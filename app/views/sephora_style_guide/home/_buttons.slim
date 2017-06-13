@@ -6,13 +6,13 @@ article#buttons
 
     label Initial Text
     br
-    input type='text' v-model='textInitial' v-on:keyup='changeInitialText'
+    input type='text' v-model='buttonTextInitial' v-on:keyup='changeInitialText'
 
     br
 
     label Pending Text
     br
-    input type='text' v-model='textPending'
+    input type='text' v-model='buttonTextPending'
 
   section
     h3.h3 Variants
@@ -21,40 +21,14 @@ article#buttons
       .button-variant
         h4.h4 = button[:name]
 
-        button.btn.btn-sm v-on:click='clickButton' v-bind:disabled="isDisabled || #{button[:name] == 'Disabled'}" class=button[:class]
-          ' {{ text || 'Small' }}
+        button.btn.btn-sm v-on:click='clickButton' v-bind:disabled="buttonIsDisabled || #{button[:name] == 'Disabled'}" class=button[:class]
+          ' {{ buttonText || 'Small' }}
         br
-        button.btn v-on:click='clickButton' v-bind:disabled="isDisabled || #{button[:name] == 'Disabled'}" class=button[:class]
-          ' {{ text || 'Default' }}
+        button.btn v-on:click='clickButton' v-bind:disabled="buttonIsDisabled || #{button[:name] == 'Disabled'}" class=button[:class]
+          ' {{ buttonText || 'Default' }}
         br
-        button.btn.btn-lg v-on:click='clickButton' v-bind:disabled="isDisabled || #{button[:name] == 'Disabled'}" class=button[:class]
-          ' {{ text || 'Large' }}
+        button.btn.btn-lg v-on:click='clickButton' v-bind:disabled="buttonIsDisabled || #{button[:name] == 'Disabled'}" class=button[:class]
+          ' {{ buttonText || 'Large' }}
         br
-        button.btn.btn-block v-on:click='clickButton' v-bind:disabled="isDisabled || #{button[:name] == 'Disabled'}" class=button[:class]
-          ' {{ text || 'Block' }}
-
-javascript:
-  var buttons = new Vue({
-    el: '#buttons',
-    data: {
-      isDisabled: false,
-      text: this.textInitial,
-      textInitial: '',
-      textPending: 'Adding...'
-    },
-    methods: {
-      changeInitialText: function() {
-        this.text = this.textInitial;
-      },
-
-      clickButton: function() {
-        var self = this;
-        this.text = this.textPending;
-        this.isDisabled = 'disabled';
-        setTimeout(function(){
-          self.text = self.textInitial;
-          self.isDisabled = false;
-        }, 2000);
-      }
-    }
-  });
+        button.btn.btn-block v-on:click='clickButton' v-bind:disabled="buttonIsDisabled || #{button[:name] == 'Disabled'}" class=button[:class]
+          ' {{ buttonText || 'Block' }}
