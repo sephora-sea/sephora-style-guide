@@ -54,7 +54,8 @@ var Modal = function ($) {
     KEYDOWN_DISMISS: 'keydown.dismiss' + EVENT_KEY,
     MOUSEUP_DISMISS: 'mouseup.dismiss' + EVENT_KEY,
     MOUSEDOWN_DISMISS: 'mousedown.dismiss' + EVENT_KEY,
-    CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
+    CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY,
+    CLICK_ANY: 'click tap'
   };
 
   var ClassName = {
@@ -143,6 +144,12 @@ var Modal = function ($) {
             _this._ignoreBackdropClick = true;
           }
         });
+      });
+
+      $(this._dialog).on(Event.CLICK_ANY, function (event) {
+        if (event.target.className.indexOf(Selector.DIALOG)) {
+          return _this.hide(event);
+        }
       });
 
       this._showBackdrop(function () {
