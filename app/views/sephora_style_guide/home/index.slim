@@ -11,8 +11,103 @@ main.container-fluid#app role='main'
   = render 'sephora_style_guide/home/grid'
   = render 'sephora_style_guide/home/pagination'
   = render 'sephora_style_guide/home/modals'
+  = render 'sephora_style_guide/home/tabs'
 
-javascript:
+javascript:  
+  // ---------------------------- Vue Components -------------------------------------
+    Vue.component('tabs', {
+      template: `<div :class="{'secondary': isSecondary }">
+        <div class="tabs">
+          <ul ref="ul">
+            <li v-for="tab in tabs" :class="{'active': tab.isActive }">
+              <a :href="tab.href" @click="selectTab(tab)" :id="tab.setId">{{ tab.name }}</a>
+            </li>
+            <div class='tab-track' v-show="isSecondary"><div class='bar' ref="trackBar"></div></div>
+          </ul>
+        </div>
+        <div class="panel"><slot></slot></div>
+      </div>`,
+
+      data: function(){
+        return { tabs: [], isSecondary: false }
+      },
+
+      props: {
+        secondary: {default: false}
+      },
+
+      created: function() {
+        this.tabs = this.$children;
+      },
+
+      methods: {
+        selectTab: function(tab) {  
+          var index = 0;
+          var self = this;
+          this.tabs.forEach(function(t) {
+            t.isActive = false;
+            if(tab.name == t.name) {
+              t.isActive = true;
+              if(self.isSecondary) {
+                self.moveBar(index);
+              }
+            }
+            index++;
+          });
+        },
+
+        getLeftMargin: function($tbs, index) {
+          var totalMargin = 0;
+          for(var i=0; i < index; i++) {
+            totalMargin += $($tbs[i]).outerWidth();
+          }
+
+          return totalMargin;
+        },
+
+        moveBar: function(index) {
+          var $tbs = this.$refs.ul.getElementsByTagName('li'),
+            $bar = $(this.$refs.trackBar),
+            self = this;
+            
+          $bar.animate({width: $($tbs[index]).outerWidth() + 'px', 'margin-left': self.getLeftMargin($tbs, index) + 'px'}, 300);
+        }
+      },
+
+      mounted: function() {
+        this.isSecondary = this.secondary;
+      }
+    });
+
+    Vue.component('tab', {
+      template: `<div v-show="isActive"><slot></slot></div>`,
+
+      props: {
+        name: { required: true },
+        selected: {default: false}
+      },
+
+      data: function() {
+        return {isActive: false}
+      },
+
+      computed: {
+        href: function() {
+          return '#' + this.setId;
+        },
+
+        setId: function() {
+          return this.name.toLowerCase().replace(/ /g, '-');
+        }
+      },
+
+      mounted: function() {
+        this.isActive = this.selected;
+      }
+    });
+
+  // -----------------------------------------------------------------------------
+
   var app = new Vue({
     el: '#app',
     data: {

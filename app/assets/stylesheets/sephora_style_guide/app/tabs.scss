@@ -1,0 +1,156 @@
+#tabs {
+  section {
+    margin: 20px 0;
+  }
+
+  .tabs {
+    width: 100%;
+    margin-top: 10px;
+
+    ul, li {
+      padding: 0;
+    }
+
+    >ul li {
+      display: inline-block;
+      width: auto;
+      list-style: none;
+      border-right: 1px solid $grey;
+      border-top: 1px solid $grey;
+      cursor: pointer;
+
+      a {
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        padding: 0 15px;
+        display: block;
+        background-color: $grey-light;
+        height: 30px;
+        text-align: center;
+        color: $black;
+        font-size: 14px;
+        line-height: 30px;
+        outline: none;
+        text-transform: uppercase;
+      }
+
+      &:first-child {
+        border-left: 1px solid $grey;
+      }
+
+      &:hover a {
+        background-color: #dddddd;
+      }
+
+      &.active {
+        border-bottom: none;
+        a {
+          height: 31px;
+          background-color: $white;
+        }
+      }
+    }
+
+    @include mobile {
+
+      >ul li {
+        border: 0;
+        
+        &:last-child {
+          border: 0;
+        }
+
+        a,
+        &:last-child {
+          color: $grey;
+          background: $white;
+        }
+
+        &:hover a {
+          background: $white;
+        }
+
+        &.active {
+          border-bottom: 3px solid $brand-primary;
+
+          a {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+
+  .panel {
+    padding: 15px;
+    margin-top: -1px;
+    border: 1px solid $grey;
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin-left: 15px;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .secondary {
+    .tabs {
+      > ul {
+        width: 100%;
+        text-align: justify;
+        line-height: 0;
+        white-space: nowrap;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        overflow-y: hidden;
+
+        > li {
+          padding: 0 20px;
+          display: inline-block;
+          line-height: normal;
+          text-align: center;
+          background: $white;
+          height: auto;
+          border: 0;
+          background: rgba(0, 0, 0, 0);;
+
+          a {
+            height: auto;
+            background: rgba(0, 0, 0, 0);
+          }
+        }
+      }
+
+      @include mobile {
+        > ul li {
+          display: inline-block;
+          white-space: normal;
+          vertical-align: top;
+          overflow: hidden;
+          list-style: none;
+
+          a {
+            color: $black;
+          }
+        }
+      }
+    }
+
+    .tab-track .bar {
+      width: 190px;
+      height: 4px;
+      background: $brand-primary;
+    }
+
+    .panel {
+      border: 0;
+      border-top: 1px solid $grey;
+    }
+  }
+}
