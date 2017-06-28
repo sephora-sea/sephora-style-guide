@@ -61,15 +61,16 @@ var Modal = function ($) {
   var ClassName = {
     SCROLLBAR_MEASURER: 'modal-scrollbar-measure',
     BACKDROP: 'modal-backdrop',
+    DIALOG: 'modal-dialog',
     OPEN: 'modal-open',
     FADE: 'fade',
     SHOW: 'show'
   };
 
   var Selector = {
-    DIALOG: '.modal-dialog',
     DATA_TOGGLE: '[data-toggle="modal"]',
     DATA_DISMISS: '[data-dismiss="modal"]',
+    DIALOG: '.modal-dialog',
     FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
     NAVBAR_TOGGLER: '.navbar-toggler'
   };
@@ -147,7 +148,7 @@ var Modal = function ($) {
       });
 
       $(this._dialog).on(Event.CLICK_ANY, function (event) {
-        if (event.target.className.indexOf(Selector.DIALOG)) {
+        if (!event.target.className.indexOf(ClassName.DIALOG)) {
           return _this.hide(event);
         }
       });
@@ -193,6 +194,7 @@ var Modal = function ($) {
 
       $(this._element).off(Event.CLICK_DISMISS);
       $(this._dialog).off(Event.MOUSEDOWN_DISMISS);
+      $(this._dialog).off(Event.CLICK_ANY);
 
       if (transition) {
 
