@@ -5,7 +5,7 @@
   float: right;
   line-height: 18px;
 
-  &:after {
+  &::after {
     content: '\2715';
   }
 }
