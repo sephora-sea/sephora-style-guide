@@ -90,11 +90,12 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
-  padding: $modal-header-padding;
+  padding: $modal-header-padding $modal-header-padding 10px;
 }
 
 // Title text within header
 .modal-title {
+  align-self: center;
   margin-bottom: 0;
 }
 
@@ -105,7 +106,9 @@
   // Enable `flex-grow: 1` so that the body take up as much space as possible
   // when should there be a fixed height on `.modal-dialog`.
   flex: 1 1 auto;
-  padding: $modal-inner-padding;
+  padding-left: $modal-inner-padding;
+  padding-right: $modal-inner-padding;
+  padding-bottom: $modal-inner-padding;
 }
 
 // Footer (for actions)
