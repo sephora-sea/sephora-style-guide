@@ -1,0 +1,20 @@
+.close {
+  cursor: pointer;
+  font-family: 'Zapf Dingbats';
+  font-size: 24px;
+  float: right;
+  line-height: 18px;
+
+  &::after {
+    content: '\2715';
+  }
+}
+
+button.close {
+  background: transparent;
+  border: 0;
+  padding: 11px;
+  margin-top: -10px;
+  margin-right: -10px;
+  -webkit-appearance: none;
+}

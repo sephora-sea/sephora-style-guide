@@ -25,23 +25,15 @@
   // We deliberately don't use `-webkit-overflow-scrolling: touch;` due to a
   // gnarly iOS Safari bug: https://bugs.webkit.org/show_bug.cgi?id=158342
   // See also https://github.com/twbs/bootstrap/issues/17695
-  text-align: center;
-  padding: 0!important;
 
-  &:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -4px;
-  }
-
-  // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
-    transition: opacity .3s ease-out;
-    opacity: 0.6;
+    @include transition($modal-transition);
   }
-  &.in .modal-dialog { opacity: 1; }
+
+  &.show .modal-dialog {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 .modal-open .modal {
   overflow-x: hidden;
@@ -50,12 +42,16 @@
 
 // Shell div to position the modal with bottom padding
 .modal-dialog {
+  min-height: calc(100vh - 10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: auto;
   position: relative;
   width: auto;
-  margin: $modal-dialog-margin;
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
+  margin: 10px;
+  opacity: 0;
+  transform: scale(0.8);
 }
 
 // Actual modal
@@ -63,7 +59,6 @@
   position: relative;
   background-color: $modal-content-bg;
   background-clip: padding-box;
-  border: $modal-content-border-width solid $modal-content-border-color;
   // Remove focus outline from opened modal
   outline: 0;
 }
@@ -75,45 +70,53 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: $zindex-modal-bg;
+  z-index: $zindex-modal-backdrop;
   background-color: $modal-backdrop-bg;
 
   // Fade for backdrop
-  &.fade { opacity: 0; }
-  &.in { opacity: $modal-backdrop-opacity; }
+  &.fade {
+    opacity: 0;
+    transition: $modal-backfrop-transition;
+  }
+
+  &.show {
+    opacity: $modal-backdrop-opacity;
+  }
 }
 
 // Modal header
 // Top section of the modal w/ title and dismiss
 .modal-header {
-  padding: $modal-title-padding;
-  border-bottom: $modal-header-border-width solid $modal-header-border-color;
-  @include clearfix;
-}
-// Close icon
-.modal-header .close {
-  margin-top: -2px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
+  padding: $modal-header-padding $modal-header-padding 10px;
 }
 
 // Title text within header
 .modal-title {
-  margin: 0;
-  line-height: $modal-title-line-height;
+  align-self: center;
+  margin-bottom: 0;
 }
 
 // Modal body
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
 .modal-body {
   position: relative;
-  padding: $modal-inner-padding;
+  // Enable `flex-grow: 1` so that the body take up as much space as possible
+  // when should there be a fixed height on `.modal-dialog`.
+  flex: 1 1 auto;
+  padding-left: $modal-inner-padding;
+  padding-right: $modal-inner-padding;
+  padding-bottom: $modal-inner-padding;
 }
 
 // Footer (for actions)
 .modal-footer {
+  display: flex;
+  align-items: center; // vertically center
+  justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
   padding: $modal-inner-padding;
-  text-align: right; // right align buttons
-  border-top: $modal-footer-border-width solid $modal-footer-border-color;
-  @include clearfix(); // clear it in case folks use .pull-* classes on buttons
 }
 
 // Measure scrollbar width for padding body during modal show/hide
@@ -129,13 +132,14 @@
 @include media-breakpoint-up(sm) {
   // Automatically set modal's width for larger viewports
   .modal-dialog {
-    width: $modal-md;
-    margin: $modal-dialog-sm-up-margin-y auto;
+    max-width: $modal-md;
+    margin: 30px auto;
+    min-height: calc(100vh - 60px);
   }
 
-  .modal-sm { width: $modal-sm; }
+  .modal-sm { max-width: $modal-sm; }
 }
 
 @include media-breakpoint-up(lg) {
-  .modal-lg { width: $modal-lg; }
+  .modal-lg { max-width: $modal-lg; }
 }
