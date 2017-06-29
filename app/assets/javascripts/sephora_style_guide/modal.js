@@ -537,8 +537,6 @@ var Modal = function ($) {
    */
 
   $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
-    var _this10 = this;
-
     var target = void 0;
     var selector = Util.getSelectorFromElement(this);
 
