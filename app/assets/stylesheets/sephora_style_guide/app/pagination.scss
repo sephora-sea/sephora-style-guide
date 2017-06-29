@@ -71,11 +71,35 @@
       
       &.prev a {
         padding: 4px 3px 0 0;
+        
+        @include mobile {
+          padding-top: 0;
+        }
       }
       
       &.next a {
         padding: 4px 0 0 2px;
+        
+        @include mobile {
+          padding-top: 0;
+        }
       }
+    }
+  }
+  
+  @include mobile {
+    section {
+      width: 100%;
+    }
+    
+    .shift_left {
+      width: 360px;
+      margin-left: -11px;
+    }
+    
+    .page.next,
+    .page.prev {
+      padding-top: 10px;
     }
   }
 }
