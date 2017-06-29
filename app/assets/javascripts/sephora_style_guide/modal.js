@@ -557,12 +557,6 @@ var Modal = function ($) {
         // only register focus restorer if modal will actually get shown
         return;
       }
-
-      $target.one(Event.HIDDEN, function () {
-        if ($(_this10).is(':visible')) {
-          _this10.focus();
-        }
-      });
     });
 
     Modal._jQueryInterface.call($(target), config, this);
