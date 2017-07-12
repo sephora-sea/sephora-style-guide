@@ -1,12 +1,14 @@
 #pagination {
   section {
-    float: left;
+    display: inline-block;
     width: 50%;
+    min-width: 360px;
   }
   
   .pagination {
     display: inline-block;
     text-align: center;
+    line-height: 20px !important;
     
     .page {
       background: $white;
@@ -57,24 +59,21 @@
         background: $grey;
       }
       
-      &.next a,
-      &.prev a {
-        width: 15px;
-        height: 15px;
-        
-        svg {
+      &.next,
+      &.prev {
+        position: relative;
+        top: -2px;
+
+        a {
           width: 15px;
           height: 15px;
-          font-size: 20px;
+          
+          svg {
+            width: 15px;
+            height: 15px;
+            font-size: 20px;
+          }
         }
-      }
-      
-      &.prev a {
-        padding: 4px 3px 0 0;
-      }
-      
-      &.next a {
-        padding: 4px 0 0 2px;
       }
     }
   }
