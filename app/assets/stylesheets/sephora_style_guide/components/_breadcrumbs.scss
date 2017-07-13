@@ -8,7 +8,7 @@
 }
 
 .breadcrumb-item {
-  display: flex;
+  display: inline-table;
   line-height: 13px;
 
   &::before {
