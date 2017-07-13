@@ -1,26 +1,26 @@
 .breadcrumb {
   list-style: none;
-  padding: 0;
   display: flex;
   flex-direction: row;
   font-size: 11px;
+  height: 11px;
+  padding: 0;
 }
 
 .breadcrumb-item {
-  padding: 2px;
   line-height: 13px;
 
   &::before {
     content: "/";
     display: inline-block;
     color: $grey-dark;
-    padding-right: 2px;
+    padding: 0 3px;
     text-decoration: none;
   }
 
   &:first-child::before {
     content: "";
-    padding-right: 0;
+    padding: 0;
   }
 
   &:hover {
