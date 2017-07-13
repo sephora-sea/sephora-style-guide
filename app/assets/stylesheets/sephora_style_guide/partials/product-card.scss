@@ -1,15 +1,19 @@
 .product-card {
+  width: $product-card-width;
+  height: $product-card-height;
+
   .product-card-image {
-    vertical-align: bottom;
-    width: 100%;
+    width: $product-card-image-width;
+    height: $product-card-image-height;
   }
 
   .product-card-actions {
-    position: relative;
+    position: absolute;
+    width: $product-card-image-width;
   }
 
   .product-card-add-to-bag {
-    margin-top: -60px;
+    margin-top: -38px;
   }
 
   .product-card-variants {
