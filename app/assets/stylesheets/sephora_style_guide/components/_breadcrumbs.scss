@@ -1,0 +1,38 @@
+.breadcrumb {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  font-size: 11px;
+}
+
+.breadcrumb-item {
+  padding: 2px;
+  line-height: 13px;
+
+  &::before {
+    content: "/";
+    display: inline-block;
+    color: $grey-dark;
+    padding-right: 2px;
+    text-decoration: none;
+  }
+
+  &:first-child::before {
+    content: "";
+    padding-right: 0;
+  }
+
+  &:hover {
+    color: $grey-dark;
+    text-decoration: underline;
+  }
+
+  &.active {
+    color: $btn-disabled-color;
+  }
+
+  &.active:hover {
+    text-decoration: none;
+  }
+}
