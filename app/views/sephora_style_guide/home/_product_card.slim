@@ -5,6 +5,7 @@ article#product-card
     .container
       .row
         .col-4
+          h3.h3 Default
           .product-card @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
             = link_to '#product-link' do
               = image_tag 'sephora_style_guide/product1-225x225.jpg', class: 'product-card-image'
@@ -19,6 +20,7 @@ article#product-card
               p.product-card-price $29.00
               .product-card-rating
         .col-4
+          h3.h3 Out of Stock
           .product-card @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
             = link_to '#product-link' do
               = image_tag 'sephora_style_guide/product2-225x225.jpg', class: 'product-card-image'

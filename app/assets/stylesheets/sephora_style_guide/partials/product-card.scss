@@ -16,6 +16,26 @@
     margin-top: -38px;
   }
 
+  // mobile and tablet
+  @include media-breakpoint-down(md) {
+    width: $product-card-width-mobile;
+    height: $product-card-image-height-mobile;
+
+    .product-card-image {
+      width: $product-card-image-width-mobile;
+      height: $product-card-image-height-mobile;
+    }
+
+    .product-card-actions {
+      position: absolute;
+      width: $product-card-image-width-mobile;
+    }
+
+    .product-card-add-to-bag {
+      margin-top: -38px;
+    }
+  }
+
   .product-card-variants {
     height: 30px;
   }
