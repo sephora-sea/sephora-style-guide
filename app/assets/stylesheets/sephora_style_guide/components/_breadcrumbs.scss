@@ -10,6 +10,7 @@
 .breadcrumb-item {
   display: inline-table;
   line-height: 13px;
+  cursor: pointer;
 
   &::before {
     content: "/";
@@ -31,6 +32,7 @@
 
   &.active {
     color: $btn-disabled-color;
+    cursor: none;
   }
 
   &.active:hover {
