@@ -28,6 +28,7 @@
   &:hover {
     color: $grey-dark;
     text-decoration: underline;
+    text-decoration-color: $grey-mid;
   }
 
   &.active {
