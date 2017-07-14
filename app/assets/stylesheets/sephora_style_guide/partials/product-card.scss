@@ -1,24 +1,13 @@
 .product-card {
-  width: $product-card-width;
-  height: $product-card-height;
-
   &:hover {
     .product-wishlist {
       display: block;
     }
   }
 
-  .product-card-add-to-bag {
-    margin-top: -38px;
-  }
-
   // tablet
   @include media-breakpoint-between(md, lg) {
-    width: $product-card-width-tablet;
-    height: $product-card-height-tablet;
-
     .product-card-image {
-      width: 100%;
       height: $product-card-image-height-tablet;
     }
 
@@ -36,11 +25,7 @@
 
   // mobile
   @include media-breakpoint-down(md) {
-    width: $product-card-width-mobile;
-    height: $product-card-height-mobile;
-
     .product-card-image {
-      width: 100%;
       height: $product-card-image-height-mobile;
     }
 
@@ -61,8 +46,10 @@
   width: $product-card-width;
   height: $product-card-height;
 
-  .product-card-add-to-waitlist {
-    margin-top: -38px;
+  &:hover {
+    .product-wishlist {
+      display: block;
+    }
   }
 
   // tablet
@@ -71,7 +58,6 @@
     height: $product-card-height-tablet;
 
     .product-card-image {
-      width: 100%;
       height: $product-card-image-height-tablet;
     }
 
@@ -93,7 +79,6 @@
     height: $product-card-height-mobile;
 
     .product-card-image {
-      width: 100%;
       height: $product-card-image-height-mobile;
     }
 
@@ -110,8 +95,16 @@
   }
 }
 
+.product-card-add-to-bag {
+  margin-top: -38px;
+
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+}
+
 .product-card-image {
-  width: 100%;
+  display: block;
   height: $product-card-image-height;
 }
 
@@ -135,17 +128,34 @@
 }
 
 .product-card-description {
+  font-size: 13px;
+  line-height: 17px;
+
   &:hover {
     color: inherit;
   }
 }
 
 .product-card-label {
+  font-size: 10px;
+  @include font-avalon-demi;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 
+.product-card-label-primary {
+  @extend .product-card-label;
+  color: $brand-primary;
+}
+
+.product-card-label-secondary {
+  @extend .product-card-label;
+  color: $grey-mid;
 }
 
 .product-card-brand {
   @include font-avalon-demi;
+  text-transform: uppercase;
 }
 
 .product-card-product {

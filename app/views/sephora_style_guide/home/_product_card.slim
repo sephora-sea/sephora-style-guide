@@ -12,7 +12,8 @@ article#product-card
         .product-card-variants
         .product-card-wishlist
       = link_to '#product-link', class: 'product-card-description' do
-        .product-card-label
+        span.product-card-label-primary New 
+        span.product-card-label-secondary | Limited Edition
         p.product-card-brand Urban Decay
         p.product-card-product Vice Lipstick
         p.product-card-price $29.00
@@ -25,11 +26,11 @@ article#product-card
         = image_tag 'sephora_style_guide/product3-225x225.jpg', class: 'product-wishlist'
         = image_tag 'sephora_style_guide/product2-225x225.jpg', class: 'product-card-image'
       .product-card-actions v-if='showProductCardActions' 
-        button.btn.btn-sm.btn-block.btn-defaults.product-card-add-to-waitlist Waitlist Me
+        button.btn.btn-sm.btn-block.btn-defaults.product-card-add-to-bag Waitlist Me
         .product-card-variants
         .product-card-wishlist
       = link_to '#product-link', class: 'product-card-description' do
-        .product-card-label
+        .product-card-label-secondary New
         p.product-card-brand Urban Decay
         p.product-card-product Vice Lipstick
         p.product-card-price $29.00
