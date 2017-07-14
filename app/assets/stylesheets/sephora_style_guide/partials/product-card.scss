@@ -19,7 +19,7 @@
   // mobile and tablet
   @include media-breakpoint-down(md) {
     width: $product-card-width-mobile;
-    height: $product-card-image-height-mobile;
+    height: $product-card-height-mobile;
 
     .product-card-image {
       width: $product-card-image-width-mobile;
