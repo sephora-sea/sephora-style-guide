@@ -1,7 +1,6 @@
 .breadcrumb {
   list-style: none;
   display: flex;
-  flex-direction: row;
   font-size: 11px;
   height: 11px;
   padding: 0;
@@ -13,15 +12,16 @@
   cursor: pointer;
 
   &::before {
-    content: "/";
+    content: '/';
     display: inline-block;
     color: $grey-dark;
-    padding: 0 3px;
+    padding-left: 3px;
+    padding-right: 3px;
     text-decoration: none;
   }
 
   &:first-child::before {
-    content: "";
+    content: '';
     padding: 0;
   }
 
@@ -33,7 +33,7 @@
 
   &.active {
     color: $grey-mid;
-    cursor: none;
+    cursor: default;
   }
 
   &.active:hover {
