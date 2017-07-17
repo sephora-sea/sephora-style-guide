@@ -2,7 +2,6 @@
   transition: $transition;
 }
 
-@import 'mixins/media_query';
 @import 'mixins/breakpoints';
 @import 'mixins/buttons';
 @import 'mixins/clearfix';
