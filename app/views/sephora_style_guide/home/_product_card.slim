@@ -5,33 +5,32 @@ article#product-card
     h3.h3 Default
     .product-card @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
       = link_to '#product-link' do
-        = image_tag 'sephora_style_guide/product3-225x225.jpg', class: 'product-wishlist'
         = image_tag 'sephora_style_guide/product1-225x225.jpg', class: 'product-card-image'
+        img.product-card-wishlist src='/assets/sephora_style_guide/wishlist.png'
       .product-card-actions v-if='showProductCardActions'
         button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to Bag
         .product-card-variants
-        .product-card-wishlist
       = link_to '#product-link', class: 'product-card-description' do
         span.product-card-label-primary New 
         span.product-card-label-secondary | Limited Edition
         p.product-card-brand Urban Decay
         p.product-card-product Vice Lipstick
         p.product-card-price $29.00
-        .product-card-rating
+        img.product-card-rating src='/assets/sephora_style_guide/sephora-stars.png'
         
   section
     h3.h3 Out of Stock
-    .product-card-disabled @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
+    .product-card @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
       = link_to '#product-link' do
-        = image_tag 'sephora_style_guide/product3-225x225.jpg', class: 'product-wishlist'
         = image_tag 'sephora_style_guide/product2-225x225.jpg', class: 'product-card-image'
+        .out-of-stock Out of stock
+        img.product-card-wishlist src='/assets/sephora_style_guide/wishlist.png'
       .product-card-actions v-if='showProductCardActions' 
         button.btn.btn-sm.btn-block.btn-defaults.product-card-add-to-bag Waitlist Me
         .product-card-variants
-        .product-card-wishlist
       = link_to '#product-link', class: 'product-card-description' do
         .product-card-label-secondary New
         p.product-card-brand Urban Decay
         p.product-card-product Vice Lipstick
         p.product-card-price $29.00
-        .product-card-rating
+        img.product-card-rating src='/assets/sephora_style_guide/sephora-stars.png'
