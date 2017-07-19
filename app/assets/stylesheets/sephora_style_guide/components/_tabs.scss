@@ -1,0 +1,60 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
+// Don't change the ones above ^^^^^^^^^^
+
+.nav-tabs.nav-tabs-default {
+  // Styles for default nav tabs
+
+  .nav-item {
+    // The <li> that contains the nav
+  }
+
+  .nav-link {
+    // The <a> that actually toggles
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    // Specific styles for the link when it is "active"
+  }
+}
+
+.tab-content.tab-content-default {
+  // Any specific styles for the default tab-content
+}
+
+.nav-tabs.nav-tabs-primary {
+  // Styles for primary nav tabs (the ones with the red underline)
+
+  .nav-item {
+    // The <li> that contains the nav
+  }
+
+  .nav-link {
+    // The <a> that actually toggles
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    // Specific styles for the link when it is "active"
+  }
+}
+
+.tab-content.tab-content-default {
+  // Any specific styles for the primary tab-content
+}
