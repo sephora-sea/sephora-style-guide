@@ -2,7 +2,7 @@
   width: $product-card-width;
 
   &:hover {
-    .product-card-wishlist {
+    .product-card-wish-list-heart {
       display: block;
     }
   }
@@ -20,10 +20,10 @@
       width: $product-card-width-tablet;
     }
 
-    .product-card-wishlist {
+    .product-card-wish-list-heart {
       display: block;
-      margin-left: calc(#{$product-card-width-tablet} - #{$product-card-wishlist-width});
-      margin-top: -$product-card-wishlist-height;
+      margin-left: calc(#{$product-card-width-tablet} - #{$product-card-wish-list-heart-width});
+      margin-top: -$product-card-wish-list-heart-height;
     }
 
     .out-of-stock {
@@ -45,10 +45,10 @@
       width: $product-card-width-mobile;
     }
 
-    .product-card-wishlist {
+    .product-card-wish-list-heart {
       display: block;
-      margin-left: calc(#{$product-card-width-mobile} - #{$product-card-wishlist-width});
-      margin-top: -$product-card-wishlist-height;
+      margin-left: calc(#{$product-card-width-mobile} - #{$product-card-wish-list-heart-width});
+      margin-top: -$product-card-wish-list-heart-height;
     }
 
     .out-of-stock {
@@ -73,7 +73,7 @@
   color: $grey-dark;
 }
 
-.product-card-add-to-bag {
+.product-card-add-to-bag, .product-card-add-to-wish-list {
   margin-top: -38px;
 
   @include media-breakpoint-down(lg) {
@@ -91,15 +91,19 @@
   width: $product-card-width;
 }
 
-.product-card-wishlist {
-  height: $product-card-wishlist-height;
-  width: $product-card-wishlist-width;
+.product-card-wish-list-heart {
+  height: $product-card-wish-list-heart-height;
+  width: $product-card-wish-list-heart-width;
   opacity: 0.8;
-  background: $white;
+  background: url('/assets/sephora_style_guide/shared_sephora_icons_v5.png') -86px -119px;
   position: absolute;
   display: none;
-  margin-left: calc(#{$product-card-width} - #{$product-card-wishlist-width});
+  margin-left: calc(#{$product-card-width} - #{$product-card-wish-list-heart-width});
   margin-top: -$product-card-image-height;
+
+  &:hover {
+    background-position: -107px -120px;
+  }
 }
 
 .product-card-variants {
@@ -122,12 +126,12 @@
   text-transform: uppercase;
 }
 
-.product-card-label-primary {
+.product-card-label-new-arrival {
   @extend .product-card-label;
   color: $brand-primary;
 }
 
-.product-card-label-secondary {
+.product-card-label-limited-edition {
   @extend .product-card-label;
   color: $grey-mid;
 }
@@ -146,7 +150,7 @@
 }
 
 .product-card-rating {
-  transform: rotate(90deg);
-  margin-left: 8px;
-  margin-top: -5px;
+  height: 12px;
+  width: 54px;
+  background: url('/assets/sephora_style_guide/sephora-stars-sm.png') 0 -12px !important;
 }
