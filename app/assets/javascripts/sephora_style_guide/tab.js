@@ -107,6 +107,7 @@ var Tab = function ($) {
       }
 
       this._activate(this._element, listElement);
+      this._moveBar($(this._element).parent(), $(listElement));
 
       var complete = function complete() {
         var hiddenEvent = $.Event(Event.HIDDEN, {
@@ -194,6 +195,26 @@ var Tab = function ($) {
       }
     };
 
+    // custom methods
+
+    Tab.prototype._getLeftMargin = function _getLeftMargin($tbs, index) {
+      var totalMargin = 0;
+      for(var i=0; i < index; i++) {
+        totalMargin += $($tbs[i]).outerWidth();
+      }
+      return totalMargin;
+    };
+    
+    Tab.prototype._moveBar = function _moveBar($selectedTab, $ul) {
+      var $lis = $ul.find('li'),
+        index = $lis.index($selectedTab);
+
+      $ul.find('.bar').animate({
+        width: $selectedTab.outerWidth() + 'px', 
+        marginLeft: this._getLeftMargin($lis, index) + 'px'
+      }, 300);
+    };
+
     // static
 
     Tab._jQueryInterface = function _jQueryInterface(config) {
@@ -252,3 +273,13 @@ var Tab = function ($) {
   return Tab;
 }(jQuery);
 //# sourceMappingURL=tab.js.map
+
+
+//# introdue Animated tab with bar
+function loadTrackBar() {
+  $('.nav-tabs.nav-tabs-primary').each(function(){
+    $(this).append('<div class="tab-track"><div class="bar"></div></div>');
+  });
+}
+
+$(document).on('ready', loadTrackBar);
