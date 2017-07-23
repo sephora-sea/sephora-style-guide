@@ -1,0 +1,136 @@
+select {
+  overflow: hidden;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
+// Don't change the ones above ^^^^^^^^^^
+
+.nav-tabs {
+  display: block;
+  height: 45px;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
+
+  .nav-item {
+    display: inline-block;
+    white-space: normal;
+  }
+
+  .nav-link {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 0 15px;
+    display: block;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.tab-content {
+  border: 1px solid $grey;
+  margin-top: -1px;
+
+  .tab-pane {
+    padding: 15px;
+    margin-top: -1px;
+    border-top: 0;
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin-left: 15px;
+    }
+  }
+}
+
+.nav-tabs.nav-tabs-default {
+  .nav-link.active {
+    border-bottom: 3px solid $brand-primary;
+  }
+
+  @include media-breakpoint-up(md) {
+    .nav-item {
+      margin-bottom: -1px;
+      
+      &:first-child .nav-link {
+        border-left: 1px solid $grey;
+      }
+
+      &:hover .nav-link {
+        background-color: #ddd;
+      }
+    }
+
+    .nav-link {
+      border: 1px solid $grey;
+      border-left: 0;
+      background-color: $grey-light;
+    }
+
+    .nav-link.active,
+    .nav-item.show .nav-link {
+      background-color: $white !important;
+      border-bottom-color: $white;
+    }
+  }
+}
+
+.tab-content.tab-content-default {
+  margin-top: -4px;
+
+  .tab-pane {
+    //border: 1px solid $grey;
+  }
+}
+
+.tabs {
+  max-height: 35px;
+  overflow: hidden;
+}
+
+.nav-tabs.nav-tabs-primary {
+  .nav-link {
+    // The <a> that actually toggles
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    // Specific styles for the link when it is "active"
+  }
+
+  .tab-track {
+    width: 100%;
+
+    .bar {
+      width: 148px;
+      height: 4px;
+      background: $brand-primary;
+    }
+  }
+}
