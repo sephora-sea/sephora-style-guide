@@ -2,35 +2,36 @@ article#product-card
   h2.h2 Product Card
 
   section
-    h3.h3 Default
-    .product-card @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
-      = link_to '#product-link' do
-        = image_tag 'sephora_style_guide/product1-225x225.jpg', class: 'product-card-image'
-      .product-card-wish-list-heart
-      .product-card-actions v-if='showProductCardActions'
-        button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to Bag
-        .product-card-variants
-      = link_to '#product-link', class: 'product-card-description' do
-        span.product-card-label-new-arrival New 
-        span.product-card-label-limited-edition | Limited Edition
-        p.product-card-brand Urban Decay
-        p.product-card-product Vice Lipstick
-        p.product-card-price $29.00
-        .product-card-rating
-        
-  section
-    h3.h3 Out of Stock
-    .product-card @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
-      = link_to '#product-link' do
-        = image_tag 'sephora_style_guide/product2-225x225.jpg', class: 'product-card-image'
-        .out-of-stock Out of stock
-      .product-card-wish-list-heart
-      .product-card-actions v-if='showProductCardActions' 
-        button.btn.btn-sm.btn-block.btn-defaults.product-card-add-to-wish-list Waitlist Me
-        .product-card-variants
-      = link_to '#product-link', class: 'product-card-description' do
-        .product-card-label-new-arrival New
-        p.product-card-brand Tarte
-        p.product-card-product Magic Wands Brush Set
-        p.product-card-price $59.00
-        .product-card-rating
+    .container
+      .row
+        .col-6.col-md-3.offset-md-3
+          .product-card @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
+            = link_to '#product-link' do
+              = image_tag 'sephora_style_guide/product1-225x225.jpg', class: 'product-card-image'
+            .product-card-wish-list-heart
+            .product-card-actions v-if='showProductCardActions'
+              button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to Bag
+              .product-card-variants
+            = link_to '#product-link', class: 'product-card-description' do
+              span.product-card-label-new-arrival New 
+              span.product-card-label-limited-edition | Limited Edition
+              p.product-card-brand Urban Decay
+              p.product-card-product Vice Lipstick
+              p.product-card-price $29.00
+              .product-card-rating
+        .col-6.col-md-3
+          .product-card @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
+            = link_to '#product-link' do
+              = image_tag 'sephora_style_guide/product2-225x225.jpg', class: 'product-card-image'
+            .out-of-stock Out of stock
+            span.product-card-wish-list-heart
+            .product-card-actions v-if='showProductCardActions' 
+              button.btn.btn-sm.btn-block.btn-defaults.product-card-add-to-wish-list Waitlist Me
+              .product-card-variants
+            = link_to '#product-link', class: 'product-card-description' do
+              .product-card-label-new-arrival New
+              p.product-card-brand Tarte
+              p.product-card-product Magic Wands Brush Set
+              p.product-card-price $59.00
+              .product-card-rating
+        .col-6.col-md-3
