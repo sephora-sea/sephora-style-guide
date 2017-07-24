@@ -73,7 +73,8 @@
   color: $grey-dark;
 }
 
-.product-card-add-to-bag, .product-card-add-to-wish-list {
+.product-card-add-to-bag,
+.product-card-add-to-wish-list {
   margin-top: -38px;
 
   @include media-breakpoint-down(lg) {
@@ -119,7 +120,7 @@
   }
 }
 
-.product-card-label {
+%product-card-label {
   font-size: 10px;
   @include font-avalon-demi;
   letter-spacing: 1px;
@@ -127,12 +128,12 @@
 }
 
 .product-card-label-new-arrival {
-  @extend .product-card-label;
+  @extend %product-card-label;
   color: $brand-primary;
 }
 
 .product-card-label-limited-edition {
-  @extend .product-card-label;
+  @extend %product-card-label;
   color: $grey-mid;
 }
 
