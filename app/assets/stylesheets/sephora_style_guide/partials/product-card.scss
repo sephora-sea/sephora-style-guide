@@ -1,5 +1,16 @@
 .product-card {
-  width: $product-card-width;
+  width: 100%;
+
+  .product-card-image {
+    width: 100%;
+    display: block;
+  }
+
+  .product-card-actions {
+    position: relative;
+    width: 100%;
+    height: $product-card-actions-height;
+  }
 
   &:hover {
     .product-card-wish-list-heart {
@@ -7,151 +18,103 @@
     }
   }
 
-  // tablet
-  @include media-breakpoint-between(md, lg) {
-    width: $product-card-width-tablet;
+  .out-of-stock {
+    @include font-avalon-demi;
+    top: 37%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: $product-card-actions-height;
+    opacity: 0.75;
+    background-color: $white;
+    position: absolute;
+    text-transform: uppercase;
+    color: $grey-dark;
 
-    .product-card-image {
-      height: $product-card-image-height-tablet;
-    }
-
-    .product-card-actions {
-      position: absolute;
-      width: $product-card-width-tablet;
-    }
-
-    .product-card-wish-list-heart {
-      display: block;
-      margin-left: calc(#{$product-card-width-tablet} - #{$product-card-wish-list-heart-width});
-      margin-top: -$product-card-wish-list-heart-height;
-    }
-
-    .out-of-stock {
-      width: $product-card-width-tablet;
-      margin-top: -$out-of-stock-margin-top-tablet;
+    @include media-breakpoint-down(md) {
+      top: 25%;
     }
   }
 
-  // mobile
-  @include media-breakpoint-down(md) {
-    width: $product-card-width-mobile;
+  .product-card-add-to-bag,
+  .product-card-add-to-wish-list {
+    margin-top: -$product-card-actions-height;
 
-    .product-card-image {
-      height: $product-card-image-height-mobile;
-    }
-
-    .product-card-actions {
-      position: absolute;
-      width: $product-card-width-mobile;
-    }
-
-    .product-card-wish-list-heart {
-      display: block;
-      margin-left: calc(#{$product-card-width-mobile} - #{$product-card-wish-list-heart-width});
-      margin-top: -$product-card-wish-list-heart-height;
-    }
-
-    .out-of-stock {
-      width: $product-card-width-mobile;
-      margin-top: -$out-of-stock-margin-top-mobile;
+    @include media-breakpoint-down(lg) {
+      display: none;
     }
   }
-}
 
-.out-of-stock {
-  @include font-avalon-demi;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -$out-of-stock-margin-top;
-  width: $product-card-width;
-  height: 30px;
-  opacity: 0.75;
-  background-color: $white;
-  position: absolute;
-  text-transform: uppercase;
-  color: $grey-dark;
-}
-
-.product-card-add-to-bag,
-.product-card-add-to-wish-list {
-  margin-top: -38px;
-
-  @include media-breakpoint-down(lg) {
+  .product-card-wish-list-heart {
+    top: 0;
+    right: 0;
+    height: $product-card-wish-list-heart-height;
+    width: $product-card-wish-list-heart-width;
+    opacity: 0.8;
+    background: url('/assets/sephora_style_guide/shared_sephora_icons_v5.png') -86px -119px;
+    position: absolute;
     display: none;
+
+    &:hover {
+      background-position: -107px -120px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      display: block;
+      position: absolute;
+      top: auto;
+      right: 10px;
+      margin-top: -$product-card-wish-list-heart-height;
+    }
   }
-}
 
-.product-card-image {
-  display: block;
-  height: $product-card-image-height;
-}
-
-.product-card-actions {
-  position: absolute;
-  width: $product-card-width;
-}
-
-.product-card-wish-list-heart {
-  height: $product-card-wish-list-heart-height;
-  width: $product-card-wish-list-heart-width;
-  opacity: 0.8;
-  background: url('/assets/sephora_style_guide/shared_sephora_icons_v5.png') -86px -119px;
-  position: absolute;
-  display: none;
-  margin-left: calc(#{$product-card-width} - #{$product-card-wish-list-heart-width});
-  margin-top: -$product-card-image-height;
-
-  &:hover {
-    background-position: -107px -120px;
+  .product-card-variants {
+    height: $product-card-actions-height;
   }
-}
 
-.product-card-variants {
-  height: 30px;
-}
+  .product-card-description {
+    font-size: 13px;
+    line-height: 17px;
 
-.product-card-description {
-  font-size: 13px;
-  line-height: 17px;
-
-  &:hover {
-    color: inherit;
+    &:hover {
+      color: inherit;
+    }
   }
-}
 
-%product-card-label {
-  font-size: 10px;
-  @include font-avalon-demi;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
+  %product-card-label {
+    font-size: 10px;
+    @include font-avalon-demi;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
 
-.product-card-label-new-arrival {
-  @extend %product-card-label;
-  color: $brand-primary;
-}
+  .product-card-label-new-arrival {
+    @extend %product-card-label;
+    color: $brand-primary;
+  }
 
-.product-card-label-limited-edition {
-  @extend %product-card-label;
-  color: $grey-mid;
-}
+  .product-card-label-limited-edition {
+    @extend %product-card-label;
+    color: $grey-mid;
+  }
 
-.product-card-brand {
-  @include font-avalon-demi;
-  text-transform: uppercase;
-}
+  .product-card-brand {
+    @include font-avalon-demi;
+    text-transform: uppercase;
+  }
 
-.product-card-product {
-  overflow-wrap: break-word;
-}
+  .product-card-product {
+    overflow-wrap: break-word;
+  }
 
-.product-card-price {
-  @include font-avalon-demi;
-}
+  .product-card-price {
+    @include font-avalon-demi;
+  }
 
-.product-card-rating {
-  height: 12px;
-  width: 54px;
-  background: url('/assets/sephora_style_guide/sephora-stars-sm.png') 0 -12px !important;
+  .product-card-rating {
+    height: 12px;
+    width: 60px;
+    background: url('/assets/sephora_style_guide/sephora-stars-sm.png') 0 -12px !important;
+  }
 }
