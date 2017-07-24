@@ -24,7 +24,9 @@ javascript:
       buttonText: this.textInitial,
       buttonTextInitial: '',
       buttonTextPending: 'Adding...',
-      showProductCardActions: false
+      showProductOneActions: false,
+      showProductTwoActions: false,
+      showProductThreeActions: false
     },
     methods: {
       changeInitialText: function() {
@@ -41,12 +43,21 @@ javascript:
         }, 2000);
       },
 
-      mouseoverProductCard: function() {
-        this.showProductCardActions = true;
+      mouseoverProductCard: function(e) {
+        const target = e.target.closest(".product-card").getAttribute('name');
+        if (target === 'product1') {
+          this.showProductOneActions = true;
+        } else if (target === 'product2') {
+          this.showProductTwoActions = true;
+        } else if (target === 'product3') {
+          this.showProductThreeActions = true;
+        }        
       },
 
       mouseleaveProductCard: function() {
-        this.showProductCardActions = false;
+        this.showProductOneActions = false;
+        this.showProductTwoActions = false;
+        this.showProductThreeActions = false;
       }
     }
   });

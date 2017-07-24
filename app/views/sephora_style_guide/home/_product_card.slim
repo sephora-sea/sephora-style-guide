@@ -5,11 +5,11 @@ article#product-card
     .container
       .row
         .col-6.col-md-3.offset-md-3
-          .product-card @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
+          .product-card name='product1' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
             = link_to '#product-link' do
               = image_tag 'sephora_style_guide/product1-400x400.png', class: 'product-card-image'
             .product-card-wish-list-heart
-            .product-card-actions v-if='showProductCardActions'
+            .product-card-actions v-if='showProductOneActions'
               button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to Bag
               .product-card-variants
             = link_to '#product-link', class: 'product-card-description' do
@@ -20,12 +20,12 @@ article#product-card
               p.product-card-price $26.00
               .product-card-rating
         .col-6.col-md-3
-          .product-card @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
+          .product-card name='product2' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
             = link_to '#product-link' do
               = image_tag 'sephora_style_guide/product2-400x400.png', class: 'product-card-image'
             .out-of-stock Out of stock
             span.product-card-wish-list-heart
-            .product-card-actions v-if='showProductCardActions' 
+            .product-card-actions v-if='showProductTwoActions' 
               button.btn.btn-sm.btn-block.btn-defaults.product-card-add-to-wish-list Waitlist Me
               .product-card-variants
             = link_to '#product-link', class: 'product-card-description' do
@@ -35,11 +35,11 @@ article#product-card
               p.product-card-price $254.00
               .product-card-rating
         .col-6.col-md-3
-          .product-card @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
+          .product-card name='product3' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
             = link_to '#product-link' do
               = image_tag 'sephora_style_guide/product3-400x400.png', class: 'product-card-image'
             span.product-card-wish-list-heart
-            .product-card-actions v-if='showProductCardActions' 
+            .product-card-actions v-if='showProductThreeActions' 
               button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to bag
               .product-card-variants
             = link_to '#product-link', class: 'product-card-description' do
