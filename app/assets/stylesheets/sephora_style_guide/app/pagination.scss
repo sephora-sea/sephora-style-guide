@@ -18,21 +18,20 @@
       font-size: 13px;
       text-align: center;
       text-decoration: none;
-      padding: 8px;
+      padding: 10px 8px;
       height: 40px;
       min-width: 40px;
       width: auto;
       box-sizing: border-box;
       vertical-align: middle;
+      cursor: pointer;
 
       &:last-child {
         border-right: 1px solid $grey;
       }
 
-      a,
-      em {
+      span {
         display: inline-block;
-        padding: 4px 3px 0;
         vertical-align: middle;
         width: auto;
         font-style: normal;
@@ -41,10 +40,13 @@
 
       &:hover {
         background: $grey;
+        color: $black;
       }
 
-      &.current {
+      &.current,
+      &.current:hover {
         background: $grey-light;
+        color: $black;
       }
 
       &.continue {
@@ -62,7 +64,7 @@
 
       &.next,
       &.prev {
-        a {
+        span {
           width: 15px;
           height: 15px;
 
