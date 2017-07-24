@@ -48,16 +48,16 @@
 
   .product-card-wish-list-heart {
     top: 0;
-    right: 0;
-    height: $product-card-wish-list-heart-height;
+    right: 15px;
     width: $product-card-wish-list-heart-width;
+    height: $product-card-wish-list-heart-height;
     opacity: 0.8;
-    background: url('/assets/sephora_style_guide/shared_sephora_icons_v5.png') -86px -119px;
+    background: url('/assets/sephora_style_guide/heart.svg');
     position: absolute;
     display: none;
 
     &:hover {
-      background-position: -107px -120px;
+      background: url('/assets/sephora_style_guide/heart-filled.svg');
     }
 
     @include media-breakpoint-down(lg) {
@@ -65,7 +65,7 @@
       position: absolute;
       top: auto;
       right: 10px;
-      margin-top: -$product-card-wish-list-heart-height;
+      margin-top: -25;
     }
   }
 
