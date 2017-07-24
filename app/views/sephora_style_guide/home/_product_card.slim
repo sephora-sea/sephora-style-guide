@@ -9,16 +9,36 @@ article#product-card
             = link_to '#product-link' do
               = image_tag 'sephora_style_guide/product1-400x400.png', class: 'product-card-image'
             .product-card-wish-list-heart
-            .product-card-actions v-if='showProductOneActions'
+            .product-card-actions
               button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to Bag
               .product-card-variants
+                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
+                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
+                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
+                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
+                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
+                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
+                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
+                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
             = link_to '#product-link', class: 'product-card-description' do
-              span.product-card-label-new-arrival New 
-              span.product-card-label-limited-edition | Limited Edition
-              p.product-card-brand Clinique
-              p.product-card-product Chubby Stick Moisturizing Lip Colour Balm
-              p.product-card-price $26.00
-              .product-card-rating
+              .product-card-description-container
+                span.product-card-label-new-arrival New 
+                span.product-card-label-limited-edition | Limited Edition
+                p.product-card-brand Clinique
+                p.product-card-product Chubby Stick Moisturizing Lip Colour Balm
+                p.product-card-price $26.00
+                .product-card-rating
+                  .product-rating-range
+                    .product-current-rating
+                
         .col-6.col-md-3
           .product-card name='product2' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
             = link_to '#product-link' do
@@ -26,14 +46,18 @@ article#product-card
             .out-of-stock Out of stock
             span.product-card-wish-list-heart
             .product-card-actions v-if='showProductTwoActions' 
-              button.btn.btn-sm.btn-block.btn-defaults.product-card-add-to-wish-list Waitlist Me
+              button.btn.btn-sm.btn-block.product-card-add-to-wish-list :class='{ "btn-defaults": !productIsWaitListed, "disabled": productIsWaitListed }' @click='waitlistProduct' {{ waitlistText }}
               .product-card-variants
             = link_to '#product-link', class: 'product-card-description' do
-              .product-card-label-new-arrival New
-              p.product-card-brand Sigma Beauty
-              p.product-card-product Mr. Bunny Essential Kit
-              p.product-card-price $254.00
-              .product-card-rating
+              .product-card-description-container
+                span.product-card-label-new-arrival New
+                p.product-card-brand Sigma Beauty
+                p.product-card-product Mr. Bunny Essential Kit
+                p.product-card-price $254.00
+                .product-card-rating
+                  .product-rating-range
+                    .product-current-rating
+                
         .col-6.col-md-3
           .product-card name='product3' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
             = link_to '#product-link' do
@@ -43,7 +67,15 @@ article#product-card
               button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to bag
               .product-card-variants
             = link_to '#product-link', class: 'product-card-description' do
-              p.product-card-brand Alima Pure
-              p.product-card-product Satin Matte Bronzer
-              p.product-card-price $34.00
-              .product-card-rating
+              .product-card-description-container
+                span.product-card-label-new-arrival New
+                span.product-card-label-limited-edition | Limited Edition
+                p.product-card-brand Alima Pure
+                p.product-card-product Shimmering Skin Perfector Pressed Prismatic Amethyst (Limited Edition)
+                .product-card-price-discount
+                  p.product-card-old-price $34.00
+                  p.product-card-new-price $17.00
+                  p.product-card-discount-percentage = "(-50%)"
+                .product-card-rating
+                  .product-rating-range
+                    .product-current-rating

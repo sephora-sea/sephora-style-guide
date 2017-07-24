@@ -26,7 +26,10 @@ javascript:
       buttonTextPending: 'Adding...',
       showProductOneActions: false,
       showProductTwoActions: false,
-      showProductThreeActions: false
+      showProductThreeActions: false,
+      waitlistText: 'Waitlist Me',
+      productIsWaitListed: false,
+      variantIsActive: false
     },
     methods: {
       changeInitialText: function() {
@@ -58,6 +61,25 @@ javascript:
         this.showProductOneActions = false;
         this.showProductTwoActions = false;
         this.showProductThreeActions = false;
+      },
+      
+      waitlistProduct: function() {
+        this.waitlistText = 'Waitlisted';
+        this.productIsWaitListed = true;
+      },
+      
+      setProductRating: function() {
+        const product = document.getElementsByName("product3")[0];
+        const productRating = product.querySelector(".product-current-rating");
+        productRating.style.width = '49px';
+      },
+      
+      selectVariant: function() {
+        this.variantIsActive = !this.variantIsActive;
       }
+      
+    },
+    created() {
+      this.setProductRating();
     }
   });

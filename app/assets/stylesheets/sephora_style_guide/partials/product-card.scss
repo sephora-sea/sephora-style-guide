@@ -10,6 +10,15 @@
     position: relative;
     width: 100%;
     height: $product-card-actions-height;
+
+    .product-card-add-to-bag,
+    .product-card-add-to-wish-list {
+      margin-top: -$product-card-actions-height;
+
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
   }
 
   &:hover {
@@ -26,23 +35,13 @@
     align-items: center;
     width: 90%;
     height: $product-card-actions-height;
-    opacity: 0.75;
-    background-color: $white;
+    background-color: rgba(255, 255, 255, 0.75);
     position: absolute;
     text-transform: uppercase;
     color: $grey-dark;
 
     @include media-breakpoint-down(md) {
       top: 25%;
-    }
-  }
-
-  .product-card-add-to-bag,
-  .product-card-add-to-wish-list {
-    margin-top: -$product-card-actions-height;
-
-    @include media-breakpoint-down(lg) {
-      display: none;
     }
   }
 
@@ -65,12 +64,30 @@
       position: absolute;
       top: auto;
       right: 10px;
-      margin-top: -25;
+      margin-top: -25px;
     }
   }
 
   .product-card-variants {
     height: $product-card-actions-height;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+
+    .product-variant {
+      height: 50%;
+      margin-left: 2.5px;
+      margin-right: 2.5px;
+      box-sizing: border-box;
+      cursor: pointer;
+
+      &.active {
+        border: 1px solid $black;
+        margin-left: 1.5px;
+        margin-right: 1.5px;
+      }
+    }
   }
 
   .product-card-description {
@@ -82,39 +99,74 @@
     }
   }
 
-  %product-card-label {
-    font-size: 10px;
-    @include font-avalon-demi;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
+  .product-card-description-container {
+    margin-top: 30px;
+    width: 90%;
 
-  .product-card-label-new-arrival {
-    @extend %product-card-label;
-    color: $brand-primary;
-  }
+    %product-card-label {
+      font-size: 10px;
+      @include font-avalon-demi;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
 
-  .product-card-label-limited-edition {
-    @extend %product-card-label;
-    color: $grey-mid;
-  }
+    .product-card-label-new-arrival {
+      @extend %product-card-label;
+      color: $brand-primary;
+    }
 
-  .product-card-brand {
-    @include font-avalon-demi;
-    text-transform: uppercase;
-  }
+    .product-card-label-limited-edition {
+      @extend %product-card-label;
+      color: $grey-mid;
+    }
 
-  .product-card-product {
-    overflow-wrap: break-word;
-  }
+    .product-card-brand {
+      width: 90%;
+      @include font-avalon-demi;
+      text-transform: uppercase;
+    }
 
-  .product-card-price {
-    @include font-avalon-demi;
-  }
+    .product-card-product {
+      overflow-wrap: break-word;
+    }
 
-  .product-card-rating {
-    height: 12px;
-    width: 60px;
-    background: url('/assets/sephora_style_guide/sephora-stars-sm.png') 0 -12px !important;
+    .product-card-price {
+      @include font-avalon-demi;
+    }
+
+    .product-card-price-discount {
+      .product-card-old-price {
+        text-decoration: line-through;
+        display: inline-block;
+        margin-right: 5px;
+      }
+
+      .product-card-new-price {
+        display: inline-block;
+        margin-right: 5px;
+        @include font-avalon-demi;
+      }
+
+      .product-card-discount-percentage {
+        color: $brand-primary;
+        display: inline-block;
+        @include font-avalon-demi;
+      }
+    }
+
+    .product-card-rating {
+      .product-rating-range {
+        height: 12px;
+        width: 60px;
+        background: url('/assets/sephora_style_guide/sephora-stars-sm.png') 0 -12px !important;
+
+        .product-current-rating {
+          height: 12px;
+          width: 0;
+          position: absolute;
+          background: url('/assets/sephora_style_guide/sephora-stars-sm.png') 0 0 !important;
+        }
+      }
+    }
   }
 }
