@@ -74,8 +74,19 @@ javascript:
         productRating.style.width = '49px';
       },
       
-      selectVariant: function() {
-        this.variantIsActive = !this.variantIsActive;
+      selectVariant: function(e) {
+        if (e.target.className === 'product-variant') {
+          for (let variant of e.target.parentNode.childNodes) {
+            variant.classList.remove('active');
+          }
+          e.target.classList.add('active');
+        }
+      },
+      
+      setWishList: function(e) {
+        if (e.target.className === 'product-card-wish-list-heart') {
+          e.target.classList.add('wish-listed');
+        }
       }
       
     },
