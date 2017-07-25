@@ -50,22 +50,16 @@ select {
   }
 }
 
-.tab-content {
-  border: 1px solid $grey;
-  margin-top: -1px;
+.tab-content .tab-pane {
+  padding: 15px;
+  border-top: 0;
 
-  .tab-pane {
-    padding: 15px;
-    margin-top: -1px;
-    border-top: 0;
+  p {
+    margin-bottom: 10px;
+  }
 
-    p {
-      margin-bottom: 10px;
-    }
-
-    ul {
-      margin-left: 15px;
-    }
+  ul {
+    margin-left: 15px;
   }
 }
 
@@ -102,6 +96,7 @@ select {
 }
 
 .tab-content.tab-content-default {
+  border: 1px solid $grey;
   margin-top: -4px;
 
   .tab-pane {
@@ -133,4 +128,9 @@ select {
       background: $brand-primary;
     }
   }
+}
+
+.tab-content.tab-content-primary {
+  border-top: 1px solid $grey;
+  margin-top: -1px;
 }
