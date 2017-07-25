@@ -2,8 +2,9 @@
   width: 100%;
 
   &:hover {
-    .product-card-wish-list-heart {
-      display: block;
+    .product-card-wish-list-heart,
+    .product-card-wish-list-heart-filled {
+      visibility: visible;
     }
   }
 
@@ -49,30 +50,22 @@
     }
   }
 
-  .product-card-wish-list-heart {
-    display: none;
+  .product-card-wish-list-heart,
+  .product-card-wish-list-heart-filled {
+    visibility: hidden;
     position: absolute;
     top: 0;
     right: 15px;
     width: $product-card-wish-list-heart-width;
     height: $product-card-wish-list-heart-height;
     opacity: 0.8;
-    background: url('/assets/sephora_style_guide/heart.svg');
-
-    &:hover {
-      background: url('/assets/sephora_style_guide/heart-filled.svg');
-    }
-
-    &.wish-listed {
-      background: url('/assets/sephora_style_guide/heart-filled.svg');
-    }
 
     @include media-breakpoint-down(lg) {
-      display: block;
+      visibility: visible;
       position: absolute;
       top: auto;
       right: 10px;
-      margin-top: -35px;
+      margin-top: -40px;
     }
   }
 
@@ -229,7 +222,7 @@
       }
 
       @include media-breakpoint-down(lg) {
-        margin-top: 10px;
+        margin-top: 0;
       }
     }
   }

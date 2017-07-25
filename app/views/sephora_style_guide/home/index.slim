@@ -27,8 +27,14 @@ javascript:
       showProductOneActions: false,
       showProductTwoActions: false,
       showProductThreeActions: false,
+      showWishListHeartOneFilled: false,
+      showWishListHeartTwoFilled: false,
+      showWishListHeartThreeFilled: false,
       waitlistText: 'Waitlist Me',
       productIsWaitListed: false,
+      productOneIsWishListed: false,
+      productTwoIsWishListed: false,
+      productThreeIsWishListed: false,
       variantIsActive: false
     },
     methods: {
@@ -84,11 +90,38 @@ javascript:
       },
       
       setWishList: function(e) {
-        if (e.target.className === 'product-card-wish-list-heart') {
-          e.target.classList.add('wish-listed');
-        }
-      }
+        if (e.target.parentNode.parentNode.className === 'product-card-wish-list-heart-filled') {
+          const target = e.target.closest(".product-card").getAttribute('name');
+          if (target === 'product1') {
+            this.productOneIsWishListed = !this.productOneIsWishListed;
+          } else if (target === 'product2') {
+            this.productTwoIsWishListed = !this.productTwoIsWishListed;
+          } else if (target === 'product3') {
+            this.productThreeIsWishListed = !this.productThreeIsWishListed;
+          }
+        } 
+      },
       
+      mouseoverWishListHeart: function(e) {
+        if (e.target.parentNode.className === 'product-card-wish-list-heart') {
+          const target = e.target.closest(".product-card").getAttribute('name');
+          if (target === 'product1') {
+            this.showWishListHeartOneFilled = true;
+          } else if (target === 'product2') {
+            this.showWishListHeartTwoFilled = true;
+          } else if (target === 'product3') {
+            this.showWishListHeartThreeFilled = true;
+          }   
+        }     
+      },
+
+      mouseleaveWishListHeart: function(e) {
+        if (e.target.className === 'product-card-wish-list-heart-filled') {
+          this.showWishListHeartOneFilled = false;
+          this.showWishListHeartTwoFilled = false;
+          this.showWishListHeartThreeFilled = false;
+        }
+      },
     },
     created() {
       this.setProductRating();
