@@ -34,9 +34,9 @@ article#product-card
                 img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
                 img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
             = link_to '#product-link', class: 'product-card-description' do
+              span.product-card-label-new-arrival New 
+              span.product-card-label-limited-edition | Limited Edition
               .product-card-description-container
-                span.product-card-label-new-arrival New 
-                span.product-card-label-limited-edition | Limited Edition
                 p.product-card-brand Clinique
                 p.product-card-product Chubby Stick Moisturizing Lip Colour Balm
                 p.product-card-price $26.00
@@ -57,8 +57,8 @@ article#product-card
               button.btn.btn-sm.btn-block.product-card-add-to-wish-list :class='{ "btn-defaults": !productIsWaitListed, "disabled": productIsWaitListed }' @click='waitlistProduct' {{ waitlistText }}
               .product-card-variants
             = link_to '#product-link', class: 'product-card-description' do
+              span.product-card-label-new-arrival New
               .product-card-description-container
-                span.product-card-label-new-arrival New
                 p.product-card-brand Sigma Beauty
                 p.product-card-product Mr. Bunny Essential Kit
                 p.product-card-price $254.00
@@ -82,8 +82,6 @@ article#product-card
                 img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
             = link_to '#product-link', class: 'product-card-description' do
               .product-card-description-container
-                span.product-card-label-new-arrival New
-                span.product-card-label-limited-edition | Limited Edition
                 p.product-card-brand Alima Pure
                 p.product-card-product Shimmering Skin Perfector Pressed Prismatic Amethyst (Limited Edition)
                 .product-card-discount-price

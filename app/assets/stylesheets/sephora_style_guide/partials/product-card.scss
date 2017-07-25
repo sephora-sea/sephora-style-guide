@@ -151,26 +151,33 @@
       color: inherit;
     }
 
-    .product-card-description-container {
+    %product-card-label {
+      font-size: 10px;
+      @include font-avalon-demi;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      position: absolute;
       margin-top: 30px;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 0;
+      }
+    }
+
+    .product-card-label-new-arrival {
+      @extend %product-card-label;
+      color: $brand-primary;
+    }
+
+    .product-card-label-limited-edition {
+      @extend %product-card-label;
+      color: $grey-mid;
+      margin-left: 28px;
+    }
+
+    .product-card-description-container {
+      margin-top: 47px;
       width: 90%;
-
-      %product-card-label {
-        font-size: 10px;
-        @include font-avalon-demi;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-      }
-
-      .product-card-label-new-arrival {
-        @extend %product-card-label;
-        color: $brand-primary;
-      }
-
-      .product-card-label-limited-edition {
-        @extend %product-card-label;
-        color: $grey-mid;
-      }
 
       .product-card-brand {
         @include font-avalon-demi;
@@ -221,7 +228,7 @@
       }
 
       @include media-breakpoint-down(lg) {
-        margin-top: 0;
+        margin-top: 17px;
       }
     }
   }
