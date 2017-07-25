@@ -111,7 +111,7 @@
       right: 0;
       position: absolute;
       margin-right: 20px;
-      background: linear-gradient(to right, rgba(255,255,255,0), white);
+      background: linear-gradient(to right, rgba(255,255,255,0), $white);
       cursor: default;
     }
 
@@ -127,23 +127,23 @@
     align-items: center;
     overflow-x: hidden;
 
-      &.variants-overflow {
-        margin-left: 15px;
-        margin-right: 25px;
+    &.variants-overflow {
+      margin-left: 15px;
+      margin-right: 25px;
+    }
+
+    .product-variant {
+      height: 50%;
+      margin-left: 2.5px;
+      margin-right: 2.5px;
+      box-sizing: border-box;
+      cursor: pointer;
+
+      &.active {
+        border: 1px solid $black;
+        margin-left: 1.5px;
+        margin-right: 1.5px;
       }
-
-      .product-variant {
-        height: 50%;
-        margin-left: 2.5px;
-        margin-right: 2.5px;
-        box-sizing: border-box;
-        cursor: pointer;
-
-        &.active {
-          border: 1px solid $black;
-          margin-left: 1.5px;
-          margin-right: 1.5px;
-        }
     }
 
     @include media-breakpoint-down(lg) {
