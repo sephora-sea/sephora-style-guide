@@ -8,9 +8,9 @@ article#product-card
           .product-card name='product1' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
             = link_to '#product-link' do
               = image_tag 'sephora_style_guide/product1-400x400.png', class: 'product-card-image'
-            .product-card-wish-list-heart-filled v-if='productOneIsWishListed || showWishListHeartOneFilled' @mouseleave='mouseleaveWishListHeart' @click='setWishList'
+            .product-card-wish-list-heart-filled v-if='productOneIsWishListed' @click='setWishList'
               = inline_svg 'sephora_style_guide/heart-filled.svg'
-            .product-card-wish-list-heart v-if='!productOneIsWishListed && !showWishListHeartOneFilled' @mouseover='mouseoverWishListHeart'
+            .product-card-wish-list-heart v-if='!productOneIsWishListed' @click='setWishList'
               = inline_svg 'sephora_style_guide/heart.svg'
             .product-card-actions v-if='showProductOneActions'
               button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to Bag
@@ -49,9 +49,9 @@ article#product-card
             = link_to '#product-link' do
               = image_tag 'sephora_style_guide/product2-400x400.png', class: 'product-card-image'
             .out-of-stock Out of stock
-            .product-card-wish-list-heart-filled v-if='productTwoIsWishListed || showWishListHeartTwoFilled' @mouseleave='mouseleaveWishListHeart' @click='setWishList'
+            .product-card-wish-list-heart-filled v-if='productTwoIsWishListed' @click='setWishList'
               = inline_svg 'sephora_style_guide/heart-filled.svg'
-            .product-card-wish-list-heart v-if='!productTwoIsWishListed && !showWishListHeartTwoFilled' @mouseover='mouseoverWishListHeart'
+            .product-card-wish-list-heart v-if='!productTwoIsWishListed' @click='setWishList'
               = inline_svg 'sephora_style_guide/heart.svg'
             .product-card-actions v-if='showProductTwoActions'
               button.btn.btn-sm.btn-block.product-card-add-to-wish-list :class='{ "btn-defaults": !productIsWaitListed, "disabled": productIsWaitListed }' @click='waitlistProduct' {{ waitlistText }}
@@ -70,9 +70,9 @@ article#product-card
           .product-card name='product3' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
             = link_to '#product-link' do
               = image_tag 'sephora_style_guide/product3-400x400.png', class: 'product-card-image'
-            .product-card-wish-list-heart-filled v-if='productThreeIsWishListed || showWishListHeartThreeFilled' @mouseleave='mouseleaveWishListHeart' @click='setWishList'
+            .product-card-wish-list-heart-filled v-if='productThreeIsWishListed' @click='setWishList'
               = inline_svg 'sephora_style_guide/heart-filled.svg'
-            .product-card-wish-list-heart v-if='!productThreeIsWishListed && !showWishListHeartThreeFilled' @mouseover='mouseoverWishListHeart'
+            .product-card-wish-list-heart v-if='!productThreeIsWishListed' @click='setWishList'
               = inline_svg 'sephora_style_guide/heart.svg'
             .product-card-actions v-if='showProductThreeActions' 
               button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to bag

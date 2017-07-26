@@ -68,6 +68,10 @@
     }
   }
 
+  .product-card-wish-list-heart:hover svg path {
+    fill: $brand-primary;
+  }
+
   .product-card-variants-carousel {
     position: absolute;
     bottom: 0;
