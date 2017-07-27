@@ -9,7 +9,7 @@ $(document).ready(function() {
     }
   });
 
-  $('.product-card').mouseover(function(e) {
+  $('.product-card').mouseover(function() {
     if ($('[name="variant11"]').hasClass('active')) {
       $('.product-card-variants').animate({ scrollLeft: $('[name="variant11"]').offset().left }, 500);
       $('.carousel-more-variants').hide();
