@@ -17,22 +17,21 @@ article#product-card
               .product-card-variants-carousel
                 span.carousel-arrow-left
                 span.carousel-arrow-right
-                p.carousel-more-variants +3
+                p.carousel-more-variants +2
               .product-card-variants.variants-overflow 
-                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
-                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
-                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
-                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
-                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
-                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
-                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
-                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
-                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
-                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
-                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
-                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
-                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
-                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
+                img.product-variant name='variant1' :class='{ active: isVariantOneSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant name='variant2' :class='{ active: isVariantTwoSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
+                img.product-variant name='variant3' :class='{ active: isVariantThreeSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant name='variant4' :class='{ active: isVariantFourSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
+                img.product-variant name='variant5' :class='{ active: isVariantFiveSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant name='variant6' :class='{ active: isVariantSixSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
+                img.product-variant name='variant7' :class='{ active: isVariantSevenSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant name='variant8' :class='{ active: isVariantEightSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
+                img.product-variant name='variant9' :class='{ active: isVariantNineSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant name='variant10' :class='{ active: isVariantTenSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
+                img.product-variant name='variant11' :class='{ active: isVariantElevenSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant name='variant12' :class='{ active: isVariantTwelveSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
+                img.product-variant name='variant13' :class='{ active: isVariantThirteenSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
             = link_to '#product-link', class: 'product-card-description' do
               span.product-card-label-new-arrival New 
               span.product-card-label-limited-edition | Limited Edition
@@ -77,9 +76,9 @@ article#product-card
             .product-card-actions v-if='showProductThreeActions' 
               button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to bag
               .product-card-variants 
-                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
-                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
-                img.product-variant :class='{ active: variantIsActive }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant  @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant  @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
+                img.product-variant  @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
             = link_to '#product-link', class: 'product-card-description' do
               .product-card-description-container
                 p.product-card-brand Alima Pure
