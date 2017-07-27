@@ -76,9 +76,8 @@ article#product-card
             .product-card-actions v-if='showProductThreeActions' 
               button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to bag
               .product-card-variants 
-                img.product-variant  @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
-                img.product-variant  @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
-                img.product-variant  @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant name='variant14' :class='{ active: isVariantFourteenSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant name='variant15' :class='{ active: isVariantFifteenSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
             = link_to '#product-link', class: 'product-card-description' do
               .product-card-description-container
                 p.product-card-brand Alima Pure

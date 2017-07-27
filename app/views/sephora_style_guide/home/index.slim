@@ -44,7 +44,9 @@ javascript:
       isVariantTenSelected: false,
       isVariantElevenSelected: false,
       isVariantTwelveSelected: false,
-      isVariantThirteenSelected: false
+      isVariantThirteenSelected: false,
+      isVariantFourteenSelected: false,
+      isVariantFifteenSelected: false
     },
     methods: {
       changeInitialText: function() {
@@ -129,6 +131,12 @@ javascript:
         } else if (e.target.getAttribute('name') === 'variant13') {
           this.clearActiveVariants();
           this.isVariantThirteenSelected = true;
+        } else if (e.target.getAttribute('name') === 'variant14') {
+          this.clearActiveVariants();
+          this.isVariantFourteenSelected = true;
+        } else if (e.target.getAttribute('name') === 'variant15') {
+          this.clearActiveVariants();
+          this.isVariantFifteenSelected = true;
         } 
       },
       
@@ -146,6 +154,8 @@ javascript:
         this.isVariantElevenSelected = false;
         this.isVariantTwelveSelected = false;
         this.isVariantThirteenSelected = false;
+        this.isVariantFourteenSelected = false;
+        this.isVariantFifteenSelected = false;
       },
       
       setWishList: function(e) {
