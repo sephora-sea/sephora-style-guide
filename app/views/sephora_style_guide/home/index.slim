@@ -92,55 +92,47 @@ javascript:
       },
       
       selectVariant: function(e) {
-        if (e.target.getAttribute('name') === 'variant1') {
-          this.clearActiveVariants();
-          this.isVariantOneSelected = true;
-        } else if (e.target.getAttribute('name') === 'variant2') {
-          this.clearActiveVariants();
-          this.isVariantTwoSelected = true;
-        } else if (e.target.getAttribute('name') === 'variant3') {
-          this.clearActiveVariants();
-          this.isVariantThreeSelected = true;
-        } else if (e.target.getAttribute('name') === 'variant4') {
-          this.clearActiveVariants();
-          this.isVariantFourSelected = true;
-        } else if (e.target.getAttribute('name') === 'variant5') {
-          this.clearActiveVariants();
-          this.isVariantFiveSelected = true;
-        } else if (e.target.getAttribute('name') === 'variant6') {
-          this.clearActiveVariants();
-          this.isVariantSixSelected = true;
-        } else if (e.target.getAttribute('name') === 'variant7') {
-          this.clearActiveVariants();
-          this.isVariantSevenSelected = true;
-        } else if (e.target.getAttribute('name') === 'variant8') {
-          this.clearActiveVariants();
-          this.isVariantEightSelected = true;
-        } else if (e.target.getAttribute('name') === 'variant9') {
-          this.clearActiveVariants();
-          this.isVariantNineSelected = true;
-        } else if (e.target.getAttribute('name') === 'variant10') {
-          this.clearActiveVariants();
-          this.isVariantTenSelected = true;
-        } else if (e.target.getAttribute('name') === 'variant11') {
-          this.clearActiveVariants();
-          this.isVariantElevenSelected = true;
-        } else if (e.target.getAttribute('name') === 'variant12') {
-          this.clearActiveVariants();
-          this.isVariantTwelveSelected = true;
-        } else if (e.target.getAttribute('name') === 'variant13') {
-          this.clearActiveVariants();
-          this.isVariantThirteenSelected = true;
-        } else if (e.target.getAttribute('name') === 'variant14') {
-          this.clearActiveVariants();
-          this.isVariantFourteenSelected = true;
-        } else if (e.target.getAttribute('name') === 'variant15') {
-          this.clearActiveVariants();
-          this.isVariantFifteenSelected = true;
-        } 
+        if (e.target.closest(".product-card").getAttribute('name') === 'product1')
+          this.clearActiveProductOneVariants();
+          if (e.target.getAttribute('name') === 'variant1') {
+            this.isVariantOneSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant2') {
+            this.isVariantTwoSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant3') {
+            this.isVariantThreeSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant4') {
+            this.isVariantFourSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant5') {
+            this.isVariantFiveSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant6') {
+            this.isVariantSixSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant7') {
+            this.isVariantSevenSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant8') {
+            this.isVariantEightSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant9') {
+            this.isVariantNineSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant10') {
+            this.isVariantTenSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant11') {
+            this.isVariantElevenSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant12') {
+            this.isVariantTwelveSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant13') {
+            this.isVariantThirteenSelected = true;
+          } 
+        } else {
+          if (e.target.getAttribute('name') === 'variant14') {
+            this.isVariantFourteenSelected = true;
+            this.isVariantFifteenSelected = false;
+          } else if (e.target.getAttribute('name') === 'variant15') {
+            this.isVariantFourteenSelected = false;
+            this.isVariantFifteenSelected = true;
+          }
+        }
       },
       
-      clearActiveVariants: function() {
+      clearActiveProductOneVariants: function() {
         this.isVariantOneSelected = false;
         this.isVariantTwoSelected = false;
         this.isVariantThreeSelected = false;
