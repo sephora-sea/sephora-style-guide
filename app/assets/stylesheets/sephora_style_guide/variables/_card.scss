@@ -1,0 +1,19 @@
+$card-spacer-y:            9.75px !default;
+$card-spacer-x:            16.25px !default;
+$card-border-width:        1px !default;
+$card-border-radius:       $border-radius !default;
+$card-border-color:        rgba($black,.125) !default;
+$card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width}) !default;
+$card-cap-bg:              rgba($black, .03) !default;
+$card-bg:                   $white !default;
+
+$card-cap-bg-inverse:       $black;
+$card-color-inverse:        $white;
+
+$card-img-overlay-padding:  16.25px !default;
+
+$card-deck-margin:          (map-get($grid-gutter-widths, sm) / 2) !default;
+
+$card-columns-count:        3 !default;
+$card-columns-gap:          16.25px !default;
+$card-columns-margin:       $card-spacer-y !default;
