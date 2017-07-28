@@ -92,8 +92,9 @@ javascript:
       },
       
       selectVariant: function(e) {
-        if (e.target.closest(".product-card").getAttribute('name') === 'product1')
+        if (e.target.closest(".product-card").getAttribute('name') === 'product1') {
           this.clearActiveProductOneVariants();
+          
           if (e.target.getAttribute('name') === 'variant1') {
             this.isVariantOneSelected = true;
           } else if (e.target.getAttribute('name') === 'variant2') {
