@@ -1,0 +1,42 @@
+.breadcrumb {
+  list-style: none;
+  display: flex;
+  font-size: 11px;
+  height: 11px;
+  padding: 0;
+}
+
+.breadcrumb-item {
+  display: inline-table;
+  line-height: 13px;
+  cursor: pointer;
+
+  &::before {
+    content: '/';
+    display: inline-block;
+    color: $grey-dark;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: none;
+  }
+
+  &:first-child::before {
+    content: '';
+    padding: 0;
+  }
+
+  &:hover {
+    color: $grey-dark;
+    text-decoration: underline;
+    text-decoration-color: $grey-mid;
+  }
+
+  &.active {
+    color: $grey-mid;
+    cursor: default;
+  }
+
+  &.active:hover {
+    text-decoration: none;
+  }
+}

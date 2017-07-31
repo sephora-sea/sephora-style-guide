@@ -1,0 +1,80 @@
+#pagination {
+  section {
+    display: inline-block;
+    width: 50%;
+    min-width: 360px;
+  }
+
+  .pagination {
+    display: inline-block;
+    text-align: center;
+    line-height: 20px !important;
+
+    .page {
+      background: $white;
+      border: 1px solid $grey;
+      border-right: 0;
+      display: inline-block;
+      font-size: 13px;
+      text-align: center;
+      text-decoration: none;
+      padding: 10px 8px;
+      height: 40px;
+      min-width: 40px;
+      width: auto;
+      box-sizing: border-box;
+      vertical-align: middle;
+      cursor: pointer;
+
+      &:last-child {
+        border-right: 1px solid $grey;
+      }
+
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        width: auto;
+        font-style: normal;
+        box-sizing: initial;
+      }
+
+      &:hover {
+        background: $grey;
+        color: $black;
+      }
+
+      &.current,
+      &.current:hover {
+        background: $grey-light;
+        color: $black;
+      }
+
+      &.continue {
+        border: 0;
+        border-left: 1px solid $grey;
+
+        @include hover {
+          background: $white;
+        }
+      }
+
+      @include hover {
+        background: $grey;
+      }
+
+      &.next,
+      &.prev {
+        span {
+          width: 15px;
+          height: 15px;
+
+          svg {
+            width: 15px;
+            height: 15px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
