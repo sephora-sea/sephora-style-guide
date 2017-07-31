@@ -150,8 +150,8 @@ javascript:
       },
       
       setWishList: function(e) {
-        if (e.target.parentNode.className === 'product-card-wish-list-heart' || 
-          e.target.parentNode.parentNode.className === 'product-card-wish-list-heart-filled') {
+        const targetClass = e.target.parentNode.parentNode.parentNode.className;
+        if (targetClass === 'product-card-wish-list-heart' || targetClass === 'product-card-wish-list-heart-filled') {
           const target = e.target.closest(".product-card").getAttribute('name');
           if (target === 'product1') {
             this.productOneIsWishListed = !this.productOneIsWishListed;
