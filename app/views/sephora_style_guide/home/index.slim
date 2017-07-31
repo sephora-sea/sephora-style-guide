@@ -15,6 +15,10 @@ main.container-fluid#app role='main'
   = render 'sephora_style_guide/home/tabs'
   = render 'sephora_style_guide/home/accordion'
 
+  br
+  h2.h2 Partials
+  = render 'sephora_style_guide/home/product_card'
+
 javascript:
   var app = new Vue({
     el: '#app',
@@ -24,7 +28,30 @@ javascript:
       buttonIsDisabled: false,
       buttonText: this.textInitial,
       buttonTextInitial: '',
-      buttonTextPending: 'Adding...'
+      buttonTextPending: 'Adding...',
+      showProductOneActions: false,
+      showProductTwoActions: false,
+      showProductThreeActions: false,
+      waitlistText: 'Waitlist Me',
+      productIsWaitListed: false,
+      productOneIsWishListed: false,
+      productTwoIsWishListed: false,
+      productThreeIsWishListed: false,
+      isVariantOneSelected: true,
+      isVariantTwoSelected: false,
+      isVariantThreeSelected: false,
+      isVariantFourSelected: false,
+      isVariantFiveSelected: false,
+      isVariantSixSelected: false,
+      isVariantSevenSelected: false,
+      isVariantEightSelected: false,
+      isVariantNineSelected: false,
+      isVariantTenSelected: false,
+      isVariantElevenSelected: false,
+      isVariantTwelveSelected: false,
+      isVariantThirteenSelected: false,
+      isVariantFourteenSelected: true,
+      isVariantFifteenSelected: false
     },
     methods: {
       changeInitialText: function() {
@@ -39,6 +66,109 @@ javascript:
           self.buttonText = self.buttonTextInitial;
           self.buttonIsDisabled = false;
         }, 2000);
+      },
+
+      mouseoverProductCard: function(e) {
+        const target = e.target.closest(".product-card").getAttribute('name');
+        if (target === 'product1') {
+          this.showProductOneActions = true;
+        } else if (target === 'product2') {
+          this.showProductTwoActions = true;
+        } else if (target === 'product3') {
+          this.showProductThreeActions = true;
+        }        
+      },
+
+      mouseleaveProductCard: function() {
+        this.showProductOneActions = false;
+        this.showProductTwoActions = false;
+        this.showProductThreeActions = false;
+      },
+      
+      waitlistProduct: function() {
+        this.waitlistText = 'Waitlisted';
+        this.productIsWaitListed = true;
+      },
+      
+      setProductRating: function() {
+        const product = document.getElementsByName("product3")[0];
+        const productRating = product.querySelector(".product-current-rating");
+        productRating.style.width = '49px';
+      },
+      
+      selectVariant: function(e) {
+        if (e.target.closest(".product-card").getAttribute('name') === 'product1') {
+          this.clearActiveProductOneVariants();
+          
+          if (e.target.getAttribute('name') === 'variant1') {
+            this.isVariantOneSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant2') {
+            this.isVariantTwoSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant3') {
+            this.isVariantThreeSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant4') {
+            this.isVariantFourSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant5') {
+            this.isVariantFiveSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant6') {
+            this.isVariantSixSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant7') {
+            this.isVariantSevenSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant8') {
+            this.isVariantEightSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant9') {
+            this.isVariantNineSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant10') {
+            this.isVariantTenSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant11') {
+            this.isVariantElevenSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant12') {
+            this.isVariantTwelveSelected = true;
+          } else if (e.target.getAttribute('name') === 'variant13') {
+            this.isVariantThirteenSelected = true;
+          } 
+        } else {
+          if (e.target.getAttribute('name') === 'variant14') {
+            this.isVariantFourteenSelected = true;
+            this.isVariantFifteenSelected = false;
+          } else if (e.target.getAttribute('name') === 'variant15') {
+            this.isVariantFourteenSelected = false;
+            this.isVariantFifteenSelected = true;
+          }
+        }
+      },
+      
+      clearActiveProductOneVariants: function() {
+        this.isVariantOneSelected = false;
+        this.isVariantTwoSelected = false;
+        this.isVariantThreeSelected = false;
+        this.isVariantFourSelected = false;
+        this.isVariantFiveSelected = false;
+        this.isVariantSixSelected = false;
+        this.isVariantSevenSelected = false;
+        this.isVariantEightSelected = false;
+        this.isVariantNineSelected = false;
+        this.isVariantTenSelected = false;
+        this.isVariantElevenSelected = false;
+        this.isVariantTwelveSelected = false;
+        this.isVariantThirteenSelected = false;
+      },
+      
+      setWishList: function(e) {
+        const targetClass = e.target.parentNode.parentNode.parentNode.className;
+        if (targetClass === 'product-card-wish-list-heart' || targetClass === 'product-card-wish-list-heart-filled') {
+          const target = e.target.closest(".product-card").getAttribute('name');
+          if (target === 'product1') {
+            this.productOneIsWishListed = !this.productOneIsWishListed;
+          } else if (target === 'product2') {
+            this.productTwoIsWishListed = !this.productTwoIsWishListed;
+          } else if (target === 'product3') {
+            this.productThreeIsWishListed = !this.productThreeIsWishListed;
+          }
+        } 
       }
+    },
+    created() {
+      this.setProductRating();
     }
   });
