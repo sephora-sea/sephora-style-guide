@@ -1,0 +1,26 @@
+.accordion {
+  .card {
+    &:not(:last-child) {
+      border-bottom-width: 0;
+    }
+
+    &.card-light {
+      border-left-width: 0;
+      border-right-width: 0;
+    }
+
+    i.collapse-arrow {
+      margin-top: -2px;
+    }
+  }
+
+  .card-header {
+    border: 0;
+  }
+
+  .collapsed {
+    i.collapse-arrow {
+      transform: rotate(-90deg);
+    }
+  }
+}

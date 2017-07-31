@@ -51,9 +51,8 @@
   border-bottom: $card-border-width solid $card-border-color;
   color: $black;
 
-  &.inverse {
-    color: $card-color-inverse;
-    background-color: $card-cap-bg-inverse;
+  &.cursor {
+    cursor: pointer;
   }
 }
 
@@ -62,7 +61,6 @@
   background-color: $card-cap-bg;
   border-top: $card-border-width solid $card-border-color;
 }
-
 
 //
 // Header navs
@@ -80,13 +78,34 @@
   margin-left: -($card-spacer-x / 2);
 }
 
-
 //
 // Background variations
 //
 
 .card-primary {
-  @include card-variant($brand-primary, $brand-primary);
+  @include card-variant(
+    $border-color: $card-border-color,
+    $header-color: $card-header-color-primary,
+    $header-bg-color: $card-header-bg-primary
+  );
+}
+
+.card-light {
+  @include card-variant(
+    $border-color: $card-border-color,
+    $header-color: inherit,
+    $header-bg-color: transparent
+  );
+
+  border-width: 2px;
+}
+
+.card-disabled {
+  @include card-variant(
+    $border-color: $card-border-color,
+    $header-color: $card-disabled-color,
+    $header-bg-color: $grey-light
+  );
 }
 
 // Remove all backgrounds
@@ -133,7 +152,6 @@
     }
   }
 }
-
 
 //
 // Card groups
@@ -187,7 +205,6 @@
     }
   }
 }
-
 
 //
 // Columns

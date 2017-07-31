@@ -1,9 +1,13 @@
-@mixin card-variant($background, $border) {
-  background-color: $background;
-  border-color: $border;
+@mixin card-variant($border-color, $header-color, $header-bg-color: inherit, $footer-color: inherit, $footer-bg-color: transparent, $disabled-color: $grey-mid) {
+  border-color: $border-color;
 
-  .card-header,
+  .card-header {
+    color: $header-color;
+    background-color: $header-bg-color;
+  }
+
   .card-footer {
+    color: $footer-color;
     background-color: transparent;
   }
 }

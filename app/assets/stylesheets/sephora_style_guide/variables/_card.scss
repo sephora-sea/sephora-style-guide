@@ -7,8 +7,10 @@ $card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width}) 
 $card-cap-bg:              rgba($black, .03) !default;
 $card-bg:                   $white !default;
 
-$card-cap-bg-inverse:       $black;
-$card-color-inverse:        $white;
+$card-header-bg-primary:           $black;
+$card-header-color-primary:        $white;
+
+$card-disabled-color:        $grey-mid;
 
 $card-img-overlay-padding:  16.25px !default;
 
