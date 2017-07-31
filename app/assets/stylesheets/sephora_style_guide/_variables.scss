@@ -1,3 +1,5 @@
+$enable-rounded:            false !default;
+
 @import 'variables/color';
 @import 'variables/grid';
 @import 'variables/spacing';
@@ -8,3 +10,6 @@
 @import 'variables/forms';
 @import 'variables/tables';
 @import 'variables/modal';
+@import 'variables/border';
+@import 'variables/card';
+@import 'variables/transitions';
