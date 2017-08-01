@@ -85,7 +85,7 @@
       top: 6.5px;
       height: 17px;
       width: 10px;
-      background: url('/assets/sephora_style_guide/left_arrow.png') no-repeat;
+      background: asset-url('/assets/sephora_style_guide/left_arrow.png') no-repeat;
       background-size: contain;
       cursor: pointer;
     }
@@ -96,7 +96,7 @@
       top: 6.5px;
       height: 17px;
       width: 10px;
-      background: url('/assets/sephora_style_guide/right_arrow.png') no-repeat;
+      background: asset-url('/assets/sephora_style_guide/right_arrow.png') no-repeat;
       background-size: contain;
       cursor: pointer;
     }
@@ -221,14 +221,14 @@
         .product-rating-range {
           height: 12px;
           width: 60px;
-          background: url('/assets/sephora_style_guide/sephora-stars-sm.png') 0 -12px !important;
+          background: asset-url('/assets/sephora_style_guide/sephora-stars-sm.png') 0 -12px !important;
         }
 
         .product-current-rating {
           height: 12px;
           width: 0;
           position: absolute;
-          background: url('/assets/sephora_style_guide/sephora-stars-sm.png') 0 0 !important;
+          background: asset-url('/assets/sephora_style_guide/sephora-stars-sm.png') 0 0 !important;
         }
       }
 
