@@ -36,27 +36,25 @@ article
 
   section
     h3.h3 Sidebar
-    .container-fluid
-      .row
-        .col-4
-          #sidebar-accordion.accordion.light aria-multiselectable='true' role='tablist'
 
-            .card.card-light
-              #skin-concerns-heading.card-header.collapsed role='tab' data-toggle='collapse' data-target='#skin-concerns-collapse' data-parent='#sidebar-accordion'
-                i.collapse-arrow
-                h3.h3.mb-0
-                  | SKINCARE
+    #sidebar-accordion.accordion.light.sidebar aria-multiselectable='true' role='tablist'
 
-              #skin-concerns-collapse.collapse aria-labelledby='heading-one' role='tabpanel'
-                .card-block
-                  | Custom HTML
+      .card.card-light
+        #skin-concerns-heading.card-header.collapsed role='tab' data-toggle='collapse' data-target='#skin-concerns-collapse' data-parent='#sidebar-accordion'
+          i.collapse-arrow
+          h3.h3.mb-0
+            | SKINCARE
 
-            .card.card-light
-              #brands-heading.card-header role='tab' data-toggle='collapse' data-target='#brands-collapse' data-parent='#sidebar-accordion'
-                i.collapse-arrow
-                h3.h3.mb-0
-                  | BRANDS
+        #skin-concerns-collapse.collapse aria-labelledby='heading-one' role='tabpanel'
+          .card-block
+            | Custom HTML
 
-              #brands-collapse.collapse.show aria-labelledby='heading-two' role='tabpanel'
-                .card-block
-                  | Custom HTML
+      .card.card-light
+        #brands-heading.card-header role='tab' data-toggle='collapse' data-target='#brands-collapse' data-parent='#sidebar-accordion'
+          i.collapse-arrow
+          h3.h3.mb-0
+            | BRANDS
+
+        #brands-collapse.collapse.show aria-labelledby='heading-two' role='tabpanel'
+          .card-block
+            | Custom HTML

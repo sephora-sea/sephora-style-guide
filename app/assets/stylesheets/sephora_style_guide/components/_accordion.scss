@@ -23,4 +23,12 @@
       transform: rotate(-90deg);
     }
   }
+
+  &.sidebar {
+    max-width: 300px;
+
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+    }
+  }
 }
