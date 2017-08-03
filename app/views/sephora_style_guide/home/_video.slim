@@ -1,0 +1,22 @@
+article#video
+  h2.h2 Video
+  
+  section
+    h3.h3 Default (Home Page)
+    .container
+      .row
+        .col-12.col-md-6.offset-md-6
+          .media-container
+            .video-panel
+              iframe width='100%' height='100%' src='//www.youtube.com/embed/RvY-YNMp-1w?rel=0&amp;autoplay=1&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
+            = link_to '#', class: 'video-link'
+              p.video-text Please use when ugly
+                  
+  section
+    h3.h3 Regular Thumbnail (Learn more)
+    .media-container-small
+      .video-panel
+      .video-text
+    
+  section
+    h3.h3 Small Thumbnail (Product Page)
