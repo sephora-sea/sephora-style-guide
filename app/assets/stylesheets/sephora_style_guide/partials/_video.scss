@@ -1,13 +1,38 @@
-.media-container {
+%media-panel {
+  width: 100%;
+  height: 100%;
+}
+
+.media-container-lg {
   height: 350px;
 
   .video-panel {
-    width: 100%;
-    height: 100%;
+    @extend %media-panel;
   }
-  
+
   .video-text {
     width: 100%;
     text-align: center;
+  }
+}
+
+.media-container-sm {
+  display: inline-block;
+  height: 75px;
+  width: 80px;
+
+  .video-link {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    .video-image-sm {
+      position: absolute;
+      margin: auto;
+      width: 80px;
+      top: 0;
+      bottom: 0;
+    }
   }
 }

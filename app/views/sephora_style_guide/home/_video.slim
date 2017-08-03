@@ -6,7 +6,7 @@ article#video
     .container
       .row
         .col-12.col-md-6.offset-md-6
-          .media-container
+          .media-container-lg
             .video-panel
               iframe width='100%' height='100%' src='//www.youtube.com/embed/RvY-YNMp-1w?rel=0&amp;autoplay=1&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
             = link_to '#', class: 'video-link'
@@ -14,9 +14,23 @@ article#video
                   
   section
     h3.h3 Regular Thumbnail (Learn more)
-    .media-container-small
+    .media-container-md
       .video-panel
       .video-text
     
   section
     h3.h3 Small Thumbnail (Product Page)
+    .media-container-sm
+      = link_to '#video-small-thumbnail', data: { toggle: 'modal' }, class: 'video-link' do
+        = image_tag '//img.youtube.com/vi/kdCoMnZFsuk/maxresdefault.jpg', class: 'video-image-sm'
+  
+    .modal.fade#video-small-thumbnail aria-hidden='true' role='dialog' tabindex='-1'
+      .modal-dialog role='document'
+        .modal-content
+          .modal-header
+            button.close type='button' data-dismiss='modal' aria-label='Close'
+          .modal-body
+            | yooyoyo
+              
+
+      
