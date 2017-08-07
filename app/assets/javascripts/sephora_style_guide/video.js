@@ -27,7 +27,7 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerReady(event) {
   // bind events
-  $('.close').click(function() {
+  $('.close').on('click', function() {
     var currentVideoId = $(this).closest('.modal-header').siblings().find('.modal-video').attr('id');
 
     for (var i in players) {
@@ -37,7 +37,19 @@ function onPlayerReady(event) {
     }
   });
 
-  $('.video-link').click(function() {
+  $('.modal[role="dialog"]').on('click', function(e) {
+    var currentVideoId = $(this).find('.modal-video').attr('id');
+
+    for (var i in players) {
+      if (players[i].a.id === currentVideoId) {
+        players[i].pauseVideo();
+      }
+    }
+  }).on('click', '.modal-dialog[role="document"]', function(e) {
+    e.stopPropagation();
+  });
+
+  $('.video-link').on('click', function() {
     var currentVideoId = $(this).attr('href').replace(/#|-/g, '');
 
     for (var i in players) {
