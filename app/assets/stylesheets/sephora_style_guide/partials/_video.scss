@@ -5,6 +5,7 @@
   left: 0;
   right: 0;
   margin: auto;
+  width: 90px;
 
   g path {
     fill: white;
@@ -17,6 +18,8 @@
   height: 100%;
   background: $black;
   opacity: 0.25;
+  top: 0;
+  left: 0;
 }
 
 %video {
@@ -48,14 +51,15 @@
   @include media-breakpoint-down(sm) {
     height: auto;
     margin-bottom: 15px;
+    margin-left: -10px;
+    margin-right: -10px;
   }
 
   .video-panel {
     @extend %video-container;
 
-    @include media-breakpoint-down(sm) {
-      min-height: 150px;
-      height: auto;
+    @include media-breakpoint-down(md) {
+      display: flex;
     }
 
     .video-link {
@@ -64,9 +68,10 @@
       height: 100%;
       width: 100%;
 
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         display: flex;
         flex-direction: column;
+        position: static;
       }
 
       .video-image-lg {
@@ -82,7 +87,7 @@
     iframe {
       @extend %video;
 
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         display: none;
       }
     }
@@ -91,10 +96,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @include media-breakpoint-down(md) {
-      margin-top: 5px;
-    }
 
     .video-text {
       @include font-avalon-bold;
@@ -106,7 +107,8 @@
       margin-top: 10px;
 
       @include media-breakpoint-down(md) {
-        width: 85%;
+        width: 90%;
+        margin-top: 5px;
         margin-left: 5px;
       }
 
@@ -116,13 +118,18 @@
         width: 15px;
         height: 15px;
         display: inline-block;
+        position: relative;
+        top: 1px;
       }
     }
   }
 
   .video-play-icon {
     @extend %play-icon;
-    width: 70px;
+
+    @include media-breakpoint-up(md) {
+      width: 70px;
+    }
   }
 }
 
@@ -166,6 +173,7 @@
       @include media-breakpoint-down(sm) {
         display: inline-block;
         width: 80%;
+        margin-bottom: 25px;
       }
     }
 
@@ -177,10 +185,9 @@
 
   .video-play-icon {
     @extend %play-icon;
-    width: 60px;
 
-    @include media-breakpoint-down(sm) {
-      width: 90px;
+    @include media-breakpoint-up(sm) {
+      width: 60px;
     }
   }
 }
@@ -194,6 +201,7 @@
 
   @include media-breakpoint-down(sm) {
     width: 100%;
+    height: 100%;
     margin-right: 0;
     text-align: center;
   }
@@ -215,6 +223,7 @@
       @include media-breakpoint-down(sm) {
         width: 100%;
         border: 0;
+        object-fit: fill;
       }
     }
 
@@ -226,16 +235,19 @@
 
   .video-play-icon {
     @extend %play-icon;
-    width: 40px;
 
-    @include media-breakpoint-down(sm) {
-      width: 70px;
+    @include media-breakpoint-up(md) {
+      width: 40px;
     }
   }
 }
 
 .media-modal {
   max-width: 700px;
+
+  .video-link {
+    width: 100%;
+  }
 
   .modal-title {
     @include font-avalon-demi;
