@@ -18,14 +18,15 @@ article#video
                 p.video-text Discover masks that hydrate, brighten and soothe your skin              
               
           .modal.fade#lg-video aria-hidden='true' role='dialog' tabindex='-1'
-            .modal-dialog role='document'
+            .modal-dialog.modal-video role='document'
               .modal-content
                 .modal-header 
                   = link_to '#', class: 'video-link'
-                    .modal-title.modal-video-title Discover masks that hydrate, brighten and soothe your skin
+                    .modal-title Discover masks that hydrate, brighten and soothe your skin
                   button.close type='button' data-dismiss='modal' aria-label='Close'
                 .modal-body
-                  iframe#lgVideo.modal-video width='100%' height='100%' src='//www.youtube.com/embed/RvY-YNMp-1w?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
+                  .modal-video-embbed
+                    iframe#lgVideo width='100%' height='100%' src='//www.youtube.com/embed/RvY-YNMp-1w?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
               
   section
     h3.h3 Regular Thumbnail (Learn More)
@@ -46,22 +47,24 @@ article#video
         p.video-text What’s New In Lips | Sephora
         
     .modal.fade#md-video-one aria-hidden='true' role='dialog' tabindex='-1'
-      .modal-dialog role='document'
+      .modal-dialog.modal-video role='document'
         .modal-content
           .modal-header 
-            .modal-title.modal-video-title Your Beauty Questions Answered ft. Sephora PRO Jeffrey | Sephora
+            .modal-title Your Beauty Questions Answered ft. Sephora PRO Jeffrey | Sephora
             button.close type='button' data-dismiss='modal' aria-label='Close'
           .modal-body
-            iframe#mdVideoOne.modal-video width='100%' height='100%' src='//www.youtube.com/embed/DETIxzEf5Sk?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
+            .modal-video-embbed
+              iframe#mdVideoOne width="560" height="315" src='//www.youtube.com/embed/DETIxzEf5Sk?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
             
     .modal.fade#md-video-two aria-hidden='true' role='dialog' tabindex='-1'
-      .modal-dialog role='document'
+      .modal-dialog.modal-video role='document'
         .modal-content
           .modal-header 
-            .modal-title.modal-video-title What’s New In Lips | Sephora
+            .modal-title What’s New In Lips | Sephora
             button.close type='button' data-dismiss='modal' aria-label='Close'
           .modal-body
-            iframe#mdVideoTwo.modal-video width='100%' height='100%' src='//www.youtube.com/embed/4h02DfuFBpo?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
+            .modal-video-embbed
+              iframe#mdVideoTwo width='100%' height='100%' src='//www.youtube.com/embed/4h02DfuFBpo?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
           
   section
     h3.h3 Small Thumbnail (Product Show)
@@ -78,22 +81,24 @@ article#video
         = inline_svg 'sephora_style_guide/video-play.svg', class: 'video-play-icon'
   
     .modal.fade#sm-video-one aria-hidden='true' role='dialog' tabindex='-1'
-      .modal-dialog role='document'
+      .modal-dialog.modal-video role='document'
         .modal-content
           .modal-header 
-            .modal-title.modal-video-title Your Beauty Questions Answered ft. Sephora PRO Jeffrey | Sephora
+            .modal-title Your Beauty Questions Answered ft. Sephora PRO Jeffrey | Sephora
             button.close type='button' data-dismiss='modal' aria-label='Close'
           .modal-body
-            iframe#smVideoOne.modal-video width='100%' height='100%' src='//www.youtube.com/embed/DETIxzEf5Sk?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
+            .modal-video-embbed
+              iframe#smVideoOne width='100%' height='100%' src='//www.youtube.com/embed/DETIxzEf5Sk?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
             
-    .modal.fade#sm-video-two aria-hidden='true' role='dialog' tabindex='-1'
-      .modal-dialog role='document'
+    .modal.modal-video.fade#sm-video-two aria-hidden='true' role='dialog' tabindex='-1'
+      .modal-dialog.modal-video role='document'
         .modal-content
           .modal-header 
-            .modal-title.modal-video-title What’s New In Lips | Sephora
+            .modal-title What’s New In Lips | Sephora
             button.close type='button' data-dismiss='modal' aria-label='Close'
           .modal-body
-            iframe#smVideoTwo.modal-video width='100%' height='100%' src='//www.youtube.com/embed/4h02DfuFBpo?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
+            .modal-video-embbed
+              iframe#smVideoTwo width='100%' height='100%' src='//www.youtube.com/embed/4h02DfuFBpo?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
 
 
       
