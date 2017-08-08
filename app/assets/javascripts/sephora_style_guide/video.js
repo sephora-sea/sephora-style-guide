@@ -13,7 +13,7 @@ var players = [];
 
 // this function gets called when API is ready to use
 function onYouTubeIframeAPIReady() {
-  var allPlayers = $('.modal-video-embbed').children('iframe');
+  var allPlayers = $('.modal-video').children('iframe');
 
   for (var el in Array.from(allPlayers)) {
     var player = new YT.Player($(allPlayers[el]).attr('id'), {
