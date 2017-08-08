@@ -64,7 +64,7 @@ select {
     .nav-item {
       margin-bottom: -1px;
 
-      &:first-child .nav-link {
+      &:first-child {
         border-left: 1px solid $grey;
       }
 
@@ -82,7 +82,7 @@ select {
     .nav-link.active,
     .nav-item.show .nav-link {
       background-color: $white !important;
-      border-bottom-color: $white;
+      border-bottom: 1px solid $white;
     }
   }
 }
