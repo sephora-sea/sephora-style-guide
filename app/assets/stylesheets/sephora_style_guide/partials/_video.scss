@@ -58,7 +58,7 @@
   .video-panel {
     @extend %video-container;
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       display: flex;
     }
 
@@ -68,7 +68,7 @@
       height: 100%;
       width: 100%;
 
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-down(lg) {
         display: flex;
         flex-direction: column;
         position: static;
@@ -87,7 +87,7 @@
     iframe {
       @extend %video;
 
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-down(lg) {
         display: none;
       }
     }
@@ -96,6 +96,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 10px;
+    }
 
     .video-text {
       @include font-avalon-bold;
@@ -106,9 +110,8 @@
       margin-left: 20px;
       margin-top: 10px;
 
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-down(lg) {
         width: 90%;
-        margin-top: 5px;
         margin-left: 5px;
       }
 
@@ -243,30 +246,32 @@
 }
 
 .media-modal {
-  max-width: 700px;
+  .modal-dialog {
+    max-width: 700px;
 
-  .video-link {
-    width: 100%;
-  }
+    .video-link {
+      width: 100%;
+    }
 
-  .modal-title {
-    @include font-avalon-demi;
-    text-align: center;
-    font-size: 13px;
-    line-height: 16px;
-    width: 100%;
-  }
+    .modal-title {
+      @include font-avalon-demi;
+      text-align: center;
+      font-size: 13px;
+      line-height: 16px;
+      width: 100%;
+    }
 
-  .modal-body {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
+    .modal-body {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
 
-    .modal-video {
-      @extend %video-container;
+      .modal-video {
+        @extend %video-container;
 
-      iframe {
-        @extend %video;
+        iframe {
+          @extend %video;
+        }
       }
     }
   }
