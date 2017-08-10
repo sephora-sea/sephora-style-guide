@@ -88,8 +88,10 @@ select {
 }
 
 .tab-content.tab-content-default {
-  border: 1px solid $grey;
-  margin-top: -4px;
+  @include media-breakpoint-up(md) {
+    border: 1px solid $grey;
+    margin-top: -4px;
+  }
 
   .tab-pane {
     //border: 1px solid $grey;
