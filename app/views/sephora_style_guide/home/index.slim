@@ -156,7 +156,7 @@ javascript:
 
       setWishList: function(e) {
         const targetClass = e.target.parentNode.parentNode.parentNode.className;
-        if (targetClass === 'product-card-wish-list-heart' || targetClass === 'product-card-wish-list-heart-filled') {
+        if (targetClass === 'product-card-heart' || targetClass === 'product-card-heart-filled') {
           const target = e.target.closest(".product-card").getAttribute('name');
           if (target === 'product1') {
             this.productOneIsWishListed = !this.productOneIsWishListed;
