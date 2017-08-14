@@ -25,7 +25,7 @@ function onYouTubeIframeAPIReady() {
   }
 }
 
-function onPlayerReady(event) {
+function onPlayerReady() {
   // bind events
   $('.close').on('click', function() {
     var currentVideoId = $(this).closest('.modal-header').siblings().find('iframe').attr('id');
@@ -37,7 +37,7 @@ function onPlayerReady(event) {
     }
   });
 
-  $('.modal[role="dialog"]').on('click', function(e) {
+  $('.modal[role="dialog"]').on('click', function() {
     var currentVideoId = $(this).find('iframe').attr('id');
 
     for (var i in players) {
