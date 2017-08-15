@@ -2,8 +2,8 @@
   width: 100%;
 
   &:hover {
-    .product-card-wish-list-heart,
-    .product-card-wish-list-heart-filled {
+    .product-card-heart,
+    .product-card-heart-filled {
       visibility: visible;
     }
   }
@@ -49,14 +49,14 @@
     }
   }
 
-  .product-card-wish-list-heart,
-  .product-card-wish-list-heart-filled {
+  .product-card-heart,
+  .product-card-heart-filled {
     visibility: hidden;
     position: absolute;
     top: 0;
     right: 15px;
-    width: $product-card-wish-list-heart-width;
-    height: $product-card-wish-list-heart-height;
+    width: $product-card-heart-width;
+    height: $product-card-heart-height;
     opacity: 0.8;
 
     @include media-breakpoint-down(lg) {
@@ -67,7 +67,7 @@
     }
   }
 
-  .product-card-wish-list-heart:hover svg g path {
+  .product-card-heart:hover svg g path {
     @include media-breakpoint-up(lg) {
       fill: $brand-primary;
     }
@@ -107,6 +107,7 @@
       top: 7.5px;
       right: 0;
       position: absolute;
+      z-index: $more-variants-z-index;
       margin-right: 20px;
       background: linear-gradient(to right, rgba(255, 255, 255, 0), $white);
       cursor: default;
@@ -123,6 +124,8 @@
     display: flex;
     align-items: center;
     overflow-x: hidden;
+    position: relative;
+    z-index: $variants-z-index;
 
     &.variants-overflow {
       margin-left: 15px;
@@ -130,7 +133,8 @@
     }
 
     .product-variant {
-      height: 50%;
+      height: 13px;
+      width: 13px;
       margin-left: 2.5px;
       margin-right: 2.5px;
       box-sizing: border-box;
