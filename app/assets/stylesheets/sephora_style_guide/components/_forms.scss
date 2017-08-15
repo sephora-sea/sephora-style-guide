@@ -1,6 +1,13 @@
 //
 // Textual form controls
 //
+%form-icon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 
 .form-control {
   display: block;
@@ -175,25 +182,12 @@ textarea.form-control {
   margin-top: ($spacer * .25);
 }
 
-// Form validation states
-// .has-success {
-//   @include form-control-validation($brand-success);
-
-//   .form-control-success {
-//     background-image: $form-icon-success;
-//   }
-// }
-
-// .has-warning {
-//   @include form-control-validation($brand-warning);
-
-//   .form-control-warning {
-//     background-image: $form-icon-warning;
-//   }
-// }
-
 .has-error {
   @include form-control-validation($brand-error);
+
+  .input-error {
+    @extend %form-icon;
+  }
 }
 
 // Custom
@@ -203,4 +197,27 @@ textarea.form-control {
   font-size: $error-font-size;
   line-height: $error-line-height;
   position: absolute;
+}
+
+.editable-verification {
+  .input-success {
+    @extend %form-icon;
+  }
+}
+
+.non-editable-verification {
+  .form-control[readonly] {
+    border: 0;
+    background-color: $white !important;
+    color: $black !important;
+    padding-left: 0;
+  }
+
+  .control-label {
+    left: 0;
+  }
+
+  .input-success {
+    @extend %form-icon;
+  }
 }
