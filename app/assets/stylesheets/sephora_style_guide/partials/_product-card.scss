@@ -1,5 +1,6 @@
 .product-card {
   width: 100%;
+  position: relative;
 
   &:hover {
     .product-card-heart,
@@ -32,7 +33,7 @@
     @include font-avalon-demi;
     position: absolute;
     top: 28%;
-    width: 90%;
+    width: 100%;
     height: $product-card-actions-height;
     padding-top: 9px;
     background-color: rgba(255, 255, 255, 0.75);
@@ -54,7 +55,7 @@
     visibility: hidden;
     position: absolute;
     top: 0;
-    right: 15px;
+    right: 0;
     width: $product-card-heart-width;
     height: $product-card-heart-height;
     opacity: 0.8;
