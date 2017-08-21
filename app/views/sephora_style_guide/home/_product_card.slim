@@ -32,10 +32,10 @@ article#product-card
                 img.product-variant name='variant11' :class='{ active: isVariantElevenSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
                 img.product-variant name='variant12' :class='{ active: isVariantTwelveSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
                 img.product-variant name='variant13' :class='{ active: isVariantThirteenSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
-            = link_to '#product-link', class: 'product-card-description' do
-              span.product-card-label-new-arrival New 
-              span.product-card-label-limited-edition | Limited Edition
-              .product-card-description-container
+            = link_to '#product-link', class: 'product-card-description-container' do
+              .product-card-description
+                span.product-card-label-new-arrival New 
+                span.product-card-label-limited-edition | Limited Edition
                 p.product-card-brand Clinique
                 p.product-card-product Chubby Stick Moisturizing Lip Colour Balm
                 p.product-card-price $26.00
@@ -55,9 +55,9 @@ article#product-card
             .product-card-actions v-if='showProductTwoActions'
               button.btn.btn-sm.btn-block.product-card-add-to-wish-list :class='{ "btn-defaults": !productIsWaitListed, "disabled": productIsWaitListed }' @click='waitlistProduct' {{ waitlistText }}
               .product-card-variants
-            = link_to '#product-link', class: 'product-card-description' do
-              span.product-card-label-new-arrival New
-              .product-card-description-container
+            = link_to '#product-link', class: 'product-card-description-container' do
+              .product-card-description
+                span.product-card-label-new-arrival New
                 p.product-card-brand Sigma Beauty
                 p.product-card-product Mr. Bunny Essential Kit
                 p.product-card-price $254.00
@@ -78,8 +78,8 @@ article#product-card
               .product-card-variants 
                 img.product-variant name='variant14' :class='{ active: isVariantFourteenSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
                 img.product-variant name='variant15' :class='{ active: isVariantFifteenSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
-            = link_to '#product-link', class: 'product-card-description' do
-              .product-card-description-container
+            = link_to '#product-link', class: 'product-card-description-container' do
+              .product-card-description
                 p.product-card-brand Alima Pure
                 p.product-card-product Shimmering Skin Perfector Pressed Prismatic Amethyst (Limited Edition)
                 .product-card-discount-price

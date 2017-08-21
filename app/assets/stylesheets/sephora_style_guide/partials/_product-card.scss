@@ -32,21 +32,31 @@
   .out-of-stock {
     @include font-avalon-demi;
     position: absolute;
-    top: 28%;
+    box-sizing: content-box;
+    top: 26%;
     width: 100%;
     height: $product-card-actions-height;
-    padding-top: 9px;
+    padding-top: 15px;
     background-color: rgba(255, 255, 255, 0.75);
     text-transform: uppercase;
     text-align: center;
     color: $grey-dark;
+    font-size: 16px;
 
     @include media-breakpoint-between(md, lg) {
       top: 25%;
     }
 
     @include media-breakpoint-down(md) {
-      top: 20%;
+      top: 22%;
+      box-sizing: inherit;
+      padding-top: 9px;
+      font-size: 14px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      top: 3em;
+      padding-top: 6px;
     }
   }
 
@@ -134,8 +144,8 @@
     }
 
     .product-variant {
-      height: 13px;
-      width: 13px;
+      height: 15px;
+      width: 15px;
       margin-left: 2.5px;
       margin-right: 2.5px;
       box-sizing: border-box;
@@ -151,7 +161,7 @@
     }
   }
 
-  .product-card-description {
+  .product-card-description-container {
     font-size: 13px;
     line-height: 17px;
 
@@ -164,8 +174,6 @@
       @include font-avalon-demi;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      position: absolute;
-      margin-top: 30px;
 
       @include media-breakpoint-down(lg) {
         margin-top: 0;
@@ -180,11 +188,10 @@
     .product-card-label-limited-edition {
       @extend %product-card-label;
       color: $grey-mid;
-      margin-left: 28px;
     }
 
-    .product-card-description-container {
-      margin-top: 47px;
+    .product-card-description {
+      margin-top: 30px;
       width: 90%;
 
       .product-card-brand {
