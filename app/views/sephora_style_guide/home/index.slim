@@ -93,8 +93,8 @@ javascript:
 
       setProductRating: function() {
         const product = document.getElementsByName("product3")[0];
-        const productRating = product.querySelector(".product-current-rating");
-        productRating.style.width = '49px';
+        const productRating = product.querySelector(".rateit-selected");
+        productRating.style.width = '51px';
       },
 
       selectVariant: function(e) {
@@ -169,6 +169,7 @@ javascript:
         }
       }
     },
+    
     created() {
       this.setProductRating();
     }

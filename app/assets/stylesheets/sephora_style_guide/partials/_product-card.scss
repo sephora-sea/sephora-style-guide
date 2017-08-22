@@ -227,17 +227,22 @@
       }
 
       .product-card-rating {
-        .product-rating-range {
-          height: 12px;
-          width: 60px;
-          background: asset-url('/assets/sephora_style_guide/sephora-stars-sm.png') 0 -12px !important;
+        .product-rating {
+          position: relative;
+          width: 72px;
         }
 
-        .product-current-rating {
+        .rateit .rateit-range {
           height: 12px;
-          width: 0;
+          background: asset-url('/assets/sephora_style_guide/star.png') !important;
+        }
+
+        .rateit .rateit-selected,
+        .rateit .rateit-preset {
+          height: 12px;
           position: absolute;
-          background: asset-url('/assets/sephora_style_guide/sephora-stars-sm.png') 0 0 !important;
+          top: 0;
+          background: asset-url('/assets/sephora_style_guide/star-filled.png') !important;
         }
       }
 
