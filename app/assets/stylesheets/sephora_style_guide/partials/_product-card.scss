@@ -32,25 +32,24 @@
   .out-of-stock {
     @include font-avalon-demi;
     position: absolute;
-    box-sizing: content-box;
     top: 26%;
     width: 100%;
     height: $product-card-actions-height;
-    padding-top: 15px;
+    padding-top: 17px;
     background-color: rgba(255, 255, 255, 0.75);
     text-transform: uppercase;
     text-align: center;
     color: $grey-dark;
     font-size: 16px;
 
-    @include media-breakpoint-between(md, lg) {
+    @include media-breakpoint-down(lg) {
       top: 25%;
     }
 
     @include media-breakpoint-down(md) {
       top: 22%;
-      box-sizing: inherit;
       padding-top: 9px;
+      height: 30px;
       font-size: 14px;
     }
 
