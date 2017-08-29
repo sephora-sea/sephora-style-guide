@@ -54,7 +54,7 @@ article#product-card
             .product-card-heart v-if='!productTwoIsWishListed' @click='setWishList'
               = inline_svg 'sephora_style_guide/heart.svg'
             .product-card-actions v-if='showProductTwoActions'
-              button.btn.btn-sm.btn-block.product-card-add-to-wish-list :class='{ "btn-defaults": !productIsWaitListed, "disabled": productIsWaitListed }' @click='waitlistProduct' {{ waitlistText }}
+              button.btn.btn-sm.btn-block.product-card-add-to-wait-list :class='{ "btn-defaults": !productIsWaitListed, "disabled": productIsWaitListed }' @click='waitlistProduct' {{ waitlistText }}
               .product-card-variants
             = link_to '#product-link', class: 'product-card-description-container' do
               .product-card-description
