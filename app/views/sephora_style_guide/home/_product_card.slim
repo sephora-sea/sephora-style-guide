@@ -19,19 +19,32 @@ article#product-card
                 span.carousel-arrow-right
                 p.carousel-more-variants +2
               .product-card-variants.variants-overflow 
-                img.product-variant name='variant1' :class='{ active: isVariantOneSelected }' @click='selectVariant' src='examples/product1-variant1.jpg'
-                img.product-variant name='variant2' :class='{ active: isVariantTwoSelected }' @click='selectVariant' src='examples/product1-variant2.jpg'
-                img.product-variant name='variant3' :class='{ active: isVariantThreeSelected }' @click='selectVariant' src='examples/product1-variant1.jpg'
-                img.product-variant name='variant4' :class='{ active: isVariantFourSelected }' @click='selectVariant' src='examples/product1-variant2.jpg'
-                img.product-variant name='variant5' :class='{ active: isVariantFiveSelected }' @click='selectVariant' src='examples/product1-variant1.jpg'
-                img.product-variant name='variant6' :class='{ active: isVariantSixSelected }' @click='selectVariant' src='examples/product1-variant2.jpg'
-                img.product-variant name='variant7' :class='{ active: isVariantSevenSelected }' @click='selectVariant' src='examples/product1-variant1.jpg'
-                img.product-variant name='variant8' :class='{ active: isVariantEightSelected }' @click='selectVariant' src='examples/product1-variant2.jpg'
-                img.product-variant name='variant9' :class='{ active: isVariantNineSelected }' @click='selectVariant' src='examples/product1-variant1.jpg'
-                img.product-variant name='variant10' :class='{ active: isVariantTenSelected }' @click='selectVariant' src='examples/product1-variant2.jpg'
-                img.product-variant name='variant11' :class='{ active: isVariantElevenSelected }' @click='selectVariant' src='examples/product1-variant1.jpg'
-                img.product-variant name='variant12' :class='{ active: isVariantTwelveSelected }' @click='selectVariant' src='examples/product1-variant2.jpg'
-                img.product-variant name='variant13' :class='{ active: isVariantThirteenSelected }' @click='selectVariant' src='examples/product1-variant1.jpg'
+                span.variant-container name='variant1' @click='selectVariant'
+                  = image_tag 'examples/variant1.jpg', class: 'product-variant active'
+                span.variant-container name='variant2' @click='selectVariant'
+                  = image_tag 'examples/variant2.jpg', class: 'product-variant'
+                span.variant-container name='variant3' @click='selectVariant'
+                  = image_tag 'examples/variant1.jpg', class: 'product-variant'
+                span.variant-container name='variant4' @click='selectVariant'
+                  = image_tag 'examples/variant2.jpg', class: 'product-variant'
+                span.variant-container name='variant5' @click='selectVariant'
+                  = image_tag 'examples/variant1.jpg', class: 'product-variant'
+                span.variant-container name='variant6' @click='selectVariant'
+                  = image_tag 'examples/variant2.jpg', class: 'product-variant'
+                span.variant-container name='variant7' @click='selectVariant'
+                  = image_tag 'examples/variant1.jpg', class: 'product-variant'
+                span.variant-container name='variant8' @click='selectVariant'
+                  = image_tag 'examples/variant2.jpg', class: 'product-variant'
+                span.variant-container name='variant9' @click='selectVariant'
+                  = image_tag 'examples/variant1.jpg', class: 'product-variant'
+                span.variant-container name='variant10' @click='selectVariant'
+                  = image_tag 'examples/variant2.jpg', class: 'product-variant'
+                span.variant-container name='variant11' @click='selectVariant'
+                  = image_tag 'examples/variant1.jpg', class: 'product-variant'  
+                span.variant-container name='variant12' @click='selectVariant'
+                  = image_tag 'examples/variant2.jpg', class: 'product-variant'
+                span.variant-container name='variant13' @click='selectVariant'
+                  = image_tag 'examples/variant1.jpg', class: 'product-variant'  
             = link_to '#product-link', class: 'product-card-description-container' do
               .product-card-description
                 span.product-card-label-new-arrival New 
@@ -78,8 +91,10 @@ article#product-card
             .product-card-actions v-if='showProductThreeActions' 
               button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to bag
               .product-card-variants 
-                img.product-variant name='variant14' :class='{ active: isVariantFourteenSelected }' @click='selectVariant' src='examples/product1-variant1.jpg'
-                img.product-variant name='variant15' :class='{ active: isVariantFifteenSelected }' @click='selectVariant' src='examples/product1-variant2.jpg'
+                span.variant-container name='variant14' @click='selectVariant'
+                  = image_tag 'examples/variant2.jpg', class: 'product-variant'
+                span.variant-container name='variant15' @click='selectVariant'
+                  = image_tag 'examples/variant1.jpg', class: 'product-variant'  
             = link_to '#product-link', class: 'product-card-description-container' do
               .product-card-description
                 p.product-card-brand Alima Pure
