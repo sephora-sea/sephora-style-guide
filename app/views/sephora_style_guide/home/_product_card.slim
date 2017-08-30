@@ -12,13 +12,13 @@ article#product-card
               = inline_svg 'sephora_style_guide/heart-filled.svg'
             .product-card-heart v-if='!productOneIsWishListed' @click='setWishList'
               = inline_svg 'sephora_style_guide/heart.svg'
-            .product-card-actions v-if='showProductOneActions'
+            .product-card-actions v-show='showProductOneActions'
               button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to Bag
               .product-card-variants-carousel
                 span.carousel-arrow-left
                 span.carousel-arrow-right
                 p.carousel-more-variants +2
-              .product-card-variants.variants-overflow 
+              .product-card-variants.variants-overflow
                 span.variant-container name='variant1' @click='selectVariant'
                   = image_tag 'examples/variant1.jpg', class: 'product-variant active'
                 span.variant-container name='variant2' @click='selectVariant'
@@ -40,14 +40,14 @@ article#product-card
                 span.variant-container name='variant10' @click='selectVariant'
                   = image_tag 'examples/variant2.jpg', class: 'product-variant'
                 span.variant-container name='variant11' @click='selectVariant'
-                  = image_tag 'examples/variant1.jpg', class: 'product-variant'  
+                  = image_tag 'examples/variant1.jpg', class: 'product-variant'
                 span.variant-container name='variant12' @click='selectVariant'
                   = image_tag 'examples/variant2.jpg', class: 'product-variant'
                 span.variant-container name='variant13' @click='selectVariant'
-                  = image_tag 'examples/variant1.jpg', class: 'product-variant'  
+                  = image_tag 'examples/variant1.jpg', class: 'product-variant'
             = link_to '#product-link', class: 'product-card-description-container' do
               .product-card-description
-                span.product-card-label-new-arrival New 
+                span.product-card-label-new-arrival New
                 span.product-card-label-limited-edition | Limited Edition
                 p.product-card-brand Clinique
                 p.product-card-product Chubby Stick Moisturizing Lip Colour Balm
@@ -56,7 +56,7 @@ article#product-card
                   .rateit.product-rating
                     .rateit-range
                     .rateit-selected.rateit-preset
-                
+
         .col-6.col-md-3
           .product-card name='product2' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
             = link_to '#product-link' do
@@ -79,7 +79,7 @@ article#product-card
                   .rateit.product-rating
                     .rateit-range
                     .rateit-selected.rateit-preset
-                
+
         .col-6.col-md-3
           .product-card name='product3' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
             = link_to '#product-link' do
@@ -88,13 +88,13 @@ article#product-card
               = inline_svg 'sephora_style_guide/heart-filled.svg'
             .product-card-heart v-if='!productThreeIsWishListed' @click='setWishList'
               = inline_svg 'sephora_style_guide/heart.svg'
-            .product-card-actions v-if='showProductThreeActions' 
+            .product-card-actions v-if='showProductThreeActions'
               button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to bag
-              .product-card-variants 
+              .product-card-variants
                 span.variant-container name='variant14' @click='selectVariant'
                   = image_tag 'examples/variant2.jpg', class: 'product-variant'
                 span.variant-container name='variant15' @click='selectVariant'
-                  = image_tag 'examples/variant1.jpg', class: 'product-variant'  
+                  = image_tag 'examples/variant1.jpg', class: 'product-variant'
             = link_to '#product-link', class: 'product-card-description-container' do
               .product-card-description
                 p.product-card-brand Alima Pure
