@@ -37,24 +37,79 @@ article
   section
     h3.h3 Sidebar
 
-    #sidebar-accordion.accordion.light.sidebar aria-multiselectable='true' role='tablist'
+    #sidebar-accordion.accordion.accordion-sidebar.light aria-multiselectable='true' role='tablist'
+      .card.card-light
+        #skin-concerns-heading.card-header role='tab' data-toggle='collapse' data-target='#skin-concerns-collapse' data-parent='#sidebar-accordion'
+          i.collapse-arrow
+          h4.h4 SKINCARE
+
+        #skin-concerns-collapse.collapse.show aria-labelledby='heading-one' role='tabpanel'
+          .card-block
+            ul
+              li: a(href='#0')
+                ' Cleanser &amp; Exfoliator
+                span.badge.badge-default 512
+              li: a(href='#0')
+                ' Toner
+                span.badge.badge-default 304
+              li: a(href='#0')
+                ' Moisturiser
+                span.badge.badge-default 96
+
+                ul.secondary
+                  li: a(href='#0')
+                    ' Day Moisturiser
+                    span.badge.badge-default 17
+                  li: a(href='#0')
+                    ' Night Cream
+                    span.badge.badge-default 8
+                  li: a(href='#0')
+                    ' Facial Mist
+                    span.badge.badge-default 64
+                  li: a(href='#0')
+                    ' Neck &amp; Decollete Cream
+                    span.badge.badge-default 76
+
+              li: a(href='#0')
+                ' Masks &amp; Treatments
+                span.badge.badge-default 7
+              li: a(href='#0')
+                ' Sun Care
+                span.badge.badge-default 82
+              li: a(href='#0')
+                ' Skincare Sets
+                span.badge.badge-default 0
 
       .card.card-light
-        #skin-concerns-heading.card-header.collapsed role='tab' data-toggle='collapse' data-target='#skin-concerns-collapse' data-parent='#sidebar-accordion'
+        #brands-heading.card-header.collapsed role='tab' data-toggle='collapse' data-target='#brands-collapse' data-parent='#sidebar-accordion'
           i.collapse-arrow
-          h3.h3.mb-0
-            | SKINCARE
+          h4.h4 BRANDS
 
-        #skin-concerns-collapse.collapse aria-labelledby='heading-one' role='tabpanel'
+        #brands-collapse.collapse aria-labelledby='heading-two' role='tabpanel'
           .card-block
-            | Custom HTML
+            ul
+              li: a(href='#0')
+                ' Alpha-H
+                span.badge.badge-default 16
+              li: a(href='#0')
+                ' Aromatherapy Associates
+                span.badge.badge-default 4
+              li: a(href='#0')
+                ' VMV Hypoallergenics
+                span.badge.badge-default 21
+              li: a(href='#0')
+                ' tarte
+                span.badge.badge-default 9
 
       .card.card-light
-        #brands-heading.card-header role='tab' data-toggle='collapse' data-target='#brands-collapse' data-parent='#sidebar-accordion'
+        #price-heading.card-header.collapsed role='tab' data-toggle='collapse' data-target='#price-collapse' data-parent='#sidebar-accordion'
           i.collapse-arrow
-          h3.h3.mb-0
-            | BRANDS
+          h4.h4 PRICE
 
-        #brands-collapse.collapse.show aria-labelledby='heading-two' role='tabpanel'
+        #price-collapse.collapse aria-labelledby='heading-two' role='tabpanel'
           .card-block
-            | Custom HTML
+            ul
+              li: a(href='#0') Under $25
+              li: a(href='#0') $25 - $50
+              li: a(href='#0') $50 - $100
+              li: a(href='#0') $100 - $150

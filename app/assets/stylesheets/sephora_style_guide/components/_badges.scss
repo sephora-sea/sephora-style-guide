@@ -1,0 +1,11 @@
+.badge {
+  border-radius: 10px;
+  display: inline-block;
+  line-height: 20px;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.badge-default {
+  background-color: $grey-light;
+}

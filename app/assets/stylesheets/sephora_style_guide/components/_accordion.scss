@@ -23,12 +23,46 @@
       transform: rotate(-90deg);
     }
   }
+}
 
-  &.sidebar {
-    max-width: 300px;
+.accordion-sidebar {
+  max-width: 300px;
 
-    @include media-breakpoint-down(sm) {
-      max-width: 100%;
+  @include media-breakpoint-down(sm) {
+    max-width: 100%;
+  }
+
+  .card-header {
+    cursor: pointer;
+    padding-top: 18px;
+    padding-bottom: 17px;
+  }
+
+  .card-block {
+    padding-top: 0;
+    padding-bottom: 17px;
+  }
+
+  ul {
+    padding-left: 0;
+
+    &.secondary {
+      margin-left: 20px;
     }
+  }
+
+  li {
+    list-style: none;
+    line-height: 34px;
+
+    a:hover {
+      .badge {
+        color: $black;
+      }
+    }
+  }
+
+  .badge {
+    margin-left: 5px;
   }
 }
