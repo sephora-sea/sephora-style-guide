@@ -7,7 +7,7 @@ article#product-card
         .col-6.col-md-3.offset-md-3
           .product-card name='product1' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
             = link_to '#product-link' do
-              = image_tag 'sephora_style_guide/product1-400x400.png', class: 'product-card-image'
+              = image_tag 'examples/product1-400x400.png', class: 'product-card-image'
             .product-card-heart-filled v-if='productOneIsWishListed' @click='setWishList'
               = inline_svg 'sephora_style_guide/heart-filled.svg'
             .product-card-heart v-if='!productOneIsWishListed' @click='setWishList'
@@ -19,19 +19,19 @@ article#product-card
                 span.carousel-arrow-right
                 p.carousel-more-variants +2
               .product-card-variants.variants-overflow 
-                img.product-variant name='variant1' :class='{ active: isVariantOneSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
-                img.product-variant name='variant2' :class='{ active: isVariantTwoSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
-                img.product-variant name='variant3' :class='{ active: isVariantThreeSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
-                img.product-variant name='variant4' :class='{ active: isVariantFourSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
-                img.product-variant name='variant5' :class='{ active: isVariantFiveSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
-                img.product-variant name='variant6' :class='{ active: isVariantSixSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
-                img.product-variant name='variant7' :class='{ active: isVariantSevenSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
-                img.product-variant name='variant8' :class='{ active: isVariantEightSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
-                img.product-variant name='variant9' :class='{ active: isVariantNineSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
-                img.product-variant name='variant10' :class='{ active: isVariantTenSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
-                img.product-variant name='variant11' :class='{ active: isVariantElevenSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
-                img.product-variant name='variant12' :class='{ active: isVariantTwelveSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
-                img.product-variant name='variant13' :class='{ active: isVariantThirteenSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
+                img.product-variant name='variant1' :class='{ active: isVariantOneSelected }' @click='selectVariant' src='examples/product1-variant1.jpg'
+                img.product-variant name='variant2' :class='{ active: isVariantTwoSelected }' @click='selectVariant' src='examples/product1-variant2.jpg'
+                img.product-variant name='variant3' :class='{ active: isVariantThreeSelected }' @click='selectVariant' src='examples/product1-variant1.jpg'
+                img.product-variant name='variant4' :class='{ active: isVariantFourSelected }' @click='selectVariant' src='examples/product1-variant2.jpg'
+                img.product-variant name='variant5' :class='{ active: isVariantFiveSelected }' @click='selectVariant' src='examples/product1-variant1.jpg'
+                img.product-variant name='variant6' :class='{ active: isVariantSixSelected }' @click='selectVariant' src='examples/product1-variant2.jpg'
+                img.product-variant name='variant7' :class='{ active: isVariantSevenSelected }' @click='selectVariant' src='examples/product1-variant1.jpg'
+                img.product-variant name='variant8' :class='{ active: isVariantEightSelected }' @click='selectVariant' src='examples/product1-variant2.jpg'
+                img.product-variant name='variant9' :class='{ active: isVariantNineSelected }' @click='selectVariant' src='examples/product1-variant1.jpg'
+                img.product-variant name='variant10' :class='{ active: isVariantTenSelected }' @click='selectVariant' src='examples/product1-variant2.jpg'
+                img.product-variant name='variant11' :class='{ active: isVariantElevenSelected }' @click='selectVariant' src='examples/product1-variant1.jpg'
+                img.product-variant name='variant12' :class='{ active: isVariantTwelveSelected }' @click='selectVariant' src='examples/product1-variant2.jpg'
+                img.product-variant name='variant13' :class='{ active: isVariantThirteenSelected }' @click='selectVariant' src='examples/product1-variant1.jpg'
             = link_to '#product-link', class: 'product-card-description-container' do
               .product-card-description
                 span.product-card-label-new-arrival New 
@@ -47,7 +47,7 @@ article#product-card
         .col-6.col-md-3
           .product-card name='product2' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
             = link_to '#product-link' do
-              = image_tag 'sephora_style_guide/product2-400x400.png', class: 'product-card-image'
+              = image_tag 'examples/product2-400x400.png', class: 'product-card-image'
             .out-of-stock Out of stock
             .product-card-heart-filled v-if='productTwoIsWishListed' @click='setWishList'
               = inline_svg 'sephora_style_guide/heart-filled.svg'
@@ -70,7 +70,7 @@ article#product-card
         .col-6.col-md-3
           .product-card name='product3' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
             = link_to '#product-link' do
-              = image_tag 'sephora_style_guide/product3-400x400.png', class: 'product-card-image'
+              = image_tag 'examples/product3-400x400.png', class: 'product-card-image'
             .product-card-heart-filled v-if='productThreeIsWishListed' @click='setWishList'
               = inline_svg 'sephora_style_guide/heart-filled.svg'
             .product-card-heart v-if='!productThreeIsWishListed' @click='setWishList'
@@ -78,8 +78,8 @@ article#product-card
             .product-card-actions v-if='showProductThreeActions' 
               button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to bag
               .product-card-variants 
-                img.product-variant name='variant14' :class='{ active: isVariantFourteenSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant1.jpg'
-                img.product-variant name='variant15' :class='{ active: isVariantFifteenSelected }' @click='selectVariant' src='/assets/sephora_style_guide/product1-variant2.jpg'
+                img.product-variant name='variant14' :class='{ active: isVariantFourteenSelected }' @click='selectVariant' src='examples/product1-variant1.jpg'
+                img.product-variant name='variant15' :class='{ active: isVariantFifteenSelected }' @click='selectVariant' src='examples/product1-variant2.jpg'
             = link_to '#product-link', class: 'product-card-description-container' do
               .product-card-description
                 p.product-card-brand Alima Pure
