@@ -4,75 +4,75 @@
     width: 50%;
     min-width: 360px;
   }
+}
 
-  .pagination {
+.pagination {
+  display: inline-block;
+  text-align: center;
+  line-height: 20px !important;
+
+  .page {
+    background: $white;
+    border: 1px solid $grey;
+    border-right: 0;
     display: inline-block;
+    font-size: 13px;
     text-align: center;
-    line-height: 20px !important;
+    text-decoration: none;
+    padding: 10px 8px;
+    height: 40px;
+    min-width: 40px;
+    width: auto;
+    box-sizing: border-box;
+    vertical-align: middle;
+    cursor: pointer;
 
-    .page {
-      background: $white;
-      border: 1px solid $grey;
-      border-right: 0;
+    &:last-child {
+      border-right: 1px solid $grey;
+    }
+
+    span {
       display: inline-block;
-      font-size: 13px;
-      text-align: center;
-      text-decoration: none;
-      padding: 10px 8px;
-      height: 40px;
-      min-width: 40px;
-      width: auto;
-      box-sizing: border-box;
       vertical-align: middle;
-      cursor: pointer;
+      width: auto;
+      font-style: normal;
+      box-sizing: initial;
+    }
 
-      &:last-child {
-        border-right: 1px solid $grey;
-      }
+    &:hover {
+      background: $grey;
+      color: $black;
+    }
 
-      span {
-        display: inline-block;
-        vertical-align: middle;
-        width: auto;
-        font-style: normal;
-        box-sizing: initial;
-      }
+    &.current,
+    &.current:hover {
+      background: $grey-light;
+      color: $black;
+    }
 
-      &:hover {
-        background: $grey;
-        color: $black;
-      }
-
-      &.current,
-      &.current:hover {
-        background: $grey-light;
-        color: $black;
-      }
-
-      &.continue {
-        border: 0;
-        border-left: 1px solid $grey;
-
-        @include hover {
-          background: $white;
-        }
-      }
+    &.continue {
+      border: 0;
+      border-left: 1px solid $grey;
 
       @include hover {
-        background: $grey;
+        background: $white;
       }
+    }
 
-      &.next,
-      &.prev {
-        span {
+    @include hover {
+      background: $grey;
+    }
+
+    &.next,
+    &.prev {
+      span {
+        width: 15px;
+        height: 15px;
+
+        svg {
           width: 15px;
           height: 15px;
-
-          svg {
-            width: 15px;
-            height: 15px;
-            font-size: 20px;
-          }
+          font-size: 20px;
         }
       }
     }
