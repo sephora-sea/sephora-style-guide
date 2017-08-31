@@ -37,22 +37,7 @@ javascript:
       productIsWaitListed: false,
       productOneIsWishListed: false,
       productTwoIsWishListed: false,
-      productThreeIsWishListed: false,
-      isVariantOneSelected: true,
-      isVariantTwoSelected: false,
-      isVariantThreeSelected: false,
-      isVariantFourSelected: false,
-      isVariantFiveSelected: false,
-      isVariantSixSelected: false,
-      isVariantSevenSelected: false,
-      isVariantEightSelected: false,
-      isVariantNineSelected: false,
-      isVariantTenSelected: false,
-      isVariantElevenSelected: false,
-      isVariantTwelveSelected: false,
-      isVariantThirteenSelected: false,
-      isVariantFourteenSelected: true,
-      isVariantFifteenSelected: false
+      productThreeIsWishListed: false
     },
     methods: {
       changeInitialText: function() {
@@ -98,61 +83,15 @@ javascript:
       },
 
       selectVariant: function(e) {
-        if (e.target.closest(".product-card").getAttribute('name') === 'product1') {
-          this.clearActiveProductOneVariants();
-
-          if (e.target.getAttribute('name') === 'variant1') {
-            this.isVariantOneSelected = true;
-          } else if (e.target.getAttribute('name') === 'variant2') {
-            this.isVariantTwoSelected = true;
-          } else if (e.target.getAttribute('name') === 'variant3') {
-            this.isVariantThreeSelected = true;
-          } else if (e.target.getAttribute('name') === 'variant4') {
-            this.isVariantFourSelected = true;
-          } else if (e.target.getAttribute('name') === 'variant5') {
-            this.isVariantFiveSelected = true;
-          } else if (e.target.getAttribute('name') === 'variant6') {
-            this.isVariantSixSelected = true;
-          } else if (e.target.getAttribute('name') === 'variant7') {
-            this.isVariantSevenSelected = true;
-          } else if (e.target.getAttribute('name') === 'variant8') {
-            this.isVariantEightSelected = true;
-          } else if (e.target.getAttribute('name') === 'variant9') {
-            this.isVariantNineSelected = true;
-          } else if (e.target.getAttribute('name') === 'variant10') {
-            this.isVariantTenSelected = true;
-          } else if (e.target.getAttribute('name') === 'variant11') {
-            this.isVariantElevenSelected = true;
-          } else if (e.target.getAttribute('name') === 'variant12') {
-            this.isVariantTwelveSelected = true;
-          } else if (e.target.getAttribute('name') === 'variant13') {
-            this.isVariantThirteenSelected = true;
-          }
-        } else {
-          if (e.target.getAttribute('name') === 'variant14') {
-            this.isVariantFourteenSelected = true;
-            this.isVariantFifteenSelected = false;
-          } else if (e.target.getAttribute('name') === 'variant15') {
-            this.isVariantFourteenSelected = false;
-            this.isVariantFifteenSelected = true;
-          }
+        if ($(e.target).hasClass('product-variant')) {
+          const variants = $(e.target).closest('.product-card-variants').children()
+          
+          $.each(variants, function(i, variant) {
+            $(variant).children().removeClass('active')
+          })
+          
+          $(e.target).addClass('active')
         }
-      },
-
-      clearActiveProductOneVariants: function() {
-        this.isVariantOneSelected = false;
-        this.isVariantTwoSelected = false;
-        this.isVariantThreeSelected = false;
-        this.isVariantFourSelected = false;
-        this.isVariantFiveSelected = false;
-        this.isVariantSixSelected = false;
-        this.isVariantSevenSelected = false;
-        this.isVariantEightSelected = false;
-        this.isVariantNineSelected = false;
-        this.isVariantTenSelected = false;
-        this.isVariantElevenSelected = false;
-        this.isVariantTwelveSelected = false;
-        this.isVariantThirteenSelected = false;
       },
 
       setWishList: function(e) {
