@@ -92,22 +92,20 @@
     .carousel-arrow-left {
       position: absolute;
       left: 0;
-      top: 6.5px;
-      height: 17px;
-      width: 10px;
-      background: asset-url('/assets/sephora_style_guide/left_arrow.png') no-repeat;
-      background-size: contain;
+      height: 30px;
+      width: 15px;
+      background: asset-url('/assets/sephora_style_guide/left_arrow.png') center no-repeat;
+      background-size: 10px 17px;
       cursor: pointer;
     }
 
     .carousel-arrow-right {
       position: absolute;
       right: 0;
-      top: 6.5px;
-      height: 17px;
-      width: 10px;
-      background: asset-url('/assets/sephora_style_guide/right_arrow.png') no-repeat;
-      background-size: contain;
+      height: 30px;
+      width: 15px;
+      background: asset-url('/assets/sephora_style_guide/right_arrow.png') center no-repeat;
+      background-size: 10px 17px;
       cursor: pointer;
     }
 
@@ -121,6 +119,7 @@
       margin-right: 20px;
       background: linear-gradient(to right, rgba(255, 255, 255, 0), $white);
       cursor: default;
+      pointer-events: none;
     }
 
     @include media-breakpoint-down(lg) {
@@ -202,20 +201,36 @@
         @include font-avalon-demi;
         text-transform: uppercase;
         margin-bottom: 1px;
+
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 0;
+        }
       }
 
       .product-card-product {
         overflow-wrap: break-word;
         margin-bottom: 1px;
+
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 0;
+        }
       }
 
       .product-card-price {
         @include font-avalon-demi;
         margin-bottom: 2px;
+
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 0;
+        }
       }
 
       .product-card-discount-price {
         margin-bottom: 2px;
+
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 0;
+        }
 
         .product-old-price {
           text-decoration: line-through;
