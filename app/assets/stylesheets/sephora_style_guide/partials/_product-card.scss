@@ -94,7 +94,7 @@
       left: 0;
       height: 30px;
       width: 20px;
-      background: asset-url('/assets/sephora_style_guide/left_arrow.png') center no-repeat;
+      background: asset-url('sephora_style_guide/arrow-left.svg') center no-repeat;
       background-size: 10px 17px;
       cursor: pointer;
     }
@@ -104,7 +104,7 @@
       right: 0;
       height: 30px;
       width: 20px;
-      background: asset-url('/assets/sephora_style_guide/right_arrow.png') center no-repeat;
+      background: asset-url('sephora_style_guide/arrow-right.svg') center no-repeat;
       background-size: 10px 17px;
       cursor: pointer;
     }
@@ -259,7 +259,7 @@
 
         .rateit .rateit-range {
           height: 12px;
-          background: asset-url('/assets/sephora_style_guide/star.png') !important;
+          background: asset-url('sephora_style_guide/star.png') !important;
         }
 
         .rateit .rateit-selected,
@@ -267,7 +267,7 @@
           height: 12px;
           position: absolute;
           top: 0;
-          background: asset-url('/assets/sephora_style_guide/star-filled.png') !important;
+          background: asset-url('sephora_style_guide/star-filled.png') !important;
         }
       }
 
