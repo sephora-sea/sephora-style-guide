@@ -37,13 +37,13 @@ article
   section
     h3.h3 Sidebar
 
-    #sidebar-accordion.accordion.accordion-sidebar.light aria-multiselectable='true' role='tablist'
+    #sidebar-accordion.accordion.accordion-sidebar(role='tablist')
       .card.card-light
-        #skin-concerns-heading.card-header role='tab' data-toggle='collapse' data-target='#skin-concerns-collapse' data-parent='#sidebar-accordion'
+        #skin-concerns-heading.card-header(data-toggle='collapse' data-target='#skin-concerns-collapse' data-parent='#sidebar-accordion' role='tab')
           i.collapse-arrow
           h4.h4 SKINCARE
 
-        #skin-concerns-collapse.collapse.show aria-labelledby='heading-one' role='tabpanel'
+        #skin-concerns-collapse.collapse.show(aria-labelledby='skin-concerns-heading' role='tabpanel')
           .card-block
             ul
               li: a(href='#0')
@@ -81,11 +81,11 @@ article
                 span.badge.badge-default 0
 
       .card.card-light
-        #brands-heading.card-header.collapsed role='tab' data-toggle='collapse' data-target='#brands-collapse' data-parent='#sidebar-accordion'
+        #brands-heading.card-header.collapsed(data-toggle='collapse' data-target='#brands-collapse' data-parent='#sidebar-accordion' role='tab')
           i.collapse-arrow
           h4.h4 BRANDS
 
-        #brands-collapse.collapse aria-labelledby='heading-two' role='tabpanel'
+        #brands-collapse.collapse(role='tabpanel' aria-labelledby='brands-heading')
           .card-block
             ul
               li: a(href='#0')
@@ -102,11 +102,11 @@ article
                 span.badge.badge-default 9
 
       .card.card-light
-        #price-heading.card-header.collapsed role='tab' data-toggle='collapse' data-target='#price-collapse' data-parent='#sidebar-accordion'
+        #price-heading.card-header.collapsed(data-toggle='collapse' data-target='#price-collapse' data-parent='#sidebar-accordion' role='tab')
           i.collapse-arrow
           h4.h4 PRICE
 
-        #price-collapse.collapse aria-labelledby='heading-two' role='tabpanel'
+        #price-collapse.collapse(role='tabpanel' aria-labelledby='price-heading')
           .card-block
             ul
               li: a(href='#0') Under $25

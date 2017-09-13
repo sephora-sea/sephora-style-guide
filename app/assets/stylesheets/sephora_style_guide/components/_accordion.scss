@@ -27,6 +27,7 @@
 
 .accordion-sidebar {
   max-width: 300px;
+  user-select: none;
 
   @include media-breakpoint-down(sm) {
     max-width: 100%;
