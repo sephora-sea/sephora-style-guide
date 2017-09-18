@@ -281,6 +281,13 @@
           display: block;
         }
 
+        @include media-breakpoint-down(sm) {
+          svg {
+            width: 15px;
+            height: 15px;
+          }
+        }
+
         .variant-count {
           color: $grey-mid;
           vertical-align: top;
