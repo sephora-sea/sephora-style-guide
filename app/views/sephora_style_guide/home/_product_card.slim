@@ -77,7 +77,10 @@ article#product-card
                 span.product-card-label-new-arrival New
                 p.product-card-brand Sigma Beauty
                 p.product-card-product Mr. Bunny Essential Kit
-                p.product-card-price $254.00
+                .product-card-discount-price
+                  p.product-old-price $254.00
+                  p.product-new-price $127.00
+                  p.product-discount-percentage = "(50%)"
                 .product-card-rating
                   .rateit.product-rating
                     .rateit-range
@@ -94,18 +97,15 @@ article#product-card
             .product-card-actions v-if='showProductThreeActions'
               button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to bag
               .product-card-variants
-                span.variant-container name='variant14' @click='selectVariant'
-                  = image_tag 'examples/variant2.jpg', class: 'product-variant'
-                span.variant-container name='variant15' @click='selectVariant'
+                span.variant-container name='variant14' @click='selectVariant' @mouseover='hoverVariant'
+                  = image_tag 'examples/variant2.jpg', class: 'product-variant' 
+                span.variant-container name='variant15' @click='selectVariant' @mouseover='hoverVariant'
                   = image_tag 'examples/variant1.jpg', class: 'product-variant'
             = link_to '#product-link', class: 'product-card-description-container' do
               .product-card-description
                 p.product-card-brand Alima Pure
                 p.product-card-product Shimmering Skin Perfector Pressed Prismatic Amethyst (Limited Edition)
-                .product-card-discount-price
-                  p.product-old-price $34.00
-                  p.product-new-price $17.00
-                  p.product-discount-percentage = "(50%)"
+                p.product-card-price $26.00 - $32.00
                 .product-card-rating
                   .rateit.product-rating
                     .rateit-range

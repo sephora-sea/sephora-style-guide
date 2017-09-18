@@ -93,6 +93,16 @@ javascript:
           $(e.target).addClass('active')
         }
       },
+      
+      hoverVariant: function(e) {
+        if ($(e.target).hasClass('product-variant')) {
+          if ($(e.target).getAttribute('name') === 'variant14') {
+            e.target.closest('.product-card').find('.product-card-price').text('$26.00')
+          } else if ($(e.target).getAttribute('name') === 'variant15') {
+            e.target.closest('.product-card').find('.product-card-price').text('$32.00')
+          }
+        }
+      },
 
       setWishList: function(e) {
         const targetClass = e.target.parentNode.parentNode.parentNode.className;
