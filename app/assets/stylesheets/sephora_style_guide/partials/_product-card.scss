@@ -191,6 +191,7 @@
     .product-card-label-limited-edition {
       @extend %product-card-label;
       color: $grey-mid;
+      margin-left: 3px;
     }
 
     .product-card-description {
@@ -252,6 +253,8 @@
       }
 
       .product-card-rating {
+        margin-bottom: 5px;
+
         .product-rating {
           position: relative;
           width: 72px;
@@ -268,6 +271,20 @@
           position: absolute;
           top: 0;
           background: asset-url('sephora_style_guide/star-filled.png') !important;
+        }
+      }
+
+      .product-card-mobile-variant-indicator {
+        display: none;
+
+        @include media-breakpoint-down(md) {
+          display: block;
+        }
+
+        .variant-count {
+          color: $grey-mid;
+          vertical-align: top;
+          margin-left: 2px;
         }
       }
 

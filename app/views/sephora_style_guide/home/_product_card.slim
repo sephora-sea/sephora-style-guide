@@ -56,6 +56,9 @@ article#product-card
                   .rateit.product-rating
                     .rateit-range
                     .rateit-selected.rateit-preset
+                .product-card-mobile-variant-indicator
+                  = inline_svg 'sephora_style_guide/shade-icon.svg'
+                  span.variant-count 13 shades
 
         .col-6.col-md-3
           .product-card name='product2' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
@@ -102,8 +105,11 @@ article#product-card
                 .product-card-discount-price
                   p.product-old-price $34.00
                   p.product-new-price $17.00
-                  p.product-discount-percentage = "(-50%)"
+                  p.product-discount-percentage = "(50%)"
                 .product-card-rating
                   .rateit.product-rating
                     .rateit-range
                     .rateit-selected.rateit-preset
+                .product-card-mobile-variant-indicator
+                  = inline_svg 'sephora_style_guide/size-icon.svg'
+                  span.variant-count 2 sizes
