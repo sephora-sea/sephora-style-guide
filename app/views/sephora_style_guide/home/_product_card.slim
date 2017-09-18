@@ -97,9 +97,9 @@ article#product-card
             .product-card-actions v-if='showProductThreeActions'
               button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to bag
               .product-card-variants
-                span.variant-container name='variant14' @click='selectVariant' @mouseover='hoverVariant'
+                span.variant-container name='variant14' @click='selectVariant' @mouseover='hoverVariant' @mouseleave='leaveVariant'
                   = image_tag 'examples/variant2.jpg', class: 'product-variant' 
-                span.variant-container name='variant15' @click='selectVariant' @mouseover='hoverVariant'
+                span.variant-container name='variant15' @click='selectVariant' @mouseover='hoverVariant' @mouseleave='leaveVariant'
                   = image_tag 'examples/variant1.jpg', class: 'product-variant'
             = link_to '#product-link', class: 'product-card-description-container' do
               .product-card-description
