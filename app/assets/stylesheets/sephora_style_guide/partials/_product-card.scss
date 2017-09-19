@@ -203,36 +203,20 @@
         @include font-avalon-demi;
         text-transform: uppercase;
         margin-bottom: 1px;
-
-        @include media-breakpoint-down(lg) {
-          margin-bottom: 0;
-        }
       }
 
       .product-card-product {
         overflow-wrap: break-word;
         margin-bottom: 1px;
-
-        @include media-breakpoint-down(lg) {
-          margin-bottom: 0;
-        }
       }
 
       .product-card-price {
         @include font-avalon-demi;
         margin-bottom: 2px;
-
-        @include media-breakpoint-down(lg) {
-          margin-bottom: 0;
-        }
       }
 
       .product-card-discount-price {
         margin-bottom: 2px;
-
-        @include media-breakpoint-down(lg) {
-          margin-bottom: 0;
-        }
 
         .product-old-price {
           text-decoration: line-through;
