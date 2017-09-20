@@ -37,7 +37,9 @@ javascript:
       productIsWaitListed: false,
       productOneIsWishListed: false,
       productTwoIsWishListed: false,
-      productThreeIsWishListed: false
+      productThreeIsWishListed: false,
+      isDiscountVariant: false,
+      hoverTimeout: null
     },
     methods: {
       changeInitialText: function() {
@@ -95,17 +97,26 @@ javascript:
       },
       
       hoverVariant: function(e) {
+        if(this.hoverTimeout) {
+          clearTimeout(this.hoverTimeout)
+        }
+        
         if ($(e.target).hasClass('product-variant')) {
           if (e.target.parentNode.getAttribute('name') === 'variant14') {
-            $(e.target).closest('.product-card').find('.product-card-price').text('$26.00')
+            this.isDiscountVariant = true;
           } else if (e.target.parentNode.getAttribute('name') === 'variant15') {
-            $(e.target).closest('.product-card').find('.product-card-price').text('$32.00')
+            this.isDiscountVariant = false;
+            $(e.target).closest('.product-card').find('.product-card-price').text('$32.00');
           }
         }
       },
       
       leaveVariant: function(e) {
-        $(e.target).closest('.product-card').find('.product-card-price').text('$26.00 – $32.00')
+        var self = this;
+        this.hoverTimeout = setTimeout(function() {
+          self.isDiscountVariant = false;
+          $(e.target).closest('.product-card').find('.product-card-price').text('$26.00 – $32.00')
+        }, 10)
       },
 
       setWishList: function(e) {
