@@ -6,7 +6,7 @@ article#product-card
       .row
         .col-6.col-md-3.offset-md-3
           .product-card name='product1' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
-            = link_to '#product-link' do
+            = link_to '#product-link', class: 'product-image-container' do
               = image_tag 'examples/product1-400x400.png', class: 'product-card-image'
             .product-card-heart-filled v-if='productOneIsWishListed' @click='setWishList'
               = inline_svg 'sephora_style_guide/heart-filled.svg'
@@ -60,9 +60,9 @@ article#product-card
 
         .col-6.col-md-3
           .product-card name='product2' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
-            = link_to '#product-link' do
+            = link_to '#product-link', class: 'product-card-image-container' do
+              .out-of-stock Out of stock
               = image_tag 'examples/product2-400x400.png', class: 'product-card-image'
-            .out-of-stock Out of stock
             .product-card-heart-filled v-if='productTwoIsWishListed' @click='setWishList'
               = inline_svg 'sephora_style_guide/heart-filled.svg'
             .product-card-heart v-if='!productTwoIsWishListed' @click='setWishList'
@@ -84,7 +84,7 @@ article#product-card
 
         .col-6.col-md-3
           .product-card name='product3' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
-            = link_to '#product-link' do
+            = link_to '#product-link', class: 'product-image-container' do
               = image_tag 'examples/product3-400x400.png', class: 'product-card-image'
             .product-card-heart-filled v-if='productThreeIsWishListed' @click='setWishList'
               = inline_svg 'sephora_style_guide/heart-filled.svg'
