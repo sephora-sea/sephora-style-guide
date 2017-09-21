@@ -101,8 +101,9 @@ article#product-card
               .product-card-description
                 p.product-card-brand Alima Pure
                 p.product-card-product Shimmering Skin Perfector Pressed Prismatic Amethyst (Limited Edition)
-                p.product-card-price v-show='!isDiscountVariant' $26.00 &ndash; $32.00
-                .product-card-discount-price v-show='isDiscountVariant'
+                p.product-card-price-range v-show='!showDiscountPrice && !showNormalPrice' $26.00 &ndash; $32.00
+                p.product-card-price v-show='!showDiscountPrice && showNormalPrice' $36.00
+                .product-card-discount-price v-show='showDiscountPrice && !showNormalPrice'
                   p.product-old-price $52.00
                   p.product-new-price $26.00
                   p.product-discount-percentage = "(50%)"

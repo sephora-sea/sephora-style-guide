@@ -213,6 +213,11 @@
         margin-bottom: 2px;
       }
 
+      .product-card-price-range {
+        @include font-avalon-demi;
+        margin-bottom: 2px;
+      }
+
       .product-card-discount-price {
         margin-bottom: 2px;
 
