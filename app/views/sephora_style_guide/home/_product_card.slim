@@ -90,7 +90,7 @@ article#product-card
               = inline_svg 'sephora_style_guide/heart-filled.svg'
             .product-card-heart v-if='!productThreeIsWishListed' @click='setWishList'
               = inline_svg 'sephora_style_guide/heart.svg'
-            .product-card-actions v-if='showProductThreeActions'
+            .product-card-actions v-show='showProductThreeActions'
               button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to bag
               .product-card-variants
                 span.variant-container name='variant14' @click='selectVariant' @mouseover='hoverVariant' @mouseleave='leaveVariant'
