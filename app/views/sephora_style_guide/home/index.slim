@@ -37,7 +37,11 @@ javascript:
       productIsWaitListed: false,
       productOneIsWishListed: false,
       productTwoIsWishListed: false,
-      productThreeIsWishListed: false
+      productThreeIsWishListed: false,
+      showDiscountPrice: false,
+      showNormalPrice: false,
+      showPriceRange: true,
+      hoverTimeout: null
     },
     methods: {
       changeInitialText: function() {
@@ -55,7 +59,7 @@ javascript:
       },
 
       mouseoverProductCard: function(e) {
-        const target = e.target.closest(".product-card").getAttribute('name');
+        const target = e.target.closest('.product-card').getAttribute('name');
         if (target === 'product1') {
           this.showProductOneActions = true;
         } else if (target === 'product2') {
@@ -84,6 +88,19 @@ javascript:
 
       selectVariant: function(e) {
         if ($(e.target).hasClass('product-variant')) {
+        
+          if (e.target.closest('.product-card').getAttribute('name') === 'product3') {
+            this.showPriceRange = false;
+            
+            if (e.target.parentNode.getAttribute('name') === 'variant14') {
+              this.showDiscountPrice = true;
+              this.showNormalPrice = false;
+            } else if (e.target.parentNode.getAttribute('name') === 'variant15') {
+              this.showDiscountPrice = false;
+              this.showNormalPrice = true;
+            }
+          }
+          
           const variants = $(e.target).closest('.product-card-variants').children()
           
           $.each(variants, function(i, variant) {
@@ -92,6 +109,40 @@ javascript:
           
           $(e.target).addClass('active')
         }
+      },
+      
+      hoverVariant: function(e) {
+        if(this.hoverTimeout) {
+          clearTimeout(this.hoverTimeout)
+        }
+        
+        if ($(e.target).hasClass('product-variant')) {
+          if (e.target.parentNode.getAttribute('name') === 'variant14') {
+            this.showDiscountPrice = true;
+            this.showNormalPrice = false;
+          } else if (e.target.parentNode.getAttribute('name') === 'variant15') {
+            this.showDiscountPrice = false;
+            this.showNormalPrice = true;
+          }
+        }
+      },
+      
+      leaveVariant: function(e) {
+        const self = this;
+        this.hoverTimeout = setTimeout(function() {
+          const variant = $(e.target).closest('.product-card-variants').find('.active').parent().attr('name')
+          
+          if (variant === 'variant14' && self.showPriceRange === false) {
+            self.showDiscountPrice = true;
+            self.showNormalPrice = false;
+          } else if (variant === 'variant15' && self.showPriceRange === false) {
+            self.showDiscountPrice = false;
+            self.showNormalPrice = true;
+          } else {
+            self.showDiscountPrice = false;
+            self.showNormalPrice = false;
+          }
+        }, 10)
       },
 
       setWishList: function(e) {

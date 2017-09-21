@@ -1,12 +1,17 @@
 .product-card {
   width: 100%;
-  position: relative;
 
   &:hover {
     .product-card-heart,
     .product-card-heart-filled {
       visibility: visible;
     }
+  }
+
+  .product-card-image-container {
+    display: flex;
+    position: relative;
+    align-items: center;
   }
 
   .product-card-image {
@@ -32,7 +37,6 @@
   .out-of-stock {
     @include font-avalon-demi;
     position: absolute;
-    top: 26%;
     width: 100%;
     height: 45px;
     padding-top: 17px;
@@ -41,20 +45,15 @@
     text-align: center;
     color: $grey-dark;
     font-size: 16px;
-
-    @include media-breakpoint-down(lg) {
-      top: 25%;
-    }
+    pointer-events: none;
 
     @include media-breakpoint-down(md) {
-      top: 22%;
       padding-top: 9px;
       height: 30px;
       font-size: 14px;
     }
 
     @include media-breakpoint-down(sm) {
-      top: 3em;
       padding-top: 6px;
     }
   }
@@ -64,7 +63,7 @@
     visibility: hidden;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 15px;
     width: $product-card-heart-width;
     height: $product-card-heart-height;
     opacity: 0.8;
@@ -191,6 +190,7 @@
     .product-card-label-limited-edition {
       @extend %product-card-label;
       color: $grey-mid;
+      margin-left: 3px;
     }
 
     .product-card-description {
@@ -201,36 +201,25 @@
         @include font-avalon-demi;
         text-transform: uppercase;
         margin-bottom: 1px;
-
-        @include media-breakpoint-down(lg) {
-          margin-bottom: 0;
-        }
       }
 
       .product-card-product {
         overflow-wrap: break-word;
         margin-bottom: 1px;
-
-        @include media-breakpoint-down(lg) {
-          margin-bottom: 0;
-        }
       }
 
       .product-card-price {
         @include font-avalon-demi;
         margin-bottom: 2px;
+      }
 
-        @include media-breakpoint-down(lg) {
-          margin-bottom: 0;
-        }
+      .product-card-price-range {
+        @include font-avalon-demi;
+        margin-bottom: 2px;
       }
 
       .product-card-discount-price {
         margin-bottom: 2px;
-
-        @include media-breakpoint-down(lg) {
-          margin-bottom: 0;
-        }
 
         .product-old-price {
           text-decoration: line-through;
@@ -252,6 +241,8 @@
       }
 
       .product-card-rating {
+        margin-bottom: 2px;
+
         .product-rating {
           position: relative;
           width: 72px;
@@ -268,6 +259,27 @@
           position: absolute;
           top: 0;
           background: asset-url('sephora_style_guide/star-filled.png') !important;
+        }
+      }
+
+      .product-card-mobile-variant-indicator {
+        display: none;
+
+        @include media-breakpoint-down(lg) {
+          display: block;
+        }
+
+        @include media-breakpoint-down(sm) {
+          svg {
+            width: 15px;
+            height: 15px;
+          }
+        }
+
+        .variant-count {
+          color: $grey-mid;
+          vertical-align: top;
+          margin-left: 2px;
         }
       }
 
