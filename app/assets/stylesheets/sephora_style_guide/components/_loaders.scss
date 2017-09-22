@@ -1,0 +1,20 @@
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader-spinner {
+  animation: spin 0.7s linear infinite;
+  border-width: 7px;
+  border-style: solid;
+  border-color: $grey-light;
+  border-top-color: $grey-dark;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+
+  @include media-breakpoint-up(md) {
+    height: 60px;
+    width: 60px;
+  }
+}

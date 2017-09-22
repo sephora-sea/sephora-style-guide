@@ -14,6 +14,7 @@ main.container-fluid#app role='main'
   = render 'sephora_style_guide/home/breadcrumbs'
   = render 'sephora_style_guide/home/tabs'
   = render 'sephora_style_guide/home/accordion'
+  = render 'sephora_style_guide/home/loaders'
 
   br
   h2.h2 Partials
@@ -102,11 +103,11 @@ javascript:
           }
           
           const variants = $(e.target).closest('.product-card-variants').children()
-          
+
           $.each(variants, function(i, variant) {
             $(variant).children().removeClass('active')
           })
-          
+
           $(e.target).addClass('active')
         }
       },
@@ -159,7 +160,7 @@ javascript:
         }
       }
     },
-    
+
     created() {
       this.setProductRating();
     }
