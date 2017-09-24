@@ -1,8 +1,8 @@
 .breadcrumb {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   font-size: 11px;
-  height: 11px;
   padding: 0;
 }
 
