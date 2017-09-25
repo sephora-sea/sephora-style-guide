@@ -1,6 +1,6 @@
 <svg viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
   <g fill="none" fill-rule="evenodd">
-    <path fill="#F1F1F1" d="M.6 0h25v25H.6z"/>
-    <path stroke="#AAA" stroke-width="2" d="M5.6 12.97l4.54 4.53 9.5-9.5"/>
+    <path fill="#F1F1F1" d="M0 0h25v25H0z"/>
+    <path stroke="#AAA" stroke-width="2" d="M5 12.96l4.52 4.52L19 8"/>
   </g>
 </svg>
