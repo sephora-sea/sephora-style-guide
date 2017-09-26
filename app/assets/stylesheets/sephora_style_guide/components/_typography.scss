@@ -24,6 +24,15 @@
 }
 
 @font-face {
+  font-family: 'Sephora Sans';
+  src: asset-url('SephoraSans-Book.eot');
+  src: asset-url('SephoraSans-Book.woff2') format('woff2'),
+    asset-url('SephoraSans-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Avalon';
   src: asset-url('Avalon-Bold.eot');
   src: asset-url('Avalon-Bold.eot?#iefix') format('embedded-opentype'),
@@ -139,6 +148,10 @@
 
 .text-sephora-italic {
   @include font-sephora-serif-italic;
+}
+
+.text-sephora-sans {
+  @include font-sephora-sans;
 }
 
 .text-avalon-bold {
