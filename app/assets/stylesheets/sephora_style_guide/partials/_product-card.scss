@@ -249,16 +249,16 @@
         }
 
         .rateit .rateit-range {
-          height: 12px;
           background: asset-url('sephora_style_guide/star.png') !important;
+          background-size: 15px 12px !important;
         }
 
         .rateit .rateit-selected,
         .rateit .rateit-preset {
-          height: 12px;
           position: absolute;
           top: 0;
           background: asset-url('sephora_style_guide/star-filled.png') !important;
+          background-size: 15px 12px !important;
         }
       }
 
