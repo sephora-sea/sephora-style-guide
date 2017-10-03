@@ -1,0 +1,25 @@
+.option-link {
+  display: inline-block;
+
+  &.disabled {
+    pointer-events: none;
+    color: $grey-mid
+  }
+
+  .checkbox,
+  .radio {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+  }
+
+  .option-label {
+    cursor: pointer;
+    margin-left: 10px;
+    vertical-align: bottom;
+
+    &.selected {
+      @include font-avalon-demi;
+    }
+  }
+}
