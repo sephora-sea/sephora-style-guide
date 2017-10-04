@@ -15,7 +15,8 @@ main.container-fluid#app role='main'
   = render 'sephora_style_guide/home/tabs'
   = render 'sephora_style_guide/home/accordion'
   = render 'sephora_style_guide/home/loaders'
-
+  = render 'sephora_style_guide/home/alerts'
+  
   br
   h2.h2 Partials
   = render 'sephora_style_guide/home/product_card'
@@ -42,7 +43,8 @@ javascript:
       showDiscountPrice: false,
       showNormalPrice: false,
       showPriceRange: true,
-      hoverTimeout: null
+      hoverTimeout: null,
+      alertTimeout: null
     },
     methods: {
       changeInitialText: function() {
@@ -79,12 +81,6 @@ javascript:
       waitlistProduct: function() {
         this.waitlistText = 'Waitlisted';
         this.productIsWaitListed = true;
-      },
-
-      setProductRating: function() {
-        const product = document.getElementsByName("product3")[0];
-        const productRating = product.querySelector(".rateit-selected");
-        productRating.style.width = '51px';
       },
 
       selectVariant: function(e) {
@@ -158,10 +154,48 @@ javascript:
             this.productThreeIsWishListed = !this.productThreeIsWishListed;
           }
         }
-      }
-    },
+      },
+      
+      alertError: function() {    
+        clearTimeout(this.alertTimeout)
+        
+        $('.alert-error').fadeIn(200)
+        $('.alert-warning').hide()
+        $('.alert-success').hide()
 
-    created() {
-      this.setProductRating();
+        if ($('.alert-error').is(':visible')) {
+          this.alertTimeout = setTimeout(function () {
+            $('.alert-error').fadeOut(200)
+          }, 3500)
+        }
+      },
+      
+      alertWarning: function() {
+        clearTimeout(this.alertTimeout)
+
+        $('.alert-warning').fadeIn(200)
+        $('.alert-error').hide()
+        $('.alert-success').hide()
+        
+        if ($('.alert-warning').is(':visible')) {
+          this.alertTimeout = setTimeout(function () {
+            $('.alert-warning').fadeOut(200)
+          }, 3500)
+        }
+      },
+      
+      alertSuccess: function() {
+        clearTimeout(this.alertTimeout)
+
+        $('.alert-success').fadeIn(200)
+        $('.alert-warning').hide()
+        $('.alert-error').hide()
+        
+        if ($('.alert-success').is(':visible')) {
+          this.alertTimeout = setTimeout(function () {
+            $('.alert-success').fadeOut(200)
+          }, 3500)
+        }
+      }
     }
   });
