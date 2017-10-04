@@ -16,6 +16,7 @@ main.container-fluid#app role='main'
   = render 'sephora_style_guide/home/accordion'
   = render 'sephora_style_guide/home/loaders'
   = render 'sephora_style_guide/home/alerts'
+  = render 'sephora_style_guide/home/checkbox_radio'
   
   br
   h2.h2 Partials
@@ -44,7 +45,9 @@ javascript:
       showNormalPrice: false,
       showPriceRange: true,
       hoverTimeout: null,
-      alertTimeout: null
+      alertTimeout: null,
+      isCheckboxChecked: false,
+      isRadioSelected: false
     },
     methods: {
       changeInitialText: function() {
@@ -196,6 +199,14 @@ javascript:
             $('.alert-success').fadeOut(200)
           }, 3500)
         }
+      },
+      
+      toggleCheck() {
+        this.isCheckboxChecked = !this.isCheckboxChecked
+      },
+      
+      toggleSelect() {
+        this.isRadioSelected = !this.isRadioSelected
       }
     }
   });

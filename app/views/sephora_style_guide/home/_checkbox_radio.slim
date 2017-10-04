@@ -1,0 +1,46 @@
+article#checkbox-radio
+  h2.h2 Checkboxes & Radio
+
+  section
+    h3.h3 Checkbox
+    .row
+      .col-2
+        .option-link @click='toggleCheck'
+          span v-if='isCheckboxChecked'
+            = inline_svg 'sephora_style_guide/checkbox-checked.svg', class: 'checkbox'
+          span v-if='!isCheckboxChecked'
+            = inline_svg 'sephora_style_guide/checkbox.svg', class: 'checkbox'
+          label.option-label Default          
+      .col-2
+        .option-link.disabled
+          span
+            = inline_svg 'sephora_style_guide/checkbox-disabled.svg', class: 'checkbox'
+          label.option-label Disabled    
+      .col-2
+        .option-link.disabled
+          span
+            = inline_svg 'sephora_style_guide/checkbox-disabled-checked.svg', class: 'checkbox'
+          label.option-label Disabled Checked  
+    
+    br
+    section
+      h3.h3 Radio
+      .row
+        .col-2
+          .option-link @click='toggleSelect'
+            span v-if='isRadioSelected'
+              = inline_svg 'sephora_style_guide/radio-selected.svg', class: 'radio'
+            span v-if='!isRadioSelected'
+              = inline_svg 'sephora_style_guide/radio-unselected.svg', class: 'radio'
+            label.option-label Default
+        .col-2
+          .option-link.disabled
+            span
+              = inline_svg 'sephora_style_guide/radio-disabled-unselected.svg', class: 'radio'
+            label.option-label Disabled
+        .col-2
+          .option-link.disabled
+            span
+              = inline_svg 'sephora_style_guide/radio-disabled-selected.svg', class: 'radio'
+            label.option-label Disabled Selected             
+              
