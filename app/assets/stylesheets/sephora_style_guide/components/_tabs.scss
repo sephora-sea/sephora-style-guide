@@ -53,6 +53,14 @@ select {
 .tab-content .tab-pane {
   padding: 15px;
   border-top: 0;
+
+  >ul {
+    padding-left: 25px;
+  }
+
+  >h4 {
+    margin: 10px 0 5px; 
+  }
 }
 
 .nav-tabs.nav-tabs-default {
