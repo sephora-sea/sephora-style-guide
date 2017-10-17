@@ -19,7 +19,7 @@
   }
 
   .alert-message {
-    @include font-avalon-bold
+    @include font-avalon-bold;
     word-wrap: break-word;
     margin-right: 10px;
   }
