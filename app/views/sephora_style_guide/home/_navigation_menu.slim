@@ -35,7 +35,7 @@ article#navigation-menu
         ul.nav-list
           li.list-item
             a.list-link New
-          li.list-item
+          li.list-item name='Makeup' @mouseover='mouseoverNavMenu' @mouseleave='mouseleaveNavMenu'
             a.list-link Makeup
           li.list-item
             a.list-link Skincare
@@ -43,3 +43,93 @@ article#navigation-menu
             a.list-link Brands
           li.list-item
             a.list-link Sales
+            
+      .nav-content.container
+        .nav-pane.nav-default
+          .category
+            a.h4.category-title
+              span Face
+              = inline_svg 'sephora_style_guide/video-arrow.svg', class: 'category-title-arrow'
+            ul.subcategory
+              li.subcategory-title
+                a Primer
+              li.subcategory-title
+                a Foundation
+              li.subcategory-title
+                a CC &amp; BB Cream
+              li.subcategory-title
+                a Face Powder
+              li.subcategory-title
+                a Concealer
+              li.subcategory-title
+                a Contouring
+              li.subcategory-title
+                a Tools
+          .category
+            a.h4.category-title
+              span Eyes
+              = inline_svg 'sephora_style_guide/video-arrow.svg', class: 'category-title-arrow'
+            ul.subcategory
+              li.subcategory-title
+                a Primer
+              li.subcategory-title
+                a Eyeshadow
+              li.subcategory-title
+                a Eyeliner
+              li.subcategory-title
+                a Mascaras
+              li.subcategory-title
+                a False Eyelashes
+              li.subcategory-title
+                a Eyebrows
+              li.subcategory-title
+                a Under Eye Concealer
+              li.subcategory-title
+                a Treatments
+              li.subcategory-title
+                a Tools
+          .category
+            a.h4.category-title
+              span Lips
+              = inline_svg 'sephora_style_guide/video-arrow.svg', class: 'category-title-arrow'
+            ul.subcategory
+              li.subcategory-title
+                a Tools
+              li.subcategory-title
+                a Lip Gloss
+              li.subcategory-title
+                a Lipstick
+              li.subcategory-title
+                a Enhancers &amp; Treatments
+              li.subcategory-title
+                a Lip Stain
+              li.subcategory-title
+                a Lip Balm
+              li.subcategory-title
+                a Lip Liner
+          .category
+            a.h4.category-title 
+              span Cheek
+              = inline_svg 'sephora_style_guide/video-arrow.svg', class: 'category-title-arrow'
+            ul.subcategory
+              li.subcategory-title
+                a Bronzer &amp; Luminiser
+              li.subcategory-title
+                a Blush
+              li.subcategory-title
+                a Tools
+          .category
+            a.h4.category-title
+              span Nails
+              = inline_svg 'sephora_style_guide/video-arrow.svg', class: 'category-title-arrow'
+            ul.subcategory
+              li.subcategory-title
+                a Nail Polish
+              li.subcategory-title
+                a Base &amp; Top Coat
+              li.subcategory-title
+                a Tools
+              li.subcategory-title
+                a Nail Polish Remover
+              li.subcategory-title
+                a Treatments

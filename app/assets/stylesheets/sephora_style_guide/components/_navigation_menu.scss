@@ -140,4 +140,39 @@
       }
     }
   }
+
+  .nav-content {
+    .nav-pane {
+      display: flex;
+      flex-direction: column;
+      max-height: 300px;
+      flex-wrap: wrap;
+    }
+
+    .category {
+      margin-bottom: 20px;
+
+      .category-title {
+        text-transform: uppercase;
+        cursor: pointer;
+
+        .category-title-arrow {
+          width: 15px;
+          margin-left: 3px;
+        }
+      }
+
+      .subcategory {
+        list-style: none;
+        padding: 0;
+
+        .subcategory-title {
+          @include font-avalon-book;
+          font-size: 13px;
+          line-height: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }

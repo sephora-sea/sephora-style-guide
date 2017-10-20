@@ -43,7 +43,8 @@ javascript:
       showDiscountPrice: false,
       showNormalPrice: false,
       showPriceRange: true,
-      hoverTimeout: null
+      hoverTimeout: null,
+      showMakeup: false,
     },
     methods: {
       changeInitialText: function() {
@@ -75,6 +76,21 @@ javascript:
         this.showProductOneActions = false;
         this.showProductTwoActions = false;
         this.showProductThreeActions = false;
+      },
+      
+      mouseoverNavMenu: function(e) {
+        const target = e.target.getAttribute('name');
+        if (target === 'Makeup') {
+          this.showMakeup = true;
+        } else if (target === 'product2') {
+          this.showProductTwoActions = true;
+        } else if (target === 'product3') {
+          this.showProductThreeActions = true;
+        }
+      },
+
+      mouseleaveNavMenu: function() {
+        this.showMakeup = false;
       },
 
       waitlistProduct: function() {
