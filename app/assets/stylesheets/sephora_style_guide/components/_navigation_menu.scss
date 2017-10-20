@@ -1,7 +1,6 @@
 .nav-header {
   width: 100%;
   display: block;
-  border-bottom: 1px solid $grey;
 
   %menu {
     list-style: none;
@@ -113,60 +112,111 @@
   }
 
   .nav-menu {
+    border-bottom: 1px solid $grey;
+    height: 32px;
+
     .nav-list {
       display: flex;
       justify-content: space-between;
       list-style: none;
+      position: relative;
       padding: 0;
 
       .list-item {
         @include font-avalon-bold;
         font-size: 13px;
         line-height: 16px;
+        padding: 8px 18px;
         text-transform: uppercase;
 
         &:first-child,
         &:last-child {
-          .list-link {
-            padding: 8px 0;
-          }
+          padding-left: 0;
+          padding-right: 0;
         }
 
         .list-link {
           cursor: pointer;
           display: block;
-          padding: 8px 18px;
+        }
+
+        &:hover {
+          padding-left: 17px;
+          padding-right: 17px;
+          background: $white;
+          border-top: 1px solid $grey;
+          border-left: 1px solid $grey;
+          border-right: 1px solid $grey;
+
+          .list-link {
+            color: $brand-primary;
+          }
         }
       }
     }
   }
 
   .nav-content {
+    border-left: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+    border-right: 1px solid $grey;
+    background: $white;
+    padding: 15px;
+    margin-left: -18px;
+    position: absolute;
+    top: 32px;
+    z-index: 2;
+
     .nav-pane {
       display: flex;
-      flex-direction: column;
-      max-height: 300px;
       flex-wrap: wrap;
+      align-content: flex-start;
+      writing-mode: vertical-lr;
+      max-height: 300px;
     }
 
-    .category {
-      margin-bottom: 20px;
+    .brands {
+      border-left: 1px solid #ddd;
+      padding-left: 15px;
 
-      .category-title {
+      .brands-list {
+        padding-bottom: 15px;
+      }
+
+      .featured-image {
+        max-height: 100px;
+      }
+    }
+
+    .category,
+    .brands {
+      padding-bottom: 15px;
+      padding-right: 15px;
+      min-width: 180px;
+      writing-mode: horizontal-tb;
+
+      .category-title,
+      .brands-title,
+      .featured-title {
         text-transform: uppercase;
+        font-size: 13px;
         cursor: pointer;
 
         .category-title-arrow {
-          width: 15px;
+          width: 13px;
           margin-left: 3px;
         }
       }
 
-      .subcategory {
+      .subcategory,
+      .brands-list {
         list-style: none;
-        padding: 0;
+        padding-left: 0;
+        margin-top: 3px;
+        text-transform: capitalize;
 
-        .subcategory-title {
+        .subcategory-title,
+        .brand-option {
           @include font-avalon-book;
           font-size: 13px;
           line-height: 20px;
