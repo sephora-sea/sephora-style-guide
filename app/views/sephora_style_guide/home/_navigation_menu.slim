@@ -1,0 +1,45 @@
+article#navigation-menu
+  h2.h2 Navigation Menu
+
+  section
+    nav.nav.nav-header
+      .nav-top
+        .container
+          ul.left-menu
+            li.menu-item
+              a.menu-link Register
+            li.menu-item
+              a.menu-link Sign In
+            li.menu-item
+              a.menu-link Beauty Pass
+          ul.right-menu
+            li.menu-item
+              a.menu-link Get the App
+            li.menu-item
+              a.menu-link Stores
+            li.menu-item
+              a.menu-link
+            li.menu-item
+              a.menu-link Bag
+      .nav-title.container
+        .nav-brand
+          = link_to '#', class: 'brand-link'
+            = image_tag 'sephora_style_guide/sephora-logo.png', class: 'brand-image'
+        .nav-promotion
+          .promotion-banner
+            = inline_svg 'sephora_style_guide/sephora-flame.svg', class: 'banner-image'
+          = link_to '#', class: 'promotion-notification'
+            .notification-title Free shipping
+            .notification-subtitle for orders $40 &amp; above
+      .nav-menu.container
+        ul.nav-list
+          li.list-item
+            a.list-link New
+          li.list-item
+            a.list-link Makeup
+          li.list-item
+            a.list-link Skincare
+          li.list-item
+            a.list-link Brands
+          li.list-item
+            a.list-link Sales

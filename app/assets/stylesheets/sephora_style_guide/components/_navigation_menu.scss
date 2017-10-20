@@ -1,0 +1,143 @@
+.nav-header {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid $grey;
+
+  %menu {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+  }
+
+  .nav-top {
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $black;
+
+    .left-menu {
+      @extend %menu;
+      float: left;
+
+      .menu-item {
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+
+    .right-menu {
+      @extend %menu;
+      float: right;
+
+      .menu-item {
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+
+    .menu-item {
+      @include font-avalon-demi;
+      color: $white;
+      font-size: 12px;
+      text-transform: uppercase;
+      padding: 0 10px;
+      display: inline-block;
+
+      .menu-link {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .nav-title {
+    height: 85px;
+    width: 100%;
+    max-width: 1125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    .nav-brand {
+      display: inline-block;
+      height: 40px;
+      width: 310px;
+
+      .brand-image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .nav-promotion {
+      @include font-avalon-demi;
+      text-align: left;
+      position: absolute;
+      right: 0;
+
+      .promotion-banner {
+        display: inline-block;
+        vertical-align: middle;
+
+        .banner-image {
+          width: 20px;
+          height: 40px;
+        }
+      }
+
+      .promotion-notification {
+        display: inline-block;
+        vertical-align: middle;
+
+        .notification-title {
+          @include font-avalon-demi;
+          text-transform: uppercase;
+          font-size: 21px;
+          line-height: 25px;
+        }
+
+        .notification-subtitle {
+          @include font-avalon-book;
+          text-transform: uppercase;
+          font-size: 13px;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+
+  .nav-menu {
+    .nav-list {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      padding: 0;
+
+      .list-item {
+        @include font-avalon-bold;
+        font-size: 13px;
+        line-height: 16px;
+        text-transform: uppercase;
+
+        &:first-child,
+        &:last-child {
+          .list-link {
+            padding: 8px 0;
+          }
+        }
+
+        .list-link {
+          cursor: pointer;
+          display: block;
+          padding: 8px 18px;
+        }
+      }
+    }
+  }
+}
