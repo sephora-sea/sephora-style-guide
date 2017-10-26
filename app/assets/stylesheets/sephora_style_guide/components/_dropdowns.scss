@@ -47,12 +47,42 @@
 
   .dropdown-menu  {
     width: 300px;
-    max-height: 200px;
     position: absolute;
-    overflow-y: auto;
     margin-top: 5px;
     border: 1px solid $grey-mid;
     background: $white;
+
+    .dropdown-options-container {
+      max-height: 200px;
+      width: 100%;
+      overflow-y: auto;
+    }
+
+    .dropdown-searchbar {
+      display: flex;
+      align-items: center;
+      height: 35px;
+      margin: 5px;
+      border: 1px solid $grey-mid;
+
+      .search-input {
+        border: none;
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .search-icon {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
+    }
 
     .dropdown-option {
       font-size: 14px;

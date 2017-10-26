@@ -45,7 +45,8 @@ javascript:
       showPriceRange: true,
       hoverTimeout: null,
       currentSelect: 1,
-      dropdownOption: 'Yellow'
+      dropdownOption: 'Select',
+      searchDropdownOption: 'Select'
     },
     methods: {
       changeInitialText: function() {
@@ -165,6 +166,10 @@ javascript:
       
       setDropdownOption: function(e) {
         this.dropdownOption = e.target.getAttribute('value');
+      },
+      
+      setSearchDropdownOption: function(e) {
+        this.searchDropdownOption =  e.target.getAttribute('value');
       }
     },
 
