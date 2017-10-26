@@ -15,6 +15,7 @@ main.container-fluid#app role='main'
   = render 'sephora_style_guide/home/tabs'
   = render 'sephora_style_guide/home/accordion'
   = render 'sephora_style_guide/home/loaders'
+  = render 'sephora_style_guide/home/dropdowns'
 
   br
   h2.h2 Partials
@@ -42,7 +43,9 @@ javascript:
       showDiscountPrice: false,
       showNormalPrice: false,
       showPriceRange: true,
-      hoverTimeout: null
+      hoverTimeout: null,
+      currentSelect: 1,
+      dropdownOption: 'Yellow'
     },
     methods: {
       changeInitialText: function() {
@@ -158,6 +161,10 @@ javascript:
             this.productThreeIsWishListed = !this.productThreeIsWishListed;
           }
         }
+      },
+      
+      setDropdownOption: function(e) {
+        this.dropdownOption = e.target.getAttribute('value');
       }
     },
 

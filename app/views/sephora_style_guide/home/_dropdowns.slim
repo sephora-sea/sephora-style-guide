@@ -1,0 +1,32 @@
+article#dropdowns
+  h2.h2 Dropdowns
+
+  section
+    h3.h3 Default
+    .dropdown
+      label.dropdown-label Select:
+      .select-dropdown#select-dropdown
+        .dropdown-toggle#dropdown-toggle-one :class='{"error": dropdownOption === "Error"}' role='tab' data-toggle='collapse' data-parent='#select-dropdown' data-target='#dropdown-menu-one' aria-expanded='false' aria-controls='dropdown-menu-one'
+          .selected-option
+            ' {{ dropdownOption }}
+          .dropdown-arrow
+            = inline_svg 'sephora_style_guide/arrow-dropdown.svg'
+        .dropdown-menu.collapse#dropdown-menu-one aria-labelledby='dropdown-toggle-one' role='tabpanel' @click.prevent='setDropdownOption'
+          .dropdown-option :class='{"selected": dropdownOption === "Yellow"}' value='Yellow' data-toggle='collapse' data-target='#dropdown-menu-one' Yellow
+          .dropdown-option :class='{"selected": dropdownOption === "Blue"}' value='Blue' data-toggle='collapse' data-target='#dropdown-menu-one' Blue
+          .dropdown-option :class='{"selected": dropdownOption === "Super Dark Green That is Actually Teal With a Hint of Cake"}' value='Super Dark Green That is Actually Teal With a Hint of Cake' data-toggle='collapse' data-target='#dropdown-menu-one' Super Dark Green That is Actually Teal With a Hint of Cake
+          .dropdown-option :class='{"selected": dropdownOption === "Error"}' value='Error' data-toggle='collapse' data-target='#dropdown-menu-one' Error
+          .dropdown-option :class='{"selected": dropdownOption === "Maroon"}' value='Maroon' data-toggle='collapse' data-target='#dropdown-menu-one' Maroon
+          .dropdown-option :class='{"selected": dropdownOption === "Black"}' value='Black' data-toggle='collapse' data-target='#dropdown-menu-one' Black
+          .dropdown-option :class='{"selected": dropdownOption === "Hot Pink"}' value='Hot Pink' data-toggle='collapse' data-target='#dropdown-menu-one' Hot Pink
+          .dropdown-option :class='{"selected": dropdownOption === "Aquamarine"}' value='Aquamarine' data-toggle='collapse' data-target='#dropdown-menu-one' Aquamarine
+          .dropdown-option :class='{"selected": dropdownOption === "Goldenrod"}' value='Goldenrod' data-toggle='collapse' data-target='#dropdown-menu-one' Goldenrod
+          
+  section
+    h3.h3 Disabled
+    .dropdown
+      label.dropdown-label Sort:
+      .dropdown-container
+        .dropdown-toggle#dropdown-label.disabled
+          .selected-option
+            ' {{ dropdownOption }}
