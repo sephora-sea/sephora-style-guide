@@ -19,7 +19,7 @@
     border: 1px solid $grey-mid;
     font-size: 14px;
     height: 40px;
-    width: 300px;
+    width: 100%;
     padding: 10px;
     text-align: left;
     display: flex;
@@ -45,17 +45,19 @@
     }
   }
 
-  .dropdown-menu  {
-    width: 300px;
+  .dropdown-menu {
     position: absolute;
     margin-top: 5px;
     border: 1px solid $grey-mid;
+    max-width: 300px;
     background: $white;
 
     .dropdown-options-container {
       max-height: 200px;
       width: 100%;
       overflow-y: auto;
+      list-style-type: none;
+      padding: 0;
     }
 
     .dropdown-searchbar {
@@ -88,6 +90,10 @@
       font-size: 14px;
       padding: 5px 10px;
       cursor: pointer;
+
+      .search-match {
+        text-decoration: underline;
+      }
 
       &.selected {
         background-color: $grey-light;

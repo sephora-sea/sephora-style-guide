@@ -1,52 +1,59 @@
 article#dropdowns
   h2.h2 Dropdowns
+  
+  .row
+    section.col-4
+      h3.h3 Default
+      .dropdown
+        label.dropdown-label Select:
+        .select-dropdown#select-dropdown
+          .dropdown-toggle#dropdown-toggle-one :class='{"error": dropdownOptionOne === "Error"}' role='tab' data-toggle='collapse' data-parent='#select-dropdown' data-target='#dropdown-menu-one' aria-expanded='false' aria-controls='dropdown-menu-one'
+            .selected-option
+              ' {{ dropdownOptionOne }}
+            .dropdown-arrow
+              = inline_svg 'sephora_style_guide/arrow-dropdown.svg'
+          .dropdown-menu.collapse#dropdown-menu-one aria-labelledby='dropdown-toggle-one' role='tabpanel' @click.prevent='setDropdownOption'
+            ul.dropdown-options-container
+              li.dropdown-option :class='{"selected": dropdownOptionOne === "Yellow"}' value='Yellow' data-toggle='collapse' data-target='#dropdown-menu-one' Yellow
+              li.dropdown-option :class='{"selected": dropdownOptionOne === "Blue"}' value='Blue' data-toggle='collapse' data-target='#dropdown-menu-one' Blue
+              li.dropdown-option :class='{"selected": dropdownOptionOne === "Super Dark Green That is Actually Teal With a Hint of Cake"}' value='Super Dark Green That is Actually Teal With a Hint of Cake' data-toggle='collapse' data-target='#dropdown-menu-one' Super Dark Green That is Actually Teal With a Hint of Cake
+              li.dropdown-option :class='{"selected": dropdownOptionOne === "Error"}' value='Error' data-toggle='collapse' data-target='#dropdown-menu-one' Error
+              li.dropdown-option :class='{"selected": dropdownOptionOne === "Maroon"}' value='Maroon' data-toggle='collapse' data-target='#dropdown-menu-one' Maroon
+              li.dropdown-option :class='{"selected": dropdownOptionOne === "Black"}' value='Black' data-toggle='collapse' data-target='#dropdown-menu-one' Black
+              li.dropdown-option :class='{"selected": dropdownOptionOne === "Hot Pink"}' value='Hot Pink' data-toggle='collapse' data-target='#dropdown-menu-one' Hot Pink
+              li.dropdown-option :class='{"selected": dropdownOptionOne === "Aquamarine"}' value='Aquamarine' data-toggle='collapse' data-target='#dropdown-menu-one' Aquamarine
+              li.dropdown-option :class='{"selected": dropdownOptionOne === "Goldenrod"}' value='Goldenrod' data-toggle='collapse' data-target='#dropdown-menu-one' Goldenrod
+            
+    section.col-4
+      h3.h3 Disabled
+      .dropdown
+        label.dropdown-label Sort:
+        .dropdown-container
+          .dropdown-toggle#dropdown-label.disabled
+            .selected-option Disabled
 
-  section
-    h3.h3 Default
-    .dropdown
-      label.dropdown-label Select:
-      .select-dropdown#select-dropdown
-        .dropdown-toggle#dropdown-toggle-one :class='{"error": dropdownOption === "Error"}' role='tab' data-toggle='collapse' data-parent='#select-dropdown' data-target='#dropdown-menu-one' aria-expanded='false' aria-controls='dropdown-menu-one'
-          .selected-option
-            ' {{ dropdownOption }}
-          .dropdown-arrow
-            = inline_svg 'sephora_style_guide/arrow-dropdown.svg'
-        .dropdown-menu.collapse#dropdown-menu-one aria-labelledby='dropdown-toggle-one' role='tabpanel' @click.prevent='setDropdownOption'
-          .dropdown-options-container
-            .dropdown-option :class='{"selected": dropdownOption === "Yellow"}' value='Yellow' data-toggle='collapse' data-target='#dropdown-menu-one' Yellow
-            .dropdown-option :class='{"selected": dropdownOption === "Blue"}' value='Blue' data-toggle='collapse' data-target='#dropdown-menu-one' Blue
-            .dropdown-option :class='{"selected": dropdownOption === "Super Dark Green That is Actually Teal With a Hint of Cake"}' value='Super Dark Green That is Actually Teal With a Hint of Cake' data-toggle='collapse' data-target='#dropdown-menu-one' Super Dark Green That is Actually Teal With a Hint of Cake
-            .dropdown-option :class='{"selected": dropdownOption === "Error"}' value='Error' data-toggle='collapse' data-target='#dropdown-menu-one' Error
-            .dropdown-option :class='{"selected": dropdownOption === "Maroon"}' value='Maroon' data-toggle='collapse' data-target='#dropdown-menu-one' Maroon
-            .dropdown-option :class='{"selected": dropdownOption === "Black"}' value='Black' data-toggle='collapse' data-target='#dropdown-menu-one' Black
-            .dropdown-option :class='{"selected": dropdownOption === "Hot Pink"}' value='Hot Pink' data-toggle='collapse' data-target='#dropdown-menu-one' Hot Pink
-            .dropdown-option :class='{"selected": dropdownOption === "Aquamarine"}' value='Aquamarine' data-toggle='collapse' data-target='#dropdown-menu-one' Aquamarine
-            .dropdown-option :class='{"selected": dropdownOption === "Goldenrod"}' value='Goldenrod' data-toggle='collapse' data-target='#dropdown-menu-one' Goldenrod
-          
-  section
-    h3.h3 Disabled
-    .dropdown
-      label.dropdown-label Sort:
-      .dropdown-container
-        .dropdown-toggle#dropdown-label.disabled
-          .selected-option Disabled
-
-  section
-    h3.h3 With Search
-    .dropdown
-      label.dropdown-label Brands:
-      .search-dropdown#search-dropdown
-        .dropdown-toggle#dropdown-toggle-two role='tab' data-toggle='collapse' data-parent='#search-dropdown' data-target='#dropdown-menu-two' aria-expanded='true' aria-controls='dropdown-menu-two'
-          .selected-option
-            ' {{ searchDropdownOption }}
-          .dropdown-arrow
-            = inline_svg 'sephora_style_guide/arrow-dropdown.svg'
-        .dropdown-menu.collapse.show#dropdown-menu-two aria-labelledby='dropdown-toggle-two' role='tabpanel'
-          .dropdown-searchbar
-            input.search-input type='text'
-            span.search-icon
-              = inline_svg 'sephora_style_guide/search.svg'
-          .dropdown-options-container @click.prevent='setSearchDropdownOption'
-            .dropdown-option :class='{"selected": searchDropdownOption === "1"}' value='1' data-toggle='collapse' data-target='#dropdown-menu-two' 1
-            .dropdown-option :class='{"selected": searchDropdownOption === "2"}' value='2' data-toggle='collapse' data-target='#dropdown-menu-two' 2
-            .dropdown-option :class='{"selected": searchDropdownOption === "3"}' value='3' data-toggle='collapse' data-target='#dropdown-menu-two' 3
+    section.col-4
+      h3.h3 With Search
+      .dropdown
+        label.dropdown-label Brands:
+        .search-dropdown#search-dropdown
+          .dropdown-toggle#dropdown-toggle-two role='tab' data-toggle='collapse' data-parent='#search-dropdown' data-target='#dropdown-menu-two' aria-expanded='true' aria-controls='dropdown-menu-two'
+            .selected-option
+              ' {{ dropdownOptionTwo }}
+            .dropdown-arrow
+              = inline_svg 'sephora_style_guide/arrow-dropdown.svg'
+          .dropdown-menu.collapse.show#dropdown-menu-two aria-labelledby='dropdown-toggle-two' role='tabpanel'
+            .dropdown-searchbar
+              input.search-input type='text' v-model='searchInput' @input='searchDropdownOption'
+              span.search-icon
+                = inline_svg 'sephora_style_guide/search.svg'
+            ul.dropdown-options-container @click.prevent='setDropdownOptionTwo'
+              li.dropdown-option :class='{"selected": dropdownOptionTwo === "1"}' value='1' data-toggle='collapse' data-target='#dropdown-menu-two'
+                ' Benefit Cosmetics
+                span.search-match
+              li.dropdown-option :class='{"selected": dropdownOptionTwo === "2"}' value='2' data-toggle='collapse' data-target='#dropdown-menu-two'
+                ' Astalift
+                span.search-match
+              li.dropdown-option :class='{"selected": dropdownOptionTwo === "3"}' value='3' data-toggle='collapse' data-target='#dropdown-menu-two'
+                ' Lavie Lash
+                span.search-match

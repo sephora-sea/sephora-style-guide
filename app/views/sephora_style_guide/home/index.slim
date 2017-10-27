@@ -45,8 +45,9 @@ javascript:
       showPriceRange: true,
       hoverTimeout: null,
       currentSelect: 1,
-      dropdownOption: 'Select',
-      searchDropdownOption: 'Select'
+      dropdownOptionOne: 'Select',
+      dropdownOptionTwo: 'Select',
+      searchInput: ''
     },
     methods: {
       changeInitialText: function() {
@@ -164,12 +165,48 @@ javascript:
         }
       },
       
-      setDropdownOption: function(e) {
-        this.dropdownOption = e.target.getAttribute('value');
+      setDropdownOptionOne: function(e) {
+        this.dropdownOptionOne = e.target.getAttribute('value');
       },
       
-      setSearchDropdownOption: function(e) {
-        this.searchDropdownOption =  e.target.getAttribute('value');
+      setDropdownOptionTwo: function(e) {
+        this.dropdownOptionTwo =  e.target.getAttribute('value');
+      },
+      
+      searchDropdownOption: function(e) {
+        const input = this.searchInput;
+        const options = $(e.target).closest('.dropdown-menu').find('.dropdown-options-container .dropdown-option')
+        
+        if (input.length > 0) {
+          options.each(function() {
+            $(this).show();
+            const brand = $(this).text();
+            const startMatchingIndex = brand.toLowerCase().indexOf(input.toLowerCase());
+            
+            if (startMatchingIndex !== -1) {
+              const firstMatch = brand.slice(0, startMatchingIndex);
+              const secondMatch = brand.slice(startMatchingIndex + input.length); 
+              const inputMatch = brand.slice(startMatchingIndex, startMatchingIndex + input.length);
+              
+              $(this).find('.search-match').text(inputMatch);
+              const searchMatchSpan = $(this).find('.search-match').get(0).outerHTML;
+              
+              $(this).html(firstMatch + searchMatchSpan + secondMatch);
+            } else {
+              $(this).hide();
+            }
+          });
+        } else {
+          options.each(function() {
+            const brand = $(this).text();
+            const match = $(this).find('.search-match').get(0).outerHTML;
+            
+            $(this).html(brand + match);
+            $(this).find('.search-match').text('');
+            
+            $(this).show();
+          })
+        }
       }
     },
 
