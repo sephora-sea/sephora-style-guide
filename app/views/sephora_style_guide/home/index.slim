@@ -15,6 +15,7 @@ main.container-fluid#app role='main'
   = render 'sephora_style_guide/home/tabs'
   = render 'sephora_style_guide/home/accordion'
   = render 'sephora_style_guide/home/loaders'
+  = render 'sephora_style_guide/home/dropdowns'
 
   br
   h2.h2 Partials
@@ -42,7 +43,11 @@ javascript:
       showDiscountPrice: false,
       showNormalPrice: false,
       showPriceRange: true,
-      hoverTimeout: null
+      hoverTimeout: null,
+      currentSelect: 1,
+      dropdownOptionOne: 'Select',
+      dropdownOptionTwo: 'Select',
+      searchInput: ''
     },
     methods: {
       changeInitialText: function() {
@@ -157,6 +162,50 @@ javascript:
           } else if (target === 'product3') {
             this.productThreeIsWishListed = !this.productThreeIsWishListed;
           }
+        }
+      },
+      
+      setDropdownOptionOne: function(e) {
+        this.dropdownOptionOne = e.target.getAttribute('value');
+      },
+      
+      setDropdownOptionTwo: function(e) {
+        this.dropdownOptionTwo =  e.target.getAttribute('value');
+      },
+      
+      searchDropdownOption: function(e) {
+        const input = this.searchInput;
+        const options = $(e.target).closest('.dropdown-menu').find('.dropdown-options-container .dropdown-option')
+        
+        if (input.length > 0) {
+          options.each(function() {
+            $(this).show();
+            const brand = $(this).text();
+            const startMatchingIndex = brand.toLowerCase().indexOf(input.toLowerCase());
+            
+            if (startMatchingIndex !== -1) {
+              const firstMatch = brand.slice(0, startMatchingIndex);
+              const secondMatch = brand.slice(startMatchingIndex + input.length); 
+              const inputMatch = brand.slice(startMatchingIndex, startMatchingIndex + input.length);
+              
+              $(this).find('.search-match').text(inputMatch);
+              const searchMatchSpan = $(this).find('.search-match').get(0).outerHTML;
+              
+              $(this).html(firstMatch + searchMatchSpan + secondMatch);
+            } else {
+              $(this).hide();
+            }
+          });
+        } else {
+          options.each(function() {
+            const brand = $(this).text();
+            const match = $(this).find('.search-match').get(0).outerHTML;
+            
+            $(this).html(brand + match);
+            $(this).find('.search-match').text('');
+            
+            $(this).show();
+          })
         }
       }
     },
