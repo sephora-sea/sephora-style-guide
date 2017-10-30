@@ -96,6 +96,9 @@ select {
 }
 
 .tab-content.tab-content-default {
+  border-top: 1px solid $grey;
+  margin-top: -2px;
+
   @include media-breakpoint-up(md) {
     border: 1px solid $grey;
     margin-top: -4px;
