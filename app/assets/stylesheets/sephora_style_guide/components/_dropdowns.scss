@@ -123,7 +123,7 @@
 
     .dropdown-option {
       font-size: 14px;
-      padding: 5px 10px;
+      padding: 12px 10px;
       cursor: pointer;
 
       @include media-breakpoint-down(sm) {
@@ -176,14 +176,6 @@
           }
         }
       }
-
-      &:first-child {
-        padding-top: 10px
-      }
-
-      &:last-child {
-        padding-bottom: 10px
-      }
     }
   }
 
@@ -191,11 +183,15 @@
     display: none;
 
     @include media-breakpoint-down(sm) {
-      display: block;
       @include font-avalon-demi;
+      display: block;
 
       &:not(.disabled) {
         border: 1px solid $grey;
+
+        &.error {
+          border: 1px solid $brand-error;
+        }
 
         .button-text {
           font-size: 16px;

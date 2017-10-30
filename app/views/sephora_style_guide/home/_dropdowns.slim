@@ -4,7 +4,7 @@ article#dropdowns
   section
     h3.h3 Default
     .dropdown
-      button.dropdown-btn.btn.btn-block.btn-white#dropdown-toggle-one role='tab' data-toggle='collapse' data-parent='#select-dropdown' data-target='#dropdown-menu-one' aria-expanded='false' aria-controls='dropdown-menu-one'
+      button.dropdown-btn.btn.btn-block.btn-white#dropdown-toggle-one :class='{"error": dropdownOptionOne === "Error"}' role='tab' data-toggle='collapse' data-parent='#select-dropdown' data-target='#dropdown-menu-one' aria-expanded='false' aria-controls='dropdown-menu-one'
         span.button-text Select
         span.dropdown-arrow
           = inline_svg 'sephora_style_guide/arrow-dropdown.svg'
@@ -28,6 +28,10 @@ article#dropdowns
                 = inline_svg 'sephora_style_guide/selected-tick.svg'
             li.dropdown-option :class='{"selected": dropdownOptionOne === "Super Dark Green That is Actually Teal With a Hint of Cake"}' value='Super Dark Green That is Actually Teal With a Hint of Cake' data-toggle='collapse' data-target='#dropdown-menu-one'
               ' Super Dark Green That is Actually Teal With a Hint of Cake
+              span.option-selected
+                = inline_svg 'sephora_style_guide/selected-tick.svg'
+            li.dropdown-option :class='{"selected": dropdownOptionOne === "Error"}' value='Error' data-toggle='collapse' data-target='#dropdown-menu-one'
+              ' Error
               span.option-selected
                 = inline_svg 'sephora_style_guide/selected-tick.svg'
             li.dropdown-option :class='{"selected": dropdownOptionOne === "Maroon"}' value='Maroon' data-toggle='collapse' data-target='#dropdown-menu-one'
