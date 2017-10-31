@@ -1,5 +1,5 @@
 .option-link {
-  display: inline-block;
+  display: flex;
 
   &.disabled {
     pointer-events: none;

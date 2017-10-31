@@ -4,7 +4,7 @@ $(document).ready(function(){
         CLOSE_BTN = '.alert[role="alert"] .close[data-dismiss="alert"]';
 
     $(document).on('click', CLOSE_BTN, function () {
-      $(this).closest(PARENT_CLASS).fadeOut(200);
+      $(this).closest(PARENT_CLASS).fadeOut(200, 'linear');
     });
   }
 

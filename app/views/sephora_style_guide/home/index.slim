@@ -160,53 +160,53 @@ javascript:
       },
       
       alertError: function() {    
-        clearTimeout(this.alertTimeout)
+        clearTimeout(this.alertTimeout);
         
-        $('.alert-error').fadeIn(200)
-        $('.alert-warning').hide()
-        $('.alert-success').hide()
+        $('.alert-error').fadeIn(200, 'linear');
+        $('.alert-warning').hide();
+        $('.alert-success').hide();
 
         if ($('.alert-error').is(':visible')) {
           this.alertTimeout = setTimeout(function () {
-            $('.alert-error').fadeOut(200)
-          }, 3500)
+            $('.alert-error').fadeOut(200, 'linear');
+          }, 3500);
         }
       },
       
       alertWarning: function() {
-        clearTimeout(this.alertTimeout)
+        clearTimeout(this.alertTimeout);
 
-        $('.alert-warning').fadeIn(200)
-        $('.alert-error').hide()
-        $('.alert-success').hide()
+        $('.alert-warning').fadeIn(200, 'linear');
+        $('.alert-error').hide();
+        $('.alert-success').hide();
         
         if ($('.alert-warning').is(':visible')) {
           this.alertTimeout = setTimeout(function () {
-            $('.alert-warning').fadeOut(200)
-          }, 3500)
+            $('.alert-warning').fadeOut(200, 'linear');
+          }, 3500);
         }
       },
       
       alertSuccess: function() {
-        clearTimeout(this.alertTimeout)
+        clearTimeout(this.alertTimeout);
 
-        $('.alert-success').fadeIn(200)
-        $('.alert-warning').hide()
-        $('.alert-error').hide()
+        $('.alert-success').fadeIn(200, 'linear');
+        $('.alert-warning').hide();
+        $('.alert-error').hide();
         
         if ($('.alert-success').is(':visible')) {
           this.alertTimeout = setTimeout(function () {
-            $('.alert-success').fadeOut(200)
-          }, 3500)
+            $('.alert-success').fadeOut(200, 'linear');
+          }, 3500);
         }
       },
       
       toggleCheck() {
-        this.isCheckboxChecked = !this.isCheckboxChecked
+        this.isCheckboxChecked = !this.isCheckboxChecked;
       },
       
       toggleSelect() {
-        this.isRadioSelected = !this.isRadioSelected
+        this.isRadioSelected = !this.isRadioSelected;
       }
     }
   });
