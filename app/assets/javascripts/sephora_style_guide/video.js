@@ -2,10 +2,12 @@
 
 $(document).ready(function() {
   // Inject YouTube API script
-  var tag = document.createElement('script');
-  tag.src = "//www.youtube.com/player_api";
-  var firstScriptTag = document.body.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  /**
+    var tag = document.createElement('script');
+    tag.src = '//www.youtube.com/player_api';
+    var firstScriptTag = document.body.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  **/
 });
 
 // global variable for the players
