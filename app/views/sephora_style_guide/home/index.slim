@@ -158,18 +158,10 @@ javascript:
         }
       },
       
-      alertError: function() {    
-        clearTimeout(this.alertTimeout);
-        
+      alertError: function() {           
         $('.alert-error').fadeIn(200, 'linear');
         $('.alert-warning').hide();
         $('.alert-success').hide();
-
-        if ($('.alert-error').is(':visible')) {
-          this.alertTimeout = setTimeout(function () {
-            $('.alert-error').fadeOut(200, 'linear');
-          }, 3500);
-        }
       },
       
       alertWarning: function() {
@@ -178,12 +170,6 @@ javascript:
         $('.alert-warning').fadeIn(200, 'linear');
         $('.alert-error').hide();
         $('.alert-success').hide();
-        
-        if ($('.alert-warning').is(':visible')) {
-          this.alertTimeout = setTimeout(function () {
-            $('.alert-warning').fadeOut(200, 'linear');
-          }, 3500);
-        }
       },
       
       alertSuccess: function() {
@@ -192,12 +178,6 @@ javascript:
         $('.alert-success').fadeIn(200, 'linear');
         $('.alert-warning').hide();
         $('.alert-error').hide();
-        
-        if ($('.alert-success').is(':visible')) {
-          this.alertTimeout = setTimeout(function () {
-            $('.alert-success').fadeOut(200, 'linear');
-          }, 3500);
-        }
       },
       
       toggleCheck() {
