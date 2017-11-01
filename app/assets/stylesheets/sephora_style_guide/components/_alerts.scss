@@ -10,12 +10,12 @@
   width: 100%;
   min-height: 40px;
   display: none;
-  z-index: 1000;
+  z-index: $zindex-dropdown;
 
   .alert-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .alert-message {
@@ -37,15 +37,15 @@
 
 .alert-success {
   color: #3a773a;
-  background-color: #ecf1e6 !important;
+  background-color: #ecf1e6;
 }
 
 .alert-warning {
   color: #c000c4;
-  background-color: #f8e5f9 !important;
+  background-color: #f8e5f9;
 }
 
 .alert-error {
   color: #e00;
-  background-color: #fde5e5 !important;
+  background-color: #fde5e5;
 }

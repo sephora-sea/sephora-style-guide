@@ -1,19 +1,53 @@
-.option-link {
+.form-check {
   display: flex;
+
+  .form-check-input {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    background-size: 18px 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
   &.disabled {
     pointer-events: none;
     color: $grey-mid;
+
+    .checkbox {
+      background-image: asset-url('sephora_style_guide/checkbox-disabled.svg');
+
+      &.checked {
+        background-image: asset-url('sephora_style_guide/checkbox-disabled-checked.svg');
+      }
+    }
+
+    .radio {
+      background-image: asset-url('sephora_style_guide/radio-disabled-unselected.svg');
+
+      &.selected {
+        background-image: asset-url('sephora_style_guide/radio-disabled-selected.svg');
+      }
+    }
   }
 
-  .checkbox,
+  .checkbox {
+    background-image: asset-url('sephora_style_guide/checkbox.svg');
+
+    &.checked {
+      background-image: asset-url('sephora_style_guide/checkbox-checked.svg');
+    }
+  }
+
   .radio {
-    height: 18px;
-    width: 18px;
-    vertical-align: middle;
+    background-image: asset-url('sephora_style_guide/radio-unselected.svg');
+
+    &.selected {
+      background-image: asset-url('sephora_style_guide/radio-selected.svg');
+    }
   }
 
-  .option-label {
+  .form-check-label {
     cursor: pointer;
     margin-left: 10px;
     vertical-align: bottom;
