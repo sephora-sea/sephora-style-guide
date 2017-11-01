@@ -45,8 +45,10 @@ javascript:
       showPriceRange: true,
       hoverTimeout: null,
       alertTimeout: null,
-      isCheckboxChecked: false,
-      isRadioSelected: false,
+      isCheckboxOneChecked: false,
+      isCheckboxTwoChecked: false,
+      isRadioOneSelected: false,
+      isRadioTwoSelected: false,
       showAlertSuccess: false,
       showAlertWarning: false,
       showAlertError: false
@@ -203,12 +205,22 @@ javascript:
         this.showAlertError = false;
       },
       
-      toggleCheck() {
-        this.isCheckboxChecked = !this.isCheckboxChecked;
+      toggleCheckboxOne() {
+        this.isCheckboxOneChecked = !this.isCheckboxOneChecked;
       },
       
-      toggleSelect() {
-        this.isRadioSelected = !this.isRadioSelected;
+      toggleCheckboxTwo() {
+        this.isCheckboxTwoChecked = !this.isCheckboxTwoChecked;
+      },
+      
+      toggleRadioOne() {
+        this.isRadioOneSelected = !this.isRadioOneSelected;
+        this.isRadioTwoSelected = false;
+      },
+      
+      toggleRadioTwo() {
+        this.isRadioTwoSelected = !this.isRadioTwoSelected;
+        this.isRadioOneSelected = false;
       }
     },
 
