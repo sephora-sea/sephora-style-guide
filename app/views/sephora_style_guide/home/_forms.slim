@@ -1,4 +1,4 @@
-article#input
+article#forms
   h2.h2 Input Fields
 
   section
@@ -17,12 +17,12 @@ article#input
       input#email3.form-control type='email' value='testemail'
       .form-control-feedback= 'Error: Email is incorrect'
       = inline_svg 'sephora_style_guide/field-error.svg', class: 'input-error'
-      
+
     .form-group.floating-labels.editable-verification
       label.control-label for='text1' Prefilled (Editable)
       input#text1.form-control type='text' value='Flora Wong'
       = inline_svg 'sephora_style_guide/field-succeed.svg', class: 'input-success'
-    
+
     .form-group.floating-labels.non-editable-verification
       label.control-label for='text2' Verified (Readonly Field)
       input#text2.form-control type='text' value='Flora Wong' readonly=true

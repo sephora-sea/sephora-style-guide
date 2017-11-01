@@ -1,3 +1,27 @@
+ruby:
+  buttons = [
+    {
+      name: 'Default',
+      class: nil
+    },
+    {
+      name: 'Primary',
+      class: 'btn-primary'
+    },
+    {
+      name: 'White',
+      class: 'btn-white'
+    },
+    {
+      name: 'Grey',
+      class: 'btn-grey'
+    },
+    {
+      name: 'Disabled',
+      class: 'disabled'
+    }
+  ].freeze
+
 article#buttons
   h2.h2 Buttons
 
@@ -17,7 +41,7 @@ article#buttons
   section
     h3.h3 Variants
 
-    - @buttons.each do |button|
+    - buttons.each do |button|
       .button-variant
         h4.h4 = button[:name]
 

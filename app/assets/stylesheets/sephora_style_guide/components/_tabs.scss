@@ -53,6 +53,14 @@ select {
 .tab-content .tab-pane {
   padding: 15px;
   border-top: 0;
+
+  >ul {
+    padding-left: 25px;
+  }
+
+  >h4 {
+    margin: 10px 0 5px;
+  }
 }
 
 .nav-tabs.nav-tabs-default {
@@ -88,6 +96,9 @@ select {
 }
 
 .tab-content.tab-content-default {
+  border-top: 1px solid $grey;
+  margin-top: -2px;
+
   @include media-breakpoint-up(md) {
     border: 1px solid $grey;
     margin-top: -4px;

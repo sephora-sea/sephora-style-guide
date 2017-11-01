@@ -90,10 +90,10 @@ javascript:
 
       selectVariant(e) {
         if ($(e.target).hasClass('product-variant')) {
-        
+
           if (e.target.closest('.product-card').getAttribute('name') === 'product3') {
             this.showPriceRange = false;
-            
+
             if (e.target.parentNode.getAttribute('name') === 'variant14') {
               this.showDiscountPrice = true;
               this.showNormalPrice = false;
@@ -102,7 +102,7 @@ javascript:
               this.showNormalPrice = true;
             }
           }
-          
+
           const variants = $(e.target).closest('.product-card-variants').children()
 
           $.each(variants, function(i, variant) {
@@ -112,12 +112,12 @@ javascript:
           $(e.target).addClass('active')
         }
       },
-      
+
       hoverVariant(e) {
         if(this.hoverTimeout) {
           clearTimeout(this.hoverTimeout)
         }
-        
+
         if ($(e.target).hasClass('product-variant')) {
           if (e.target.parentNode.getAttribute('name') === 'variant14') {
             this.showDiscountPrice = true;
@@ -128,12 +128,12 @@ javascript:
           }
         }
       },
-      
+
       leaveVariant(e) {
         const self = this;
         this.hoverTimeout = setTimeout(function() {
           const variant = $(e.target).closest('.product-card-variants').find('.active').parent().attr('name')
-          
+
           if (variant === 'variant14' && self.showPriceRange === false) {
             self.showDiscountPrice = true;
             self.showNormalPrice = false;
@@ -211,4 +211,15 @@ javascript:
         this.isRadioSelected = !this.isRadioSelected;
       }
     },
+
+    created() {
+      this.setProductRating();
+    },
+    
+    mounted() {
+      let tag = document.createElement('script');
+      tag.src = '//www.youtube.com/player_api';
+      const firstScriptTag = document.body.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
   });
