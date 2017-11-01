@@ -1,8 +1,10 @@
-.alert-fade-enter-active, .alert-fade-leave-active {
+.alert-fade-enter-active,
+.alert-fade-leave-active {
   transition: $transition-fade;
 }
 
-.alert-fade-enter, .alert-fade-leave-to {
+.alert-fade-enter,
+.alert-fade-leave-to {
   opacity: 0;
 }
 
