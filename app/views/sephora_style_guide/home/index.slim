@@ -46,14 +46,17 @@ javascript:
       hoverTimeout: null,
       alertTimeout: null,
       isCheckboxChecked: false,
-      isRadioSelected: false
+      isRadioSelected: false,
+      showAlertSuccess: false,
+      showAlertWarning: false,
+      showAlertError: false
     },
     methods: {
-      changeInitialText: function() {
+      changeInitialText() {
         this.buttonText = this.buttonTextInitial;
       },
 
-      clickButton: function() {
+      clickButton() {
         var self = this;
         this.buttonText = this.buttonTextPending;
         this.isDisabled = 'disabled';
@@ -63,7 +66,7 @@ javascript:
         }, 2000);
       },
 
-      mouseoverProductCard: function(e) {
+      mouseoverProductCard(e) {
         const target = e.target.closest('.product-card').getAttribute('name');
         if (target === 'product1') {
           this.showProductOneActions = true;
@@ -74,18 +77,18 @@ javascript:
         }
       },
 
-      mouseleaveProductCard: function() {
+      mouseleaveProductCard() {
         this.showProductOneActions = false;
         this.showProductTwoActions = false;
         this.showProductThreeActions = false;
       },
 
-      waitlistProduct: function() {
+      waitlistProduct() {
         this.waitlistText = 'Waitlisted';
         this.productIsWaitListed = true;
       },
 
-      selectVariant: function(e) {
+      selectVariant(e) {
         if ($(e.target).hasClass('product-variant')) {
         
           if (e.target.closest('.product-card').getAttribute('name') === 'product3') {
@@ -110,7 +113,7 @@ javascript:
         }
       },
       
-      hoverVariant: function(e) {
+      hoverVariant(e) {
         if(this.hoverTimeout) {
           clearTimeout(this.hoverTimeout)
         }
@@ -126,7 +129,7 @@ javascript:
         }
       },
       
-      leaveVariant: function(e) {
+      leaveVariant(e) {
         const self = this;
         this.hoverTimeout = setTimeout(function() {
           const variant = $(e.target).closest('.product-card-variants').find('.active').parent().attr('name')
@@ -144,7 +147,7 @@ javascript:
         }, 10)
       },
 
-      setWishList: function(e) {
+      setWishList(e) {
         const targetClass = e.target.parentNode.parentNode.parentNode.className;
         if (targetClass === 'product-card-heart' || targetClass === 'product-card-heart-filled') {
           const target = e.target.closest(".product-card").getAttribute('name');
@@ -158,26 +161,46 @@ javascript:
         }
       },
       
-      alertError: function() {           
-        $('.alert-error').fadeIn(200, 'linear');
-        $('.alert-warning').hide();
-        $('.alert-success').hide();
+      alertError() {           
+        this.showAlertError = true;
+        this.showAlertSuccess = false;
+        this.showAlertWarning = false;
+        
+        clearTimeout(this.alertTimeout);
+        const self = this;
+        this.alertTimeout = setTimeout(function () {
+          self.showAlertError = false;
+        }, 3500);
       },
       
-      alertWarning: function() {
+      alertWarning() {
+        this.showAlertWarning = true;
+        this.showAlertSuccess = false;
+        this.showAlertError = false;
+        
         clearTimeout(this.alertTimeout);
-
-        $('.alert-warning').fadeIn(200, 'linear');
-        $('.alert-error').hide();
-        $('.alert-success').hide();
+        const self = this;
+        this.alertTimeout = setTimeout(function () {
+          self.showAlertWarning = false;
+        }, 3500);
       },
       
-      alertSuccess: function() {
+      alertSuccess() {
+        this.showAlertSuccess = true;
+        this.showAlertWarning = false;
+        this.showAlertError = false;
+        
         clearTimeout(this.alertTimeout);
-
-        $('.alert-success').fadeIn(200, 'linear');
-        $('.alert-warning').hide();
-        $('.alert-error').hide();
+        const self = this;
+        this.alertTimeout = setTimeout(function () {
+          self.showAlertSuccess = false;
+        }, 3500);
+      },
+      
+      closeAlerts() {
+        this.showAlertSuccess = false;
+        this.showAlertWarning = false;
+        this.showAlertError = false;
       },
       
       toggleCheck() {
@@ -187,5 +210,5 @@ javascript:
       toggleSelect() {
         this.isRadioSelected = !this.isRadioSelected;
       }
-    }
+    },
   });
