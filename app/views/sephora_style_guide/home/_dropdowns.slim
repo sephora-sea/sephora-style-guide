@@ -2,22 +2,20 @@ article#dropdowns
   h2.h2 Dropdowns
   
   section
-    h3.h3 Default
+    h3.h3 Select
     .dropdown
       button.dropdown-btn.btn.btn-block.btn-white#dropdown-toggle-one :class='{"error": dropdownOptionOne === "Error"}' role='tab' data-toggle='collapse' data-parent='#select-dropdown' data-target='#dropdown-menu-one' aria-expanded='false' aria-controls='dropdown-menu-one'
         span.button-text Select
         span.dropdown-arrow
           = inline_svg 'sephora_style_guide/arrow-dropdown.svg'
-
+          
       label.dropdown-label Select:
       .select-dropdown#select-dropdown
-        .dropdown-toggle#dropdown-toggle-one :class='{"error": dropdownOptionOne === "Error"}' role='tab' data-toggle='collapse' data-parent='#select-dropdown' data-target='#dropdown-menu-one' aria-expanded='false' aria-controls='dropdown-menu-one'
+        .dropdown-toggle#dropdown-toggle-one.disabled
           .option-selected
-            ' {{ dropdownOptionOne }}
-          .dropdown-arrow
-            = inline_svg 'sephora_style_guide/arrow-dropdown.svg'
-        .dropdown-menu.collapse#dropdown-menu-one aria-labelledby='dropdown-toggle-one' role='tabpanel' @click.prevent='setDropdownOptionOne'              
-          ul.dropdown-options-container
+            ' Select
+        .dropdown-menu.collapse#dropdown-menu-one aria-labelledby='dropdown-toggle-one' role='tabpanel'              
+          ul.dropdown-options-container @click.prevent='setDropdownOptionOne'
             li.dropdown-option :class='{"selected": dropdownOptionOne === "Yellow"}' value='Yellow' data-toggle='collapse' data-target='#dropdown-menu-one'
               ' Yellow
               span.option-selected
@@ -62,7 +60,7 @@ article#dropdowns
         span.button-text Sort
 
       label.dropdown-label Sort:
-      .dropdown-container
+      .select-dropdown
         .dropdown-toggle#dropdown-label.disabled
           .option-selected Disabled
 
