@@ -4,16 +4,17 @@ article#dropdowns
   section
     h3.h3 Select
     .dropdown
-      button.dropdown-btn.btn.btn-block.btn-white#dropdown-toggle-one :class='{"error": dropdownOptionOne === "Error"}' role='tab' data-toggle='collapse' data-parent='#select-dropdown' data-target='#dropdown-menu-one' aria-expanded='false' aria-controls='dropdown-menu-one'
-        span.button-text Select
-        span.dropdown-arrow
-          = inline_svg 'sephora_style_guide/arrow-dropdown.svg'
-          
       label.dropdown-label Select:
-      .select-dropdown#select-dropdown
+      .dropdown-container
+        button.dropdown-toggle.btn.btn-block.btn-white#dropdown-toggle-one :class='{"error": dropdownOptionOne === "Error"}' role='tab' data-toggle='collapse' data-target='#dropdown-menu-one' aria-expanded='false' aria-controls='dropdown-menu-one'
+          span.button-text Select
+          span.dropdown-arrow
+            = inline_svg 'sephora_style_guide/arrow-dropdown.svg'
+            
         .dropdown-toggle#dropdown-toggle-one.disabled
           .option-selected
             ' Select
+            
         .dropdown-menu.collapse#dropdown-menu-one aria-labelledby='dropdown-toggle-one' role='tabpanel'              
           ul.dropdown-options-container @click.prevent='setDropdownOptionOne'
             li.dropdown-option :class='{"selected": dropdownOptionOne === "Yellow"}' value='Yellow' data-toggle='collapse' data-target='#dropdown-menu-one'
@@ -56,27 +57,28 @@ article#dropdowns
   section
     h3.h3 Disabled
     .dropdown
-      button.dropdown-btn.btn.btn-block.disabled
-        span.button-text Sort
-
       label.dropdown-label Sort:
-      .select-dropdown
+      .dropdown-container
+        button.dropdown-toggle.btn.btn-block.disabled
+          span.button-text Sort
+
         .dropdown-toggle#dropdown-label.disabled
           .option-selected Disabled
 
   section
     h3.h3 With Search
     .dropdown
-      button.dropdown-btn.btn.btn-block.disabled
-        span.button-text Brands
-        
       label.dropdown-label Brands:
-      .search-dropdown#search-dropdown
-        .dropdown-toggle#dropdown-toggle-two role='tab' data-toggle='collapse' data-parent='#search-dropdown' data-target='#dropdown-menu-two' aria-expanded='false' aria-controls='dropdown-menu-two'
+      .dropdown-container
+        button.dropdown-toggle.btn.btn-block.disabled
+          span.button-text Brands
+          
+        .dropdown-toggle#dropdown-toggle-two role='tab' data-toggle='collapse' data-target='#dropdown-menu-two' aria-expanded='false' aria-controls='dropdown-menu-two'
           .option-selected
             ' {{ dropdownOptionTwo }}
           .dropdown-arrow
             = inline_svg 'sephora_style_guide/arrow-dropdown.svg'
+            
         .dropdown-menu.collapse#dropdown-menu-two aria-labelledby='dropdown-toggle-two' role='tabpanel'
           .dropdown-searchbar
             input.search-input type='text' v-model='searchInput' @input='searchDropdownOption'

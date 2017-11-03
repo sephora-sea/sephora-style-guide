@@ -14,13 +14,18 @@
     }
   }
 
+  .dropdown-container {
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
   .dropdown-toggle {
     @include font-avalon-book;
     background-color: $white;
     border: 1px solid $grey-mid;
     font-size: 14px;
     height: 40px;
-    width: 100%;
     padding: 10px;
     text-align: left;
     display: flex;
@@ -28,6 +33,48 @@
 
     @include media-breakpoint-down(sm) {
       display: none;
+    }
+
+    &.btn {
+      display: none;
+
+      @include media-breakpoint-down(sm) {
+        @include font-avalon-demi;
+        display: block;
+        text-align: center;
+
+        &:not(.disabled) {
+          border: 1px solid $grey;
+
+          &.error {
+            border: 1px solid $brand-error;
+          }
+
+          .button-text {
+            font-size: 16px;
+            color: $black;
+            text-transform: uppercase;
+          }
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .dropdown-arrow {
+        display: inline-block;
+        margin-left: 5px;
+        pointer-events: none;
+
+        svg {
+          width: 10px;
+          height: 5px;
+          vertical-align: middle;
+        }
+      }
     }
 
     &.error {
@@ -174,47 +221,6 @@
             height: 15px;
           }
         }
-      }
-    }
-  }
-
-  .dropdown-btn {
-    display: none;
-
-    @include media-breakpoint-down(sm) {
-      @include font-avalon-demi;
-      display: block;
-
-      &:not(.disabled) {
-        border: 1px solid $grey;
-
-        &.error {
-          border: 1px solid $brand-error;
-        }
-
-        .button-text {
-          font-size: 16px;
-          color: $black;
-          text-transform: uppercase;
-        }
-      }
-
-      &:active,
-      &:focus,
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    .dropdown-arrow {
-      display: inline-block;
-      margin-left: 5px;
-      pointer-events: none;
-
-      svg {
-        width: 10px;
-        height: 5px;
-        vertical-align: middle;
       }
     }
   }

@@ -11,10 +11,13 @@ $(document).ready(function(){
 
     $(document).on('click', function (event) {
       var clickover = $(event.target);
-      var isOpened = $(DROPDOWN_CLASS).hasClass(OPENED_CLASS);
-      if (isOpened && !clickover.hasClass(INPUT_CLASS.container) && !clickover.hasClass(INPUT_CLASS.input) && !clickover.hasClass(INPUT_CLASS.icon)) {
-        $(TOGGLER_CLASS).click();
-      }
+
+      $(DROPDOWN_CLASS).each(function() {
+        var isOpened = $(this).hasClass(OPENED_CLASS);
+        if (isOpened && !clickover.hasClass(INPUT_CLASS.container) && !clickover.hasClass(INPUT_CLASS.input) && !clickover.hasClass(INPUT_CLASS.icon)) {
+          $(this).siblings(TOGGLER_CLASS).click();
+        }
+      })
     });
   }
 
