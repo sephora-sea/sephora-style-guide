@@ -1,21 +1,19 @@
 .pagination {
   display: inline-block;
   text-align: center;
-  line-height: 20px !important;
+  line-height: 20px;
 
   .page {
-    background: $white;
+    background-color: $white;
     border: 1px solid $grey;
     border-right: 0;
     display: inline-block;
     font-size: 13px;
-    text-align: center;
     text-decoration: none;
     padding: 10px 8px;
     height: 40px;
     min-width: 40px;
     width: auto;
-    box-sizing: border-box;
     vertical-align: middle;
     cursor: pointer;
 
@@ -24,13 +22,13 @@
     }
 
     &:hover {
-      background: $grey;
+      background-color: $grey;
       color: $black;
     }
 
     &.current,
     &.current:hover {
-      background: $grey-light;
+      background-color: $grey-light;
       color: $black;
     }
 
@@ -39,12 +37,12 @@
       border-left: 1px solid $grey;
 
       @include hover {
-        background: $white;
+        background-color: $white;
       }
     }
 
     @include hover {
-      background: $grey;
+      background-color: $grey;
     }
 
     &.prev,
