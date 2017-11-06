@@ -17,15 +17,6 @@ $(document).ready(function(){
       $(this).parents(PARENT_CLASS)
           .toggleClass('focus', e.type === 'liszt:showing_dropdown')
     });
-
-    $(document).on('click', function (event) {
-      console.log('ehh')
-      var clickover = $(event.target);
-      var _opened = $('.dropdown-menu').hasClass('collapse show');
-      if (_opened === true && !clickover.hasClass('dropdown-searchbar') && !clickover.hasClass('search-input') && !clickover.hasClass('search-icon')) {
-        $('.dropdown-toggle[role="tab"]').click();
-      }
-    });
   }
 
   floatingLabel();
