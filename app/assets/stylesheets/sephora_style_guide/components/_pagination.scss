@@ -1,80 +1,63 @@
-#pagination {
-  section {
+.pagination {
+  display: inline-block;
+  text-align: center;
+  line-height: 20px;
+
+  .page {
+    background-color: $white;
+    border: 1px solid $grey;
+    border-right: 0;
     display: inline-block;
-    width: 50%;
-    min-width: 360px;
-  }
+    font-size: 13px;
+    text-decoration: none;
+    padding: 10px 8px;
+    height: 40px;
+    min-width: 40px;
+    width: auto;
+    vertical-align: middle;
+    cursor: pointer;
 
-  .pagination {
-    display: inline-block;
-    text-align: center;
-    line-height: 20px !important;
+    &:last-child {
+      border-right: 1px solid $grey;
+    }
 
-    .page {
-      background: $white;
-      border: 1px solid $grey;
-      border-right: 0;
-      display: inline-block;
-      font-size: 13px;
-      text-align: center;
-      text-decoration: none;
-      padding: 10px 8px;
-      height: 40px;
-      min-width: 40px;
-      width: auto;
-      box-sizing: border-box;
-      vertical-align: middle;
-      cursor: pointer;
+    &:hover {
+      background-color: $grey;
+      color: $black;
+    }
 
-      &:last-child {
-        border-right: 1px solid $grey;
-      }
+    &.current,
+    &.current:hover {
+      background-color: $grey-light;
+      color: $black;
+    }
 
-      span {
-        display: inline-block;
-        vertical-align: middle;
-        width: auto;
-        font-style: normal;
-        box-sizing: initial;
-      }
-
-      &:hover {
-        background: $grey;
-        color: $black;
-      }
-
-      &.current,
-      &.current:hover {
-        background: $grey-light;
-        color: $black;
-      }
-
-      &.continue {
-        border: 0;
-        border-left: 1px solid $grey;
-
-        @include hover {
-          background: $white;
-        }
-      }
+    &.continue {
+      border: 0;
+      border-left: 1px solid $grey;
 
       @include hover {
-        background: $grey;
+        background-color: $white;
       }
+    }
 
-      &.next,
-      &.prev {
-        span {
-          width: 15px;
-          height: 15px;
+    @include hover {
+      background-color: $grey;
+    }
 
-          svg {
-            width: 15px;
-            height: 15px;
-            font-size: 20px;
-          }
-        }
-      }
+    &.prev,
+    &.next {
+      background-repeat: no-repeat;
+      background-size: 15px 15px;
+      background-position: center center;
+    }
+
+    &.prev {
+      background-image: asset_url('sephora_style_guide/arrow-left.svg');
+    }
+
+    &.next {
+      background-image: asset_url('sephora_style_guide/arrow-right.svg');
     }
   }
 }
