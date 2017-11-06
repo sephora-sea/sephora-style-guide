@@ -175,6 +175,11 @@ textarea.form-control {
       }
     }
   }
+
+  .input-success {
+    @extend %form-icon;
+    background-image: asset_url('sephora_style_guide/field-succeed.svg');
+  }
 }
 
 .form-text {
@@ -187,6 +192,7 @@ textarea.form-control {
 
   .input-error {
     @extend %form-icon;
+    background-image: asset_url('sephora_style_guide/field-error.svg');
   }
 }
 
@@ -199,12 +205,6 @@ textarea.form-control {
   position: absolute;
 }
 
-.editable-verification {
-  .input-success {
-    @extend %form-icon;
-  }
-}
-
 .non-editable-verification {
   .form-control[readonly] {
     border: 0;
@@ -215,10 +215,6 @@ textarea.form-control {
 
   .control-label {
     left: 0;
-  }
-
-  .input-success {
-    @extend %form-icon;
   }
 }
 
