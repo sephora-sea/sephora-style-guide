@@ -178,7 +178,7 @@ textarea.form-control {
 
   .input-success {
     @extend %form-icon;
-    background-image: asset_url('sephora_style_guide/field-succeed.svg');
+    background: asset_url('sephora_style_guide/field-succeed.svg');
   }
 }
 
@@ -192,7 +192,7 @@ textarea.form-control {
 
   .input-error {
     @extend %form-icon;
-    background-image: asset_url('sephora_style_guide/field-error.svg');
+    background: asset_url('sephora_style_guide/field-error.svg');
   }
 }
 
