@@ -1,3 +1,26 @@
+%heart-icon {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  width: $product-card-heart-width;
+  height: $product-card-heart-height;
+  opacity: 0.8;
+
+  @include media-breakpoint-down(lg) {
+    visibility: visible;
+    position: absolute;
+    top: auto;
+    margin-top: -40px;
+  }
+}
+
+%option-type-icon {
+  height: 14px;
+  width: 14px;
+  display: inline-block;
+}
+
 .product-card {
   width: 100%;
 
@@ -58,28 +81,20 @@
     }
   }
 
-  .product-card-heart,
-  .product-card-heart-filled {
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    right: 15px;
-    width: $product-card-heart-width;
-    height: $product-card-heart-height;
-    opacity: 0.8;
+  .product-card-heart {
+    @extend %heart-icon;
+    background: asset_url('sephora_style_guide/heart.svg');
 
-    @include media-breakpoint-down(lg) {
-      visibility: visible;
-      position: absolute;
-      top: auto;
-      margin-top: -40px;
+    &:hover {
+      @include media-breakpoint-up(lg) {
+        background: asset_url('sephora_style_guide/heart-outline.svg');
+      }
     }
   }
 
-  .product-card-heart:hover svg g path {
-    @include media-breakpoint-up(lg) {
-      fill: $brand-primary;
-    }
+  .product-card-heart-filled {
+    @extend %heart-icon;
+    background: asset_url('sephora_style_guide/heart-filled.svg');
   }
 
   .product-card-variants-carousel {
@@ -269,17 +284,20 @@
           display: block;
         }
 
-        @include media-breakpoint-down(sm) {
-          svg {
-            width: 15px;
-            height: 15px;
-          }
+        .size-indicator {
+          @extend %option-type-icon;
+          background: asset-url('sephora_style_guide/size-icon.svg') no-repeat;
+        }
+
+        .shade-indicator {
+          @extend %option-type-icon;
+          background: asset-url('sephora_style_guide/shade-icon.svg') no-repeat;
         }
 
         .variant-count {
           color: $grey-mid;
           vertical-align: top;
-          margin-left: 2px;
+          margin-left: 5px;
         }
       }
 

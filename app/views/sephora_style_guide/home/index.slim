@@ -150,7 +150,7 @@ javascript:
       },
 
       setWishList(e) {
-        const targetClass = e.target.parentNode.parentNode.parentNode.className;
+        const targetClass = e.target.className;
         if (targetClass === 'product-card-heart' || targetClass === 'product-card-heart-filled') {
           const target = e.target.closest(".product-card").getAttribute('name');
           if (target === 'product1') {

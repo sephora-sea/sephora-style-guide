@@ -16,17 +16,17 @@ article#forms
       label.control-label for='email3' Email (Field Error)
       input#email3.form-control type='email' value='testemail'
       .form-control-feedback= 'Error: Email is incorrect'
-      = inline_svg 'sephora_style_guide/field-error.svg', class: 'input-error'
+      .input-error
 
     .form-group.floating-labels.editable-verification
       label.control-label for='text1' Prefilled (Editable)
       input#text1.form-control type='text' value='Flora Wong'
-      = inline_svg 'sephora_style_guide/field-succeed.svg', class: 'input-success'
-
+      .input-success
+      
     .form-group.floating-labels.non-editable-verification
       label.control-label for='text2' Verified (Readonly Field)
       input#text2.form-control type='text' value='Flora Wong' readonly=true
-      = inline_svg 'sephora_style_guide/field-succeed.svg', class: 'input-success'
+      .input-success
 
     .form-group.floating-labels
       label.control-label for='email4' Email (Readonly Field)

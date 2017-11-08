@@ -9,9 +9,7 @@ article#product-card
             = link_to '#product-link', class: 'product-image-container' do
               = image_tag 'examples/product1-400x400.png', class: 'product-card-image'
             .product-card-heart-filled v-if='productOneIsWishListed' @click='setWishList'
-              = inline_svg 'sephora_style_guide/heart-filled.svg'
             .product-card-heart v-if='!productOneIsWishListed' @click='setWishList'
-              = inline_svg 'sephora_style_guide/heart.svg'
             .product-card-actions v-show='showProductOneActions'
               button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to Bag
               .product-card-variants-carousel
@@ -55,7 +53,7 @@ article#product-card
                 .product-card-rating
                   .product_rating.rateit data-rateit-resetable='false' data-rateit-readonly='true' data-rateit-starwidth='14.7' data-rateit-starheight='12' data-rateit-value='1' data-rateit-ispreset='true'
                 .product-card-mobile-variant-indicator
-                  = inline_svg 'sephora_style_guide/shade-icon.svg'
+                  span.shade-indicator
                   span.variant-count 13 shades
 
         .col-6.col-md-3
@@ -64,9 +62,7 @@ article#product-card
               .out-of-stock Out of stock
               = image_tag 'examples/product2-400x400.png', class: 'product-card-image'
             .product-card-heart-filled v-if='productTwoIsWishListed' @click='setWishList'
-              = inline_svg 'sephora_style_guide/heart-filled.svg'
             .product-card-heart v-if='!productTwoIsWishListed' @click='setWishList'
-              = inline_svg 'sephora_style_guide/heart.svg'
             .product-card-actions v-if='showProductTwoActions'
               button.btn.btn-sm.btn-block.product-card-add-to-wait-list :class='{ "btn-defaults": !productIsWaitListed, "disabled": productIsWaitListed }' @click='waitlistProduct' {{ waitlistText }}
               .product-card-variants
@@ -87,9 +83,7 @@ article#product-card
             = link_to '#product-link', class: 'product-image-container' do
               = image_tag 'examples/product3-400x400.png', class: 'product-card-image'
             .product-card-heart-filled v-if='productThreeIsWishListed' @click='setWishList'
-              = inline_svg 'sephora_style_guide/heart-filled.svg'
             .product-card-heart v-if='!productThreeIsWishListed' @click='setWishList'
-              = inline_svg 'sephora_style_guide/heart.svg'
             .product-card-actions v-show='showProductThreeActions'
               button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to bag
               .product-card-variants
@@ -110,5 +104,5 @@ article#product-card
                 .product-card-rating
                   .product_rating.rateit data-rateit-resetable='false' data-rateit-readonly='true' data-rateit-starwidth='14.7' data-rateit-starheight='12' data-rateit-value='3.5' data-rateit-ispreset='true'
                 .product-card-mobile-variant-indicator
-                  = inline_svg 'sephora_style_guide/size-icon.svg'
+                  span.size-indicator
                   span.variant-count 2 sizes
