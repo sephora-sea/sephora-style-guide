@@ -21,6 +21,21 @@
   display: inline-block;
 }
 
+.rating-container {
+  .rateit .rateit-range {
+    background: asset-url('sephora_style_guide/star.png') !important;
+    background-size: 15px 12px !important;
+  }
+
+  .rateit .rateit-selected,
+  .rateit .rateit-preset {
+    position: absolute;
+    top: 0;
+    background: asset-url('sephora_style_guide/star-filled.png') !important;
+    background-size: 15px 12px !important;
+  }
+}
+
 .product-card {
   width: 100%;
 
@@ -108,7 +123,6 @@
       left: 0;
       height: 30px;
       width: 20px;
-      background: asset-url('sephora_style_guide/arrow-left.svg') center no-repeat;
       background-size: 10px 17px;
       cursor: pointer;
     }
@@ -118,7 +132,6 @@
       right: 0;
       height: 30px;
       width: 20px;
-      background: asset-url('sephora_style_guide/arrow-right.svg') center no-repeat;
       background-size: 10px 17px;
       cursor: pointer;
     }
@@ -158,6 +171,11 @@
 
     .variant-container {
       height: 15px;
+
+      .out-of-stock {
+        margin-left: 2.5px;
+        margin-right: 2.5px;
+      }
     }
 
     .product-variant {
@@ -261,21 +279,7 @@
         .product-rating {
           position: relative;
           width: 72px;
-        }
-
-        .rateit .rateit-range {
-          background: asset-url('sephora_style_guide/star.png') !important;
-          background-size: 15px 12px !important;
-        }
-
-        .rateit .rateit-selected,
-        .rateit .rateit-preset {
-          position: absolute;
-          top: 0;
-          background: asset-url('sephora_style_guide/star-filled.png') !important;
-          background-size: 15px 12px !important;
-        }
-      }
+        }      }
 
       .product-card-mobile-variant-indicator {
         display: none;

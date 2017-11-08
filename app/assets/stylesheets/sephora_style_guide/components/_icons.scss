@@ -13,4 +13,32 @@ i {
     transform: rotate(-90deg);
     transition: transform 0.3s;
   }
+
+  &.arrow-left {
+    background: asset-url('sephora_style_guide/arrow-left.svg') center no-repeat;
+  }
+
+  &.arrow-right {
+    background: asset-url('sephora_style_guide/arrow-right.svg') center no-repeat;
+  }
+
+  &.out-of-stock {
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+    background: asset-url('sephora_style_guide/variant-oos.png') center no-repeat;
+
+    &.icon-sm {
+      background-size: 15px 15px;
+      background-color: transparent;
+      height: 15px;
+      width: 15px;
+    }
+
+    &.icon {
+      background-size: 40px 40px;
+      width: 40px;
+      height: 40px;
+    }
+  }
 }
