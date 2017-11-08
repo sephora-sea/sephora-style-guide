@@ -149,7 +149,7 @@ javascript:
         }, 10)
       },
 
-      setWishList: function(e) {
+      setWishList(e) {
         const targetClass = e.target.className;
         if (targetClass === 'product-card-heart' || targetClass === 'product-card-heart-filled') {
           const target = e.target.closest(".product-card").getAttribute('name');
