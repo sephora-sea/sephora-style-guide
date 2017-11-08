@@ -1,0 +1,24 @@
+article#alerts
+  h2.h2 Alerts
+  
+  section
+    button.btn.alert-btn data-target='alert' @click='alertError' Error
+    transition name='alert-fade'
+      .alert.alert-error role='alert' v-if='showAlertError'
+        .alert-container
+          .alert-message This product is no longer available.
+          button.close type='button' data-dismiss='alert' aria-label='Close' @click='closeAlerts'
+  
+    button.btn.alert-btn data-target='alert' @click='alertSuccess' Success
+    transition name='alert-fade'
+      .alert.alert-success role='alert' v-if='showAlertSuccess'
+        .alert-container
+          .alert-message You've successfully signed in.
+          button.close type='button' data-dismiss='alert' aria-label='Close' @click='closeAlerts'
+      
+    button.btn.alert-btn data-target='alert' @click='alertWarning' Warning
+    transition name='alert-fade'
+      .alert.alert-warning role='alert' v-if='showAlertWarning'
+        .alert-container
+          .alert-message You have items in your shopping bag that are not eligible for discount. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          button.close type='button' data-dismiss='alert' aria-label='Close' @click='closeAlerts'

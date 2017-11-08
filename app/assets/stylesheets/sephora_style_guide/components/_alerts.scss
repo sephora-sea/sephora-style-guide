@@ -1,0 +1,60 @@
+.alert-fade-enter-active,
+.alert-fade-leave-active {
+  transition: $transition-fade;
+}
+
+.alert-fade-enter,
+.alert-fade-leave-to {
+  opacity: 0;
+}
+
+.alert-btn {
+  margin-right: 5px;
+}
+
+.alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 20px;
+  width: 100%;
+  min-height: 40px;
+  z-index: $zindex-dropdown;
+
+  .alert-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .alert-message {
+    @include font-avalon-bold;
+    word-wrap: break-word;
+    margin-right: 10px;
+  }
+
+  .close {
+    padding: 0;
+    margin: 0;
+    color: inherit;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+.alert-success {
+  color: #3a773a;
+  background-color: #ecf1e6;
+}
+
+.alert-warning {
+  color: #c000c4;
+  background-color: #f8e5f9;
+}
+
+.alert-error {
+  color: #e00;
+  background-color: #fde5e5;
+}

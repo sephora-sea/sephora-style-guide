@@ -221,3 +221,61 @@ textarea.form-control {
     @extend %form-icon;
   }
 }
+
+.form-check {
+  display: flex;
+  margin: 2px;
+
+  &.disabled {
+    pointer-events: none;
+    color: $grey-mid;
+
+    .form-check-input.checkbox {
+      background-image: asset-url('sephora_style_guide/checkbox-disabled.svg');
+
+      &.checked {
+        background-image: asset-url('sephora_style_guide/checkbox-disabled-checked.svg');
+      }
+    }
+
+    .form-check-input.radio {
+      background-image: asset-url('sephora_style_guide/radio-disabled-unselected.svg');
+
+      &.selected {
+        background-image: asset-url('sephora_style_guide/radio-disabled-selected.svg');
+      }
+    }
+  }
+
+  .form-check-label {
+    cursor: pointer;
+    vertical-align: bottom;
+
+    .form-check-input {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+      vertical-align: text-bottom;
+      background-size: 18px 18px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .form-check-input.checkbox {
+    background-image: asset-url('sephora_style_guide/checkbox.svg');
+
+    &.checked {
+      background-image: asset-url('sephora_style_guide/checkbox-checked.svg');
+    }
+  }
+
+  .form-check-input.radio {
+    background-image: asset-url('sephora_style_guide/radio-unselected.svg');
+
+    &.selected {
+      background-image: asset-url('sephora_style_guide/radio-selected.svg');
+    }
+  }
+}

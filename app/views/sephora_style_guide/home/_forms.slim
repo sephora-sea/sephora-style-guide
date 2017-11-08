@@ -77,3 +77,53 @@ article#forms
       .form-group.floating-labels#year-group
         label.control-label for='year' YYYY
         input#year.form-control type='number' max=2999 min=1899
+        
+  section
+    h3.h3 Checkboxes
+    .row
+      .col-4
+        .form-check
+          label.form-check-label @click='toggleCheckboxOne'
+            span.form-check-input.checkbox :class='{ "checked" : isCheckboxOneChecked }'
+            ' Default 1
+      .col-4
+        .form-check.disabled
+          label.form-check-label 
+            span.form-check-input.checkbox
+            ' Disabled
+      .col-4
+        .form-check.disabled
+          label.form-check-label
+            span.form-check-input.checkbox.checked
+            ' Disabled Checked
+    .row
+      .col-4
+        .form-check
+          label.form-check-label @click='toggleCheckboxTwo'
+            span.form-check-input.checkbox :class='{ "checked" : isCheckboxTwoChecked }'
+            ' Default 2 
+          
+    br
+    h3.h3 Radio
+    .row
+      .col-4
+        .form-check
+          label.form-check-label @click='toggleRadioOne'
+            span.form-check-input.radio :class='{ "selected" : isRadioOneSelected }'
+            ' Default 1
+      .col-4
+        .form-check.disabled
+          label.form-check-label
+            span.form-check-input.radio
+            ' Disabled
+      .col-4
+        .form-check.disabled
+          label.form-check-label
+            span.form-check-input.radio.checked
+            ' Selected
+    .row
+      .col-4
+        .form-check 
+          label.form-check-label @click='toggleRadioTwo'
+            span.form-check-input.radio :class='{ "selected" : isRadioTwoSelected }'
+            ' Default 2
