@@ -1,0 +1,64 @@
+$icon_30x20-width: 30px;
+$icon_30x20-height: 20px;
+$icon_30x20-top: 0;
+$icon_30x20-classes: sg my au nz hk ph;
+
+$icon_50x30-width: 50px;
+$icon_50x30-height: 30px;
+$icon_50x30-top: -1 * $icon_30x20-height;
+$icon_50x30-classes: twoc2p unionpay bca molpay amex mastercard visa webcash 
+              ambank fpx paypal tmb kkbank krungsri scb card16 uob payatpost 
+              tesco bbl truemoney tbank bigc mpay jautpay;
+
+$icon_70x30-width: 70px;
+$icon_70x30-height: 30px;
+$icon_70x30-top: (-4 * $icon_50x30-height) + $icon_50x30-top;
+$icon_70x30-classes: mandiri paypal visa rhbnow mepf dragonpay cod bayar afterpay connect;
+
+$icon_100x30-width: 100px;
+$icon_100x30-height: 30px;
+$icon_100x30-top: (-2 * $icon_70x30-height) + $icon_70x30-top;
+$icon_100x30-classes: maybank hongleong permata cimbclick;
+
+$icon_90x40-width: 90px;
+$icon_90x40-height: 40px;
+$icon_90x40-top: (-1 * $icon_100x30-height) + $icon_100x30-top;
+$icon_90x40-classes: visa mastercard amex;
+
+$sephora-sprite: (
+  icon_30x20: (
+    height: $icon_30x20-height,
+    width: $icon_30x20-width,
+    col: 12,
+    top: $icon_30x20-top,
+    classes: $icon_30x20-classes
+  ),
+  icon_50x30: (
+    height: $icon_50x30-height,
+    width: $icon_50x30-width,
+    col: 8,
+    top: $icon_50x30-top,
+    classes: $icon_50x30-classes
+  ),
+  icon_70x30: (
+    height: $icon_70x30-height,
+    width: $icon_70x30-width,
+    col: 6,
+    top: $icon_70x30-top,
+    classes: $icon_70x30-classes
+  ),
+  icon_100x30: (
+    height: $icon_100x30-height,
+    width: $icon_100x30-width,
+    col: 5,
+    top: $icon_100x30-top,
+    classes: $icon_100x30-classes
+  ),
+  icon_90x40: (
+    height: $icon_90x40-height,
+    width: $icon_90x40-width,
+    col: 4,
+    top: $icon_90x40-top,
+    classes: $icon_90x40-classes
+  )
+);

@@ -1,0 +1,33 @@
+@mixin sprite_icons {
+  background-image: asset-url('sephora_style_guide/sephora-sprite.png');
+}
+
+@mixin generate-sprite-icons() {
+  @each $sprite-type, $sprite-details in $sephora-sprite {
+    $height: map-get($sprite-details, 'height');
+    $width: map-get($sprite-details, 'width');
+    $col: map-get($sprite-details, 'col');
+    $top: map-get($sprite-details, 'top');
+    $classes: map-get($sprite-details, 'classes');
+    $y_index: 0;
+
+    &.#{$sprite-type} {
+      height: #{$height};
+      width: #{$width};
+      $x_index: 0;
+
+      @each $class in $classes {
+        &.#{$class} {
+          background-position: (-1 * $x_index * $width) ( (-1 * $y_index * $height) + $top);
+        }
+
+        $x_index: $x_index + 1;
+
+        @if $x_index >= $col {
+          $x_index: 0;
+          $y_index: $y_index + 1;
+        }
+      }
+    }
+  }
+}
