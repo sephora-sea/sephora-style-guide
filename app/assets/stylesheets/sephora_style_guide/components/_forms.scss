@@ -84,8 +84,8 @@ select.form-control {
     background-color: $input-bg;
   }
 
-  .form-option {
-    font-size: 10px;
+  @include media-breakpoint-down(sm) {
+    max-width: 100%;
   }
 }
 
