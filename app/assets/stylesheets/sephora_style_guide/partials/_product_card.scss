@@ -23,16 +23,16 @@
 
 .rating-container {
   .rateit .rateit-range {
-    background: asset-url('sephora_style_guide/star.png');
-    background-size: 15px 12px;
+    background: asset-url('sephora_style_guide/star.png') !important;
+    background-size: 15px 12px !important;
   }
 
   .rateit .rateit-selected,
   .rateit .rateit-preset {
     position: absolute;
     top: 0;
-    background: asset-url('sephora_style_guide/star-filled.png');
-    background-size: 15px 12px;
+    background: asset-url('sephora_style_guide/star-filled.png') !important;
+    background-size: 15px 12px !important;
   }
 }
 
