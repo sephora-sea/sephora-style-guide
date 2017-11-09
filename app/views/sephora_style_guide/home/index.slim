@@ -49,6 +49,7 @@ javascript:
       isCheckboxTwoChecked: false,
       isRadioOneSelected: false,
       isRadioTwoSelected: false,
+      isOutOfStock: false,
       showAlertSuccess: false,
       showAlertWarning: false,
       showAlertError: false
@@ -92,6 +93,16 @@ javascript:
 
       selectVariant(e) {
         if ($(e.target).hasClass('product-variant')) {
+        
+          if (e.target.closest('.product-card').getAttribute('name') === 'product1') {
+            this.showPriceRange = false;
+
+            if (e.target.parentNode.getAttribute('name') === 'variant2') {
+              this.isOutOfStock = true;
+            } else {
+              this.isOutOfStock = false;
+            }
+          }
 
           if (e.target.closest('.product-card').getAttribute('name') === 'product3') {
             this.showPriceRange = false;
@@ -222,10 +233,6 @@ javascript:
         this.isRadioTwoSelected = !this.isRadioTwoSelected;
         this.isRadioOneSelected = false;
       }
-    },
-
-    created() {
-      this.setProductRating();
     },
     
     mounted() {

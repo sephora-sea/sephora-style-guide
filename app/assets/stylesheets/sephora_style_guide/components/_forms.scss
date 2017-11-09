@@ -60,10 +60,19 @@
 }
 
 select.form-control {
-  &:not([size]):not([multiple]) {
-    $select-border-width: ($border-width * 2);
-    height: calc(#{$input-height} - #{$select-border-width});
-  }
+  @include font-avalon-book;
+  appearance: none;
+  display: inline-block;
+  background-color: $white;
+  border: 1px solid $grey-mid;
+  font-size: 14px;
+  text-align: left;
+  text-overflow: ellipsis;
+  height: $input-height;
+  max-width: 300px;
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 35px;
 
   &:focus::-ms-value {
     // Suppress the nested default white text on blue background highlight given to
@@ -73,6 +82,10 @@ select.form-control {
     // See https://github.com/twbs/bootstrap/issues/19398.
     color: $input-color;
     background-color: $input-bg;
+  }
+
+  .form-option {
+    font-size: 10px;
   }
 }
 
@@ -88,6 +101,16 @@ textarea.form-control {
   top: 5px;
   left: 10px;
   color: $input-label-color;
+}
+
+.control-label-inline {
+  @include font-avalon-demi;
+  text-transform: uppercase;
+  margin-right: 10px;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
 }
 
 .control-label-text {

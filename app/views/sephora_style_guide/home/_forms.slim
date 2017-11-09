@@ -127,3 +127,13 @@ article#forms
           label.form-check-label @click='toggleRadioTwo'
             span.form-check-input.radio :class='{ "selected" : isRadioTwoSelected }'
             ' Default 2
+            
+    br
+    h3.h3 Select
+    .form-group
+      label.control-label-inline Select:
+      select.form-control
+        option.form-option.selected :value='1' 1
+        option.form-option :value='2' 2
+        option.form-option :value='3' 3
+      i.dropdown-arrow
