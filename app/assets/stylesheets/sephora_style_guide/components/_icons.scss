@@ -14,6 +14,16 @@ i {
     transition: transform 0.3s;
   }
 
+  &.dropdown-arrow {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    margin-left: -17px;
+    margin-top: 15px;
+    pointer-events: none;
+    background: asset-url('sephora_style_guide/arrow-dropdown.svg') center no-repeat;
+  }
+
   &.arrow-left {
     background: asset-url('sephora_style_guide/arrow-left.svg') center no-repeat;
   }
