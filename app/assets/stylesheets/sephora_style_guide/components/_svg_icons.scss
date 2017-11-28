@@ -1,0 +1,16 @@
+.svg-icon {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-size: contain;
+
+  @include generate-svg-icons();
+
+  &.bag-white:hover {
+    @extend .bag-red;
+  }
+
+  &.heart-empty-bg:hover {
+    @extend .heart-empty-red-bg;
+  }
+}

@@ -1,0 +1,22 @@
+article#svg_icons
+  h2.h2 SVG Icons
+  - svg_icons = ["account", "arrow-dropdown", "bag-black", "bag-red", "bag-white", "beauty-profile", "beautypass", "birthday-gift", "brands", "black-card",
+    "gold-card", "white-card", "categories", "certified", "chevron-down", "chevron-left", "chevron-right", "chevron-up",
+    "close2", "delete", "delivered", "delivery", "edit-icon", "email", "facebook", "field-error", "field-succeed",
+    "filter", "giftcard", "google", "heart-empty", "heart-empty-bg", "heart-empty-red-bg", "heart-fill", "heart-fill-bg", "help", "home",
+    "instagram", "lipstick-empty", "lipstick-filled", "location", "logout", "makeup-1", "makeup-2", "benefits",
+    "member-points", "menu", "orders", "payment-cancelled", "payment-expired", "payment-failed", "payment-paid",
+    "payment-pending", "pdf", "pinterest", "point-history", "pop-location", "pop-parcel", "pop-payment", "pop-scan-barcode",
+    "pop-sms", "print", "processing", "purchase", "purchase-zero", "radio-disabled-selected", "radio-disabled-unselected",
+    "radio-selected", "radio-unselected", "reviews", "rewards-boutique", "sale", "scan", "search-black", "search-white",
+    "selected-option-icon", "settings", "shade", "shipped", "show-icon", "size", "snapchat", "stock", "store-black",
+    "store-white", "triangle", "twitter", "video-play-black", "video-play-white", "waitlist", "welcome-gift", "youtube"]
+
+  section
+    h3.h3 Icons
+    - svg_icons.each do | icon |
+      .icon_container
+        .svg-icon class="#{ icon }"
+        span #{icon}
+  br
+  br
