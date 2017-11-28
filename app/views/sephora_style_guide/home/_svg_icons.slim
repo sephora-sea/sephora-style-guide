@@ -1,0 +1,13 @@
+article#svg_icons
+  h2.h2 SVG Icons
+  - svg_icons = ["account", "arrow_dropdown", "bag", "beauty_profile", "beautypass", "birthday", "brands", "card_black", "card_gold", "card_white", "categories", "certified", "chevron_down", "chevron_left", "chevron_right", "chevron_up", "close", "delete_icon", "delivered", "delivery", "edit_icon", "email", "facebook", "field_error", "field_succeed", "filter", "giftcard", "google", "heart_empty", "heart_empty_bg", "heart_fill", "heart_fill_bg", "help", "home", "instagram", "lipstick_empty", "lipstick_filled", "location", "logout", "makeup_1", "makeup_2", "member_benefits", "member_points", "orders", "payment_cancelled", "payment_expired", "payment_failed", "payment_paid", "payment_pending", "pdf", "pinterest", "point_history", "pop_location", "pop_parcel", "pop_payment", "pop_scan_barcode", "pop_sms", "print", "processing", "purchase", "purchase_zero", "radio_disabled_selected", "radio_disabled_unselected", "radio_selected", "radio_unselected", "reviews", "rewards_boutique", "sale", "scan", "search", "selected_option-icon", "settings", "shade", "shipped", "show_icon", "size", "snapchat", "stock", "store_black", "store_white", "triangle", "twitter", "video_play", "waitlist", "welcome_bonus", "youtube"]
+
+  section
+    h3.h3 Icons
+    - svg_icons.each do | icon |
+      .icon_container
+        .svg-icon
+          = inline_svg "sephora_style_guide/svgs/#{icon}.svg"
+        span #{icon}
+  br
+  br
