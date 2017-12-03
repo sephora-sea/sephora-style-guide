@@ -277,8 +277,19 @@ var Tab = function ($) {
 
 //# introdue Animated tab with bar
 function loadTrackBar() {
-  $('.nav-tabs.nav-tabs-primary').each(function(){
-    $(this).append('<div class="tab-track"><div class="bar"></div></div>');
+  $('.nav-tabs').each(function() {
+    var $navTab = $(this),
+      $tab = $navTab ? $navTab.find('li') : null,
+      tabHeight = $tab ? $tab.height() : 35;
+
+    if ($navTab.hasClass('nav-tabs-primary')) {
+      $navTab.parent().css({maxHeight: (tabHeight + 5) + 'px'});
+      $navTab.append('<div class="tab-track"><div class="bar"></div></div>');
+    } else {
+      $navTab.parent().css({maxHeight: (tabHeight + 2) + 'px'});
+    }
+
+    $navTab.css({height: (tabHeight + 10) + 'px'});
   });
 }
 
