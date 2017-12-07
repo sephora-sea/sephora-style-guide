@@ -6,7 +6,7 @@
   box-sizing: content-box;
   @include sprite_icons;
   background-repeat: no-repeat;
-  @include generate-sprite-icons();
+  @include generate-sprite-icons(400px);
 
   &.noborder {
     border: 0;

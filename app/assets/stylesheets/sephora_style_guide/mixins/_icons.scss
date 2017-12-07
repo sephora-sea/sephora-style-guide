@@ -1,8 +1,10 @@
 @mixin sprite_icons {
-  background-image: asset-url('sephora_style_guide/sephora-sprite.png');
+  background-image: asset-url('sephora_style_guide/sephora-sprite-3x.png');
 }
 
-@mixin generate-sprite-icons() {
+@mixin generate-sprite-icons($width: auto) {
+  background-size: $width auto;
+
   @each $sprite-type, $sprite-details in $sephora-sprite {
     $height: map-get($sprite-details, 'height');
     $width: map-get($sprite-details, 'width');
