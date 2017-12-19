@@ -4,9 +4,12 @@
   margin: 1px;
   border: 1px solid #ccc;
   box-sizing: content-box;
-  @include sprite_icons;
   background-repeat: no-repeat;
-  @include generate-sprite-icons(400px);
+
+  &:not(.payatall) {
+    @include sprite_icons;
+    @include generate-sprite-icons(400px);
+  }
 
   &.noborder {
     border: 0;
@@ -14,5 +17,12 @@
 
   &.nospace {
     margin: 0;
+  }
+
+  &.payatall {
+    background-image: asset-url('sephora_style_guide/payatall.png');
+    width: 70px;
+    height: 30px;
+    background-size: 70px 30px;
   }
 }
