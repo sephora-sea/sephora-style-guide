@@ -5,9 +5,36 @@ article#modals
     h3.h3 Sizes
     = link_to 'Open Small Modal', '#sample-modal-sm', data: { toggle: 'modal' }, class: 'btn'
     '
+    br
+    br
+    markdown: Below is the code for the small modal component. (WIP, code not complete!)
+    .highlight
+      pre.formatted
+        | #{'<div class="modal-header" role="dialog" tabindex="-1 class="modal fade show">'}
+            #{'<div class="document" class="modal-dialog modal-sm">'}
+              #{'<div class="modal-header">'}
+                #{'<div class="modal-title">This is a very small modal</div>'}
     = link_to 'Open Modal', '#sample-modal', data: { toggle: 'modal' }, class: 'btn'
     '
+    br
+    br
+    markdown: Below is the code for the normal modal component (WIP, code not complete!)
+    .highlight
+      pre.formatted
+        | #{'<div class="modal-header" role="dialog" tabindex="-1 class="modal fade show">'}
+            #{'<div class="document" class="modal-dialog modal-sm">'}
+              #{'<div class="modal-header">'}
+                #{'<div class="modal-title">This is a very small modal</div>'}
     = link_to 'Open Large Modal', '#sample-modal-lg', data: { toggle: 'modal' }, class: 'btn'
+    br
+    br
+    markdown: Below is the code for the large modal component (WIP, code not complete!)
+    .highlight
+      pre.formatted
+        | #{'<div class="modal-header" role="dialog" tabindex="-1 class="modal fade show">'}
+            #{'<div class="document" class="modal-dialog modal-sm">'}
+              #{'<div class="modal-header">'}
+                #{'<div class="modal-title">This is a very small modal</div>'}
 
     .modal.fade#sample-modal-sm aria-hidden='true' role='dialog' tabindex='-1'
       .modal-dialog.modal-sm role='document'
