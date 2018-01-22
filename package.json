@@ -1,6 +1,6 @@
 {
   "name": "sephora-style-guide",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Style Guide for Sephora Digital SEA",
   "main": "index.js",
   "scripts": {
