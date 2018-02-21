@@ -15,12 +15,6 @@
   }
 }
 
-%option-type-icon {
-  height: 14px;
-  width: 14px;
-  display: inline-block;
-}
-
 .rating-container {
   .rateit .rateit-range {
     background: asset-url('sephora_style_guide/star.png') !important;
@@ -230,6 +224,10 @@
       margin-top: 30px;
       width: 90%;
 
+      @include media-breakpoint-down(lg) {
+        margin-top: 17px;
+      }
+
       .product-card-brand {
         @include font-avalon-demi;
         text-transform: uppercase;
@@ -281,32 +279,13 @@
           width: 72px;
         }      }
 
-      .product-card-mobile-variant-indicator {
-        display: none;
+      .product-card-variants-count {
+        color: $grey-dark;
+        display: block;
 
-        @include media-breakpoint-down(lg) {
-          display: block;
+        @include media-breakpoint-up(lg) {
+          display: none;
         }
-
-        .size-indicator {
-          @extend %option-type-icon;
-          background: asset-url('sephora_style_guide/size-icon.svg') no-repeat;
-        }
-
-        .shade-indicator {
-          @extend %option-type-icon;
-          background: asset-url('sephora_style_guide/shade-icon.svg') no-repeat;
-        }
-
-        .variant-count {
-          color: $grey-mid;
-          vertical-align: top;
-          margin-left: 5px;
-        }
-      }
-
-      @include media-breakpoint-down(lg) {
-        margin-top: 17px;
       }
     }
   }
