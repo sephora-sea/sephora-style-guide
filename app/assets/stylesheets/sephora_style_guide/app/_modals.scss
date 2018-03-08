@@ -3,21 +3,16 @@
     display: inline-block;
     width: 50%;
   }
-
   pre {
-    margin: 0;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    word-wrap: break-word;
   }
-
   .formatted {
     font-size: 12px;
     background-color: #f5f2f0;
     border: 1px solid #e1e1e8;
     border-radius: 4px;
-    // padding: 5px;
-    // font-family: 'Menlo';
-  }
-
-  .highlight {
-    padding: 2rem;
+    padding: 12px;
   }
 }
