@@ -9,19 +9,14 @@ article#modals
     markdown: Code snippet for small modal (when open):
     .highlight
       pre.formatted
-        | #{'<div aria-hidden="true" id="sample-modal-sm" class="modal fade show" role="dialog" tabindex="-1>'}
-            #{'<div role="document" class="modal-dialog modal-sm">'}
-              #{'<div class="modal-content">'}
-                #{'<div class="modal-header">'}
-                  #{'<div class="modal-title">This is a very small modal</div>'}
-                  #{'<button aria-label="Close" data-dismiss="modal" type="button" class="close"></button>'}
-                  #{'</div>'}
-                #{'<div class="modal-body">'}
-                  #{'<p>Lorem ipsum and dimsum and all that jazz. Achieve eye perfection with this matte finish. No animal testing involved.</p>'}
-                #{'</div>'}
-              #{'</div>'}
-            #{'</div>'}
-          #{'</div>'}
+        | #{.modal.fade#sample-modal-sm aria-hidden='true' role='dialog' tabindex='-1'}
+            #{.modal-dialog.modal-sm role='document'}
+              #{.modal-content}
+                #{.modal-header}
+                  #{.modal-title This is a small modal}
+                  #{#button.close type='button' data-dismiss='modal' aria-label='Close'}
+                #{.modal-body}
+                  #{p Lorem ipsum and dimsum and all that jazz. Achieve eye perfection with this matte finish. No animal testing involved.}
 
     = link_to 'Open Modal', '#sample-modal', data: { toggle: 'modal' }, class: 'btn'
     br
@@ -29,19 +24,14 @@ article#modals
     markdown: Code snippet for normal modal (when open):
     .highlight
       pre.formatted
-        | #{'<div aria-hidden="true" id="sample-modal" class="modal fade show" role="dialog" tabindex="-1>'}
-            #{'<div role="document" class="modal-dialog">'}
-              #{'<div class="modal-content">'}
-                #{'<div class="modal-header">'}
-                  #{'<div class="modal-title">This is a normal modal</div>'}
-                  #{'<button aria-label="Close" data-dismiss="modal" type="button" class="close"></button>'}
-                  #{'</div>'}
-                #{'<div class="modal-body">'}
-                  #{'<p>Lorem ipsum and dimsum and all that jazz. Achieve eye perfection with this matte finish. No animal testing involved.</p>'}
-                #{'</div>'}
-              #{'</div>'}
-            #{'</div>'}
-          #{'</div>'}
+        | #{.modal.fade#sample-modal aria-hidden='true' role='dialog' tabindex='-1'}
+            #{.modal-dialog role='document'}
+              #{.modal-content}
+                #{.modal-header}
+                  #{.modal-title This is a normal modal}
+                  #{#button.close type='button' data-dismiss='modal' aria-label='Close'}
+                #{.modal-body}
+                  #{p Lorem ipsum and dimsum and all that jazz. Achieve eye perfection with this matte finish. No animal testing involved.}
 
     = link_to 'Open Large Modal', '#sample-modal-lg', data: { toggle: 'modal' }, class: 'btn'
     br
@@ -49,19 +39,14 @@ article#modals
     markdown: Code snippet for large modal (when open):
     .highlight
       pre.formatted
-        | #{'<div aria-hidden="true" id="sample-modal-lg" class="modal fade show" role="dialog" tabindex="-1>'}
-            #{'<div role="document" class="modal-dialog modal-lg">'}
-              #{'<div class="modal-content">'}
-                #{'<div class="modal-header">'}
-                  #{'<div class="modal-title">This is a large modal</div>'}
-                  #{'<button aria-label="Close" data-dismiss="modal" type="button" class="close"></button>'}
-                  #{'</div>'}
-                #{'<div class="modal-body">'}
-                  #{'<p>Lorem ipsum and dimsum and all that jazz. Achieve eye perfection with this matte finish. No animal testing involved.</p>'}
-                #{'</div>'}
-              #{'</div>'}
-            #{'</div>'}
-          #{'</div>'}
+        | #{.modal.fade#sample-modal-lg aria-hidden='true' role='dialog' tabindex='-1'}
+            #{.modal-dialog.modal-lg role='document'}
+              #{.modal-content}
+                #{.modal-header}
+                  #{.modal-title This is a large modal}
+                  #{#button.close type='button' data-dismiss='modal' aria-label='Close'}
+                #{.modal-body}
+                  #{p Lorem ipsum and dimsum and all that jazz. Achieve eye perfection with this matte finish. No animal testing involved.}
 
 
     .modal.fade#sample-modal-sm aria-hidden='false' role='dialog' tabindex='-1'
