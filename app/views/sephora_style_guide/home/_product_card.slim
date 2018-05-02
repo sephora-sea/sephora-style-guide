@@ -45,16 +45,16 @@ article#product-card
                   = image_tag 'examples/variant2.jpg', class: 'product-variant'
                 span.variant-container name='variant13' @click='selectVariant'
                   = image_tag 'examples/variant1.jpg', class: 'product-variant'
-            = link_to '#product-link', class: 'product-card-description-container' do
-              .product-card-description
-                span.product-card-label-new-arrival New
-                span.product-card-label-limited-edition | Limited Edition
-                p.product-card-brand Clinique
-                p.product-card-product Chubby Stick Moisturizing Lip Colour Balm
-                p.product-card-price $26.00
-                .product-card-rating.rating-container
-                  .rateit data-rateit-resetable='false' data-rateit-readonly='true' data-rateit-starwidth='14.7' data-rateit-starheight='12' data-rateit-value='1' data-rateit-ispreset='true'
-                .product-card-variants-count 13 shades
+            = link_to '#product-link', class: 'product-card-description' do
+              p.product-card-label
+                span.product-card-label-primary New
+                span  | Limited Edition
+              p.product-card-brand Clinique
+              p.product-card-product Chubby Stick Moisturizing Lip Colour Balm
+              p.product-price $26.00
+              .product-card-rating.rating-container
+                .rateit data-rateit-resetable='false' data-rateit-readonly='true' data-rateit-starwidth='14.7' data-rateit-starheight='12' data-rateit-value='1' data-rateit-ispreset='true'
+              .product-card-variants-count 13 shades
 
         .col-6.col-md-3
           .product-card name='product2' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
@@ -66,17 +66,17 @@ article#product-card
             .product-card-actions v-if='showProductTwoActions'
               button.btn.btn-sm.btn-block.product-card-add-to-wait-list :class='{ "btn-defaults": !productIsWaitListed, "disabled": productIsWaitListed }' @click='waitlistProduct' {{ waitlistText }}
               .product-card-variants
-            = link_to '#product-link', class: 'product-card-description-container' do
-              .product-card-description
-                span.product-card-label-new-arrival New
-                p.product-card-brand Sigma Beauty
-                p.product-card-product Mr. Bunny Essential Kit
-                .product-card-discount-price
-                  p.product-old-price $254.00
-                  p.product-new-price $127.00
-                  p.product-discount-percentage = "(50%)"
-                .product-card-rating.rating-container
-                  .rateit data-rateit-resetable='false' data-rateit-readonly='true' data-rateit-starwidth='14.7' data-rateit-starheight='12' data-rateit-value='5' data-rateit-ispreset='true'
+            = link_to '#product-link', class: 'product-card-description' do
+              p.product-card-label
+                span.product-card-label-primary New
+              p.product-card-brand Sigma Beauty
+              p.product-card-product Mr. Bunny Essential Kit
+              .product-price
+                span.product-price-sale-old $254.00
+                span.product-price-sale-new $127.00
+                span.product-price-sale-text= '(50%)'
+              .product-card-rating.rating-container
+                .rateit data-rateit-resetable='false' data-rateit-readonly='true' data-rateit-starwidth='14.7' data-rateit-starheight='12' data-rateit-value='5' data-rateit-ispreset='true'
 
         .col-6.col-md-3
           .product-card name='product3' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
@@ -91,16 +91,15 @@ article#product-card
                   = image_tag 'examples/variant2.jpg', class: 'product-variant active'
                 span.variant-container name='variant15' @click='selectVariant' @mouseover='hoverVariant' @mouseleave='leaveVariant'
                   = image_tag 'examples/variant1.jpg', class: 'product-variant'
-            = link_to '#product-link', class: 'product-card-description-container' do
-              .product-card-description
-                p.product-card-brand Alima Pure
-                p.product-card-product Shimmering Skin Perfector Pressed Prismatic Amethyst (Limited Edition)
-                p.product-card-price-range v-show='!showDiscountPrice && !showNormalPrice' $26.00 &ndash; $32.00
-                p.product-card-price v-show='!showDiscountPrice && showNormalPrice' $36.00
-                .product-card-discount-price v-show='showDiscountPrice && !showNormalPrice'
-                  p.product-old-price $52.00
-                  p.product-new-price $26.00
-                  p.product-discount-percentage = "(50%)"
-                .product-card-rating.rating-container
-                  .rateit data-rateit-resetable='false' data-rateit-readonly='true' data-rateit-starwidth='14.7' data-rateit-starheight='12' data-rateit-value='3.5' data-rateit-ispreset='true'
-                .product-card-variants-count 2 sizes
+            = link_to '#product-link', class: 'product-card-description' do
+              p.product-card-brand Alima Pure
+              p.product-card-product Shimmering Skin Perfector Pressed Prismatic Amethyst (Limited Edition)
+              p.product-price v-show='!showDiscountPrice && !showNormalPrice' $26.00 &ndash; $32.00
+              p.product-price v-show='!showDiscountPrice && showNormalPrice' $36.00
+              .product-price v-show='showDiscountPrice && !showNormalPrice'
+                span.product-price-sale-old $52.00
+                span.product-price-sale-new $26.00
+                span.product-price-sale-text= '(50%)'
+              .product-card-rating.rating-container
+                .rateit data-rateit-resetable='false' data-rateit-readonly='true' data-rateit-starwidth='14.7' data-rateit-starheight='12' data-rateit-value='3.5' data-rateit-ispreset='true'
+              .product-card-variants-count 2 sizes

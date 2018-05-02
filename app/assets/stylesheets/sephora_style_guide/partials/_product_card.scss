@@ -190,103 +190,85 @@
     }
   }
 
-  .product-card-description-container {
+  .product-card-description {
     font-size: 13px;
     line-height: 18px;
+    display: block;
+    margin-top: 17px;
+    width: 90%;
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 30px;
+    }
 
     &:hover {
       color: inherit;
     }
+  }
 
-    %product-card-label {
-      font-size: 10px;
-      @include font-avalon-demi;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
+  .product-card-label {
+    @include font-avalon-demi;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: $grey-mid;
+    text-transform: uppercase;
 
-      @include media-breakpoint-down(lg) {
-        margin-top: 0;
-      }
+    @include media-breakpoint-down(lg) {
+      margin-top: 0;
     }
 
-    .product-card-label-new-arrival {
-      @extend %product-card-label;
+    .product-card-label-primary {
       color: $brand-primary;
     }
+  }
 
-    .product-card-label-limited-edition {
-      @extend %product-card-label;
-      color: $grey-mid;
-      margin-left: 3px;
+  .product-card-brand {
+    @include font-avalon-demi;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+  }
+
+  .product-card-product {
+    overflow-wrap: break-word;
+    margin-bottom: 1px;
+  }
+
+  .product-price {
+    margin-bottom: 2px;
+  }
+
+  .product-card-rating {
+    margin-bottom: 2px;
+
+    .product-rating {
+      position: relative;
+      width: 72px;
     }
+  }
 
-    .product-card-description {
-      margin-top: 30px;
-      width: 90%;
+  .product-card-variants-count {
+    color: $grey-dark;
 
-      @include media-breakpoint-down(lg) {
-        margin-top: 17px;
-      }
-
-      .product-card-brand {
-        @include font-avalon-demi;
-        text-transform: uppercase;
-        margin-bottom: 1px;
-      }
-
-      .product-card-product {
-        overflow-wrap: break-word;
-        margin-bottom: 1px;
-      }
-
-      .product-card-price {
-        @include font-avalon-demi;
-        margin-bottom: 2px;
-      }
-
-      .product-card-price-range {
-        @include font-avalon-demi;
-        margin-bottom: 2px;
-      }
-
-      .product-card-discount-price {
-        margin-bottom: 2px;
-
-        .product-old-price {
-          text-decoration: line-through;
-          display: inline-block;
-          margin-right: 5px;
-        }
-
-        .product-new-price {
-          display: inline-block;
-          margin-right: 5px;
-          @include font-avalon-demi;
-        }
-
-        .product-discount-percentage {
-          color: $brand-primary;
-          display: inline-block;
-          @include font-avalon-demi;
-        }
-      }
-
-      .product-card-rating {
-        margin-bottom: 2px;
-
-        .product-rating {
-          position: relative;
-          width: 72px;
-        }      }
-
-      .product-card-variants-count {
-        color: $grey-dark;
-        display: block;
-
-        @include media-breakpoint-up(lg) {
-          display: none;
-        }
-      }
+    @include media-breakpoint-up(lg) {
+      display: none;
     }
+  }
+}
+
+.product-price {
+  @include font-avalon-demi;
+
+  .product-price-sale-old {
+    @include font-avalon-book;
+    text-decoration: line-through;
+    margin-right: 5px;
+  }
+
+  .product-price-sale-new {
+    margin-right: 5px;
+  }
+
+  .product-price-sale-text {
+    color: $brand-primary;
   }
 }
