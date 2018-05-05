@@ -71,7 +71,7 @@ article#product-card
                 span.product-card-label-primary New
               p.product-card-brand Sigma Beauty
               p.product-card-product Mr. Bunny Essential Kit
-              .product-price
+              p.product-price
                 span.product-price-sale-old $254.00
                 span.product-price-sale-new $127.00
                 span.product-price-sale-text= '(50%)'
@@ -96,7 +96,7 @@ article#product-card
               p.product-card-product Shimmering Skin Perfector Pressed Prismatic Amethyst (Limited Edition)
               p.product-price v-show='!showDiscountPrice && !showNormalPrice' $26.00 &ndash; $32.00
               p.product-price v-show='!showDiscountPrice && showNormalPrice' $36.00
-              .product-price v-show='showDiscountPrice && !showNormalPrice'
+              p.product-price v-show='showDiscountPrice && !showNormalPrice'
                 span.product-price-sale-old $52.00
                 span.product-price-sale-new $26.00
                 span.product-price-sale-text= '(50%)'
