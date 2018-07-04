@@ -16,6 +16,7 @@ var Util = function ($) {
   var transition = false;
 
   var MAX_UID = 1000000;
+  var MILLISECONDS_MULTIPLIER = 1000;
 
   var TransitionEndEvent = {
     WebkitTransition: 'webkitTransitionEnd',
@@ -117,6 +118,23 @@ var Util = function ($) {
       }
 
       return selector;
+    },
+    getTransitionDurationFromElement: function getTransitionDurationFromElement(element) {
+      if (!element) {
+        return 0;
+      } // Get transition-duration of the element
+
+
+      var transitionDuration = $(element).css('transition-duration');
+      var floatTransitionDuration = parseFloat(transitionDuration); // Return 0 if element or transition duration is not found
+
+      if (!floatTransitionDuration) {
+        return 0;
+      } // If multiple durations are defined, take the first
+
+
+      transitionDuration = transitionDuration.split(',')[0];
+      return parseFloat(transitionDuration) * MILLISECONDS_MULTIPLIER;
     },
     reflow: function reflow(element) {
       new Function('bs', 'return bs')(element.offsetHeight);
