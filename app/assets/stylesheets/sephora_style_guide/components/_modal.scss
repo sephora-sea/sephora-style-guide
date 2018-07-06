@@ -76,7 +76,7 @@
   // Fade for backdrop
   &.fade {
     opacity: 0;
-    transition: $modal-backfrop-transition;
+    transition: $modal-backdrop-transition;
   }
 
   &.show {
