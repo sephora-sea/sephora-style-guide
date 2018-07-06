@@ -52,6 +52,7 @@
   margin: 10px;
   opacity: 0;
   transform: scale(0.8);
+  pointer-events: none;
 }
 
 // Actual modal
@@ -61,6 +62,8 @@
   background-clip: padding-box;
   // Remove focus outline from opened modal
   outline: 0;
+  // counteract the pointer-events: none; in the .modal-dialog
+  pointer-events: auto;
 }
 
 // Modal background
