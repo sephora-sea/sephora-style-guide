@@ -13,8 +13,7 @@ var Util = function ($) {
    * ------------------------------------------------------------------------
    */
 
-  var transition = false;
-
+  var TRANSITION_END = 'transitionend';
   var MAX_UID = 1000000;
   var MILLISECONDS_MULTIPLIER = 1000;
 
@@ -33,16 +32,16 @@ var Util = function ($) {
   function isElement(obj) {
     return (obj[0] || obj).nodeType;
   }
-
   function getSpecialTransitionEndEvent() {
     return {
-      bindType: transition.end,
-      delegateType: transition.end,
+      bindType: TRANSITION_END,
+      delegateType: TRANSITION_END,
       handle: function handle(event) {
         if ($(event.target).is(this)) {
           return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
         }
-        return undefined;
+
+        return undefined; // eslint-disable-line no-undefined
       }
     };
   }
@@ -122,28 +121,32 @@ var Util = function ($) {
     getTransitionDurationFromElement: function getTransitionDurationFromElement(element) {
       if (!element) {
         return 0;
-      } // Get transition-duration of the element
-
-
+      } 
+      
+      // Get transition-duration of the element
       var transitionDuration = $(element).css('transition-duration');
       var floatTransitionDuration = parseFloat(transitionDuration); // Return 0 if element or transition duration is not found
 
       if (!floatTransitionDuration) {
         return 0;
-      } // If multiple durations are defined, take the first
-
-
+      } 
+      
+      // If multiple durations are defined, take the first
       transitionDuration = transitionDuration.split(',')[0];
       return parseFloat(transitionDuration) * MILLISECONDS_MULTIPLIER;
     },
     reflow: function reflow(element) {
-      new Function('bs', 'return bs')(element.offsetHeight);
+      return element.offsetHeight;
     },
     triggerTransitionEnd: function triggerTransitionEnd(element) {
-      $(element).trigger(transition.end);
+      $(element).trigger(TRANSITION_END);
     },
+    // TODO: Remove in v5
     supportsTransitionEnd: function supportsTransitionEnd() {
-      return Boolean(transition);
+      return Boolean(TRANSITION_END);
+    },
+    isElement: function isElement(obj) {
+      return (obj[0] || obj).nodeType;
     },
     typeCheckConfig: function typeCheckConfig(componentName, config, configTypes) {
       for (var property in configTypes) {
