@@ -20,7 +20,7 @@ function _moveBar($selectedTab, $ul) {
   }, 300);
 };
 
-//# Introduce Animated tab with bar
+// helper for animated tab with bar
 function loadTrackBar() {
   $('.nav-tabs.nav-tabs-primary').each(function(){
     $(this).append('<div class="tab-track"><div class="bar"></div></div>');

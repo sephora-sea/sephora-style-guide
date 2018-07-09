@@ -101,6 +101,7 @@ var Tab = function ($) {
       }
 
       this._activate(this._element, listElement);
+      // custom method
       _moveBar($(this._element).parent(), $(listElement));
 
       var complete = function complete() {
