@@ -1,27 +1,67 @@
 script src='https://unpkg.com/vue'
 
-main.container-fluid#app role='main'
-  h1.h1 Sephora Style Guide
-
-  = render 'sephora_style_guide/home/typography'
-  = render 'sephora_style_guide/home/colors'
-  = render 'sephora_style_guide/home/buttons'
-  = render 'sephora_style_guide/home/forms'
-  = render 'sephora_style_guide/home/tables'
-  = render 'sephora_style_guide/home/grid'
-  = render 'sephora_style_guide/home/pagination'
-  = render 'sephora_style_guide/home/modals'
-  = render 'sephora_style_guide/home/breadcrumbs'
-  = render 'sephora_style_guide/home/tabs'
-  = render 'sephora_style_guide/home/accordion'
-  = render 'sephora_style_guide/home/loaders'
-  = render 'sephora_style_guide/home/alerts'
-  = render 'sephora_style_guide/home/sprite_icons'
-  = render 'sephora_style_guide/home/svg_icons'
-  br
-  h2.h2 Partials
-  = render 'sephora_style_guide/home/product_card'
-  = render 'sephora_style_guide/home/video'
+main.container-fluid.clearfix#app role='main'
+  .sidebar
+    h1.h1 Sephora Style Guide
+    ul.text-avalon-demi
+      li 
+        = link_to "Typography", '#typography'
+      li
+        = link_to "Colors", '#colors'
+      li
+        = link_to "Buttons", '#buttons'
+      li
+        = link_to "Input Fields", '#forms'
+      li
+        = link_to "Tables", '#tables'
+      li
+        = link_to "Grid", '#grid'
+      li
+        = link_to "Pagination Buttons", '#pagination'
+      li
+        = link_to "Modals", '#modals'
+      li
+        = link_to "Breadcrumbs", '#breadcrumbs'
+      li
+        = link_to "Tabs", '#tabs'
+      li
+        = link_to "Accordion", '#accordion'
+      li
+        = link_to "Loaders", '#loaders'
+      li
+        = link_to "Alerts", '#alerts'
+      li
+        = link_to "Sprite Icons", '#sprite_icons'
+      li
+        = link_to "SVG Icons", '#svg_icons'
+      li
+        = link_to "Partials", '#partials'
+      ul
+        li
+          = link_to "Product Card", '#product-card'
+        li
+          = link_to "Video", '#video'
+  
+  .content
+    = render 'sephora_style_guide/home/typography'
+    = render 'sephora_style_guide/home/colors'
+    = render 'sephora_style_guide/home/buttons'
+    = render 'sephora_style_guide/home/forms'
+    = render 'sephora_style_guide/home/tables'
+    = render 'sephora_style_guide/home/grid'
+    = render 'sephora_style_guide/home/pagination'
+    = render 'sephora_style_guide/home/modals'
+    = render 'sephora_style_guide/home/breadcrumbs'
+    = render 'sephora_style_guide/home/tabs'
+    = render 'sephora_style_guide/home/accordion'
+    = render 'sephora_style_guide/home/loaders'
+    = render 'sephora_style_guide/home/alerts'
+    = render 'sephora_style_guide/home/sprite_icons'
+    = render 'sephora_style_guide/home/svg_icons'
+    br
+    h2.h2#partials Partials
+    = render 'sephora_style_guide/home/product_card'
+    = render 'sephora_style_guide/home/video'
 
 javascript:
   var app = new Vue({
