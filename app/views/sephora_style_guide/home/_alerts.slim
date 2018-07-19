@@ -22,3 +22,16 @@ article#alerts
         .alert-container
           .alert-message You have items in your shopping bag that are not eligible for discount. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           button.close type='button' data-dismiss='alert' aria-label='Close' @click='closeAlerts'
+
+  section
+    h3.h3 Code Snippet
+    pre
+      code.language-pug
+        |
+          /- Define a method to be called on click that modifies showAlert
+          button.btn.alert-btn(data-target='alert' @click='alertSuccess') Success
+          transition(name='alert-fade')
+            .alert.alert-success(role='alert' v-if='showAlert')
+              .alert-container
+                .alert-message You've successfully signed in.
+                button.close(type='button' data-dismiss='alert' aria-label='Close' @click='closeAlerts')

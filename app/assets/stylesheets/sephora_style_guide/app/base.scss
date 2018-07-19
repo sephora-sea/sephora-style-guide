@@ -17,3 +17,14 @@ section {
     margin-bottom: 10px;
   }
 }
+
+// code snippet CSS
+pre {
+  white-space: pre-wrap;
+}
+
+.formatted {
+  background-color: $grey-light;
+  border: 1px solid $grey;
+  padding: 10px 20px;
+}
