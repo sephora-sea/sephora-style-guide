@@ -44,6 +44,7 @@ article#buttons
     - buttons.each do |button|
       .button-variant
         h4.h4 = button[:name]
+        p = button[:class]
 
         button.btn.btn-sm v-on:click='clickButton' v-bind:disabled="buttonIsDisabled || #{button[:name] == 'Disabled'}" class=button[:class]
           ' {{ buttonText || 'Small' }}
@@ -56,3 +57,14 @@ article#buttons
         br
         button.btn.btn-block v-on:click='clickButton' v-bind:disabled="buttonIsDisabled || #{button[:name] == 'Disabled'}" class=button[:class]
           ' {{ buttonText || 'Block' }}
+
+  section
+    h3.h3 Code Snippet
+    pre
+      code.language-pug
+        |
+          /-- To change the colour, refer to the class names underneath the desired colour
+          button.btn.btn-sm.btn-primary Small
+          button.btn.btn-primary Default
+          button.btn.btn-lg.btn-primary Large
+          button.btn.btn-block.btn-primary Block
