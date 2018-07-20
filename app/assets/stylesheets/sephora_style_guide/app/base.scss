@@ -1,4 +1,18 @@
+body {
+  margin: 0;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
 article {
+  margin-left: 200px;
+  margin-top: 45px;
+
+  > h1 {
+    font-size: 36px;
+  }
 
   > h2 {
     border-bottom: 2px solid $black;
@@ -32,22 +46,70 @@ pre {
 }
 
 .sidebar {
-  height: 100vh;
-  width: 280px;
-  float: left;
+  height: 100%;
+  width: 230px;
   position: fixed;
+  top: 0;
+  background: $black;
+  overflow: auto;
   
   > ul {
     list-style: none;
     padding-left: 0;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 13px;
+    line-height: 42px;
+    color: $white;
+  }
+
+  li {
+
+    > a {
+      display: block;
+      padding-left: 25px;
+    }
+
+    > a:hover {
+      color: $white;
+    }
+
+    &:hover {
+      background-color: #333333;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $grey-light;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $grey-mid;
   }
 }
 
 .content {
   height: 100%;
-  width: 80%;
-  float: right;  
+  width: 800px;
+  margin: 0 auto;
 }
 
+.title {
+  color: $white;
+  line-height: 26px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 17px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+
+.header {
+  color: $white;
+  line-height: 40px;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  margin-left: 25px;
+}
