@@ -24,7 +24,8 @@ main.container-fluid.clearfix#app role='main'
       template(v-for='partial in partials')
         li @click='toggleSidebar()'
           a :href='partial.id' v-text='partial.name'
-  
+  .backdrop(v-if='showSidebar' @click='toggleSidebar()')
+
   .content
     = render 'sephora_style_guide/home/colors'
     = render 'sephora_style_guide/home/typography'
@@ -85,10 +86,12 @@ javascript:
       toggleSidebar() {
         console.log(this.showSidebar)
         if (!this.showSidebar) {
+          $('body').addClass('disable-scroll')
           $('.content').addClass('with-sidebar')
           $('.sidebar').addClass('show')
           this.showSidebar = true;
         } else {
+          $('body').removeClass('disable-scroll')
           $('.content').removeClass('with-sidebar')
           //setTimeout(() => $('.sidebar').removeClass('show'), 350)
           $('.sidebar').removeClass('show')
