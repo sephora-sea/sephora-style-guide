@@ -179,3 +179,15 @@ pre {
 .alert {
   z-index: $zindex-fixed;
 }
+
+.disable-scroll {
+  overflow: hidden;
+}
+
+.backdrop {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  bottom: 0;
+  width: 12%;
+}
