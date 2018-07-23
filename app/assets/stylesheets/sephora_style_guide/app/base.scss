@@ -165,3 +165,7 @@ pre {
 .disable-scroll {
   overflow: hidden;
 }
+
+[v-cloak] {
+  display: none;
+}
