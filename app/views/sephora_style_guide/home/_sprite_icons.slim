@@ -5,12 +5,12 @@ article#sprite_icons
   section
     h3.h3 Icons
     - sprite_icons.each do | icon |
-      .icon_container.col-4
+      .icon_container.col-12.col-md-6.col-lg-4
         .helper
         .sprite-icon class="#{ icon[:class] }" class="#{ icon[:size] }"
-        div
+        div.icon-data
           p #{ icon[:name] }
-          p.subtext Class: .#{ icon[:class] }.#{ icon[:size] }
+          p.subtext .sprite-icon.#{ icon[:class] }.#{ icon[:size] }
 
   br
   br

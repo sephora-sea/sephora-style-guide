@@ -15,8 +15,11 @@ article#svg_icons
   section
     h3.h3 Icons
     - svg_icons.each do | icon |
-      .icon_container
+      .icon_container.col-12.col-md-6.col-lg-4
+        .helper
         .svg-icon class="#{ icon }"
-        span #{icon}
+        div.icon-data
+          p .svg-icon.#{ icon }
+
   br
   br
