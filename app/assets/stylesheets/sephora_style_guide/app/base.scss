@@ -11,11 +11,6 @@ article {
   width: 90%;
   margin: 0 auto;
 
-  @include media-breakpoint-up(md) {
-    //margin-left: 50px;
-    //margin-top: 45px;
-  }
-
   > h1 {
     font-size: 36px;
   }
@@ -52,13 +47,12 @@ pre {
 }
 
 .sidebar {
-  //height: 100%;
   width: 230px;
   position: fixed;
   top: 0;
   bottom: 0;
   background: $black;
-  overflow: auto;
+  overflow-y: auto;
   transition: all 400ms ease;
 
   @include media-breakpoint-down(sm) {
@@ -69,7 +63,7 @@ pre {
 
     transform: translateX(-100%);
     top: 60px;
-    width: 88%;
+    width: 100%;
     z-index: $zindex-fixed;
   }
 
@@ -117,14 +111,6 @@ pre {
 .content {
   width: 100%;
   margin: 0 auto;
-  // margin-top: 60px;
-  //transition: left 0.35s ease;
-  //position: absolute;
-  //left: 0;
-
-  > article {
-    //padding-top: 
-  }
 
   @include media-breakpoint-up(md) {
     height: 100%;
@@ -167,8 +153,8 @@ pre {
     display: none;
   }
   
-  .menu {
-    filter: invert(100%); // to make the menu icon white
+  .topbar-icon {
+    filter: invert(100%); // to make the icon white
     margin-top: 10px;
     margin-right: 10px;
     float: right;
@@ -182,12 +168,4 @@ pre {
 
 .disable-scroll {
   overflow: hidden;
-}
-
-.backdrop {
-  position: fixed;
-  top: 60px;
-  right: 0;
-  bottom: 0;
-  width: 12%;
 }
