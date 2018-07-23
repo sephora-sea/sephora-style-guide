@@ -35,3 +35,18 @@ article#alerts
               .alert-container
                 .alert-message You've successfully signed in.
                 button.close(type='button' data-dismiss='alert' aria-label='Close' @click='closeAlerts')
+
+    h4.h4 JavaScript
+    pre
+      code.language-javascript
+        |
+          alertSuccess () {
+            this.showAlertSuccess = true
+            
+            // Prevent double rendering if button is clicked too fast
+            clearTimeout(this.alertTimeout)
+            
+            this.alertTimeout = setTimeout(() => {
+              this.showAlertSuccess = false
+            }, 3500)
+          } 
