@@ -67,9 +67,12 @@ pre {
     }
 
     transform: translateX(-100%);
-    top: 60px;
+    top: 0px;
+    margin-top: 60px;
     width: 100%;
     z-index: $zindex-fixed;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; // for momentum scrolling on iOS
   }
 
   &.show {
