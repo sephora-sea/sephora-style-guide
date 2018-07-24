@@ -85,12 +85,10 @@ javascript:
       toggleSidebar() {
         if (!this.showSidebar) {
           $('body').addClass('disable-scroll')
-          $('.content').addClass('with-sidebar')
           $('.sidebar').addClass('show')
           this.showSidebar = true;
         } else {
           $('body').removeClass('disable-scroll')
-          $('.content').removeClass('with-sidebar')
           $('.sidebar').removeClass('show')
           this.showSidebar = false;
         }
