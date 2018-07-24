@@ -8,6 +8,7 @@ body {
 }
 
 .container-fluid {
+  height: 100%;
   padding: 0;
 }
 
@@ -171,7 +172,7 @@ pre {
 }
 
 .disable-scroll {
-  overflow: hidden;
+  position: fixed;  // prevent address bar being hidden on mobile
 }
 
 [v-cloak] {
