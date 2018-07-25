@@ -1,6 +1,6 @@
 script src='https://unpkg.com/vue'
 
-main.container-fluid.clearfix#app role='main'
+main.container-fluid#app role='main'
   .topbar
     h1.h1.text-avalon-bold.title SEPHORA STYLE GUIDE
     span.svg-icon.close2.topbar-icon(@click='toggleSidebar()' v-if='showSidebar')
@@ -26,7 +26,6 @@ main.container-fluid.clearfix#app role='main'
       template(v-for='partial in partials')
         li @click='toggleSidebar()'
           a :href='partial.id' v-text='partial.name'
-  .backdrop(v-if='showSidebar' @click='toggleSidebar()')
 
   .content
     = render 'sephora_style_guide/home/colors'
