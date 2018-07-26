@@ -60,8 +60,9 @@ pre {
   top: 0;
   bottom: 0;
   background: $black;
-  overflow-y: auto;
+  overflow-y: scroll;
   transition: all 400ms ease;
+  z-index: $zindex-fixed;
 
   @include media-breakpoint-down(sm) {
 
@@ -70,11 +71,8 @@ pre {
     }
 
     transform: translateX(-100%);
-    top: 0px;
     margin-top: 60px;
     width: 100%;
-    z-index: $zindex-fixed;
-    overflow-y: scroll;
     -webkit-overflow-scrolling: touch; // for momentum scrolling on iOS
   }
 
@@ -125,7 +123,7 @@ pre {
 
   @include media-breakpoint-up(md) {
     height: 100%;
-    width: calc(100% - 230px);
+    width: calc(100% - 230px);  // subtract sidebar width
     margin-left: 230px;
   }
 }
