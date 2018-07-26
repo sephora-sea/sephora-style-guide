@@ -25,30 +25,40 @@ article#typography
           td
             p.text-sephora-book v-bind:style="{fontSize: fontSize + 'px'}"
               ' {{ text }}
+          td
+            p.text-sephora-book style='font-size: 18px;' .text-sephora-book
         tr
           td
             p.text-sephora-italic style='font-size: 18px;' Sephora Serif Book Italic
           td
             p.text-sephora-italic v-bind:style="{fontSize: fontSize + 'px'}"
               ' {{ text }}
+          td
+            p.text-sephora-italic style='font-size: 18px;' .text-sephora-italic
         tr
           td
             p.text-avalon-bold style='font-size: 18px;' Avalon Bold
           td
             p.text-avalon-bold v-bind:style="{fontSize: fontSize + 'px'}"
               ' {{ text }}
+          td
+            p.text-avalon-bold style='font-size: 18px;' .text-avalon-bold
         tr
           td
             p.text-avalon-demi style='font-size: 18px;' Avalon Demi
           td
             p.text-avalon-demi v-bind:style="{fontSize: fontSize + 'px'}"
               ' {{ text }}
+          td
+            p.text-avalon-demi style='font-size: 18px;' .text-avalon-demi
         tr
           td
             p.text-avalon-book style='font-size: 18px;' Avalon Book
           td
             p.text-avalon-book v-bind:style="{fontSize: fontSize + 'px'}"
               ' {{ text }}
+          td
+            p.text-avalon-book style='font-size: 18px;' .text-avalon-book
 
   section
     h3.h3 Headings
@@ -108,3 +118,8 @@ article#typography
     h3.h3 Rule Headers
     .rule-header
       ' {{ text }}
+    
+    pre
+      code.language-pug
+        |
+          .rule-header
