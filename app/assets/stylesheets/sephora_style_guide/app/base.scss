@@ -79,7 +79,7 @@ pre {
   &.show {
     transform: translateX(0);
   }
-  
+
   > ul {
     list-style: none;
     padding-left: 0;
@@ -99,7 +99,7 @@ pre {
     }
 
     &:hover {
-      background-color: #333333;
+      background-color: #333;
     }
   }
 
@@ -161,7 +161,7 @@ pre {
   @include media-breakpoint-up(md) {
     display: none;
   }
-  
+
   .topbar-icon {
     filter: invert(100%); // to make the icon white
     margin-top: 10px;

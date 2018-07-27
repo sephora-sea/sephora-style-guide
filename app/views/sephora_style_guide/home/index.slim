@@ -47,9 +47,18 @@ main.container-fluid#app role='main'
     = render 'sephora_style_guide/home/video'
 
 javascript:
+  var elements = [ { name: 'Colors', id: '#colors' }, { name: 'Typography', id: '#typography'}, { name: 'Buttons', id: '#buttons' },
+    { name: 'Input Fields', id: '#forms' }, { name: 'Tables', id: '#tables' }, { name: 'Grid', id: '#grid' } ]
+  var components = [{ name: 'Pagination Buttons', id: '#pagination' }, { name: 'Modals', id: '#modals'}, { name: 'Breadcrumbs', id: '#breadcrumbs' },
+    { name: 'Tabs', id: '#tabs' }, { name: 'Accordion', id: '#accordion' }, { name: 'Loaders', id: '#loaders' }, { name: 'Alerts', id: '#alerts' },
+    { name: 'Sprite Icons', id: '#sprite_icons' }, { name: 'SVG Icons', id: '#svg_icons' } ]
+  var partials = [{ name: 'Product Card', id: '#product-card' }, { name: 'Video', id: '#video' }]
   var app = new Vue({
     el: '#app',
     data: {
+      elements: elements,
+      components: components,
+      partials: partials,
       text: 'The quick brown fox jumps over the lazy dog.',
       buttonIsDisabled: false,
       buttonText: this.textInitial,
@@ -77,9 +86,6 @@ javascript:
       showAlertWarning: false,
       showAlertError: false,
       showSidebar: false,
-      elements: [ { name: 'Colors', id: '#colors' }, { name: 'Typography', id: '#typography'}, { name: 'Buttons', id: '#buttons' }, { name: 'Input Fields', id: '#forms' }, { name: 'Tables', id: '#tables' }, { name: 'Grid', id: '#grid' } ],
-      components: [{ name: 'Pagination Buttons', id: '#pagination' }, { name: 'Modals', id: '#modals'}, { name: 'Breadcrumbs', id: '#breadcrumbs' }, { name: 'Tabs', id: '#tabs' }, { name: 'Accordion', id: '#accordion' }, { name: 'Loaders', id: '#loaders' }, { name: 'Alerts', id: '#alerts' }, { name: 'Sprite Icons', id: '#sprite_icons' }, { name: 'SVG Icons', id: '#svg_icons' } ],
-      partials: [{ name: 'Product Card', id: '#product-card' }, { name: 'Video', id: '#video' }]
     },
     methods: {
       openSidebar() {
