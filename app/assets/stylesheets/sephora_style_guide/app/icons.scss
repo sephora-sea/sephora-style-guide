@@ -1,5 +1,5 @@
 #icons {
-  .icon_container {
+  .icon-container {
     display: inline-block;
     height: 60px;
     padding: 0 20px;
@@ -10,7 +10,8 @@
       background: $white;
     }
 
-    .svg-icon, .sprite-icon {
+    .svg-icon,
+    .sprite-icon {
       display: inline-block;
       vertical-align: middle;
       float: none; // remove default float value for sprites

@@ -22,7 +22,7 @@ article#forms
       label.control-label for='text1' Prefilled (Editable)
       input#text1.form-control type='text' value='Flora Wong'
       .input-success
-      
+
     .form-group.floating-labels.non-editable-verification
       label.control-label for='text2' Verified (Readonly Field)
       input#text2.form-control type='text' value='Flora Wong' readonly=true
@@ -35,9 +35,9 @@ article#forms
     .form-group.floating-labels
       label.control-label for='email5' Email (Disabled Field)
       input#email5.form-control type='email' value='testemail' disabled=true
-    
+
     br
-    h4.h4 pug
+    h4.h4 Pug
     pre
       code.language-pug
         |
@@ -59,7 +59,7 @@ article#forms
             label.control-label(for='text1') Prefilled (Editable)
             input#text1.form-control(type='text' value='Flora Wong')
             .input-success
-            
+
           .form-group.floating-labels.non-editable-verification
             label.control-label(for='text2') Verified (Readonly Field)
             input#text2.form-control(type='text' value='Flora Wong' readonly=true)
@@ -114,9 +114,9 @@ article#forms
       .form-group.floating-labels#year-group
         label.control-label for='year' YYYY
         input#year.form-control type='number' max=2999 min=1899
-    
+
     br
-    h4.h4 pug
+    h4.h4 Pug
     pre
       code.language-pug
         |
@@ -126,9 +126,7 @@ article#forms
 
           .form-group.floating-labels.textarea.filled.focused
             label.control-label(for='textarea') Textarea
-            textarea#textarea.form-control
-              = 'Now led tedious shy lasting females off. Dashwood marianne in of entrance be on wondered possible building. Wondered sociable he carriage in speedily margaret. Up devonshire of he thoroughly insensible alteration. An mr settling occasion insisted distance ladyship so. Not attention say frankness intention out dashwoods now curiosity. Stronger ecstatic as no judgment daughter speedily thoughts. Worse downs nor might she court did nay forth these. Now led tedious shy lasting females off. Dashwood marianne in of entrance be on wondered possible building. Wondered sociable he carriage in speedily margaret. Up devonshire of he thoroughly insensible alteration. An mr settling occasion insisted distance ladyship so. Not attention say frankness intention out dashwoods now curiosity. Stronger ecstatic as no judgment daughter speedily thoughts. Worse downs nor might she court did nay forth these.'
-
+            textarea#textarea.form-control Change Me
           .form-group.floating-labels.filled.focused
             label.control-label(for='text') Text Input
             input#text.form-control(type='text' value='Text Input')
@@ -179,7 +177,7 @@ article#forms
             width: 100px;
             float: left;
           }
-        
+
   section
     h3.h3 Checkboxes
     .row
@@ -190,7 +188,7 @@ article#forms
             ' Default 1
       .col-4
         .form-check.disabled
-          label.form-check-label 
+          label.form-check-label
             span.form-check-input.checkbox
             ' Disabled
       .col-4
@@ -203,8 +201,8 @@ article#forms
         .form-check
           label.form-check-label @click='toggleCheckboxTwo'
             span.form-check-input.checkbox :class='{ "checked" : isCheckboxTwoChecked }'
-            ' Default 2 
-          
+            ' Default 2
+
     br
     h4.h4 Pug
     pre
@@ -217,7 +215,7 @@ article#forms
                   span.form-check-input.checkbox(:class='{ "checked" : isCheckboxChecked }') Default 1
             .col-4
               .form-check.disabled
-                label.form-check-label 
+                label.form-check-label
                   span.form-check-input.checkbox Disabled
             .col-4
               .form-check.disabled
@@ -251,7 +249,7 @@ article#forms
             ' Selected
     .row
       .col-4
-        .form-check 
+        .form-check
           label.form-check-label @click='toggleRadioTwo'
             span.form-check-input.radio :class='{ "selected" : isRadioTwoSelected }'
             ' Default 2

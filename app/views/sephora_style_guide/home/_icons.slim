@@ -682,76 +682,76 @@ article#icons
   section
     h3.h3 Navigation and Menu
     - navigation_icons.each do | icon |
-      .icon_container.col-12.col-md-6
+      .icon-container.col-12.col-md-6
         .helper
-        .svg-icon class="#{ icon[:class] }" class="#{ icon[:background] }"
+        .svg-icon class="#{icon[:class]}" class="#{icon[:background]}"
         div.icon-data
-          p #{ icon[:name] }
-          p.subtext .svg-icon.#{ icon[:class] }
+          p=icon[:name]
+          p.subtext .svg-icon.#{icon[:class]}
     h3.h3 Orders and Shipping Status
     - orders_and_shipping.each do | icon |
-      .icon_container.col-12.col-md-6
+      .icon-container.col-12.col-md-6
         .helper
-        .svg-icon class="#{ icon[:class] }"
+        .svg-icon class="#{icon[:class]}"
         div.icon-data
-          p #{ icon[:name] }
-          p.subtext .svg-icon.#{ icon[:class] }
+          p=icon[:name]
+          p.subtext .svg-icon.#{icon[:class]}
     h3.h3 Payment Types
     - flags.each do | icon |
-      .icon_container.col-12.col-md-6
+      .icon-container.col-12.col-md-6
         .helper
-        .sprite-icon class="#{ icon[:class] }" class="#{ icon[:size] }"
+        .sprite-icon class="#{icon[:class]}" class="#{icon[:size]}"
         div.icon-data
-          p #{ icon[:name] }
-          p.subtext .sprite-icon.#{ icon[:class] }.#{ icon[:size] }
+          p=icon[:name]
+          p.subtext .sprite-icon.#{icon[:class]}.#{icon[:size]}
     h3.h3 My Account
     - my_account.each do | icon |
-      .icon_container.col-12.col-md-6
+      .icon-container.col-12.col-md-6
         .helper
-        .svg-icon class="#{ icon[:class] }" class="#{ icon[:background] }"
+        .svg-icon class="#{icon[:class]}" class="#{icon[:background]}"
         div.icon-data
-          p #{ icon[:name] }
+          p=icon[:name]
           p.subtext .svg-icon.#{ icon[:class] }
     h3.h3 Beauty Pass
     - beauty_pass.each do | icon |
-      .icon_container.col-12.col-md-6
+      .icon-container.col-12.col-md-6
         .helper
-        .svg-icon class="#{ icon[:class] }" class="#{ icon[:background] }"
+        .svg-icon class="#{icon[:class]}" class="#{icon[:background]}"
         div.icon-data
-          p #{ icon[:name] }
-          p.subtext .svg-icon.#{ icon[:class] }
+          p=icon[:name]
+          p.subtext .svg-icon.#{icon[:class]}
     h3.h3 Functions
     - function.each do | icon |
-      .icon_container.col-12.col-md-6
+      .icon-container.col-12.col-md-6
         .helper
-        .svg-icon class="#{ icon[:class] }" class="#{ icon[:background] }"
+        .svg-icon class="#{icon[:class]}" class="#{icon[:background]}"
         div.icon-data
-          p #{ icon[:name] }
-          p.subtext .svg-icon.#{ icon[:class] }
+          p=icon[:name]
+          p.subtext .svg-icon.#{icon[:class]}
     h3.h3 Social Media and Email
     - social_media.each do | icon |
-      .icon_container.col-12.col-md-6
+      .icon-container.col-12.col-md-6
         .helper
-        .svg-icon class="#{ icon[:class] }" class="#{ icon[:background] }"
+        .svg-icon class="#{icon[:class]}" class="#{icon[:background]}"
         div.icon-data
-          p #{ icon[:name] }
-          p.subtext .svg-icon.#{ icon[:class] }
+          p=icon[:name]
+          p.subtext .svg-icon.#{icon[:class]}
     h3.h3 Flags
     - flags.each do | icon |
-      .icon_container.col-12.col-md-6
+      .icon-container.col-12.col-md-6
         .helper
-        .sprite-icon class="#{ icon[:class] }" class="#{ icon[:size] }"
+        .sprite-icon class="#{icon[:class]}" class="#{ icon[:size]}"
         div.icon-data
-          p #{ icon[:name] }
-          p.subtext .sprite-icon.#{ icon[:class] }.#{ icon[:size] }
+          p=icon[:name]
+          p.subtext .sprite-icon.#{icon[:class]}.#{icon[:size] }
     h3.h3 Others
     - others.each do | icon |
-      .icon_container.col-12.col-md-6
+      .icon-container.col-12.col-md-6
         .helper
-        .svg-icon class="#{ icon[:class] }" class="#{ icon[:background] }"
+        .svg-icon class="#{icon[:class]}" class="#{icon[:background]}"
         div.icon-data
-          p #{ icon[:name] }
-          p.subtext .svg-icon.#{ icon[:class] }
+          p=icon[:name]
+          p.subtext .svg-icon.#{icon[:class]}
 
   br
   br
