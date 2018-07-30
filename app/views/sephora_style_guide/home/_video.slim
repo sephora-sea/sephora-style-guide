@@ -27,6 +27,35 @@ article#video
                 .modal-body
                   .modal-video
                     iframe#lgVideo width='100%' height='100%' src='//www.youtube.com/embed/RvY-YNMp-1w?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
+  section
+    h3.h3 Code Snippet
+    pre
+      code.language-pug
+        |
+          .container
+            .row
+              .col-12.col-md-6.offset-lg-6.offset-md-3
+                .media-container-lg
+                  .video-panel
+                    iframe(width='100%' height='100%' src='//www.youtube.com/embed/VIDEOID?rel=0&amp;autoplay=1&amp;loop=1&amp;mute=1&amp;playlist=RvY-YNMp-1w&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen)
+                    a.video-link(href='#lg-video' data-toggle='modal' data-video='lgVideo')
+                      .video-image-overlay
+                      img.video-image-lg(src='//img.youtube.com/vi/VIDEOID/maxresdefault.jpg')
+                      .video-play-icon
+                  a.video-link(href='#')
+                    span.video-text-container
+                      p.video-text Change me and VIDEOID
+
+                .modal.fade.media-modal#lg-video(aria-hidden='true' role='dialog' tabindex='-1')
+                  .modal-dialog(role='document')
+                    .modal-content
+                      .modal-header
+                        a.video-link(href='#')
+                          .modal-title Change me and VIDEOID
+                        button.close(type='button' data-dismiss='modal' aria-label='Close')
+                      .modal-body
+                        .modal-video
+                          iframe#lgVideo(width='100%' height='100%' src='//www.youtube.com/embed/VIDEOID?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen)
 
   section
     h3.h3 Regular Thumbnail (Learn More)
@@ -67,6 +96,30 @@ article#video
               iframe#mdVideoTwo width='100%' height='100%' src='//www.youtube.com/embed/4h02DfuFBpo?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
 
   section
+    h3.h3 Code Snippet
+    pre
+      code.language-pug
+        |
+          .media-container
+            a.video-link(href='#md-video-one' data-toggle='modal' data-video='mdVideoOne')
+              .video-image-overlay
+              img.video-image(src='//img.youtube.com/vi/VIDEOID/maxresdefault.jpg')
+              .video-play-icon
+            a.video-link(href='#md-video-one' data-toggle='modal' data-video='mdVideoOne')
+              p.video-text Change me and VIDEOID
+
+          .modal.fade.media-modal#md-video-one(aria-hidden='true' role='dialog' tabindex='-1')
+            .modal-dialog role='document'
+              .modal-content
+                .modal-header
+                  .modal-title Change me and VIDEOID
+                  button.close(type='button' data-dismiss='modal' aria-label='Close')
+                .modal-body
+                  .modal-video
+                    iframe#mdVideoOne(width="560" height="315" src='//www.youtube.com/embed/VIDEOID?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen)
+
+
+  section
     h3.h3 Small Thumbnail (Product Show)
     .media-container-sm
       = link_to '#sm-video-one', data: { toggle: 'modal', video: 'smVideoOne' }, class: 'video-link' do
@@ -98,4 +151,26 @@ article#video
             button.close type='button' data-dismiss='modal' aria-label='Close'
           .modal-body
             .modal-video
-              iframe#smVideoTwo width='100%' height='100%' src='//www.youtube.com/embed/4h02DfuFBpo?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
+              iframe#smVideoTwo width='100%' height='100%' src='//www.youtube.com/embed/videoId?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
+
+  section
+    h3.h3 Code Snippet
+    pre
+      code.language-pug
+        |
+          .media-container-sm
+            a.video-link(href='#sm-video-one' data-toggle='modal' data-video='smVideoOne')
+              .video-image-overlay
+              img.video-image-sm(src='//img.youtube.com/vi/VIDEOID/maxresdefault.jpg')
+              .video-play-icon
+
+          .modal.fade.media-modal#sm-video-one(aria-hidden='true' role='dialog' tabindex='-1')
+            .modal-dialog(role='document')
+              .modal-content
+                .modal-header
+                  .modal-title Change me and VIDEOID
+                  button.close(type='button' data-dismiss='modal' aria-label='Close')
+                .modal-body
+                  .modal-video
+                    iframe#smVideoOne(width='100%' height='100%' src='//www.youtube.com/embed/VIDEOID?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen)
+  br
