@@ -16,8 +16,7 @@ main.container-fluid#app role='main'
   = render 'sephora_style_guide/home/accordion'
   = render 'sephora_style_guide/home/loaders'
   = render 'sephora_style_guide/home/alerts'
-  = render 'sephora_style_guide/home/sprite_icons'
-  = render 'sephora_style_guide/home/svg_icons'
+  = render 'sephora_style_guide/home/icons'
   br
   h2.h2 Partials
   = render 'sephora_style_guide/home/product_card'
@@ -94,7 +93,7 @@ javascript:
 
       selectVariant(e) {
         if ($(e.target).hasClass('product-variant')) {
-        
+
           if (e.target.closest('.product-card').getAttribute('name') === 'product1') {
             this.showPriceRange = false;
 
@@ -174,68 +173,68 @@ javascript:
           }
         }
       },
-      
-      alertError() {           
+
+      alertError() {
         this.showAlertError = true;
         this.showAlertSuccess = false;
         this.showAlertWarning = false;
-        
+
         clearTimeout(this.alertTimeout);
         const self = this;
         this.alertTimeout = setTimeout(function () {
           self.showAlertError = false;
         }, 3500);
       },
-      
+
       alertWarning() {
         this.showAlertWarning = true;
         this.showAlertSuccess = false;
         this.showAlertError = false;
-        
+
         clearTimeout(this.alertTimeout);
         const self = this;
         this.alertTimeout = setTimeout(function () {
           self.showAlertWarning = false;
         }, 3500);
       },
-      
+
       alertSuccess() {
         this.showAlertSuccess = true;
         this.showAlertWarning = false;
         this.showAlertError = false;
-        
+
         clearTimeout(this.alertTimeout);
         const self = this;
         this.alertTimeout = setTimeout(function () {
           self.showAlertSuccess = false;
         }, 3500);
       },
-      
+
       closeAlerts() {
         this.showAlertSuccess = false;
         this.showAlertWarning = false;
         this.showAlertError = false;
       },
-      
+
       toggleCheckboxOne() {
         this.isCheckboxOneChecked = !this.isCheckboxOneChecked;
       },
-      
+
       toggleCheckboxTwo() {
         this.isCheckboxTwoChecked = !this.isCheckboxTwoChecked;
       },
-      
+
       toggleRadioOne() {
         this.isRadioOneSelected = !this.isRadioOneSelected;
         this.isRadioTwoSelected = false;
       },
-      
+
       toggleRadioTwo() {
         this.isRadioTwoSelected = !this.isRadioTwoSelected;
         this.isRadioOneSelected = false;
       }
     },
-    
+
     mounted() {
       let tag = document.createElement('script');
       tag.src = '//www.youtube.com/player_api';
