@@ -1,125 +1,101 @@
-article#typography
-  h2.h2 Typography
-
+article#fonts
+  h2.h2 Fonts
   section
-    h3.h3 Preview Settings
-
-    label Text
+    h3.h3 Avalon
     br
-    input type='text' v-model='text'
-
-    br
-
-    label Font Size
-    br
-    input type='number' v-model='fontSize'
-
-  section
-    h3.h3 Fonts
-
-    table
+    table.font-table
       tbody
         tr
           td
-            p.text-sephora-book style='font-size: 18px;' Sephora Serif Book
+            p.text-avalon-book.font-text Aa
           td
-            p.text-sephora-book v-bind:style="{fontSize: fontSize + 'px'}"
-              ' {{ text }}
+            p.text-avalon-demi.font-text Aa
           td
-            p.text-sephora-book style='font-size: 18px;' .text-sephora-book
+            p.text-avalon-bold.font-text Aa
+          td
         tr
           td
-            p.text-sephora-italic style='font-size: 18px;' Sephora Serif Book Italic
+            p.text-avalon-book Book
           td
-            p.text-sephora-italic v-bind:style="{fontSize: fontSize + 'px'}"
-              ' {{ text }}
+            p.text-avalon-book Demi
           td
-            p.text-sephora-italic style='font-size: 18px;' .text-sephora-italic
+            p.text-avalon-book Bold
         tr
           td
-            p.text-avalon-bold style='font-size: 18px;' Avalon Bold
+            p.font-class .text-avalon-book
           td
-            p.text-avalon-bold v-bind:style="{fontSize: fontSize + 'px'}"
-              ' {{ text }}
+            p.font-class .text-avalon-demi
           td
-            p.text-avalon-bold style='font-size: 18px;' .text-avalon-bold
+            p.font-class .text-avalon-bold
         tr
           td
-            p.text-avalon-demi style='font-size: 18px;' Avalon Demi
+            p.font-class @include font-avalon-book
           td
-            p.text-avalon-demi v-bind:style="{fontSize: fontSize + 'px'}"
-              ' {{ text }}
+            p.font-class @include font-avalon-demi
           td
-            p.text-avalon-demi style='font-size: 18px;' .text-avalon-demi
-        tr
-          td
-            p.text-avalon-book style='font-size: 18px;' Avalon Book
-          td
-            p.text-avalon-book v-bind:style="{fontSize: fontSize + 'px'}"
-              ' {{ text }}
-          td
-            p.text-avalon-book style='font-size: 18px;' .text-avalon-book
+            p.font-class @include font-avalon-bold
 
-  section
-    h3.h3 Headings
-
-    table
+    h3.h3 Sephora Serif
+    br
+    table.font-table.serif
       tbody
         tr
           td
-            p.page-title .page-title
+            p.text-sephora-book.font-text Aa
           td
-            p.page-title
-              ' {{ text }}
+            p.text-sephora-italic.font-text Aa
         tr
           td
-            p.page-title-italic .page-title-italic
+            p.text-avalon-book Book
           td
-            p.page-title-italic
-              ' {{ text }}
+            p.text-avalon-book Book Italic
         tr
           td
-            h1.h1 .h1
+            p.font-class .text-sephora-book
           td
-            h1.h1
-              ' {{ text }}
+            p.font-class .text-sephora-italic
         tr
           td
-            h2.h2 .h2
+            p.font-class @include font-sephora-serif
           td
-            h2.h2
-              ' {{ text }}
-        tr
-          td
-            h3.h3 .h3
-          td
-            h3.h3
-              ' {{ text }}
-        tr
-          td
-            h4.h4 .h4
-          td
-            h4.h4
-              ' {{ text }}
-        tr
-          td
-            h5.h5 .h5
-          td
-            h5.h5
-              ' {{ text }}
-        tr
-          td
-            p Paragraph
-          td
-            p
-              ' {{ text }}
+            p.font-class @include font-sephora-serif-italic
+
+article#text
+  h2.h2 Text Styles
 
   section
-    h3.h3 Rule Headers
+    h3.h3 .page-title
+    .page-title
+      ' {{ text }}
+
+    h3.h3 .page-title-italic
+    .page-title-italic
+      ' {{ text }}
+
+    h3.h3 .h1
+    .h1
+      ' {{ text }}
+
+    h3.h3 .h2
+    .h2
+      ' {{ text }}
+
+    h3.h3 .h3
+    .h3
+      ' {{ text }}
+
+    h3.h3 .h4
+    .h4
+      ' {{ text }}
+
+    h3.h3 .h5
+    .h5
+      ' {{ text }}
+
+    h3.h3 p
+    p
+      ' {{ text }}
+
+    h3.h3 .rule-header
     .rule-header
       ' {{ text }}
-    
-    pre
-      code.language-pug
-        |
-          .rule-header

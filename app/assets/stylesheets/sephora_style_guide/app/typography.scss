@@ -1,5 +1,41 @@
-#typography {
-  td {
-    padding: 15px;
+#fonts {
+  .font-table {
+    &.serif {
+      td {
+        padding-bottom: 20px;
+      }
+    }
+
+    td {
+      padding-right: 75px;
+      padding-bottom: 10px;
+    }
+
+    .font-class {
+      font-family: monospace;
+    }
+  }
+
+  .headings {
+    td {
+      padding: 15px;
+    }
+  }
+
+  .font-name {
+    font-size: 18px;
+  }
+
+  .font-text {
+    font-size: 48px;
+  }
+}
+
+#text {
+  section {
+    > div,
+    > p {
+      margin-bottom: 40px;
+    }
   }
 }
