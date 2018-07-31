@@ -1,5 +1,28 @@
+html {
+  height: 100%;
+  overflow: hidden; // prevent address bar from being hidden on mobile
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll; // prevent address bar from being hidden on mobile
+}
+
+.container-fluid {
+  height: 100%;
+  padding: 0;
+}
+
 article {
-  margin-top: 50px;
+  padding-top: 65px;
+  width: 90%;
+  margin: 0 auto;
+
+  > h1 {
+    font-size: 36px;
+  }
 
   > h2 {
     border-bottom: 2px solid $black;
@@ -20,4 +43,143 @@ section {
   > h4 {
     color: $grey-mid;
   }
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+.formatted {
+  background-color: $grey-light;
+  border: 1px solid $grey;
+  padding: 10px 20px;
+}
+
+.sidebar {
+  width: 230px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background: $black;
+  overflow-y: scroll;
+  transition: all 400ms ease;
+  z-index: $zindex-fixed;
+
+  @include media-breakpoint-down(sm) {
+
+    > h1 {
+      display: none; // disable display of title on mobile
+    }
+
+    transform: translateX(-100%);
+    margin-top: 60px;
+    width: 100%;
+    -webkit-overflow-scrolling: touch; // for momentum scrolling on iOS
+  }
+
+  &.show {
+    transform: translateX(0);
+  }
+
+  > ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 13px;
+    line-height: 42px;
+    color: $white;
+  }
+
+  li {
+    > a {
+      display: block;
+      padding-left: 25px;
+    }
+
+    > a:hover {
+      color: $white;
+    }
+
+    &:hover {
+      background-color: #333;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $grey-light;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $grey-mid;
+  }
+}
+
+
+.content {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+
+  @include media-breakpoint-up(md) {
+    width: calc(100% - 230px);  // subtract sidebar width
+    margin-left: 230px;
+  }
+}
+
+.title {
+  color: $white;
+  line-height: 26px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 17px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+
+.header {
+  color: $white;
+  line-height: 40px;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  margin-left: 25px;
+}
+
+.topbar {
+  background: $black;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $zindex-fixed;
+
+  > h1 {
+    display: inline-block;
+  }
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+
+  .topbar-icon {
+    filter: invert(100%); // to make the icon white
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+    cursor: pointer;
+  }
+}
+
+.alert {
+  z-index: $zindex-fixed;
+}
+
+.disable-scroll {
+  overflow-y: hidden;
+}
+
+[v-cloak] {
+  display: none;
 }

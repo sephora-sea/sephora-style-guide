@@ -1,31 +1,80 @@
 script src='https://unpkg.com/vue'
 
 main.container-fluid#app role='main'
-  h1.h1 Sephora Style Guide
+  .topbar
+    h1.h1.text-avalon-bold.title SEPHORA STYLE GUIDE
+    span.svg-icon.close2.topbar-icon(@click='closeSidebar()' v-if='showSidebar')
+    span.svg-icon.menu.topbar-icon(@click='openSidebar()' v-else)
 
-  = render 'sephora_style_guide/home/typography'
-  = render 'sephora_style_guide/home/colors'
-  = render 'sephora_style_guide/home/buttons'
-  = render 'sephora_style_guide/home/forms'
-  = render 'sephora_style_guide/home/tables'
-  = render 'sephora_style_guide/home/grid'
-  = render 'sephora_style_guide/home/pagination'
-  = render 'sephora_style_guide/home/modals'
-  = render 'sephora_style_guide/home/breadcrumbs'
-  = render 'sephora_style_guide/home/tabs'
-  = render 'sephora_style_guide/home/accordion'
-  = render 'sephora_style_guide/home/loaders'
-  = render 'sephora_style_guide/home/alerts'
-  = render 'sephora_style_guide/home/icons'
-  br
-  h2.h2 Partials
-  = render 'sephora_style_guide/home/product_card'
-  = render 'sephora_style_guide/home/video'
+  .sidebar
+    h1.h1.text-avalon-bold.title SEPHORA STYLE GUIDE
+
+    .header.text-avalon-bold ELEMENTS
+    ul.text-avalon
+      template(v-for='element in elements')
+        li @click='closeSidebar()'
+          a :href='element.id' v-text='element.name'
+
+    .header.text-avalon-bold COMPONENTS
+    ul.text-avalon
+      template(v-for='component in components')
+        li @click='closeSidebar()'
+          a :href='component.id' v-text='component.name'
+
+    .header.text-avalon-bold PARTIALS
+    ul.text-avalon
+      template(v-for='partial in partials')
+        li @click='closeSidebar()'
+          a :href='partial.id' v-text='partial.name'
+
+  .content
+    = render 'sephora_style_guide/home/colors'
+    = render 'sephora_style_guide/home/typography'
+    = render 'sephora_style_guide/home/icons'
+    = render 'sephora_style_guide/home/forms'
+    = render 'sephora_style_guide/home/grid'
+    = render 'sephora_style_guide/home/alerts'
+    = render 'sephora_style_guide/home/accordion'
+    = render 'sephora_style_guide/home/buttons'
+    = render 'sephora_style_guide/home/breadcrumbs'
+    = render 'sephora_style_guide/home/loaders'
+    = render 'sephora_style_guide/home/pagination'
+    = render 'sephora_style_guide/home/modals'
+    = render 'sephora_style_guide/home/tables'
+    = render 'sephora_style_guide/home/tabs'
+    = render 'sephora_style_guide/home/product_card'
+    = render 'sephora_style_guide/home/video'
 
 javascript:
+  var elements = [
+    { name: 'Colour', id: '#colors' },
+    { name: 'Fonts', id: '#fonts'},
+    { name: 'Text Styles', id: '#text'},
+    { name: 'Icons', id: '#icons' },
+    { name: 'Input Fields', id: '#forms' },
+    { name: 'Grid System', id: '#grid' }
+  ]
+  var components = [
+    { name: 'Alerts', id: '#alerts' },
+    { name: 'Accordion', id: '#accordion' },
+    { name: 'Buttons', id: '#buttons' },
+    { name: 'Breadcrumbs', id: '#breadcrumbs' },
+    { name: 'Loaders', id: '#loaders' },
+    { name: 'Pagination Buttons', id: '#pagination' },
+    { name: 'Modals', id: '#modals'},
+    { name: 'Tables', id: '#tables' },
+    { name: 'Tabs', id: '#tabs' }
+  ]
+  var partials = [
+    { name: 'Product Card', id: '#product-card' },
+    { name: 'Video', id: '#video' }
+  ]
   var app = new Vue({
     el: '#app',
     data: {
+      elements: elements,
+      components: components,
+      partials: partials,
       text: 'The quick brown fox jumps over the lazy dog.',
       buttonIsDisabled: false,
       buttonText: this.textInitial,
@@ -51,9 +100,22 @@ javascript:
       isOutOfStock: false,
       showAlertSuccess: false,
       showAlertWarning: false,
-      showAlertError: false
+      showAlertError: false,
+      showSidebar: false,
     },
     methods: {
+      openSidebar() {
+        $('body').addClass('disable-scroll')
+        $('.sidebar').addClass('show')
+        this.showSidebar = true;
+      },
+
+      closeSidebar() {
+        $('body').removeClass('disable-scroll')
+        $('.sidebar').removeClass('show')
+        this.showSidebar = false;
+      },
+
       changeInitialText() {
         this.buttonText = this.buttonTextInitial;
       },
