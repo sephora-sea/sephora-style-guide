@@ -6,6 +6,7 @@ html {
 body {
   margin: 0;
   height: 100%;
+  overflow-x: hidden;
   overflow-y: scroll; // prevent address bar from being hidden on mobile
 }
 
@@ -118,11 +119,11 @@ pre {
 
 
 .content {
+  height: 100%;
   width: 100%;
   margin: 0 auto;
 
   @include media-breakpoint-up(md) {
-    height: 100%;
     width: calc(100% - 230px);  // subtract sidebar width
     margin-left: 230px;
   }
