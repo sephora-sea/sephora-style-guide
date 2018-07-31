@@ -8,6 +8,7 @@ body {
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll; // prevent address bar from being hidden on mobile
+  -webkit-overflow-scrolling: touch; // for momentum scrolling on iOS
 }
 
 .container-fluid {
