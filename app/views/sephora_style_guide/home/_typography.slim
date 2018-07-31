@@ -20,21 +20,18 @@ article#fonts
             p.text-avalon-book Demi
           td
             p.text-avalon-book Bold
-        tr
-          td
-            p.font-class .text-avalon-book
-          td
-            p.font-class .text-avalon-demi
-          td
-            p.font-class .text-avalon-bold
-        tr
-          td
-            p.font-class @include font-avalon-book
-          td
-            p.font-class @include font-avalon-demi
-          td
-            p.font-class @include font-avalon-bold
+    pre
+      code.language-css
+        |
+          .text-avalon-book
+          @include font-avalon-book
 
+          .text-avalon-demi
+          @include font-avalon-demi
+
+          .text-avalon-bold
+          @include font-avalon-bold
+    br
     h3.h3 Sephora Serif
     br
     table.font-table.serif
@@ -49,16 +46,14 @@ article#fonts
             p.text-avalon-book Book
           td
             p.text-avalon-book Book Italic
-        tr
-          td
-            p.font-class .text-sephora-book
-          td
-            p.font-class .text-sephora-italic
-        tr
-          td
-            p.font-class @include font-sephora-serif
-          td
-            p.font-class @include font-sephora-serif-italic
+    pre
+      code.language-css
+        |
+          .text-sephora-book
+          @include font-sephora-serif
+
+          .text-sephora-italic
+          @include font-sephora-serif-italic
 
 article#text
   h2.h2 Text Styles
