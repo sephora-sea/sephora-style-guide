@@ -30,29 +30,45 @@ main.container-fluid#app role='main'
   .content
     = render 'sephora_style_guide/home/colors'
     = render 'sephora_style_guide/home/typography'
-    = render 'sephora_style_guide/home/buttons'
+    = render 'sephora_style_guide/home/icons'
     = render 'sephora_style_guide/home/forms'
-    = render 'sephora_style_guide/home/tables'
     = render 'sephora_style_guide/home/grid'
+    = render 'sephora_style_guide/home/alerts'
+    = render 'sephora_style_guide/home/accordion'
+    = render 'sephora_style_guide/home/buttons'
+    = render 'sephora_style_guide/home/breadcrumbs'
+    = render 'sephora_style_guide/home/loaders'
     = render 'sephora_style_guide/home/pagination'
     = render 'sephora_style_guide/home/modals'
-    = render 'sephora_style_guide/home/breadcrumbs'
+    = render 'sephora_style_guide/home/tables'
     = render 'sephora_style_guide/home/tabs'
-    = render 'sephora_style_guide/home/accordion'
-    = render 'sephora_style_guide/home/loaders'
-    = render 'sephora_style_guide/home/alerts'
-    = render 'sephora_style_guide/home/icons'
-    br
     = render 'sephora_style_guide/home/product_card'
     = render 'sephora_style_guide/home/video'
 
 javascript:
-  var elements = [ { name: 'Colors', id: '#colors' }, { name: 'Typography', id: '#typography'}, { name: 'Buttons', id: '#buttons' },
-    { name: 'Input Fields', id: '#forms' }, { name: 'Tables', id: '#tables' }, { name: 'Grid', id: '#grid' } ]
-  var components = [{ name: 'Pagination Buttons', id: '#pagination' }, { name: 'Modals', id: '#modals'}, { name: 'Breadcrumbs', id: '#breadcrumbs' },
-    { name: 'Tabs', id: '#tabs' }, { name: 'Accordion', id: '#accordion' }, { name: 'Loaders', id: '#loaders' }, { name: 'Alerts', id: '#alerts' },
-    { name: 'Sprite Icons', id: '#sprite_icons' }, { name: 'SVG Icons', id: '#svg_icons' } ]
-  var partials = [{ name: 'Product Card', id: '#product-card' }, { name: 'Video', id: '#video' }]
+  var elements = [
+    { name: 'Colour', id: '#colors' },
+    { name: 'Fonts', id: '#fonts'},
+    { name: 'Text Styles', id: '#text'},
+    { name: 'Icons', id: '#icons' },
+    { name: 'Input Fields', id: '#forms' },
+    { name: 'Grid System', id: '#grid' }
+  ]
+  var components = [
+    { name: 'Alerts', id: '#alerts' },
+    { name: 'Accordion', id: '#accordion' },
+    { name: 'Buttons', id: '#buttons' },
+    { name: 'Breadcrumbs', id: '#breadcrumbs' },
+    { name: 'Loaders', id: '#loaders' },
+    { name: 'Pagination Buttons', id: '#pagination' },
+    { name: 'Modals', id: '#modals'},
+    { name: 'Tables', id: '#tables' },
+    { name: 'Tabs', id: '#tabs' }
+  ]
+  var partials = [
+    { name: 'Product Card', id: '#product-card' },
+    { name: 'Video', id: '#video' }
+  ]
   var app = new Vue({
     el: '#app',
     data: {

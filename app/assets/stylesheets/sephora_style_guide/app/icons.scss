@@ -5,6 +5,7 @@
     padding: 0 20px;
     box-sizing: border-box;
     margin-bottom: 20px;
+    white-space: nowrap;  // prevent icon-data from wrapping
 
     &:hover {
       background: $white;
@@ -42,11 +43,8 @@
       line-height: 16px;
       font-size: 13px;
       margin-left: 20px;
-
-      @include media-breakpoint-down(sm) {
-        margin-top: 15px;
-        margin-left: 70px;
-      }
+      width: calc(100% - 60px); // allow icon data to overflow, 60px = 20px helper + 40px icon size
+      white-space: normal;
     }
   }
 }
