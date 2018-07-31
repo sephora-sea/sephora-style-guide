@@ -37,16 +37,29 @@ article#modals
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
   section
-    h3.h3 Code snippet
-    pre.formatted
-      |
-        a.btn(href='#sample-modal' data-toggle='modal') Open Modal
+    h3.h3 Code Snippet
+    pre
+      code.language-pug
+        |
+          a.btn(href='#sample-modal' data-toggle='modal') Open Modal
 
-        .modal.fade#sample-modal(aria-hidden='true' role='dialog' tabindex='-1')
-         .modal-dialog(role='document')
-           .modal-content
-             .modal-header
-               .modal-title This is a normal modal
-               button.close(type='button' data-dismiss='modal' aria-label='Close')
-             .modal-body
-               p Lorem ...
+          .modal.fade#sample-modal(aria-hidden='true' role='dialog' tabindex='-1')
+          .modal-dialog(role='document')
+            .modal-content
+              .modal-header
+                .modal-title This is a normal modal
+                button.close(type='button' data-dismiss='modal' aria-label='Close')
+              .modal-body
+                p Lorem ...
+    br
+    table.table
+      thead
+        tr
+          th Class Name
+          th Options
+          th Description
+      tbody.text-center
+        tr
+          td .modal-xx
+          td sm, lg
+          td Controls the size of the modal. Add this class to the .modal-dialog element

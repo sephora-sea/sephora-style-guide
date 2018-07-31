@@ -1,110 +1,96 @@
-article#typography
-  h2.h2 Typography
-
+article#fonts
+  h2.h2 Fonts
   section
-    h3.h3 Preview Settings
-
-    label Text
+    h3.h3 Avalon
     br
-    input type='text' v-model='text'
-
-    br
-
-    label Font Size
-    br
-    input type='number' v-model='fontSize'
-
-  section
-    h3.h3 Fonts
-
-    table
+    table.font-table
       tbody
         tr
           td
-            p.text-sephora-book style='font-size: 18px;' Sephora Serif Book
+            p.text-avalon-book.font-text Aa
           td
-            p.text-sephora-book v-bind:style="{fontSize: fontSize + 'px'}"
-              ' {{ text }}
+            p.text-avalon-demi.font-text Aa
+          td
+            p.text-avalon-bold.font-text Aa
+          td
         tr
           td
-            p.text-sephora-italic style='font-size: 18px;' Sephora Serif Book Italic
+            p.text-avalon-book Book
           td
-            p.text-sephora-italic v-bind:style="{fontSize: fontSize + 'px'}"
-              ' {{ text }}
-        tr
+            p.text-avalon-book Demi
           td
-            p.text-avalon-bold style='font-size: 18px;' Avalon Bold
-          td
-            p.text-avalon-bold v-bind:style="{fontSize: fontSize + 'px'}"
-              ' {{ text }}
-        tr
-          td
-            p.text-avalon-demi style='font-size: 18px;' Avalon Demi
-          td
-            p.text-avalon-demi v-bind:style="{fontSize: fontSize + 'px'}"
-              ' {{ text }}
-        tr
-          td
-            p.text-avalon-book style='font-size: 18px;' Avalon Book
-          td
-            p.text-avalon-book v-bind:style="{fontSize: fontSize + 'px'}"
-              ' {{ text }}
+            p.text-avalon-book Bold
+    pre
+      code.language-css
+        |
+          .text-avalon-book
+          @include font-avalon-book
 
-  section
-    h3.h3 Headings
+          .text-avalon-demi
+          @include font-avalon-demi
 
-    table
+          .text-avalon-bold
+          @include font-avalon-bold
+    br
+    h3.h3 Sephora Serif
+    br
+    table.font-table.serif
       tbody
         tr
           td
-            p.page-title .page-title
+            p.text-sephora-book.font-text Aa
           td
-            p.page-title
-              ' {{ text }}
+            p.text-sephora-italic.font-text Aa
         tr
           td
-            p.page-title-italic .page-title-italic
+            p.text-avalon-book Book
           td
-            p.page-title-italic
-              ' {{ text }}
-        tr
-          td
-            h1.h1 .h1
-          td
-            h1.h1
-              ' {{ text }}
-        tr
-          td
-            h2.h2 .h2
-          td
-            h2.h2
-              ' {{ text }}
-        tr
-          td
-            h3.h3 .h3
-          td
-            h3.h3
-              ' {{ text }}
-        tr
-          td
-            h4.h4 .h4
-          td
-            h4.h4
-              ' {{ text }}
-        tr
-          td
-            h5.h5 .h5
-          td
-            h5.h5
-              ' {{ text }}
-        tr
-          td
-            p Paragraph
-          td
-            p
-              ' {{ text }}
+            p.text-avalon-book Book Italic
+    pre
+      code.language-css
+        |
+          .text-sephora-book
+          @include font-sephora-serif
+
+          .text-sephora-italic
+          @include font-sephora-serif-italic
+
+article#text
+  h2.h2 Text Styles
 
   section
-    h3.h3 Rule Headers
+    h3.h3 .page-title
+    .page-title
+      ' {{ text }}
+
+    h3.h3 .page-title-italic
+    .page-title-italic
+      ' {{ text }}
+
+    h3.h3 .h1
+    .h1
+      ' {{ text }}
+
+    h3.h3 .h2
+    .h2
+      ' {{ text }}
+
+    h3.h3 .h3
+    .h3
+      ' {{ text }}
+
+    h3.h3 .h4
+    .h4
+      ' {{ text }}
+
+    h3.h3 .h5
+    .h5
+      ' {{ text }}
+
+    h3.h3 p
+    p
+      ' {{ text }}
+
+    h3.h3 .rule-header
     .rule-header
       ' {{ text }}

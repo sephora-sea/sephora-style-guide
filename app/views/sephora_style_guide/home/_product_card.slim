@@ -103,3 +103,60 @@ article#product-card
               .product-card-rating.rating-container
                 .rateit data-rateit-resetable='false' data-rateit-readonly='true' data-rateit-starwidth='14.65' data-rateit-starheight='12' data-rateit-value='3.5' data-rateit-ispreset='true'
               .product-card-variants-count 2 sizes
+
+  section
+    h3.h3 Code Snippet
+
+    h4.h4 Pug
+    pre
+      code.language-pug
+        |
+          .col-6.col-md-3
+            .product-card(name='product' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard')
+              a.product-card-image-container(href='#product-link')
+                  .out-of-stock(v-if='isOutOfStock') Out of stock
+                  img.product-card-image(src='examples/product1-400x400.png')
+              .product-card-heart-filled(v-if='productIsWishListed' @click='setWishList')
+              .product-card-heart(v-if='!productIsWishListed' @click='setWishList')
+              .product-card-actions(v-show='showProductActions')
+                  button.btn.btn-sm.btn-block.btn-primary.product-card-add-to-bag Add to Bag
+                  .product-card-variants-carousel
+                  i.carousel-arrow-left.arrow-left
+                  i.carousel-arrow-right.arrow-right
+                  p.carousel-more-variants +2
+                  .product-card-variants.variants-overflow
+                  span.variant-container(name='variant1' @click='selectVariant')
+                      img.product-variant.active(src='examples/variant1.jpg')
+                  span.variant-container(name='variant2' @click='selectVariant')
+                      i.out-of-stock.icon-sm
+                      img.product-variant(src='examples/variant2.jpg')
+              a.product-card-description(href='#product-link')
+                  p.product-card-label
+                    span.product-card-label-primary New
+                    span  | Limited Edition
+                  p.product-card-brand Clinique
+                  p.product-card-product Chubby Stick Moisturizing Lip Colour Balm
+                  p.product-price $26.00
+                  .product-card-rating.rating-container
+                    .rateit(data-rateit-resetable='false' data-rateit-readonly='true' data-rateit-starwidth='14.65' data-rateit-starheight='12' data-rateit-value='1' data-rateit-ispreset='true')
+                  .product-card-variants-count 13 shades
+
+    h4.h4 JavaScript
+    pre
+      code.language-js
+        |
+          mouseoverProductCard () {
+            this.showProductActions = true
+          },
+
+          mouseleaveProductCard () {
+            this.showProductActions = false
+          },
+
+          setWishList(e) {
+            const targetClass = e.target.className;
+            if (targetClass === 'product-card-heart' || targetClass === 'product-card-heart-filled') {
+              this.productIsWishListed = !this.productIsWishListed;
+            }
+          }
+

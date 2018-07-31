@@ -13,7 +13,11 @@ section {
   margin-top: 10px;
 
   > h3 {
-    color: $brand-primary;
+    color: $grey-mid;
     margin-bottom: 10px;
+  }
+
+  > h4 {
+    color: $grey-mid;
   }
 }

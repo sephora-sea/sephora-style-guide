@@ -22,7 +22,7 @@ article#forms
       label.control-label for='text1' Prefilled (Editable)
       input#text1.form-control type='text' value='Flora Wong'
       .input-success
-      
+
     .form-group.floating-labels.non-editable-verification
       label.control-label for='text2' Verified (Readonly Field)
       input#text2.form-control type='text' value='Flora Wong' readonly=true
@@ -35,6 +35,43 @@ article#forms
     .form-group.floating-labels
       label.control-label for='email5' Email (Disabled Field)
       input#email5.form-control type='email' value='testemail' disabled=true
+
+    br
+    h4.h4 Pug
+    pre
+      code.language-pug
+        |
+          .form-group.floating-labels
+            label.control-label(for='email') Email (Empty Field)
+            input#email.form-control(type='email')
+
+          .form-group.floating-labels
+            label.control-label(for='email2') Email (Filled Field)
+            input#email2.form-control(type='email' value='test@email.com')
+
+          .form-group.has-error.floating-labels
+            label.control-label(for='email3') Email (Field Error)
+            input#email3.form-control(type='email' value='testemail')
+            .form-control-feedback= 'Error: Email is incorrect'
+            .input-error
+
+          .form-group.floating-labels.editable-verification
+            label.control-label(for='text1') Prefilled (Editable)
+            input#text1.form-control(type='text' value='Flora Wong')
+            .input-success
+
+          .form-group.floating-labels.non-editable-verification
+            label.control-label(for='text2') Verified (Readonly Field)
+            input#text2.form-control(type='text' value='Flora Wong' readonly=true)
+            .input-success
+
+          .form-group.floating-labels
+            label.control-label(for='email4') Email (Readonly Field)
+            input#email4.form-control(type='email' value='testemail' readonly=true)
+
+          .form-group.floating-labels
+            label.control-label(for='email5') Email (Disabled Field)
+            input#email5.form-control(type='email' value='testemail' disabled=true)
 
   section
     h3.h3 Input Types
@@ -77,7 +114,70 @@ article#forms
       .form-group.floating-labels#year-group
         label.control-label for='year' YYYY
         input#year.form-control type='number' max=2999 min=1899
-        
+
+    br
+    h4.h4 Pug
+    pre
+      code.language-pug
+        |
+          .form-group.floating-labels.textarea
+            label.control-label(for='textarea1') Textarea
+            textarea#textarea1.form-control
+
+          .form-group.floating-labels.textarea.filled.focused
+            label.control-label(for='textarea') Textarea
+            textarea#textarea.form-control Change Me
+          .form-group.floating-labels.filled.focused
+            label.control-label(for='text') Text Input
+            input#text.form-control(type='text' value='Text Input')
+          .form-group.floating-labels.filled.focused
+            label.control-label(for='url') URL Input
+            input#url.form-control(type='url' value='https://url.input')
+          .form-group.floating-labels.filled.focused
+            label.control-label(for='telephone') Telephone Input
+            input#telephone.form-control(type='tel' value='+65 9123 5678')
+          .form-group.floating-labels.filled.focused
+            label.control-label(for='password') Password Input
+            input#password.form-control(type='password' value='Password Input')
+          .form-group.floating-labels.filled.focused
+            label.control-label for='number' Number Input
+            input#number.form-control(type='number' value='123456')
+          .form-group.floating-labels.filled.focused
+            label.control-label(for='credit-card') Credit Card
+            input#credit-card.form-control(type='text' value='4111111111111111' maxlength=19)
+          .clearfix
+            label.control-title = 'Date of Birth'
+            .form-group.floating-labels#date-group
+              label.control-label(for='date') DD
+              input#date.form-control(type='number' max=31 min=1 maxlength=2)
+            .form-group.floating-labels#month-group
+              label.control-label(for='month') MM
+              input#month.form-control(type='number' max=12 min=1 maxlength=2)
+            .form-group.floating-labels#year-group
+              label.control-label(for='year') YYYY
+              input#year.form-control(type='number' max=2999 min=1899)
+    br
+    h4.h4 CSS
+    pre
+      code.language-css
+        |
+          // Required CSS for textareas to look as per the style guide
+          .form-group.floating-labels.textarea {
+            @include textarea(90px);
+          }
+
+          // Required CSS for DOB fields to look as per the style guide
+          #date-group, #month-group {
+            width: 50px;
+            float: left;
+            margin-right: 9px;
+          }
+
+          #year-group {
+            width: 100px;
+            float: left;
+          }
+
   section
     h3.h3 Checkboxes
     .row
@@ -88,7 +188,7 @@ article#forms
             ' Default 1
       .col-4
         .form-check.disabled
-          label.form-check-label 
+          label.form-check-label
             span.form-check-input.checkbox
             ' Disabled
       .col-4
@@ -101,8 +201,34 @@ article#forms
         .form-check
           label.form-check-label @click='toggleCheckboxTwo'
             span.form-check-input.checkbox :class='{ "checked" : isCheckboxTwoChecked }'
-            ' Default 2 
-          
+            ' Default 2
+
+    br
+    h4.h4 Pug
+    pre
+      code.language-pug
+        |
+          .row
+            .col-4
+              .form-check
+                label.form-check-label(@click='toggleCheckbox')
+                  span.form-check-input.checkbox(:class='{ "checked" : isCheckboxChecked }') Default 1
+            .col-4
+              .form-check.disabled
+                label.form-check-label
+                  span.form-check-input.checkbox Disabled
+            .col-4
+              .form-check.disabled
+                label.form-check-label
+                  span.form-check-input.checkbox.checked Disabled Checked
+    br
+    h4.h4 JavaScript
+    pre
+      code.language-javascript
+        |
+          toggleCheckbox () {
+            this.isCheckboxChecked = !this.isCheckboxChecked
+          }
     br
     h3.h3 Radio
     .row
@@ -123,11 +249,36 @@ article#forms
             ' Selected
     .row
       .col-4
-        .form-check 
+        .form-check
           label.form-check-label @click='toggleRadioTwo'
             span.form-check-input.radio :class='{ "selected" : isRadioTwoSelected }'
             ' Default 2
-            
+    br
+    h4.h4 Pug
+    pre
+      code.language-pug
+        |
+          .row
+            .col-4
+              .form-check
+                label.form-check-label(@click='toggleRadio')
+                  span.form-check-input.radio(:class='{ "selected" : isRadioSelected }') Default 1
+            .col-4
+              .form-check.disabled
+                label.form-check-label
+                  span.form-check-input.radio Disabled
+            .col-4
+              .form-check.disabled
+                label.form-check-label
+                  span.form-check-input.radio.checked Selected
+    br
+    h4.h4 JavaScript
+    pre
+      code.language-javascript
+        |
+          toggleRadio () {
+            this.isRadioSelected = !this.isRadioSelected
+          }
     br
     h3.h3 Select
     .form-group
@@ -137,3 +288,14 @@ article#forms
         option.form-option :value='2' 2
         option.form-option :value='3' 3
       i.dropdown-arrow
+    br
+    pre
+      code.language-pug
+        |
+          .form-group
+            label.control-label-inline Select:
+            select.form-control
+              option.form-option.selected(:value='1') 1
+              option.form-option(:value='2') 2
+              option.form-option(:value='3') 3
+            i.dropdown-arrow
