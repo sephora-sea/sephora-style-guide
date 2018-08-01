@@ -7,67 +7,77 @@ article#forms
     .form-group.floating-labels
       label.control-label for='email' Email (Empty Field)
       input#email.form-control type='email'
+    pre
+      code.language-pug
+        |
+          .form-group.floating-labels
+            label.control-label for='email' Email (Empty Field)
+            input#email.form-control type='email'
 
     .form-group.floating-labels
       label.control-label for='email2' Email (Filled Field)
       input#email2.form-control type='email' value='test@email.com'
+    pre
+      code.language-pug
+        |
+          .form-group.floating-labels
+            label.control-label(for='email2') Email (Filled Field)
+            input#email2.form-control(type='email' value='test@email.com')
 
     .form-group.has-error.floating-labels
       label.control-label for='email3' Email (Field Error)
       input#email3.form-control type='email' value='testemail'
       .form-control-feedback= 'Error: Email is incorrect'
       .input-error
-
-    .form-group.floating-labels.editable-verification
-      label.control-label for='text1' Prefilled (Editable)
-      input#text1.form-control type='text' value='Flora Wong'
-      .input-success
-
-    .form-group.floating-labels.non-editable-verification
-      label.control-label for='text2' Verified (Readonly Field)
-      input#text2.form-control type='text' value='Flora Wong' readonly=true
-      .input-success
-
-    .form-group.floating-labels
-      label.control-label for='email4' Email (Readonly Field)
-      input#email4.form-control type='email' value='testemail' readonly=true
-
-    .form-group.floating-labels
-      label.control-label for='email5' Email (Disabled Field)
-      input#email5.form-control type='email' value='testemail' disabled=true
-
-    h4.h4.code-heading Pug
     pre
       code.language-pug
         |
-          .form-group.floating-labels
-            label.control-label(for='email') Email (Empty Field)
-            input#email.form-control(type='email')
-
-          .form-group.floating-labels
-            label.control-label(for='email2') Email (Filled Field)
-            input#email2.form-control(type='email' value='test@email.com')
-
           .form-group.has-error.floating-labels
             label.control-label(for='email3') Email (Field Error)
             input#email3.form-control(type='email' value='testemail')
             .form-control-feedback= 'Error: Email is incorrect'
             .input-error
 
+    .form-group.floating-labels.editable-verification
+      label.control-label for='text1' Prefilled (Editable)
+      input#text1.form-control type='text' value='Flora Wong'
+      .input-success
+    pre
+      code.language-pug
+        |
           .form-group.floating-labels.editable-verification
             label.control-label(for='text1') Prefilled (Editable)
             input#text1.form-control(type='text' value='Flora Wong')
             .input-success
 
+    .form-group.floating-labels.non-editable-verification
+      label.control-label for='text2' Verified (Readonly Field)
+      input#text2.form-control type='text' value='Flora Wong' readonly=true
+      .input-success
+    pre
+      code.language-pug
+        |
           .form-group.floating-labels.non-editable-verification
             label.control-label(for='text2') Verified (Readonly Field)
             input#text2.form-control(type='text' value='Flora Wong' readonly=true)
             .input-success
 
+    .form-group.floating-labels
+      label.control-label for='email4' Email (Readonly Field)
+      input#email4.form-control type='email' value='testemail' readonly=true
+    pre
+      code.language-pug
+        |
           .form-group.floating-labels
             label.control-label(for='email4') Email (Readonly Field)
             input#email4.form-control(type='email' value='testemail' readonly=true)
 
+    .form-group.floating-labels
+      label.control-label for='email5' Email (Disabled Field)
+      input#email5.form-control type='email' value='testemail' disabled=true
+    pre
+      code.language-pug
+        |
           .form-group.floating-labels
             label.control-label(for='email5') Email (Disabled Field)
             input#email5.form-control(type='email' value='testemail' disabled=true)
@@ -77,30 +87,86 @@ article#forms
     .form-group.floating-labels.textarea
       label.control-label for='textarea1' Textarea
       textarea#textarea1.form-control
+    pre
+      code.language-pug
+        |
+          .form-group.floating-labels.textarea
+            label.control-label(for='textarea1') Textarea
+            textarea#textarea1.form-control
+    h4.h4.code-heading CSS
+    pre
+      code.language-css
+        |
+          // Required CSS for textareas to look as per the style guide
+          .form-group.floating-labels.textarea {
+            @include textarea(90px);
+          }
 
     .form-group.floating-labels.textarea
       label.control-label for='textarea' Textarea
       textarea#textarea.form-control
         = 'Now led tedious shy lasting females off. Dashwood marianne in of entrance be on wondered possible building. Wondered sociable he carriage in speedily margaret. Up devonshire of he thoroughly insensible alteration. An mr settling occasion insisted distance ladyship so. Not attention say frankness intention out dashwoods now curiosity. Stronger ecstatic as no judgment daughter speedily thoughts. Worse downs nor might she court did nay forth these. Now led tedious shy lasting females off. Dashwood marianne in of entrance be on wondered possible building. Wondered sociable he carriage in speedily margaret. Up devonshire of he thoroughly insensible alteration. An mr settling occasion insisted distance ladyship so. Not attention say frankness intention out dashwoods now curiosity. Stronger ecstatic as no judgment daughter speedily thoughts. Worse downs nor might she court did nay forth these.'
+    pre
+      code.language-pug
+        |
+          .form-group.floating-labels.textarea.filled.focused
+            label.control-label(for='textarea') Textarea
+            textarea#textarea.form-control Change Me
 
     .form-group.floating-labels
       label.control-label for='text' Text Input
       input#text.form-control type='text' value='Text Input'
+    pre
+      code.language-pug
+        |
+          .form-group.floating-labels.filled.focused
+            label.control-label(for='text') Text Input
+            input#text.form-control(type='text' value='Text Input')
     .form-group.floating-labels
       label.control-label for='url' URL Input
       input#url.form-control type='url' value='https://url.input'
+    pre
+      code.language-pug
+        |
+          .form-group.floating-labels.filled.focused
+            label.control-label(for='url') URL Input
+            input#url.form-control(type='url' value='https://url.input')
     .form-group.floating-labels
       label.control-label for='telephone' Telephone Input
       input#telephone.form-control type='tel' value='+65 9123 5678'
+    pre
+      code.language-pug
+        |
+          .form-group.floating-labels.filled.focused
+            label.control-label(for='telephone') Telephone Input
+            input#telephone.form-control(type='tel' value='+65 9123 5678')
     .form-group.floating-labels
       label.control-label for='password' Password Input
       input#password.form-control type='password' value='Password Input'
+    pre
+      code.language-pug
+        |
+          .form-group.floating-labels.filled.focused
+            label.control-label(for='password') Password Input
+            input#password.form-control(type='password' value='Password Input')
     .form-group.floating-labels
       label.control-label for='number' Number Input
       input#number.form-control type='number' value='123456'
+    pre
+      code.language-pug
+        |
+          .form-group.floating-labels.filled.focused
+            label.control-label for='number' Number Input
+            input#number.form-control(type='number' value='123456')
     .form-group.floating-labels
       label.control-label for='credit-card' Credit Card
       input#credit-card.form-control type='text' value='4111111111111111' maxlength=19
+    pre
+      code.language-pug
+        |
+          .form-group.floating-labels.filled.focused
+            label.control-label(for='credit-card') Credit Card
+            input#credit-card.form-control(type='text' value='4111111111111111' maxlength=19)
 
     .clearfix
       label.control-title = 'Date of Birth'
@@ -113,36 +179,9 @@ article#forms
       .form-group.floating-labels#year-group
         label.control-label for='year' YYYY
         input#year.form-control type='number' max=2999 min=1899
-
-    h4.h4.code-heading Pug
     pre
       code.language-pug
         |
-          .form-group.floating-labels.textarea
-            label.control-label(for='textarea1') Textarea
-            textarea#textarea1.form-control
-
-          .form-group.floating-labels.textarea.filled.focused
-            label.control-label(for='textarea') Textarea
-            textarea#textarea.form-control Change Me
-          .form-group.floating-labels.filled.focused
-            label.control-label(for='text') Text Input
-            input#text.form-control(type='text' value='Text Input')
-          .form-group.floating-labels.filled.focused
-            label.control-label(for='url') URL Input
-            input#url.form-control(type='url' value='https://url.input')
-          .form-group.floating-labels.filled.focused
-            label.control-label(for='telephone') Telephone Input
-            input#telephone.form-control(type='tel' value='+65 9123 5678')
-          .form-group.floating-labels.filled.focused
-            label.control-label(for='password') Password Input
-            input#password.form-control(type='password' value='Password Input')
-          .form-group.floating-labels.filled.focused
-            label.control-label for='number' Number Input
-            input#number.form-control(type='number' value='123456')
-          .form-group.floating-labels.filled.focused
-            label.control-label(for='credit-card') Credit Card
-            input#credit-card.form-control(type='text' value='4111111111111111' maxlength=19)
           .clearfix
             label.control-title = 'Date of Birth'
             .form-group.floating-labels#date-group
@@ -154,16 +193,10 @@ article#forms
             .form-group.floating-labels#year-group
               label.control-label(for='year') YYYY
               input#year.form-control(type='number' max=2999 min=1899)
-
     h4.h4.code-heading CSS
     pre
       code.language-css
         |
-          // Required CSS for textareas to look as per the style guide
-          .form-group.floating-labels.textarea {
-            @include textarea(90px);
-          }
-
           // Required CSS for DOB fields to look as per the style guide
           #date-group, #month-group {
             width: 50px;
