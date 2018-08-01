@@ -4,7 +4,7 @@ article#product-card
   section
     .container
       .row
-        .col-6.col-md-3.offset-md-3
+        .col-6.col-md-3
           .product-card name='product1' @mouseover='mouseoverProductCard' @mouseleave='mouseleaveProductCard'
             = link_to '#product-link', class: 'product-card-image-container' do
               .out-of-stock v-if='isOutOfStock' Out of stock
