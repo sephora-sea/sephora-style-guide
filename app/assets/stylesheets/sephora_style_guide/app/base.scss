@@ -22,6 +22,14 @@ article {
   margin: 0 auto;
 
   > h1 {
+
+    &.first {
+      padding-top: 0;
+      border-top: none;
+    }
+
+    padding-top: 19px;
+    border-top: 1px solid $grey-light;
     font-size: 36px;
   }
 
@@ -36,18 +44,29 @@ article {
 section {
   margin-top: 10px;
 
+  > h2,
   > h3 {
-    color: $grey-mid;
+    color: $grey-dark;
     margin-bottom: 10px;
+    text-transform: uppercase;
+    margin-top: 25px;
+
+    &.class-name {
+      text-transform: none;
+    }
   }
 
   > h4 {
-    color: $grey-mid;
+    color: $grey;
+
+    &.code-heading {
+      margin-top: 25px;
+    }
   }
 }
 
 pre {
-  white-space: pre-wrap;
+  max-height: 180px;
 }
 
 .formatted {
@@ -146,6 +165,7 @@ pre {
   letter-spacing: 0.5px;
   font-size: 14px;
   margin-left: 25px;
+  margin-top: 15px;
 }
 
 .topbar {
@@ -183,4 +203,8 @@ pre {
 
 [v-cloak] {
   display: none;
+}
+
+.code-toolbar {
+  margin-bottom: 40px;
 }
