@@ -44,6 +44,7 @@ article {
 section {
   margin-top: 10px;
 
+  > h2,
   > h3 {
     color: $grey-dark;
     margin-bottom: 10px;
@@ -65,7 +66,6 @@ section {
 }
 
 pre {
-  white-space: pre-wrap;
   max-height: 180px;
 }
 
@@ -206,5 +206,5 @@ pre {
 }
 
 .code-toolbar {
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
