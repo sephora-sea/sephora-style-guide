@@ -1,15 +1,4 @@
 // https://developers.google.com/youtube/iframe_api_reference
-
-$(document).ready(function() {
-  // Inject YouTube API script
-  /**
-    var tag = document.createElement('script');
-    tag.src = '//www.youtube.com/player_api';
-    var firstScriptTag = document.body.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-  **/
-});
-
 // global variable for the players
 var players = [];
 
@@ -57,6 +46,21 @@ function onPlayerReady() {
     for (var i in players) {
       if (players[i].a.id === currentVideoId) {
         players[i].playVideo();
+      }
+    }
+  });
+
+  $(document).on('keyup', '.modal[role="dialog"]', function(e) {
+    // if key pressed is not the escape key
+    if (e.keyCode !== 27) {
+      return
+    }
+
+    var currentVideoId = $(this).find('iframe').attr('id');
+
+    for (var i in players) {
+      if (players[i].a.id === currentVideoId) {
+        players[i].pauseVideo();
       }
     }
   });
