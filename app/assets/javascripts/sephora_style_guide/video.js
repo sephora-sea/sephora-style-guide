@@ -18,7 +18,7 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerReady() {
   // bind events
-  $(document).on('click', '.video-link', function(e) {
+  $(document).on('click', '.video-link', function() {
     var currentVideoId = $(this).attr('data-video');
 
     for (var i in players) {
@@ -28,7 +28,7 @@ function onPlayerReady() {
     }
   });
 
-  $('.modal[role="dialog"]').on('hide.bs.modal', function(e) {
+  $('.modal[role="dialog"]').on('hide.bs.modal', function() {
     var currentVideoId = $(this).find('iframe').attr('id');
 
     for (var i in players) {
