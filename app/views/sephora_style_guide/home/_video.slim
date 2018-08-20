@@ -9,7 +9,7 @@ article#video
           .media-container-lg
             .video-panel
               iframe width='100%' height='100%' src='//www.youtube.com/embed/RvY-YNMp-1w?rel=0&amp;autoplay=1&amp;loop=1&amp;mute=1&amp;playlist=RvY-YNMp-1w&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
-              = link_to '#lg-video', data: { toggle: 'modal', video: 'lgVideo' }, class: 'video-link' do
+              = link_to '#lg-video', data: { toggle: 'modal', video: 'lgVideo' }, class: 'video-link js-video-link' do
                 .video-image-overlay
                 = image_tag '//img.youtube.com/vi/RvY-YNMp-1w/maxresdefault.jpg', class: 'video-image-lg'
                 .video-play-icon
@@ -17,7 +17,7 @@ article#video
               span.video-text-container
                 p.video-text Discover masks that hydrate, brighten and soothe your skin
 
-          .modal.fade.media-modal#lg-video aria-hidden='true' role='dialog' tabindex='-1'
+          .modal.fade.media-modal.js-video-modal#lg-video aria-hidden='true' role='dialog' tabindex='-1'
             .modal-dialog role='document'
               .modal-content
                 .modal-header
@@ -38,7 +38,7 @@ article#video
                 .media-container-lg
                   .video-panel
                     iframe(width='100%' height='100%' src='//www.youtube.com/embed/VIDEOID?rel=0&amp;autoplay=1&amp;loop=1&amp;mute=1&amp;playlist=RvY-YNMp-1w&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen)
-                    a.video-link(href='#lg-video' data-toggle='modal' data-video='lgVideo')
+                    a.video-link.js-video-link(href='#lg-video' data-toggle='modal' data-video='lgVideo')
                       .video-image-overlay
                       img.video-image-lg(src='//img.youtube.com/vi/VIDEOID/maxresdefault.jpg')
                       .video-play-icon
@@ -46,7 +46,7 @@ article#video
                     span.video-text-container
                       p.video-text Change me and VIDEOID
 
-                .modal.fade.media-modal#lg-video(aria-hidden='true' role='dialog' tabindex='-1')
+                .modal.fade.media-modal.js-video-modal#lg-video(aria-hidden='true' role='dialog' tabindex='-1')
                   .modal-dialog(role='document')
                     .modal-content
                       .modal-header
@@ -60,22 +60,22 @@ article#video
   section
     h3.h3 Regular Thumbnail (Learn More)
     .media-container
-      = link_to '#md-video-one', data: { toggle: 'modal', video: 'mdVideoOne' }, class: 'video-link' do
+      = link_to '#md-video-one', data: { toggle: 'modal', video: 'mdVideoOne' }, class: 'video-link js-video-link' do
         .video-image-overlay
         = image_tag '//img.youtube.com/vi/DETIxzEf5Sk/maxresdefault.jpg', class: 'video-image'
         .video-play-icon
-      = link_to '#md-video-one', data: { toggle: 'modal', video: 'mdVideoOne' }, class: 'video-link' do
+      = link_to '#md-video-one', data: { toggle: 'modal', video: 'mdVideoOne' }, class: 'video-link js-video-link' do
         p.video-text Your Beauty Questions Answered ft. Sephora PRO Jeffrey | Sephora
 
     .media-container
-      = link_to '#md-video-two', data: { toggle: 'modal', video: 'mdVideoTwo' }, class: 'video-link' do
+      = link_to '#md-video-two', data: { toggle: 'modal', video: 'mdVideoTwo' }, class: 'video-link js-video-link' do
         .video-image-overlay
         = image_tag '//img.youtube.com/vi/4h02DfuFBpo/maxresdefault.jpg', class: 'video-image'
         .video-play-icon
-      = link_to '#md-video-two', data: { toggle: 'modal', video: 'mdVideoTwo' }, class: 'video-link' do
+      = link_to '#md-video-two', data: { toggle: 'modal', video: 'mdVideoTwo' }, class: 'video-link js-video-link' do
         p.video-text What’s New In Lips | Sephora
 
-    .modal.fade.media-modal#md-video-one aria-hidden='true' role='dialog' tabindex='-1'
+    .modal.fade.media-modal.js-video-modal#md-video-one aria-hidden='true' role='dialog' tabindex='-1'
       .modal-dialog role='document'
         .modal-content
           .modal-header
@@ -85,7 +85,7 @@ article#video
             .modal-video
               iframe#mdVideoOne width="560" height="315" src='//www.youtube.com/embed/DETIxzEf5Sk?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
 
-    .modal.fade.media-modal#md-video-two aria-hidden='true' role='dialog' tabindex='-1'
+    .modal.fade.media-modal.js-video-modal#md-video-two aria-hidden='true' role='dialog' tabindex='-1'
       .modal-dialog role='document'
         .modal-content
           .modal-header
@@ -105,10 +105,10 @@ article#video
               .video-image-overlay
               img.video-image(src='//img.youtube.com/vi/VIDEOID/maxresdefault.jpg')
               .video-play-icon
-            a.video-link(href='#md-video-one' data-toggle='modal' data-video='mdVideoOne')
+            a.video-link.js-video-link(href='#md-video-one' data-toggle='modal' data-video='mdVideoOne')
               p.video-text Change me and VIDEOID
 
-          .modal.fade.media-modal#md-video-one(aria-hidden='true' role='dialog' tabindex='-1')
+          .modal.fade.media-modal.js-video-modal#md-video-one(aria-hidden='true' role='dialog' tabindex='-1')
             .modal-dialog role='document'
               .modal-content
                 .modal-header
@@ -122,18 +122,18 @@ article#video
   section
     h3.h3 Small Thumbnail (Product Show)
     .media-container-sm
-      = link_to '#sm-video-one', data: { toggle: 'modal', video: 'smVideoOne' }, class: 'video-link' do
+      = link_to '#sm-video-one', data: { toggle: 'modal', video: 'smVideoOne' }, class: 'video-link js-video-link' do
         .video-image-overlay
         = image_tag '//img.youtube.com/vi/DETIxzEf5Sk/maxresdefault.jpg', class: 'video-image-sm'
         .video-play-icon
 
     .media-container-sm
-      = link_to '#sm-video-two', data: { toggle: 'modal', video: 'smVideoTwo' }, class: 'video-link' do
+      = link_to '#sm-video-two', data: { toggle: 'modal', video: 'smVideoTwo' }, class: 'video-link js-video-link' do
         .video-image-overlay
         = image_tag '//img.youtube.com/vi/4h02DfuFBpo/maxresdefault.jpg', class: 'video-image-sm'
         .video-play-icon
 
-    .modal.fade.media-modal#sm-video-one aria-hidden='true' role='dialog' tabindex='-1'
+    .modal.fade.media-modal.js-video-modal#sm-video-one aria-hidden='true' role='dialog' tabindex='-1'
       .modal-dialog role='document'
         .modal-content
           .modal-header
@@ -143,7 +143,7 @@ article#video
             .modal-video
               iframe#smVideoOne width='100%' height='100%' src='//www.youtube.com/embed/DETIxzEf5Sk?rel=0&amp;enablejsapi=1&amp;modestbranding=1' frameborder='0' allowfullscreen
 
-    .modal.fade.media-modal#sm-video-two aria-hidden='true' role='dialog' tabindex='-1'
+    .modal.fade.media-modal.js-video-modal#sm-video-two aria-hidden='true' role='dialog' tabindex='-1'
       .modal-dialog role='document'
         .modal-content
           .modal-header
@@ -159,12 +159,12 @@ article#video
       code.language-pug
         |
           .media-container-sm
-            a.video-link(href='#sm-video-one' data-toggle='modal' data-video='smVideoOne')
+            a.video-link.js-video-link(href='#sm-video-one' data-toggle='modal' data-video='smVideoOne')
               .video-image-overlay
               img.video-image-sm(src='//img.youtube.com/vi/VIDEOID/maxresdefault.jpg')
               .video-play-icon
 
-          .modal.fade.media-modal#sm-video-one(aria-hidden='true' role='dialog' tabindex='-1')
+          .modal.fade.media-modal.js-video-modal#sm-video-one(aria-hidden='true' role='dialog' tabindex='-1')
             .modal-dialog(role='document')
               .modal-content
                 .modal-header
