@@ -1,15 +1,4 @@
 // https://developers.google.com/youtube/iframe_api_reference
-
-$(document).ready(function() {
-  // Inject YouTube API script
-  /**
-    var tag = document.createElement('script');
-    tag.src = '//www.youtube.com/player_api';
-    var firstScriptTag = document.body.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-  **/
-});
-
 // global variable for the players
 var players = [];
 
@@ -29,34 +18,22 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerReady() {
   // bind events
-  $(document).on('click', '.close', function() {
-    var currentVideoId = $(this).closest('.modal-header').siblings().find('iframe').attr('id');
-
-    for (var i in players) {
-      if (players[i].a.id === currentVideoId) {
-        players[i].pauseVideo();
-      }
-    }
-  });
-
-  $(document).on('click', '.modal[role="dialog"]', function() {
-    var currentVideoId = $(this).find('iframe').attr('id');
-
-    for (var i in players) {
-      if (players[i].a.id === currentVideoId) {
-        players[i].pauseVideo();
-      }
-    }
-  }).on('click', '.modal-dialog[role="document"]', function(e) {
-    e.stopPropagation();
-  });
-
-  $(document).on('click', '.video-link', function(e) {
+  $(document).on('click', '.js-video-link', function() {
     var currentVideoId = $(this).attr('data-video');
 
     for (var i in players) {
       if (players[i].a.id === currentVideoId) {
         players[i].playVideo();
+      }
+    }
+  });
+
+  $('.js-video-modal').on('hide.bs.modal', function() {
+    var currentVideoId = $(this).find('iframe').attr('id');
+
+    for (var i in players) {
+      if (players[i].a.id === currentVideoId) {
+        players[i].pauseVideo();
       }
     }
   });
