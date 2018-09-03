@@ -35,13 +35,13 @@
 
   .card-header {
     cursor: pointer;
-    padding-top: 18px;
-    padding-bottom: 17px;
+    padding-top: 15px;
+    padding-bottom: 10px;
   }
 
   .card-block {
     padding-top: 0;
-    padding-bottom: 17px;
+    padding-bottom: 15px;
   }
 
   ul {
@@ -54,7 +54,7 @@
 
   li {
     list-style: none;
-    line-height: 34px;
+    line-height: 25px;
 
     a:hover {
       .badge {
