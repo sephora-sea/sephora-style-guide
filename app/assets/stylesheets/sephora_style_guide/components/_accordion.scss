@@ -35,8 +35,8 @@
 
   .card-header {
     cursor: pointer;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 12px;
+    padding-bottom: 8px;
   }
 
   .card-block {
@@ -46,9 +46,9 @@
 
   ul {
     padding-left: 0;
-    padding-top: 3px;
 
     &.secondary {
+      padding-top: 3px;
       margin-left: 20px;
     }
   }
@@ -56,8 +56,14 @@
   li {
     list-style: none;
     line-height: 15px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+
+    &:not(:first-child) {
+      padding-top: 3px;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 3px;
+    }
 
     a:hover {
       .badge {
