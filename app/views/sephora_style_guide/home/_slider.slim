@@ -1,0 +1,19 @@
+article#slider
+  h1.h1 Slider
+
+  section
+    h3.h3 Slider
+    .slider-container ref='wrap'
+      .slider ref='elem' aria-hidden='true'
+        .slider-dot.left ref='dot0' key='dot0'
+          .dot-tooltip ref='tooltip0' 25,000
+        .slider-dot.right ref='dot1' key='dot1'
+          .dot-tooltip ref='tooltip1' 25,000
+        .slider-process
+
+  section
+    h4.h4.code-heading Pug
+    pre
+      code.language-pug
+        |
+          .loader-spinner

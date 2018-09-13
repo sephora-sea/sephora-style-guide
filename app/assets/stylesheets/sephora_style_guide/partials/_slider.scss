@@ -1,0 +1,68 @@
+.slider-container {
+  position: relative;
+  box-sizing: border-box;
+  user-select: none;
+  padding: 30px 15px 10px;
+
+  .slider {
+    height: 6px;
+    position: relative;
+    display: block;
+    border-radius: 15px;
+    background-color: $grey;
+  }
+}
+
+.slider-process {
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  will-change: width;
+  border-radius: 15px;
+  background-color: $brand-primary;
+  transition: all 0s;
+}
+
+.slider-dot {
+  position: absolute;
+  z-index: 5;
+  top: -5px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0.5px 0.5px 2px 1px rgba(0, 0, 0, 0.32);
+  transition: all 0s;
+  will-change: transform;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  transition-duration: 0s;
+
+  &.left {
+    left: 0;
+  }
+
+  &.right {
+    right: 0;
+  }
+}
+
+.dot-tooltip {
+  @include font-avalon-demi;
+  display: block;
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  z-index: 9;
+  transform: translate(-50%, -100%);
+  background-color: $grey-dark;
+  color: $white;
+  text-align: center;
+  border-radius: 5px;
+  height: 20px;
+  min-width: 50px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
