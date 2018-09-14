@@ -1,68 +1,140 @@
-.slider-container {
-  position: relative;
-  box-sizing: border-box;
+.irs {
+  position: relative; display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
-  padding: 30px 15px 10px;
+  height: 55px;
+}
 
-  .slider {
-    height: 6px;
-    position: relative;
-    display: block;
-    border-radius: 15px;
-    background-color: $grey;
+.irs-line {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  outline: none;
+  height: 6px;
+  top: 33px;
+  background-color: $grey;
+  border-radius: 16px;
+  -moz-border-radius: 16px;
+}
+
+.irs-line-left,
+.irs-line-mid,
+.irs-line-right {
+  position: absolute;
+  display: block;
+  top: 0;
+  height: 8px;
+}
+
+.irs-line-left {
+  left: 0;
+  width: 11%;
+}
+
+.irs-line-mid {
+  left: 9%;
+  width: 82%;
+}
+
+.irs-line-right {
+  right: 0;
+  width: 11%;
+}
+
+.irs-bar {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 0;
+  height: 6px;
+  top: 33px;
+  background: $brand-primary;
+}
+
+.irs-shadow {
+  position: absolute;
+  display: none;
+  left: 0;
+  width: 0;
+}
+
+.irs-slider {
+  position: absolute;
+  display: block;
+  cursor: default;
+  z-index: 1;
+  top: 26px;
+  width: 21px;
+  height: 21px;
+  background: $grey-light;
+  border: 1px solid $grey;
+  border-radius: 50%;
+  -moz-border-radius: 27px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  cursor: pointer;
+
+  &.state_hover,
+  &:hover {
+    border: 1px solid $brand-primary;
+    background: $brand-primary;
+  }
+
+  &.type_last {
+    z-index: 2;
   }
 }
 
-.slider-process {
-  width: 0;
-  height: 100%;
+.irs-min,
+.irs-max {
+  display: none;
+}
+
+.irs-from,
+.irs-to,
+.irs-single {
+  @include font-avalon-demi;
   position: absolute;
+  display: block;
   top: 0;
   left: 0;
-  z-index: 1;
-  will-change: width;
-  border-radius: 15px;
-  background-color: $brand-primary;
-  transition: all 0s;
-}
-
-.slider-dot {
-  position: absolute;
-  z-index: 5;
-  top: -5px;
-  border-radius: 50%;
-  background-color: #fff;
-  box-shadow: 0.5px 0.5px 2px 1px rgba(0, 0, 0, 0.32);
-  transition: all 0s;
-  will-change: transform;
-  cursor: pointer;
-  width: 16px;
-  height: 16px;
-  transition-duration: 0s;
-
-  &.left {
-    left: 0;
-  }
-
-  &.right {
-    right: 0;
-  }
-}
-
-.dot-tooltip {
-  @include font-avalon-demi;
-  display: block;
-  position: absolute;
-  top: -6px;
-  left: 50%;
-  z-index: 9;
-  transform: translate(-50%, -100%);
-  background-color: $grey-dark;
+  cursor: default;
+  white-space: nowrap;
   color: $white;
-  text-align: center;
-  border-radius: 5px;
-  height: 20px;
-  min-width: 50px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  font-size: 12px;
+  line-height: 1.333;
+  padding: 4px 5px 2px;
+  background: $grey-dark;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+.irs-grid {
+  position: absolute;
+  display: none;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 27px;
+}
+
+.irs-hidden-input {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  z-index: -9999;
+  background: none;
+  border-style: solid;
+  border-color: transparent;
 }
