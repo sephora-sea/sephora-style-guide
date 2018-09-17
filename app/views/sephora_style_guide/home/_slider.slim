@@ -13,3 +13,35 @@ article#slider
         |
           .range-slider
             input.js-range-slider(data-min='0' data-max='1000' data-step='20' data-prefix='$' data-from='0' data-to='600')
+    br
+    table.table
+      thead
+        tr
+          th Attributes
+          th Type
+          th Description
+      tbody.text-center
+        tr
+          td data-min
+          td int
+          td Minimum price range i.e. leftmost value
+        tr
+          td data-max
+          td int
+          td Maximum price range i.e. rightmost value
+        tr
+          td data-step
+          td int
+          td Value increments/decrements when moving sliders
+        tr
+          td data-prefix
+          td string
+          td String to be appended before value i.e. price symbol
+        tr
+          td data-from
+          td int
+          td Initial position/value of left slider
+        tr
+          td data-to
+          td int
+          td Initial position/value of right slider
