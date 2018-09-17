@@ -1,3 +1,8 @@
+.range-slider {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
 .irs {
   position: relative; display: block;
   -webkit-touch-callout: none;
@@ -14,11 +19,11 @@
   display: block;
   overflow: hidden;
   outline: none;
-  height: 6px;
+  height: 4px;
   top: 33px;
   background-color: $grey;
-  border-radius: 16px;
-  -moz-border-radius: 16px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
 }
 
 .irs-line-left,
@@ -50,7 +55,7 @@
   display: block;
   left: 0;
   width: 0;
-  height: 6px;
+  height: 4px;
   top: 33px;
   background: $brand-primary;
 }
@@ -67,9 +72,9 @@
   display: block;
   cursor: default;
   z-index: 1;
-  top: 26px;
-  width: 21px;
-  height: 21px;
+  top: 23px;
+  width: 24px;
+  height: 24px;
   background: $grey-light;
   border: 1px solid $grey;
   border-radius: 50%;
@@ -104,9 +109,9 @@
   cursor: default;
   white-space: nowrap;
   color: $white;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.333;
-  padding: 4px 5px 2px;
+  padding: 2px 5px 0;
   background: $grey-dark;
   border-radius: 3px;
   -moz-border-radius: 3px;
