@@ -1326,25 +1326,29 @@
 
         this.drawLabels();
 
-        this.$cache.bar[0].style.left = this.coords.p_bar_x + "%";
-        this.$cache.bar[0].style.width = this.coords.p_bar_w + "%";
+        if (this.coords.p_bar_w !== 0) { // ensure handles do not overlap
+          this.$cache.bar[0].style.left = this.coords.p_bar_x + "%";
+          this.$cache.bar[0].style.width = this.coords.p_bar_w + "%";
+        }
 
         if (this.options.type === "single") {
           this.$cache.s_single[0].style.left = this.coords.p_single_fake + "%";
 
           this.$cache.single[0].style.left = this.labels.p_single_left + "%";
         } else {
-          this.$cache.s_from[0].style.left = this.coords.p_from_fake + "%";
-          this.$cache.s_to[0].style.left = this.coords.p_to_fake + "%";
+          if (this.coords.p_from_fake !== this.coords.p_to_fake) { // ensure handles do not overlap
+            this.$cache.s_from[0].style.left = this.coords.p_from_fake + "%";
+            this.$cache.s_to[0].style.left = this.coords.p_to_fake + "%";
 
-          if (this.old_from !== this.result.from || this.force_redraw) {
-            this.$cache.from[0].style.left = this.labels.p_from_left + "%";
-          }
-          if (this.old_to !== this.result.to || this.force_redraw) {
-            this.$cache.to[0].style.left = this.labels.p_to_left + "%";
-          }
+            if (this.old_from !== this.result.from || this.force_redraw) {
+              this.$cache.from[0].style.left = this.labels.p_from_left + "%";
+            }
+            if (this.old_to !== this.result.to || this.force_redraw) {
+              this.$cache.to[0].style.left = this.labels.p_to_left + "%";
+            }
 
-          this.$cache.single[0].style.left = this.labels.p_single_left + "%";
+            this.$cache.single[0].style.left = this.labels.p_single_left + "%";
+          }
         }
 
         this.writeToInput();
@@ -1441,6 +1445,9 @@
           this.$cache.to.html(text_to);
 
         } else {
+          if (this.result.from === this.result.to) { // ensure no overlap of handles
+            return
+          }
 
           if (this.options.decorate_both) {
             text_single = this.decorate(this._prettify(this.result.from), this.result.from);
