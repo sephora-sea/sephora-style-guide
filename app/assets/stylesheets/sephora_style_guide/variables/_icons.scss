@@ -29,16 +29,17 @@ $icon_50x30-top: -1 * $icon_30x20-height;
 $icon_50x30-classes: twoc2p unionpay bca amex mastercard molpay webcash visa
               ambank fpx paypal tmb kkbank krungsri scb card16 uob payatpost
               tesco bbl truemoney tbank bigc mpay jautpay pubbank gcash
-              cstore;
+              cstore bni;
 
 $icon_70x30-width: 70px;
 $icon_70x30-height: 30px;
 $icon_70x30-top: (-4 * $icon_50x30-height) + $icon_50x30-top;
-$icon_70x30-classes: mandiri paypal visa rhbnow mepf dragonpay cod bayar afterpay connect;
+$icon_70x30-classes: mandiri paypal visa rhbnow mepf dragonpay cod bayar
+                     afterpay connect danamon;
 
 $icon_100x30-width: 100px;
 $icon_100x30-height: 30px;
-$icon_100x30-top: (-2 * $icon_70x30-height) + $icon_70x30-top;
+$icon_100x30-top: (-3 * $icon_70x30-height) + $icon_70x30-top;
 $icon_100x30-classes: cimbclick permata hongleong maybank;
 
 $icon_90x40-width: 90px;
