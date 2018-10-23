@@ -5,6 +5,7 @@
   background-size: contain;
 
   @include generate-svg-icons();
+  @include generate-svg-flag-icons();
 
   &.bag-white:hover {
     @extend .bag-red;

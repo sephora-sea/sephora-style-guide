@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="20px" viewBox="0 0 30 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>China</title>
+    <g id="China" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="30" height="20"></rect>
+        <g>
+            <g id="Flag_of_the_People's_Republic_of_China" fill-rule="nonzero">
+                <rect id="Rectangle-path" fill="#DE2910" x="0" y="0" width="30" height="20"></rect>
+                <g id="s-link" transform="translate(2.000000, 2.000000)" fill="#FFDE00">
+                    <polygon id="s" points="3 0 4.763355 5.427051 0.146829 2.072949 5.853171 2.072949 1.236645 5.427051"></polygon>
+                </g>
+                <g id="s-link" transform="translate(10.000000, 2.000000) rotate(23.036243) translate(-10.000000, -2.000000) translate(9.000000, 1.000000)" fill="#FFDE00">
+                    <polygon id="s" points="1 0 1.587785 1.809017 0.048943 0.690983 1.951057 0.690983 0.412215 1.809017"></polygon>
+                </g>
+                <g id="s-link" transform="translate(12.000000, 4.000000) rotate(45.869898) translate(-12.000000, -4.000000) translate(11.000000, 3.000000)" fill="#FFDE00">
+                    <polygon id="s" points="1 0 1.587785 1.809017 0.048943 0.690983 1.951057 0.690983 0.412215 1.809017"></polygon>
+                </g>
+                <g id="s-link" transform="translate(12.000000, 7.000000) rotate(69.945396) translate(-12.000000, -7.000000) translate(11.000000, 6.000000)" fill="#FFDE00">
+                    <polygon id="s" points="1 0 1.587785 1.809017 0.048943 0.690983 1.951057 0.690983 0.412215 1.809017"></polygon>
+                </g>
+                <g id="s-link" transform="translate(10.000000, 9.000000) rotate(20.659808) translate(-10.000000, -9.000000) translate(9.000000, 8.000000)" fill="#FFDE00">
+                    <polygon id="s" points="1 0 1.587785 1.809017 0.048943 0.690983 1.951057 0.690983 0.412215 1.809017"></polygon>
+                </g>
+            </g>
+            <rect id="Rectangle-2-Copy-24" stroke="#AAAAAA" stroke-width="0.5" x="0.25" y="0.25" width="29.5" height="19.5"></rect>
+        </g>
+    </g>
+</svg>

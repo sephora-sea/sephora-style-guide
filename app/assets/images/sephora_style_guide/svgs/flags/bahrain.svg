@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="20px" viewBox="0 0 30 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>Bahrain</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="30" height="20"></rect>
+    </defs>
+    <g id="Bahrain" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="30" height="20"></rect>
+        <g>
+            <g id="Flag_of_Bahrain">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <g mask="url(#mask-2)" fill-rule="nonzero" id="Shape">
+                    <g transform="translate(-2.000000, 0.000000)">
+                        <polyline fill="#FFFFFF" points="0 0 33.3333333 0 33.3333333 20 0 20"></polyline>
+                        <polyline fill="#CE1126" points="33.3333333 0 8.22222222 0 13.3333333 2 8.22222222 4 13.3333333 6 8.22222222 8 13.3333333 10 8.22222222 12 13.3333333 14 8.22222222 16 13.3333333 18 8.22222222 20 33.3333333 20"></polyline>
+                    </g>
+                </g>
+            </g>
+            <rect id="Rectangle-2-Copy-8" stroke="#AAAAAA" stroke-width="0.5" x="0.25" y="0.25" width="29.5" height="19.5"></rect>
+        </g>
+    </g>
+</svg>

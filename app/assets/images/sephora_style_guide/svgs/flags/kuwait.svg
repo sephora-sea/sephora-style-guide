@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="20px" viewBox="0 0 30 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>Kuwait</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="30" height="20"></rect>
+    </defs>
+    <g id="Kuwait" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="30" height="20"></rect>
+        <g id="kuwait">
+            <g id="if_143_Ensign_Flag_Nation_kuwait_2634333">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <g mask="url(#mask-2)" fill-rule="nonzero">
+                    <g transform="translate(-2.000000, 0.000000)">
+                        <polygon id="Rectangle-path" fill="#429976" points="0 0.0466666667 34.1333333 0.0466666667 34.1333333 6.66 0 6.66"></polygon>
+                        <polygon id="Rectangle-path" fill="#FFFFFF" points="0 6.66 34.1333333 6.66 34.1333333 13.3066667 0 13.3066667"></polygon>
+                        <rect id="Rectangle-path" fill="#BD1F34" x="0" y="13.3066667" width="34.1333333" height="6.64666667"></rect>
+                        <polygon id="Shape" fill="#010101" points="0 0.0466666667 0 19.96 9.95333333 13.3066667 9.95333333 6.66 0.0466666667 0.0466666667"></polygon>
+                    </g>
+                </g>
+            </g>
+            <rect id="Rectangle-2-Copy-34" stroke="#AAAAAA" stroke-width="0.5" x="0.25" y="0.25" width="29.5" height="19.5"></rect>
+        </g>
+    </g>
+</svg>

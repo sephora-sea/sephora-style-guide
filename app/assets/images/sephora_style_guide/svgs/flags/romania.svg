@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="20px" viewBox="0 0 30 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>Romania</title>
+    <g id="Romania" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="30" height="20"></rect>
+        <g>
+            <g id="romania" fill-rule="nonzero">
+                <rect id="Rectangle-path" fill="#FFDA44" x="0" y="0.0193567251" width="30" height="19.9605848"></rect>
+                <rect id="Rectangle-path" fill="#0052B4" x="0" y="0.0193567251" width="9.99978516" height="19.9612281"></rect>
+                <rect id="Rectangle-path" fill="#D80027" x="20.0002148" y="0.0193567251" width="9.99978516" height="19.9612281"></rect>
+            </g>
+            <rect id="Rectangle-2-Copy-20" stroke="#AAAAAA" stroke-width="0.5" x="0.25" y="0.25" width="29.5" height="19.5"></rect>
+        </g>
+    </g>
+</svg>

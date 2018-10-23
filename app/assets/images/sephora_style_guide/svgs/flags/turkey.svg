@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="20px" viewBox="0 0 30 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>Turkey</title>
+    <g id="Turkey" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="30" height="20"></rect>
+        <g>
+            <g id="Flag_of_Turkey" fill-rule="nonzero">
+                <rect id="Rectangle-path" fill="#E30A17" x="0" y="0" width="30" height="20"></rect>
+                <circle id="Oval" fill="#FFFFFF" cx="10.625" cy="10" r="5"></circle>
+                <circle id="Oval" fill="#E30A17" cx="11.875" cy="10" r="4"></circle>
+                <polygon id="Shape" fill="#FFFFFF" points="14.58335 10 19.105875 11.469475 16.310775 7.62235 16.310775 12.37765 19.105875 8.530525"></polygon>
+            </g>
+            <rect id="Rectangle-2-Copy-33" stroke="#AAAAAA" stroke-width="0.5" x="0.25" y="0.25" width="29.5" height="19.5"></rect>
+        </g>
+    </g>
+</svg>

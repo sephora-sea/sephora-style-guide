@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="20px" viewBox="0 0 30 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>Switzerland</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="30" height="20"></rect>
+    </defs>
+    <g id="Switzerland" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="30" height="20"></rect>
+        <g>
+            <g id="if_248_Ensign_Flag_Nation_switzerland_2634429">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <g mask="url(#mask-2)" fill-rule="nonzero">
+                    <g transform="translate(-2.000000, 0.000000)">
+                        <rect id="Rectangle-path" fill="#C6001E" x="0" y="0.0466666667" width="34.1333333" height="19.9133333"></rect>
+                        <polygon id="Shape" fill="#FFFFFF" points="10.8466667 8.13333333 15.2 8.13333333 15.2 3.78 18.9333333 3.78 18.9333333 8.13333333 23.2866667 8.13333333 23.2866667 11.8666667 18.9333333 11.8666667 18.9333333 16.22 15.2 16.22 15.2 11.8666667 10.8466667 11.8666667"></polygon>
+                    </g>
+                </g>
+            </g>
+            <rect id="Rectangle-2-Copy-32" stroke="#AAAAAA" stroke-width="0.5" x="0.25" y="0.25" width="29.5" height="19.5"></rect>
+        </g>
+    </g>
+</svg>
