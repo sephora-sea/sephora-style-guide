@@ -1,16 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="30px" height="20px" viewBox="0 0 30 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
-    <title>Thailand</title>
-    <g id="Thailand" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect fill="#FFFFFF" x="0" y="0" width="30" height="20"></rect>
-        <g>
-            <g id="if_254_Ensign_Flag_Nation_thailand_2634435" fill-rule="nonzero">
-                <rect id="Rectangle-path" fill="#CB0028" x="0" y="0.0466666667" width="30" height="19.9133333"></rect>
-                <rect id="Rectangle-path" fill="#FFFFFF" x="0" y="3.36" width="30" height="13.2733333"></rect>
-                <polygon id="Rectangle-path" fill="#1A237B" points="0 6.68 30 6.68 30 13.32 0 13.32"></polygon>
-            </g>
-            <rect id="Rectangle-2-Copy-27" stroke="#AAAAAA" stroke-width="0.5" x="0.25" y="0.25" width="29.5" height="19.5"></rect>
-        </g>
-    </g>
+<svg width="30" height="20" xmlns="http://www.w3.org/2000/svg">
+	<g fill="none" fill-rule="evenodd">
+		<path fill="#FFF" d="M0 0h30v20H0z"/>
+		<g fill-rule="nonzero">
+			<path fill="#CB0028" d="M0 .047h30V19.96H0z"/>
+			<path fill="#FFF" d="M0 3.36h30v13.273H0z"/>
+			<path fill="#1A237B" d="M0 6.68h30v6.64H0z"/>
+		</g>
+		<path stroke="#AAA" stroke-width=".5" d="M.25.25h29.5v19.5H.25z"/>
+	</g>
 </svg>

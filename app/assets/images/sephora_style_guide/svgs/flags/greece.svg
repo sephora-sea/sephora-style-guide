@@ -1,34 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="30px" height="20px" viewBox="0 0 30 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
-    <title>Greece</title>
-    <defs>
-        <rect id="path-1" x="0" y="0" width="30" height="20"></rect>
-    </defs>
-    <g id="Greece" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect fill="#FFFFFF" x="0" y="0" width="30" height="20"></rect>
-        <g>
-            <g id="if_101_Ensign_Flag_Nation_greece_2634297">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <g id="Mask"></g>
-                <g mask="url(#mask-2)" fill-rule="nonzero" id="Rectangle-path">
-                    <polygon fill="#2A2874" points="0 17.7466667 34.1333333 17.7466667 34.1333333 19.96 0 19.96"></polygon>
-                    <polygon fill="#FFFFFF" points="0 15.5333333 34.1333333 15.5333333 34.1333333 17.7466667 0 17.7466667"></polygon>
-                    <polygon fill="#2A2874" points="0 13.32 34.1333333 13.32 34.1333333 15.5333333 0 15.5333333"></polygon>
-                    <polygon fill="#FFFFFF" points="0 11.1066667 34.1333333 11.1066667 34.1333333 13.32 0 13.32"></polygon>
-                    <polygon fill="#2A2874" points="0 8.89333333 34.1333333 8.89333333 34.1333333 11.1066667 0 11.1066667"></polygon>
-                    <polygon fill="#FFFFFF" points="0 6.68 34.1333333 6.68 34.1333333 8.89333333 0 8.89333333"></polygon>
-                    <polygon fill="#2A2874" points="0 4.46666667 34.1333333 4.46666667 34.1333333 6.68 0 6.68"></polygon>
-                    <polygon fill="#FFFFFF" points="0 2.25333333 34.1333333 2.25333333 34.1333333 4.46666667 0 4.46666667"></polygon>
-                    <polygon fill="#2A2874" points="0 0.0466666667 34.1333333 0.0466666667 34.1333333 2.26 0 2.26"></polygon>
-                    <rect fill="#2A2874" x="0" y="0.0466666667" width="11.06" height="11.06"></rect>
-                    <polygon fill="#FFFFFF" points="0 4.46666667 11.06 4.46666667 11.06 6.68 0 6.68"></polygon>
-                    <rect fill="#FFFFFF" x="4.42666667" y="0.0466666667" width="2.21333333" height="11.06"></rect>
-                </g>
-            </g>
-            <rect id="Rectangle-2-Copy-4" stroke="#AAAAAA" stroke-width="0.5" x="0.25" y="0.25" width="29.5" height="19.5"></rect>
-        </g>
-    </g>
+<svg width="30" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<path id="a" d="M0 0h30v20H0z"/>
+	</defs>
+	<g fill="none" fill-rule="evenodd">
+		<path fill="#FFF" d="M0 0h30v20H0z"/>
+		<mask id="b" fill="#fff">
+			<use xlink:href="#a"/>
+		</mask>
+		<g mask="url(#b)" fill-rule="nonzero">
+			<path fill="#2A2874" d="M0 17.747h34.133v2.213H0z"/>
+			<path fill="#FFF" d="M0 15.533h34.133v2.214H0z"/>
+			<path fill="#2A2874" d="M0 13.32h34.133v2.213H0z"/>
+			<path fill="#FFF" d="M0 11.107h34.133v2.213H0z"/>
+			<path fill="#2A2874" d="M0 8.893h34.133v2.214H0z"/>
+			<path fill="#FFF" d="M0 6.68h34.133v2.213H0z"/>
+			<path fill="#2A2874" d="M0 4.467h34.133V6.68H0z"/>
+			<path fill="#FFF" d="M0 2.253h34.133v2.214H0z"/>
+			<path fill="#2A2874" d="M0 .047h34.133V2.26H0z"/>
+			<path fill="#2A2874" d="M0 .047h11.06v11.06H0z"/>
+			<path fill="#FFF" d="M0 4.467h11.06V6.68H0z"/>
+			<path fill="#FFF" d="M4.427.047H6.64v11.06H4.427z"/>
+		</g>
+		<path stroke="#AAA" stroke-width=".5" d="M.25.25h29.5v19.5H.25z"/>
+	</g>
 </svg>

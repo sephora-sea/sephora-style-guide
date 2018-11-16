@@ -1,28 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="30px" height="20px" viewBox="0 0 30 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
-    <title>Kuwait</title>
-    <defs>
-        <rect id="path-1" x="0" y="0" width="30" height="20"></rect>
-    </defs>
-    <g id="Kuwait" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect fill="#FFFFFF" x="0" y="0" width="30" height="20"></rect>
-        <g id="kuwait">
-            <g id="if_143_Ensign_Flag_Nation_kuwait_2634333">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <g id="Mask"></g>
-                <g mask="url(#mask-2)" fill-rule="nonzero">
-                    <g transform="translate(-2.000000, 0.000000)">
-                        <polygon id="Rectangle-path" fill="#429976" points="0 0.0466666667 34.1333333 0.0466666667 34.1333333 6.66 0 6.66"></polygon>
-                        <polygon id="Rectangle-path" fill="#FFFFFF" points="0 6.66 34.1333333 6.66 34.1333333 13.3066667 0 13.3066667"></polygon>
-                        <rect id="Rectangle-path" fill="#BD1F34" x="0" y="13.3066667" width="34.1333333" height="6.64666667"></rect>
-                        <polygon id="Shape" fill="#010101" points="0 0.0466666667 0 19.96 9.95333333 13.3066667 9.95333333 6.66 0.0466666667 0.0466666667"></polygon>
-                    </g>
-                </g>
-            </g>
-            <rect id="Rectangle-2-Copy-34" stroke="#AAAAAA" stroke-width="0.5" x="0.25" y="0.25" width="29.5" height="19.5"></rect>
-        </g>
-    </g>
+<svg width="30" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<path id="a" d="M0 0h30v20H0z"/>
+	</defs>
+	<g fill="none" fill-rule="evenodd">
+		<path fill="#FFF" d="M0 0h30v20H0z"/>
+		<mask id="b" fill="#fff">
+			<use xlink:href="#a"/>
+		</mask>
+		<g mask="url(#b)" fill-rule="nonzero">
+			<path fill="#429976" d="M-2 .047h34.133V6.66H-2z"/>
+			<path fill="#FFF" d="M-2 6.66h34.133v6.647H-2z"/>
+			<path fill="#BD1F34" d="M-2 13.307h34.133v6.647H-2z"/>
+			<path fill="#010101" d="M-2 .047V19.96l9.953-6.653V6.66L-1.953.047z"/>
+		</g>
+		<path stroke="#AAA" stroke-width=".5" d="M.25.25h29.5v19.5H.25z"/>
+	</g>
 </svg>
