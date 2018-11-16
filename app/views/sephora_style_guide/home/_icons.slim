@@ -443,6 +443,148 @@ ruby:
       "size": "icon_30x20"
     }
   ]
+  countries = [
+    {
+      "name": "Australia",
+      "class": "australia"
+    },
+    {
+      "name": "Bahrain",
+      "class": "bahrain"
+    },
+    {
+      "name": "Brazil",
+      "class": "brazil"
+    },
+    {
+      "name": "Canada",
+      "class": "canada"
+    },
+    {
+      "name": "China",
+      "class": "china"
+    },
+    {
+      "name": "Czech Republic",
+      "class": "czech-republic"
+    },
+    {
+      "name": "Denmark",
+      "class": "denmark"
+    },
+    {
+      "name": "France",
+      "class": "france"
+    },
+    {
+      "name": "Germany",
+      "class": "germany"
+    },
+    {
+      "name": "Greece",
+      "class": "greece"
+    },
+    {
+      "name": "Hong Kong",
+      "class": "hong-kong"
+    },
+    {
+      "name": "Indonesia",
+      "class": "indonesia"
+    },
+    {
+      "name": "Italy",
+      "class": "italy"
+    },
+    {
+      "name": "Kuwait",
+      "class": "kuwait"
+    },
+    {
+      "name": "Luxembourg",
+      "class": "luxembourg"
+    },
+    {
+      "name": "Malaysia",
+      "class": "malaysia"
+    },
+    {
+      "name": "Mexico",
+      "class": "mexico"
+    },
+    {
+      "name": "Monaco",
+      "class": "monaco"
+    },
+    {
+      "name": "New Zealand",
+      "class": "new-zealand"
+    },
+    {
+      "name": "Philippines",
+      "class": "philippines"
+    },
+    {
+      "name": "Poland",
+      "class": "poland"
+    },
+    {
+      "name": "Portugal",
+      "class": "portugal"
+    },
+    {
+      "name": "Qatar",
+      "class": "qatar"
+    },
+    {
+      "name": "Romania",
+      "class": "romania"
+    },
+    {
+      "name": "Russia",
+      "class": "russia"
+    },
+    {
+      "name": "Saudi Arabia",
+      "class": "saudi-arabia"
+    },
+    {
+      "name": "Serbia",
+      "class": "serbia"
+    },
+    {
+      "name": "Singapore",
+      "class": "singapore"
+    },
+    {
+      "name": "Slovakia",
+      "class": "slovakia"
+    },
+    {
+      "name": "Spain",
+      "class": "spain"
+    },
+    {
+      "name": "Switzerland",
+      "class": "switzerland"
+    },
+    {
+      "name": "Thailand",
+      "class": "thailand"
+    },
+    {
+      "name": "Turkey",
+      "class": "turkey"
+    },
+    {
+      "name": "United Arab Emirates",
+      "class": "united-arab-emirates"
+    },
+    {
+      "name": "United States",
+      "class": "united-states"
+    }
+  ]
   sprite_icons = [
     {
       "name": "2C2P 123",
@@ -747,13 +889,13 @@ article#icons
           p=icon[:name]
           p.subtext .svg-icon.#{icon[:class]}
     h3.h3 Flags
-    - flags.each do | icon |
+    - countries.each do | icon |
       .icon-container.col-12.col-md-6
         .helper
-        .sprite-icon class="#{icon[:class]}" class="#{ icon[:size]}"
+        .svg-icon class="#{icon[:class]}"
         div.icon-data
           p=icon[:name]
-          p.subtext .sprite-icon.#{icon[:class]}.#{icon[:size] }
+          p.subtext .svg-icon.#{icon[:class]}
     h3.h3 Others
     - others.each do | icon |
       .icon-container.col-12.col-md-6

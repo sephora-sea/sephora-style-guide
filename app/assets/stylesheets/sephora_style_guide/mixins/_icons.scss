@@ -34,7 +34,6 @@
   }
 }
 
-
 @mixin generate-svg-icons() {
   background-position: center;
   background-repeat: no-repeat;
@@ -42,6 +41,17 @@
   @each $svg in $sephora-svgs {
     &.#{$svg} {
       background-image: asset_url('sephora_style_guide/svgs/#{$svg}.svg');
+    }
+  }
+}
+
+@mixin generate-svg-flag-icons() {
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @each $svg in $sephora-international-countries {
+    &.#{$svg} {
+      background-image: asset_url('sephora_style_guide/svgs/flags/#{$svg}.svg');
     }
   }
 }
