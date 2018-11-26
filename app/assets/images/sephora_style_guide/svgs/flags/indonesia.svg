@@ -1,9 +1,17 @@
-<svg width="30" height="20" xmlns="http://www.w3.org/2000/svg">
+<svg width="30" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<path id="a" d="M0 0h30v20H0z"/>
+	</defs>
 	<g fill="none" fill-rule="evenodd">
 		<path fill="#FFF" d="M0 0h30v20H0z"/>
-		<g fill-rule="nonzero">
-			<path fill="#BD1F34" d="M0 .047h30v9.96H0z"/>
-			<path fill="#FFF" d="M0 10h30v9.953H0z"/>
+		<mask id="b" fill="#fff">
+			<use xlink:href="#a"/>
+		</mask>
+		<g mask="url(#b)" fill-rule="nonzero">
+			<path fill="#429976" d="M-2 .047h34.133V6.66H-2z"/>
+			<path fill="#FFF" d="M-2 6.66h34.133v6.647H-2z"/>
+			<path fill="#BD1F34" d="M-2 13.307h34.133v6.647H-2z"/>
+			<path fill="#010101" d="M-2 .047V19.96l9.953-6.653V6.66L-1.953.047z"/>
 		</g>
 		<path stroke="#AAA" stroke-width=".5" d="M.25.25h29.5v19.5H.25z"/>
 	</g>
