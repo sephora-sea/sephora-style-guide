@@ -6,8 +6,8 @@ $sephora-svgs: account arrow-dropdown bag-black bag-red bag-white beauty-profile
             heart-empty heart-empty-bg heart-empty-red-bg heart-fill heart-fill-bg help home instagram lipstick-empty lipstick-filled
             location logout makeup-1 makeup-2 benefits member-points menu orders payment-cancelled payment-expired
             payment-failed payment-paid payment-pending pdf pinterest point-history pop-location pop-parcel
-            pop-payment pop-scan-barcode pop-sms print processing purchase purchase-zero radio-disabled-selected
-            radio-disabled-unselected radio-selected radio-unselected reviews rewards-boutique sale scan search-black
+            pop-payment pop-scan-barcode pop-sms print processing purchase purchase-zero review-approved review-unapproved review-rejected 
+            radio-disabled-selected radio-disabled-unselected radio-selected radio-unselected reviews reviews-red rewards-boutique sale scan search-black
             search-white selected-option-icon settings shade shipped show-icon size snapchat stock store-black store-white
             triangle triangle-black twitter video-play-black video-play-white waitlist welcome-gift youtube;
 
@@ -93,4 +93,10 @@ $sephora-international-countries: australia bahrain brazil canada china czech-re
                                   philippines poland portugal qatar romania russia
                                   saudi-arabia serbia singapore slovakia spain switzerland
                                   thailand united-states turkey united-arab-emirates;
+// ------------------------------- Sprite icons congfig end ----------------------------
+
+// ------------------------------ SVG icons congfig start ----------------------------
+$sephora-order-status:  awaiting-collection completed customs-on-hold delivery-attempted delivery-failed
+                        in-transit invalidated order-placed packing-order return-requested
+                        with-driver;
 // ------------------------------- Sprite icons congfig end ----------------------------

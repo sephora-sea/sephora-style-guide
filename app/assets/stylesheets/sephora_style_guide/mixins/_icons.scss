@@ -55,3 +55,14 @@
     }
   }
 }
+
+@mixin generate-svg-order-status-icons() {
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @each $svg in $sephora-order-status {
+    &.#{$svg} {
+      background-image: asset_url('sephora_style_guide/svgs/order_status/#{$svg}.svg');
+    }
+  }
+}

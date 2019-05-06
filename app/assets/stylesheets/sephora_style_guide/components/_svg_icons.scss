@@ -6,6 +6,7 @@
 
   @include generate-svg-icons();
   @include generate-svg-flag-icons();
+  @include generate-svg-order-status-icons();
 
   &.bag-white:hover {
     @extend .bag-red;
