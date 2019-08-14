@@ -5,10 +5,16 @@ $(document).ready(function(){
         CHZN_SELECT_CLASS = '.chzn-select';
 
     $(document).on('focus blur', INPUT_CLASS, function (e) {
+      var valLength = this.value.length;
+      var placeholder = this.getAttribute('placeholder');
+
       $(this).parents(PARENT_CLASS)
           .toggleClass('focus', e.type === 'focus' ||  e.type === 'focusin')
-          .toggleClass('filled', this.value.length > 0)
-          .toggleClass('focused', (e.type === 'focus'||  e.type === 'focusin' || this.value.length > 0 || (this.value.length === 0 && typeof this.getAttribute('placeholder') === 'string')));
+          .toggleClass('filled', valLength > 0)
+          .toggleClass('focused', (e.type === 'focus'||
+            e.type === 'focusin' ||
+            valLength > 0 ||
+            (valLength === 0 && typeof placeholder === 'string' && placeholder.length > 0)));
     });
 
     $(INPUT_CLASS).trigger('blur');
