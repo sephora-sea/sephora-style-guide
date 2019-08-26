@@ -35,7 +35,7 @@ $icon_70x30-width: 70px;
 $icon_70x30-height: 30px;
 $icon_70x30-top: (-4 * $icon_50x30-height) + $icon_50x30-top;
 $icon_70x30-classes: mandiri paypal visa rhbnow mepf dragonpay cod bayar
-                     afterpay connect danamon;
+                     afterpay connect;
 
 $icon_100x30-width: 100px;
 $icon_100x30-height: 30px;
@@ -45,7 +45,7 @@ $icon_100x30-classes: cimbclick permata hongleong maybank;
 $icon_90x40-width: 90px;
 $icon_90x40-height: 40px;
 $icon_90x40-top: (-1 * $icon_100x30-height) + $icon_100x30-top;
-$icon_90x40-classes: visa mastercard amex;
+$icon_90x40-classes: visa mastercard amex wechat alipay_hk alipay;
 
 $sephora-sprite: (
   icon_30x20: (
