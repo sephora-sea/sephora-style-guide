@@ -12,3 +12,7 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
+group :development do
+  gem 'image_optim', require: false
+  gem 'image_optim_pack', require: false
+end
