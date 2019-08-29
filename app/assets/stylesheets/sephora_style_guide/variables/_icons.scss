@@ -35,7 +35,7 @@ $icon_70x30-width: 70px;
 $icon_70x30-height: 30px;
 $icon_70x30-top: (-4 * $icon_50x30-height) + $icon_50x30-top;
 $icon_70x30-classes: mandiri paypal visa rhbnow mepf dragonpay cod bayar
-                     afterpay connect danamon;
+                     afterpay connect danamon alipay_hk alipay;
 
 $icon_100x30-width: 100px;
 $icon_100x30-height: 30px;
@@ -84,6 +84,19 @@ $sephora-sprite: (
     classes: $icon_90x40-classes
   )
 );
+
+
+// FIXME move this to proper place
+@mixin wechat {
+  .wechat {
+    width: $icon_100x30-width;
+    height: $icon_100x30-height;
+    background-position: -270px -260px;
+  }
+}
+.footer-payment-types, .payment-options-container, #cart_payment_types_wrapper, .selected-payment-method, .payment_type_image {
+  @include wechat
+}
 // ------------------------------- Sprite icons congfig end ----------------------------
 
 // ------------------------------ SVG icons congfig start ----------------------------
