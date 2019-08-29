@@ -45,7 +45,7 @@ $icon_100x30-classes: cimbclick permata hongleong maybank;
 $icon_90x40-width: 90px;
 $icon_90x40-height: 40px;
 $icon_90x40-top: (-1 * $icon_100x30-height) + $icon_100x30-top;
-$icon_90x40-classes: visa mastercard amex wechat;
+$icon_90x40-classes: visa mastercard amex;
 
 $sephora-sprite: (
   icon_30x20: (
@@ -84,6 +84,19 @@ $sephora-sprite: (
     classes: $icon_90x40-classes
   )
 );
+
+
+// FIXME move this to proper place
+@mixin wechat {
+  .wechat {
+    width: $icon_100x30-width;
+    height: $icon_100x30-height;
+    background-position: -270px -260px;
+  }
+}
+.footer-payment-types, .payment-options-container, #cart_payment_types_wrapper, .selected-payment-method, .payment_type_image {
+  @include wechat
+}
 // ------------------------------- Sprite icons congfig end ----------------------------
 
 // ------------------------------ SVG icons congfig start ----------------------------
