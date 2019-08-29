@@ -94,7 +94,7 @@ $sephora-sprite: (
     background-position: -270px -260px;
   }
 }
-.footer-payment-types, .payment-options-container, #cart_payment_types_wrapper, .selected-payment-method, .payment_type_image {
+.footer-payment-types, .payment-options-container, #cart_payment_types_wrapper, .selected-payment-method, .payment_type_image .order_payment_type {
   @include wechat
 }
 // ------------------------------- Sprite icons congfig end ----------------------------
