@@ -368,7 +368,6 @@ var Modal = function ($) {
       this._isTransitioning = false;
 
       this._showBackdrop(function () {
-        $(document.body).removeClass(ClassName.OPEN);
 
         _this7._resetAdjustments();
 
@@ -533,6 +532,8 @@ var Modal = function ($) {
       var padding = $(document.body).data('padding-right');
       $(document.body).removeData('padding-right');
       document.body.style.paddingRight = padding ? padding : '';
+      
+      $(document.body).removeClass(ClassName.OPEN);
     };
 
     _proto._getScrollbarWidth = function _getScrollbarWidth() {
