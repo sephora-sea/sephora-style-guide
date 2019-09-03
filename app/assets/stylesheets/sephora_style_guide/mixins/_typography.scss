@@ -19,16 +19,16 @@
   letter-spacing: normal;
 }
 
-@mixin font-avalon-bold {
+@mixin font-weight-bold {
   font-weight: 700;
   letter-spacing: 0.5px;
 }
 
-@mixin font-avalon-demi {
+@mixin font-weight-semi-bold {
   font-weight: 600;
 }
 
-@mixin font-avalon-book {
+@mixin font-weight-normal {
   font-weight: 400;
 }
 

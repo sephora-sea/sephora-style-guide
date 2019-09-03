@@ -1,7 +1,7 @@
 // Base styles
 .btn {
   display: inline-block;
-  @include font-avalon-bold;
+  @include font-weight-bold;
   letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;

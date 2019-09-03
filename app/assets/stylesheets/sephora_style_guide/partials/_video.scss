@@ -101,7 +101,7 @@
     }
 
     .video-text {
-      @include font-avalon-bold;
+      @include font-weight-bold;
       text-align: center;
       text-transform: uppercase;
       font-size: 14px;
@@ -165,7 +165,7 @@
     }
 
     .video-text {
-      @include font-avalon-book;
+      @include font-weight-normal;
       text-align: center;
       font-size: 13px;
       line-height: 16px;
@@ -254,7 +254,7 @@
     }
 
     .modal-title {
-      @include font-avalon-demi;
+      @include font-weight-semi-bold;
       text-align: center;
       font-size: 13px;
       line-height: 16px;
