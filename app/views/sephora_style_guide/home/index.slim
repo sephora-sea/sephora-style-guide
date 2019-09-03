@@ -10,19 +10,19 @@ main.container-fluid#app role='main'
     h1.h1.text-avalon-bold.title SEPHORA STYLE GUIDE
 
     .header.text-avalon-bold ELEMENTS
-    ul.text-avalon
+    ul
       template(v-for='element in elements')
         li @click='closeSidebar()'
           a :href='element.id' v-text='element.name'
 
     .header.text-avalon-bold COMPONENTS
-    ul.text-avalon
+    ul
       template(v-for='component in components')
         li @click='closeSidebar()'
           a :href='component.id' v-text='component.name'
 
     .header.text-avalon-bold PARTIALS
-    ul.text-avalon
+    ul
       template(v-for='partial in partials')
         li @click='closeSidebar()'
           a :href='partial.id' v-text='partial.name'
