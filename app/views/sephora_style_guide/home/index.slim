@@ -2,26 +2,26 @@ script src='https://unpkg.com/vue'
 
 main.container-fluid#app role='main'
   .topbar
-    h1.h1.text-avalon-bold.title SEPHORA STYLE GUIDE
+    h1.h1.text-font-weight-bold.title SEPHORA STYLE GUIDE
     span.svg-icon.close2.topbar-icon(@click='closeSidebar()' v-if='showSidebar')
     span.svg-icon.menu.topbar-icon(@click='openSidebar()' v-else)
 
   .sidebar
-    h1.h1.text-avalon-bold.title SEPHORA STYLE GUIDE
+    h1.h1.text-font-weight-bold.title SEPHORA STYLE GUIDE
 
-    .header.text-avalon-bold ELEMENTS
+    .header.text-font-weight-bold ELEMENTS
     ul
       template(v-for='element in elements')
         li @click='closeSidebar()'
           a :href='element.id' v-text='element.name'
 
-    .header.text-avalon-bold COMPONENTS
+    .header.text-font-weight-bold COMPONENTS
     ul
       template(v-for='component in components')
         li @click='closeSidebar()'
           a :href='component.id' v-text='component.name'
 
-    .header.text-avalon-bold PARTIALS
+    .header.text-font-weight-bold PARTIALS
     ul
       template(v-for='partial in partials')
         li @click='closeSidebar()'

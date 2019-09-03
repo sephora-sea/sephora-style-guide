@@ -154,14 +154,14 @@
   @include font-sephora-sans;
 }
 
-.text-avalon-bold {
+.text-font-weight-bold {
   @include font-weight-bold;
 }
 
-.text-avalon-demi {
+.text-font-weight-semi-bold {
   @include font-weight-semi-bold;
 }
 
-.text-avalon-book {
+.text-font-weight-normal {
   @include font-weight-normal;
 }
