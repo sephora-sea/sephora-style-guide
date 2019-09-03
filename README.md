@@ -55,7 +55,7 @@ View the live examples [here](https://www.sephora.sg/style-guide)
 - Clone the repo inside the same folder as the main app.
 - In your Gemfile:
 ```ruby
-gem 'sephora_style_guide', path: '../sephora_style_guide'
+gem 'sephora_style_guide', path: '../sephora-style-guide'
 ```
 - Run `bundle install`
 - Restart your server. Any changes you make in the style guide should now reflect immediately in the main app.
