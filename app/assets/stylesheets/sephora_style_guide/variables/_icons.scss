@@ -6,7 +6,7 @@ $sephora-svgs: account arrow-dropdown bag-black bag-red bag-white beauty-profile
             heart-empty heart-empty-bg heart-empty-red-bg heart-fill heart-fill-bg help home instagram lipstick-empty lipstick-filled
             location logout makeup-1 makeup-2 benefits member-points menu orders payment-cancelled payment-expired
             payment-failed payment-paid payment-pending pdf pinterest point-history pop-location pop-parcel
-            pop-payment pop-scan-barcode pop-sms print processing purchase purchase-zero review-approved review-unapproved review-rejected 
+            pop-payment pop-scan-barcode pop-sms print processing purchase purchase-zero review-approved review-unapproved review-rejected
             radio-disabled-selected radio-disabled-unselected radio-selected radio-unselected reviews reviews-red rewards-boutique sale scan search-black
             search-white selected-option-icon settings shade shipped show-icon size snapchat stock store-black store-white
             triangle triangle-black twitter video-play-black video-play-white waitlist welcome-gift youtube kakao;
@@ -46,6 +46,11 @@ $icon_90x40-width: 90px;
 $icon_90x40-height: 40px;
 $icon_90x40-top: (-1 * $icon_100x30-height) + $icon_100x30-top;
 $icon_90x40-classes: visa mastercard amex;
+
+$icon_25x25-width: 25px;
+$icon_25x25-height: 25px;
+$icon_25x25-classes: naverpay wechat fdk_wallets fdk_creditcard fdk_mobilecarrier fdk_banktransfer;
+$icon_25x25-top: (-1 * $icon_90x40-height) + $icon_90x40-top;
 
 $sephora-sprite: (
   icon_30x20: (
@@ -142,11 +147,11 @@ $sephora-sprite: (
 
 .footer-payment-types, .payment-options-container, #cart_payment_types_wrapper, .selected-payment-method, .payment_type_image, .order_payment_type {
   @include wechat;
-  @include fdk_wallets;
-  @include fdk_creditcard;
-  @include fdk_mobilecarrier;
-  @include fdk_banktransfer;
-  @include naverpay;
+  //@include fdk_wallets;
+  //@include fdk_creditcard;
+  //@include fdk_mobilecarrier;
+  //@include fdk_banktransfer;
+  //@include naverpay;
 }
 // ------------------------------- Sprite icons congfig end ----------------------------
 
