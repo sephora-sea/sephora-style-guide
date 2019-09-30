@@ -11,8 +11,8 @@
 
 // Base
 html {
-  @include font-family-avalon;
-  @include font-avalon-book;
+  @include font-sephora-sans;
+  @include font-weight-book;
   color: $black;
   font-size: $font-size-root-mobile;
   line-height: $line-height-root-mobile;
