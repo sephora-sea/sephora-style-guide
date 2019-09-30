@@ -25,10 +25,49 @@
 
 @font-face {
   font-family: 'Sephora Sans';
+  src: asset-url('SephoraSans-Bold.eot');
+  src: asset-url('SephoraSans-Bold.eot?#iefix') format('embedded-opentype'),
+    asset-url('SephoraSans-Bold.woff2') format('woff2'),
+    asset-url('SephoraSans-Bold.woff') format('woff'),
+    asset-url('SephoraSans-Bold.ttf') format('truetype'),
+    asset-url('SephoraSans-Bold.svg') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sephora Sans';
+  src: asset-url('SephoraSans-Medium.eot');
+  src: asset-url('SephoraSans-Medium.eot?#iefix') format('embedded-opentype'),
+    asset-url('SephoraSans-Medium.woff2') format('woff2'),
+    asset-url('SephoraSans-Medium.woff') format('woff'),
+    asset-url('SephoraSans-Medium.ttf') format('truetype'),
+    asset-url('SephoraSans-Medium.svg') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sephora Sans';
   src: asset-url('SephoraSans-Book.eot');
-  src: asset-url('SephoraSans-Book.woff2') format('woff2'),
-    asset-url('SephoraSans-Book.woff') format('woff');
+  src: asset-url('SephoraSans-Book.eot?#iefix') format('embedded-opentype'),
+    asset-url('SephoraSans-Book.woff2') format('woff2'),
+    asset-url('SephoraSans-Book.woff') format('woff'),
+    asset-url('SephoraSans-Book.ttf') format('truetype'),
+    asset-url('SephoraSans-Book.svg') format('svg');
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sephora Sans';
+  src: asset-url('SephoraSans-Light.eot');
+  src: asset-url('SephoraSans-Light.eot?#iefix') format('embedded-opentype'),
+    asset-url('SephoraSans-Light.woff2') format('woff2'),
+    asset-url('SephoraSans-Light.woff') format('woff'),
+    asset-url('SephoraSans-Light.ttf') format('truetype'),
+    asset-url('SephoraSans-Light.svg') format('svg');
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -164,4 +203,20 @@
 
 .text-avalon-book {
   @include font-avalon-book;
+}
+
+.text-font-weight-light {
+  @include font-weight-light;
+}
+
+.text-font-weight-book {
+  @include font-weight-book;
+}
+
+.text-font-weight-medium {
+  @include font-weight-medium;
+}
+
+.text-font-weight-bold {
+  @include font-weight-bold;
 }

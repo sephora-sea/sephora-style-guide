@@ -15,11 +15,11 @@ article#fonts
             p.text-avalon-bold.font-text Aa
         tr
           td
-            p.text-avalon-book Book
+            p.text-avalon-book Book 400
           td
-            p.text-avalon-book Demi
+            p.text-avalon-demi Demi 600
           td.last
-            p.text-avalon-book Bold
+            p.text-avalon-bold Bold 700
     pre
       code.language-css
         |
@@ -31,7 +31,34 @@ article#fonts
 
           .text-avalon-bold
           @include font-avalon-bold
+
+    h3.h3 Sephora Sans
     br
+    table.font-table.text-sephora-sans
+      tr
+        td
+          p.text-font-weight-light.font-text Aa
+        td
+          p.text-font-weight-book.font-text Aa
+        td
+          p.text-font-weight-medium.font-text Aa
+        td.last
+          p.text-font-weight-bold.font-text Aa
+      tr
+        td
+          p.text-font-weight-light Light 300
+        td
+          p.text-font-weight-book Book 400
+        td
+          p.text-font-weight-medium Medium 500
+        td.last
+          p.text-font-weight-bold Bold 700
+    pre
+      code.language-css
+        |
+          .text-sephora-sans
+          @include font-sephora-sans
+
     h3.h3 Sephora Serif
     br
     table.font-table.serif
@@ -43,9 +70,9 @@ article#fonts
             p.text-sephora-italic.font-text Aa
         tr
           td
-            p.text-avalon-book Book
+            p.text-avalon-book Book 400
           td.last
-            p.text-avalon-book Book Italic
+            p.text-avalon-italic Book Italic 400
     pre
       code.language-css
         |
