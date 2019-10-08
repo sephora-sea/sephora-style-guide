@@ -60,6 +60,7 @@
 
     .product-card-add-to-bag,
     .product-card-add-to-wait-list {
+      line-height: 19px;
       margin-top: -$product-card-actions-height;
     }
 
@@ -69,7 +70,7 @@
   }
 
   .out-of-stock {
-    @include font-avalon-demi;
+    @include font-weight-bold;
     position: absolute;
     width: 100%;
     height: 45px;
@@ -209,7 +210,7 @@
   }
 
   .product-card-label {
-    @include font-avalon-demi;
+    @include font-weight-medium;
     font-size: 10px;
     letter-spacing: 1.5px;
     color: $grey-mid;
@@ -225,7 +226,7 @@
   }
 
   .product-card-brand {
-    @include font-avalon-demi;
+    @include font-weight-bold;
     text-transform: uppercase;
     margin-bottom: 1px;
   }
@@ -258,10 +259,10 @@
 }
 
 .product-price {
-  @include font-avalon-demi;
+  @include font-weight-bold;
 
   .product-price-sale-old {
-    @include font-avalon-book;
+    @include font-weight-book;
     text-decoration: line-through;
     margin-right: 5px;
   }

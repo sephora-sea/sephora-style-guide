@@ -121,25 +121,25 @@
 }
 
 .h1 {
-  @include font-avalon-bold;
+  @include font-weight-bold;
   font-size: 24px;
   line-height: 26px;
 }
 
 .h2 {
-  @include font-avalon-bold;
+  @include font-weight-bold;
   font-size: 20px;
   line-height: 22px;
 }
 
 .h3 {
-  @include font-avalon-bold;
+  @include font-weight-bold;
   font-size: 16px;
   line-height: 18px;
 }
 
 .h4 {
-  @include font-avalon-bold;
+  @include font-weight-bold;
   font-size: 14px;
   line-height: 18px;
 }

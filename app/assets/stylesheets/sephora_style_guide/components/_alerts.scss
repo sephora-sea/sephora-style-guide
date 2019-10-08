@@ -28,7 +28,7 @@
   }
 
   .alert-message {
-    @include font-avalon-bold;
+    @include font-weight-bold;
     word-wrap: break-word;
     margin-right: 10px;
   }

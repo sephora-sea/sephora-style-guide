@@ -104,7 +104,7 @@
 .irs-from,
 .irs-to,
 .irs-single {
-  @include font-avalon-demi;
+  @include font-weight-medium;
   position: absolute;
   display: block;
   top: 0;
@@ -112,9 +112,9 @@
   cursor: default;
   white-space: nowrap;
   color: $white;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.333;
-  padding: 2px 5px 0;
+  padding: 1px 5px;
   background: $grey-dark;
   border-radius: 3px;
 }
