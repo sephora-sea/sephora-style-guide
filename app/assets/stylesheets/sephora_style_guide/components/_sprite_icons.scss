@@ -25,4 +25,12 @@
     height: 30px;
     background-size: 70px 30px;
   }
+
+  &.fdk_wallets,
+  &.fdk_creditcard,
+  &.fdk_mobilecarrier,
+  &.fdk_banktransfer,
+  &.naverpay {
+    margin-right: 10px;
+  }
 }

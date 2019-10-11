@@ -6,7 +6,7 @@ $sephora-svgs: account arrow-dropdown bag-black bag-red bag-white beauty-profile
             heart-empty heart-empty-bg heart-empty-red-bg heart-fill heart-fill-bg help home instagram lipstick-empty lipstick-filled
             location logout makeup-1 makeup-2 benefits member-points menu orders payment-cancelled payment-expired
             payment-failed payment-paid payment-pending pdf pinterest point-history pop-location pop-parcel
-            pop-payment pop-scan-barcode pop-sms print processing purchase purchase-zero review-approved review-unapproved review-rejected 
+            pop-payment pop-scan-barcode pop-sms print processing purchase purchase-zero review-approved review-unapproved review-rejected
             radio-disabled-selected radio-disabled-unselected radio-selected radio-unselected reviews reviews-red rewards-boutique sale scan search-black
             search-white selected-option-icon settings shade shipped show-icon size snapchat stock store-black store-white
             triangle triangle-black twitter video-play-black video-play-white waitlist welcome-gift youtube kakao;
@@ -47,7 +47,19 @@ $icon_90x40-height: 40px;
 $icon_90x40-top: (-1 * $icon_100x30-height) + $icon_100x30-top;
 $icon_90x40-classes: visa mastercard amex;
 
+$icon_25x60-width: 60px;
+$icon_25x60-height: 25px;
+$icon_25x60-classes: naverpay wechat fdk_wallets fdk_creditcard fdk_mobilecarrier fdk_banktransfer;
+$icon_25x60-top: (-1 * $icon_90x40-height) + $icon_90x40-top;
+
 $sephora-sprite: (
+  icon_25x60: (
+    height: $icon_25x60-height,
+    width: $icon_25x60-width,
+    col: 6,
+    top: $icon_25x60-top,
+    classes: $icon_25x60-classes
+  ),
   icon_30x20: (
     height: $icon_30x20-height,
     width: $icon_30x20-width,
