@@ -14,7 +14,7 @@
 
   thead th {
     background-color: $table-heading-bg;
-    @include font-avalon-demi;
+    @include font-weight-medium;
     text-transform: uppercase;
   }
 }

@@ -60,7 +60,7 @@
 }
 
 select.form-control {
-  @include font-avalon-book;
+  @include font-weight-book;
   appearance: none;
   display: inline-block;
   background-color: $white;
@@ -73,6 +73,7 @@ select.form-control {
   padding-top: 3px;
   padding-left: 10px;
   padding-right: 20px;
+  letter-spacing: 0.3px;
 
   &:focus::-ms-value {
     // Suppress the nested default white text on blue background highlight given to
@@ -104,7 +105,7 @@ textarea.form-control {
 }
 
 .control-label-inline {
-  @include font-avalon-demi;
+  @include font-weight-bold;
   text-transform: uppercase;
   margin-right: 10px;
 
