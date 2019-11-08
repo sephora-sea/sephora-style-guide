@@ -121,9 +121,9 @@ $sephora-international-countries: australia bahrain brazil canada china czech-re
 // ------------------------------- Sprite icons congfig end ----------------------------
 
 // ------------------------------ SVG icons congfig start ----------------------------
-$sephora-order-status:  awaiting-collection awaiting-drop-off booked-for-delivery cancelled 
-                        completed customs-awaiting-payment shipped damaged delivery-attempted 
-                        delivery-failed packing-order in-transit insufficient-address invalidated
-                        lost order-placed pickup-failed preparing-to-ship return-booked
-                        return-booking-failed return-requested returned-to-sender with-driver;
+$sephora-order-status:  awaiting-collection awaiting-drop-off booked-for-delivery completed
+                        customs-awaiting-payment shipped damaged delivery-attempted delivery-failed
+                        packing-order in-transit insufficient-address invalidated lost order-cancelled
+                        order-placed pickup-failed preparing-to-ship return-booked return-booking-failed
+                        return-requested returned-to-sender with-driver;
 // ------------------------------- Sprite icons congfig end ----------------------------
