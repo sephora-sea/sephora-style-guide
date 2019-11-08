@@ -32,6 +32,10 @@ i {
     background: asset-url('sephora_style_guide/arrow-right.svg') center no-repeat;
   }
 
+  &.arrow-right-red {
+    background: asset-url('sephora_style_guide/arrow-right-red.svg') center no-repeat;
+  }
+
   &.out-of-stock {
     position: absolute;
     pointer-events: none;
