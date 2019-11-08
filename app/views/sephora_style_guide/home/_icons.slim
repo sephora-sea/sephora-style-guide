@@ -67,7 +67,7 @@ ruby:
       "class": "filter"
     }
   ]
-  orders_and_shipping = orders_and_shipping = [
+  orders_and_shipping = [
     {
       "name": "Awaiting Collection",
       "class": "awaiting-collection"
@@ -121,6 +121,10 @@ ruby:
       "class": "packing-order"
     },
     {
+      "name": "Home",
+      "class": "home"
+    },
+    {
       "name": "In Transit",
       "class": "in-transit"
     },
@@ -133,10 +137,6 @@ ruby:
       "class": "invalidated"
     },
     {
-      "name": "Home",
-      "class": "home"
-    },
-    {
       "name": "lost",
       "class": "lost"
     },
@@ -147,38 +147,6 @@ ruby:
     {
       "name": "Order Placed",
       "class": "order-placed"
-    },
-    {
-      "name": "Pickup Failed",
-      "class": "pickup-failed"
-    },
-    {
-      "name": "Ready For Pickup",
-      "class": "preparing-to-ship"
-    },
-    {
-      "name": "Return Booked",
-      "class": "return-booked"
-    },
-    {
-      "name": "Return Booking Failed",
-      "class": "return-booking-failed"
-    },
-    {
-      "name": "Return Requested",
-      "class": "return-requested"
-    },
-    {
-      "name": "Returned to Sender",
-      "class": "returned-to-sender"
-    },
-    {
-      "name": "With Customs",
-      "class": "customs"
-    }
-    {
-      "name": "Return Requested",
-      "class": "return-requested"
     },
     {
       "name": "Payment Cancelled",
@@ -221,12 +189,44 @@ ruby:
       "class": "pop-sms"
     },
     {
+      "name": "Pickup Failed",
+      "class": "pickup-failed"
+    },
+    {
+      "name": "Ready For Pickup",
+      "class": "preparing-to-ship"
+    },
+    {
+      "name": "Return Booked",
+      "class": "return-booked"
+    },
+    {
+      "name": "Return Booking Failed",
+      "class": "return-booking-failed"
+    },
+    {
       "name": "Return Requested",
       "class": "return-requested"
     },
     {
+      "name": "Returned to Sender",
+      "class": "returned-to-sender"
+    },
+    {
       "name": "Shipped",
       "class": "shipped"
+    },
+    {
+      "name": "With Customs",
+      "class": "customs"
+    }
+    {
+      "name": "Return Requested",
+      "class": "return-requested"
+    },
+    {
+      "name": "Return Requested",
+      "class": "return-requested"
     },
     {
       "name": "With Driver",
