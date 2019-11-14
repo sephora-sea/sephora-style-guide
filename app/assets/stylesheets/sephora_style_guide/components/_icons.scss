@@ -14,6 +14,18 @@ i {
     transition: transform 0.3s;
   }
 
+  &.collapse-arrow-red {
+    height: 15px;
+    width: 15px;
+
+    background: asset-url('sephora_style_guide/arrow-right-red.svg') no-repeat;
+    background-size: contain;
+    background-position: center center;
+
+    transform: rotate(-90deg);
+    transition: transform 0.3s;
+  }
+
   &.dropdown-arrow {
     position: absolute;
     width: 8px;
