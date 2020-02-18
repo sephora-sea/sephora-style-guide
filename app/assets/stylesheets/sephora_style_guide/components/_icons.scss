@@ -36,6 +36,10 @@ i {
     background: asset-url('sephora_style_guide/arrow-dropdown.svg') center no-repeat;
   }
 
+  &.arrow-small {
+    background: asset-url('sephora_style_guide/arrow-small.svg') center no-repeat;
+  }
+
   &.arrow-left {
     background: asset-url('sephora_style_guide/arrow-left.svg') center no-repeat;
   }
