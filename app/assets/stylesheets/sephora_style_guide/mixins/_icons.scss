@@ -66,3 +66,14 @@
     }
   }
 }
+
+@mixin generate-svg-booking-services-icons() {
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @each $svg in $sephora-booking-services {
+    &.#{$svg} {
+      background-image: asset_url('sephora_style_guide/svgs/booking_services/#{$svg}.svg')
+    }
+  }
+}
