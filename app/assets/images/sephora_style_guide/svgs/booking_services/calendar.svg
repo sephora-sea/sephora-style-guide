@@ -1,1 +1,14 @@
-<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M14.5 0a.5.5 0 01.5.5V2h2a1 1 0 011 1v14a1 1 0 01-1 1H1a1 1 0 01-1-1V3a1 1 0 011-1h2V.5a.5.5 0 011 0V2h10V.5a.5.5 0 01.5-.5zM1 7v10h16V7H1zm0-1h16V3h-2v.5a.5.5 0 11-1 0V3H4v.5a.5.5 0 01-1 0V3H1v3z" id="a"/></defs><g transform="translate(3 3)" fill="none" fill-rule="evenodd"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><use fill="#000" xlink:href="#a"/><g mask="url(#b)" fill="#000"><path d="M-116-111h250v240h-250z"/></g></g></svg>
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <path d="M14.5 0a.5.5 0 01.5.5V2h2a1 1 0 011 1v14a1 1 0 01-1 1H1a1 1 0 01-1-1V3a1 1 0 011-1h2V.5a.5.5 0 011 0V2h10V.5a.5.5 0 01.5-.5zM1 7v10h16V7H1zm0-1h16V3h-2v.5a.5.5 0 11-1 0V3H4v.5a.5.5 0 01-1 0V3H1v3z" id="a"/>
+  </defs>
+  <g transform="translate(3 3)" fill="none" fill-rule="evenodd">
+    <mask id="b" fill="#fff">
+      <use xlink:href="#a"/>
+    </mask>
+    <use fill="#000" xlink:href="#a"/>
+    <g mask="url(#b)" fill="#000">
+      <path d="M-116-111h250v240h-250z"/>
+    </g>
+  </g>
+</svg>
