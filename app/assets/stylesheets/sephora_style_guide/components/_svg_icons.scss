@@ -7,6 +7,7 @@
   @include generate-svg-icons();
   @include generate-svg-flag-icons();
   @include generate-svg-order-status-icons();
+  @include generate-svg-booking-services-icons();
 
   &.bag-white:hover {
     @extend .bag-red;
