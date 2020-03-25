@@ -52,6 +52,12 @@ $icon_25x60-height: 25px;
 $icon_25x60-classes: naverpay fdk_kakaopay fdk_wallets fdk_creditcard fdk_mobilecarrier fdk_banktransfer;
 $icon_25x60-top: (-1 * $icon_90x40-height) + $icon_90x40-top;
 
+$icon_60x40-width: 60px;
+$icon_60x40-height: 40px;
+$icon_60x40-classes: p1 p2 p3 p4 p5 p6
+                     p7 p8 p9 p10 p11;
+$icon_60x40-top: (-1 * $icon_25x60-height) + $icon_25x60-top;
+
 $sephora-sprite: (
   icon_25x60: (
     height: $icon_25x60-height,
@@ -94,6 +100,13 @@ $sephora-sprite: (
     col: 4,
     top: $icon_90x40-top,
     classes: $icon_90x40-classes
+  ),
+  icon_60x40: (
+    height: $icon_60x40-height,
+    width: $icon_60x40-width,
+    col: 6,
+    top: $icon_60x40-top,
+    classes: $icon_60x40-classes
   )
 );
 
