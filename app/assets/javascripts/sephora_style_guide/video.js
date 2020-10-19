@@ -32,7 +32,7 @@ function onPlayerReady() {
     var currentVideoId = $(this).find('iframe').attr('id');
 
     for (var i in players) {
-      if (players[i].a.id === currentVideoId) {
+      if (players[i].getIframe().getAttribute('id') === currentVideoId) {
         players[i].pauseVideo();
       }
     }
