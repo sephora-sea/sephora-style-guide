@@ -31,8 +31,6 @@ function onPlayerReady() {
   $('.js-video-modal').on('hide.bs.modal', function() {
     const currentVideoId = $(this).find('iframe').attr('id');
 
-    players.find(player => {
-      return player.id === currentVideoId
-    })?.player?.pauseVideo()
+    players.find(player => player.id === currentVideoId)?.player?.pauseVideo()
   });
 }
