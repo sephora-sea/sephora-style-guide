@@ -4,37 +4,37 @@ var players = [];
 
 // this function gets called when API is ready to use
 function onYouTubeIframeAPIReady() {
-  var allPlayers = $('.modal-video').children('iframe');
-
-  for (var el in Array.from(allPlayers)) {
-    var player = new YT.Player($(allPlayers[el]).attr('id'), {
+  $('.modal-video').children('iframe').each(function() {
+    const id = $(this).attr('id')
+  
+    let player = new YT.Player(id, {
       events: {
         'onReady': onPlayerReady
       }
     });
-    players.push(player);
-  }
+
+    players.push({
+      id,
+      player
+    });
+  })
 }
 
 function onPlayerReady() {
   // bind events
   $(document).on('click', '.js-video-link', function() {
-    var currentVideoId = $(this).attr('data-video');
+    const currentVideoId = $(this).attr('data-video');
 
-    for (var i in players) {
-      if (players[i].a.id === currentVideoId) {
-        players[i].playVideo();
-      }
-    }
+    players.find(player => {
+      return player.id === currentVideoId
+    })?.player?.playVideo()
   });
 
   $('.js-video-modal').on('hide.bs.modal', function() {
-    var currentVideoId = $(this).find('iframe').attr('id');
+    const currentVideoId = $(this).find('iframe').attr('id');
 
-    for (var i in players) {
-      if (players[i].a.id === currentVideoId) {
-        players[i].pauseVideo();
-      }
-    }
+    players.find(player => {
+      return player.id === currentVideoId
+    })?.player?.pauseVideo()
   });
 }
