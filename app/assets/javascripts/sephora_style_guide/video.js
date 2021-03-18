@@ -7,7 +7,7 @@ function onYouTubeIframeAPIReady() {
   $('.modal-video').children('iframe').each(function() {
     const id = $(this).attr('id')
   
-    let player = new YT.Player(id, {
+    const player = new YT.Player(id, {
       events: {
         'onReady': onPlayerReady
       }
