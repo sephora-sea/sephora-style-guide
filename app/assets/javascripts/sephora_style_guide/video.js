@@ -25,9 +25,7 @@ function onPlayerReady() {
   $(document).on('click', '.js-video-link', function() {
     const currentVideoId = $(this).attr('data-video');
 
-    players.find(player => {
-      return player.id === currentVideoId
-    })?.player?.playVideo()
+    players.find(player => player.id === currentVideoId)?.player?.playVideo()
   });
 
   $('.js-video-modal').on('hide.bs.modal', function() {
