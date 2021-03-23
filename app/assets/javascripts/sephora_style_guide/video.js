@@ -24,13 +24,17 @@ function onPlayerReady() {
   // bind events
   $(document).on('click', '.js-video-link', function() {
     const currentVideoId = $(this).attr('data-video');
-
-    players.find(player => player.id === currentVideoId)?.player?.playVideo()
+    const playerObj = players.find(player => player.id === currentVideoId)
+    if (playerObj && playerObj.player) {
+      playerObj.player.playVideo();
+    }
   });
 
   $('.js-video-modal').on('hide.bs.modal', function() {
     const currentVideoId = $(this).find('iframe').attr('id');
-
-    players.find(player => player.id === currentVideoId)?.player?.pauseVideo()
+    const playerObj = players.find(player => player.id === currentVideoId)
+    if (playerObj && playerObj.player) {
+      playerObj.player.pauseVideo();
+    }
   });
 }
