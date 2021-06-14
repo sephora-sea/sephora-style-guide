@@ -78,10 +78,15 @@ gem 'sephora_style_guide', github: 'sephora-sea/sephora-style-guide', branch: 's
 ```
 - After it has been reviewed and tested, it will be merged by the core contributors.
 
+### Bump Package version
+- Bump the package version in the `package.json` file.
+- Use semantic versioning for convention.
+- To avoid any npm cache issue.
+
 ### Updating the main app
 - Undo any changes made to `Gemfile` and `package.json`.
 - Run `bundle update sephora_style_guide`. You will see a message like this: "Bundler attempted to update sephora_style_guide but its version stayed the same". However, this will usually refer to the version of the style guide gem, for example `0.0.5`, which doesn't update that often. If you check your `Gemfile.lock`, you should see changes to the `revision` part with the commit hash of the latest changes in style guide.
-- Run `yarn upgrade sephora-style-guide`.
+- Run `yarn upgrade sephora-style-guide`, update the package version in the `yarn.lock` file to synchronize the package version.
 - Commit the changes and
 
 ## License
