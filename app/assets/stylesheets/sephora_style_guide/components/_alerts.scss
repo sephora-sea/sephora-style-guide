@@ -45,16 +45,16 @@
 }
 
 .alert-success {
-  color: #3a773a;
-  background-color: #ecf1e6;
+  color: $white;
+  background-color: $brand-success;
 }
 
 .alert-warning {
-  color: #c000c4;
-  background-color: #f8e5f9;
+  color: $white;
+  background-color: $brand-info;
 }
 
 .alert-error {
-  color: #e00;
-  background-color: #fde5e5;
+  color: $white;
+  background-color: $brand-error;
 }
