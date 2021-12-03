@@ -28,6 +28,10 @@ html {
     font-size: $font-size-root;
     line-height: $line-height-root;
   }
+
+  :lang(vi) { 
+    font-family: CenturyGothic, Helvetica, Arial; 
+  }
 }
 
 body {
