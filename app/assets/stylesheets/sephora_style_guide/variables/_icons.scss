@@ -27,7 +27,7 @@ $icon_50x30-width: 50px;
 $icon_50x30-height: 30px;
 $icon_50x30-top: -1 * $icon_30x20-height;
 $icon_50x30-classes: twoc2p unionpay bca amex mastercard molpay webcash visa
-              ambank fpx paypal tmb kkbank krungsri scb card16 uob payatpost
+              ambank fpx paypal tmb kkbank krungsri scb card16 _uob payatpost
               tesco bbl truemoney tbank bigc mpay jautpay pubbank gcash
               cstore bni applepay tapandgo;
 
@@ -40,7 +40,7 @@ $icon_70x30-classes: mandiri paypal visa rhbnow mepf dragonpay cod bayar
 $icon_100x30-width: 100px;
 $icon_100x30-height: 30px;
 $icon_100x30-top: (-3 * $icon_70x30-height) + $icon_70x30-top;
-$icon_100x30-classes: cimbclick permata hongleong maybank;
+$icon_100x30-classes: cimbclick permata hongleong;
 
 $icon_90x40-width: 90px;
 $icon_90x40-height: 40px;
@@ -54,9 +54,28 @@ $icon_25x60-top: (-1 * $icon_90x40-height) + $icon_90x40-top;
 
 $icon_60x40-width: 60px;
 $icon_60x40-height: 40px;
-$icon_60x40-classes: fpx_abb fpx_abmb fpx_bimb fpx_bkrm fpx_bmmb fpx_agrobank fpx_bsn
-                     fpx_hsbc fpx_kfh fpx_ocbc fpx_pbb fpx_scb;
+$icon_60x40-classes: fpx_bsn fpx_pbb maybank;
 $icon_60x40-top: (-1 * $icon_25x60-height) + $icon_25x60-top;
+
+$icon_91x40-width: 90px;
+$icon_91x40-height: 40px;
+$icon_91x40-classes: fpx_agrobank fpx_bimb;
+$icon_91x40-top: (-1 * $icon_60x40-height) + $icon_60x40-top;
+
+$icon_130x40-width: 130px;
+$icon_130x40-height: 40px;
+$icon_130x40-classes: fpx_abmb fpx_bmmb fpx_abb fpx_bkrm fpx_kfh;
+$icon_130x40-top: (-1 * $icon_91x40-height) + $icon_91x40-top;
+
+$icon_95x40-width: 95px;
+$icon_95x40-height: 40px;
+$icon_95x40-classes: uob fpx_hsbc;
+$icon_95x40-top: (-2 * $icon_130x40-height) + $icon_130x40-top;
+
+$icon_125x40-width: 125px;
+$icon_125x40-height: 40px;
+$icon_125x40-classes: fpx_ocbc fpx_scb;
+$icon_125x40-top: (-1 * $icon_95x40-height) + $icon_95x40-top;
 
 $sephora-sprite: (
   icon_25x60: (
@@ -104,9 +123,37 @@ $sephora-sprite: (
   icon_60x40: (
     height: $icon_60x40-height,
     width: $icon_60x40-width,
-    col: 6,
+    col: 3,
     top: $icon_60x40-top,
     classes: $icon_60x40-classes
+  ),
+  icon_91x40: (
+    height: $icon_91x40-height,
+    width: $icon_91x40-width,
+    col: 2,
+    top: $icon_91x40-top,
+    classes: $icon_91x40-classes
+  ),
+  icon_130x40: (
+    height: $icon_130x40-height,
+    width: $icon_130x40-width,
+    col: 3,
+    top: $icon_130x40-top,
+    classes: $icon_130x40-classes
+  ),
+  icon_95x40: (
+    height: $icon_95x40-height,
+    width: $icon_95x40-width,
+    col: 2,
+    top: $icon_95x40-top,
+    classes: $icon_95x40-classes
+  ),
+  icon_125x40: (
+    height: $icon_125x40-height,
+    width: $icon_125x40-width,
+    col: 2,
+    top: $icon_125x40-top,
+    classes: $icon_125x40-classes
   )
 );
 
