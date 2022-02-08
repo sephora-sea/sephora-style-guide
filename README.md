@@ -88,7 +88,7 @@ gem 'sephora_style_guide', github: 'sephora-sea/sephora-style-guide', branch: 's
 - Undo any changes made to `Gemfile` and `package.json`.
 - Run `bundle update --source sephora_style_guide`. You will see a message like this: "Bundler attempted to update sephora_style_guide but its version stayed the same". However, this will usually refer to the version of the style guide gem, for example `0.0.5`, which doesn't update that often. If you check your `Gemfile.lock`, you should see changes to the `revision` part with the commit hash of the latest changes in style guide.
 - Run `yarn upgrade sephora-style-guide`, update the package version in the `yarn.lock` file to synchronize the package version.
-- Commit the changes and
+- Commit the changes and you are done!
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
