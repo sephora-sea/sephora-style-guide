@@ -76,7 +76,8 @@ gem 'sephora_style_guide', github: 'sephora-sea/sephora-style-guide', branch: 's
 ```js
 "sephora-style-guide": "luxola/sephora-style-guide#stories/add_new_font_sephora_sans_shop_426",
 ```
-- After it has been reviewed and tested, it will be merged by the core contributors.
+- After it has been reviewed and tested, bump package version (see [below](https://github.com/sephora-sea/sephora-style-guide#bump-package-version)).
+    * Then merge to master and re-point main app to gem’s master (see [below](https://github.com/sephora-sea/sephora-style-guide#updating-the-main-app)).
 
 ### Bump Package version
 - Bump the package version in the `package.json` file.
@@ -85,9 +86,9 @@ gem 'sephora_style_guide', github: 'sephora-sea/sephora-style-guide', branch: 's
 
 ### Updating the main app
 - Undo any changes made to `Gemfile` and `package.json`.
-- Run `bundle update sephora_style_guide`. You will see a message like this: "Bundler attempted to update sephora_style_guide but its version stayed the same". However, this will usually refer to the version of the style guide gem, for example `0.0.5`, which doesn't update that often. If you check your `Gemfile.lock`, you should see changes to the `revision` part with the commit hash of the latest changes in style guide.
+- Run `bundle update --source sephora_style_guide`. You will see a message like this: "Bundler attempted to update sephora_style_guide but its version stayed the same". However, this will usually refer to the version of the style guide gem, for example `0.0.5`, which doesn't update that often. If you check your `Gemfile.lock`, you should see changes to the `revision` part with the commit hash of the latest changes in style guide.
 - Run `yarn upgrade sephora-style-guide`, update the package version in the `yarn.lock` file to synchronize the package version.
-- Commit the changes and
+- Commit the changes and you are done!
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
