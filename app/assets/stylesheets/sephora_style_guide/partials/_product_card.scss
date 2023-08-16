@@ -251,10 +251,6 @@
 
   .product-card-variants-count {
     color: $grey-dark;
-
-    @include media-breakpoint-up(lg) {
-      display: none;
-    }
   }
 }
 
