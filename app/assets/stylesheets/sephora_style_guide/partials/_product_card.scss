@@ -59,7 +59,8 @@
     height: $product-card-actions-height;
 
     .product-card-add-to-bag,
-    .product-card-add-to-wait-list {
+    .product-card-add-to-wait-list,
+    .product-card-remind-me {
       line-height: 19px;
       margin-top: -$product-card-actions-height;
     }
