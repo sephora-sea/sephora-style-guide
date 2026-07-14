@@ -14,7 +14,7 @@ $card-disabled-color:        $grey-mid;
 
 $card-img-overlay-padding:  16.25px !default;
 
-$card-deck-margin:          (map-get($grid-gutter-widths, sm) / 2) !default;
+$card-deck-margin:          calc(map-get($grid-gutter-widths, sm) / 2) !default;
 
 $card-columns-count:        3 !default;
 $card-columns-gap:          16.25px !default;
