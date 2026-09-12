@@ -4,6 +4,7 @@
   "description": "Style Guide for Sephora Digital SEA",
   "main": "index.js",
   "scripts": {
+    "commit": "git-cz",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,25 @@
   "bugs": {
     "url": "https://github.com/luxola/sephora-style-guide/issues"
   },
-  "homepage": "https://github.com/luxola/sephora-style-guide#readme"
+  "homepage": "https://github.com/luxola/sephora-style-guide#readme",
+  "devDependencies": {
+    "@auto-it/all-contributors": "^10.31.0",
+    "@auto-it/conventional-commits": "^10.31.0",
+    "@auto-it/git-tag": "^10.31.0",
+    "@auto-it/jira": "^10.31.0",
+    "@auto-it/released": "^10.31.0",
+    "@auto-it/slack": "^10.31.0",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "all-contributors-cli": "^6.20.0",
+    "auto": "^10.31.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "git-cz": "^4.7.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  }
 }

@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    "git-tag",
+    "conventional-commits",
+    ["jira", "https://sephora-asia.atlassian.net/"],
+    "released",
+    "./.auto/plugins/package-version.js",
+    "./.auto/plugins/version-file.js"
+  ],
+  "owner": "sephora-sea",
+  "repo": "sephora-style-guide"
+}

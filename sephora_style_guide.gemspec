@@ -6,7 +6,7 @@ require 'sephora_style_guide/version'
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = 'sephora_style_guide'
-  s.version     = SephoraStyleGuide::VERSION
+  s.version     = File.read('VERSION')
   s.authors     = ['Justin Ho']
   s.email       = ['justin@sephoradigital.com']
   s.homepage    = 'http://www.sephora.sg/style-guide'
